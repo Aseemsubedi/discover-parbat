@@ -40,6 +40,27 @@ function smtp_write($socket, string $command): void {
     fwrite($socket, $command . "\r\n");
 }
 
+function get_smtp_password(): string {
+    $env = getenv('DISCOVERPARBAT_SMTP_PASSWORD');
+    if (is_string($env) && trim($env) !== '') {
+        return trim($env);
+    }
+
+    $configPath = __DIR__ . '/smtp-config.php';
+    if (is_file($configPath)) {
+        /** @var mixed $config */
+        $config = require $configPath;
+        if (is_array($config) && isset($config['password'])) {
+            $filePass = trim((string)$config['password']);
+            if ($filePass !== '') {
+                return $filePass;
+            }
+        }
+    }
+
+    return '';
+}
+
 function smtp_send_mail(
     string $host,
     int $port,
@@ -257,9 +278,10 @@ try {
     $smtpHost = 'smtp.hostinger.com';
     $smtpPort = 465;
     $smtpUser = 'info@discoverparbat.com';
-    $smtpPass = getenv('DISCOVERPARBAT_SMTP_PASSWORD') ?: '';
+    // Preferred: environment variable. Fallback: smtp-config.php file.
+    $smtpPass = get_smtp_password();
     if ($smtpPass === '') {
-        throw new RuntimeException('Missing SMTP password configuration');
+        throw new RuntimeException('SMTP password is not configured');
     }
 
     smtp_send_mail(
