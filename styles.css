@@ -291,3 +291,97 @@ footer::before {
   .enquiry-menu { min-width: 190px; }
   .mobile-nav { padding: 16px 5% 28px; }
 }
+
+/* ─── GLOBAL MOBILE HARDENING LAYER ───────────────────
+   Ensures consistent behavior on iPhone 15 and other devices. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+* {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .contact-main-grid,
+  .article-wrap,
+  .page,
+  .page-body,
+  .shop-grid,
+  .departures-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .hero-small {
+    min-height: 360px;
+  }
+  .section-header {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 16px !important; /* prevents iOS zoom on focus */
+  }
+  .sticky-enquire {
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    right: calc(12px + env(safe-area-inset-right));
+  }
+  .sticky-btn {
+    max-width: calc(100vw - 28px);
+  }
+  .enquiry-menu {
+    max-width: calc(100vw - 28px);
+  }
+}
+
+@media (max-width: 430px) {
+  .mobile-nav a {
+    font-size: 1.25rem;
+  }
+  .sticky-btn {
+    padding: 11px 14px;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* ─── BREADCRUMB / LONG PATH HARDENING ─────────────── */
+.breadcrumb,
+.breadcrumb a,
+.breadcrumb span,
+.page-breadcrumb,
+.page-breadcrumb a,
+.page-breadcrumb span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .breadcrumb,
+  .page-breadcrumb {
+    font-size: 0.82rem !important;
+    line-height: 1.45;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
