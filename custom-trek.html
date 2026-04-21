@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Trek Planner | Discover Parbat</title>
+<meta name="description" content="Build your own Himalayan trek with Discover Parbat. Choose duration, comfort, difficulty, and highlights for a tailor-made route in Nepal.">
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+body { line-height: 1.7; }
+.hero {
+  position: relative;
+  height: 72vh;
+  min-height: 460px;
+  margin-top: 72px;
+  overflow: hidden;
+}
+.hero img { width: 100%; height: 100%; object-fit: cover; }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,22,16,0.18), rgba(8,22,16,0.75));
+}
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  left: 7%;
+  bottom: 12%;
+  max-width: 760px;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.74rem;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #b9f0d4;
+  border: 1px solid rgba(185,240,212,0.45);
+  background: rgba(34,98,74,0.35);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+.hero p { color: rgba(255,255,255,0.9); max-width: 640px; font-size: 1.03rem; }
+
+.page {
+  padding: 58px 7% 70px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 30px;
+  align-items: start;
+}
+.panel {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  padding: 26px;
+}
+.panel h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1a3d2b;
+}
+.muted { color: #5b646d; font-size: 0.94rem; }
+
+.cards {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.card {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 14px;
+  background: #fbfdfc;
+}
+.card h3 { font-size: 0.95rem; margin-bottom: 4px; color: #213; }
+.card p { font-size: 0.84rem; color: #65707a; }
+
+.checklist {
+  margin-top: 16px;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.checklist li {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 12px;
+  font-size: 0.89rem;
+}
+.checklist li::before {
+  content: "✓";
+  margin-right: 8px;
+  color: #2d6a4f;
+  font-weight: 700;
+}
+
+.form-wrap h2 { margin-bottom: 6px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+.field label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #667;
+  font-weight: 700;
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.93rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.field textarea { min-height: 92px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.12);
+}
+.btn-submit {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2d6a4f, #1a6fa8);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.small-note { margin-top: 8px; font-size: 0.78rem; color: #6b7280; }
+.prefill-banner {
+  margin-top: 12px;
+  border: 1px solid rgba(45,106,79,0.2);
+  background: rgba(82,183,136,0.08);
+  color: #24553f;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.83rem;
+}
+
+@media (max-width: 1024px) {
+  .page { grid-template-columns: 1fr; gap: 18px; }
+}
+@media (max-width: 640px) {
+  .hero-content { left: 5%; right: 5%; bottom: 10%; }
+  .page { padding: 38px 4% 46px; }
+  .panel { padding: 18px 14px; }
+  .cards { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header id="main-header">
+  <div class="logo"><img src="logo.png" alt="Discover Parbat"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html" aria-current="page">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html" aria-current="page">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<section class="hero">
+  <img src="mvp.jpg" alt="Custom Himalayan trek planning">
+  <div class="hero-content">
+    <span class="hero-eyebrow">Tailor-Made Journeys</span>
+    <h1>Your Best Custom Trek,<br>Built Around You</h1>
+    <p>Tell us your time, pace, and travel style. We design a route that matches your goals with the right views, comfort, and local experiences.</p>
+  </div>
+</section>
+
+<main class="page">
+  <section class="panel">
+    <h2>Why This Is The Best Option</h2>
+    <p class="muted">Not every traveler fits one fixed itinerary. Our custom plan combines the strongest parts of our top treks into one route that suits your exact window and comfort level.</p>
+    <div class="cards">
+      <article class="card"><h3>Right Duration</h3><p>From 3 to 14 days based on your calendar.</p></article>
+      <article class="card"><h3>Balanced Difficulty</h3><p>Easy, moderate, or progressive ascent with smart pacing.</p></article>
+      <article class="card"><h3>Local Authenticity</h3><p>Real villages, homestays, and less-crowded trails.</p></article>
+      <article class="card"><h3>Flexible Comfort</h3><p>Tea house, homestay, or mixed comfort style.</p></article>
+    </div>
+    <ul class="checklist">
+      <li>Best mix of views + culture + time efficiency</li>
+      <li>Route tuned for your group profile and fitness</li>
+      <li>Local team support from planning to departure</li>
+      <li>Clear cost and practical guidance before booking</li>
+    </ul>
+  </section>
+
+  <section class="panel form-wrap">
+    <h2>Build My Custom Trek</h2>
+    <p class="muted">Share your preferences and we will send a custom route proposal quickly.</p>
+    <form id="custom-form" onsubmit="handleCustomSubmit(event)">
+      <div class="grid">
+        <div class="field full">
+          <label for="ct-name">Full Name *</label>
+          <input id="ct-name" required placeholder="Your full name">
+        </div>
+        <div class="field">
+          <label for="ct-email">Gmail (optional)</label>
+          <input id="ct-email" type="email" placeholder="you@gmail.com">
+        </div>
+        <div class="field">
+          <label for="ct-whatsapp">WhatsApp (optional)</label>
+          <input id="ct-whatsapp" placeholder="+977 98XXXXXXXX">
+        </div>
+        <div class="field">
+          <label for="ct-country">Country *</label>
+          <input id="ct-country" required placeholder="Your country">
+        </div>
+        <div class="field">
+          <label for="ct-trek">Preferred Trek</label>
+          <input id="ct-trek" placeholder="Kokhe Danda Trek">
+        </div>
+        <div class="field">
+          <label for="ct-days">Duration (days) *</label>
+          <select id="ct-days" required>
+            <option value="3-4">3-4</option>
+            <option value="5-7" selected>5-7</option>
+            <option value="8-10">8-10</option>
+            <option value="11-14">11-14</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ct-date">Preferred Start Date *</label>
+          <input id="ct-date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="ct-pax">No. of Pax *</label>
+          <select id="ct-pax" required>
+            <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option><option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="ct-focus">What matters most?</label>
+          <select id="ct-focus">
+            <option selected>Balanced route (views + culture)</option>
+            <option>Best mountain views</option>
+            <option>Cultural immersion</option>
+            <option>Easy pace / comfort first</option>
+            <option>Adventure challenge</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="ct-note">Special Requirement</label>
+          <textarea id="ct-note" placeholder="Fitness level, budget range, room preference, food/allergy notes, must-visit places, etc."></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn-submit" type="submit">Send Custom Trek Request</button>
+        </div>
+      </div>
+      <p class="small-note">Please provide at least one contact option: Gmail or WhatsApp.</p>
+      <p id="prefill-banner" class="prefill-banner" style="display:none;"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Walk slow, go far.</p>
+  </div>
+</footer>
+
+<script>
+async function handleCustomSubmit(event) {
+  event.preventDefault();
+  const name = document.getElementById('ct-name').value.trim();
+  const email = document.getElementById('ct-email').value.trim();
+  const whatsapp = document.getElementById('ct-whatsapp').value.trim();
+  const country = document.getElementById('ct-country').value.trim();
+  const days = document.getElementById('ct-days').value;
+  const date = document.getElementById('ct-date').value;
+  const pax = document.getElementById('ct-pax').value;
+  const focus = document.getElementById('ct-focus').value;
+  const trek = document.getElementById('ct-trek').value.trim();
+  const note = document.getElementById('ct-note').value.trim();
+
+  if (!email && !whatsapp) {
+    alert('Please provide at least one contact option: Gmail or WhatsApp.');
+    return;
+  }
+
+  const payload = new URLSearchParams({
+    type: 'custom',
+    name,
+    email,
+    whatsapp,
+    country,
+    trek,
+    days,
+    startDate: date,
+    pax,
+    focus,
+    special: note
+  });
+
+  try {
+    const res = await fetch('inquiry.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+      body: payload.toString()
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Send failed');
+    window.location.href = 'success.html';
+  } catch (e) {
+    alert('Could not send right now. Please try again shortly.');
+  }
+}
+
+const dateInput = document.getElementById('ct-date');
+if (dateInput) {
+  const t = new Date();
+  dateInput.min = `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`;
+}
+
+const params = new URLSearchParams(window.location.search);
+const source = params.get('source');
+const trek = params.get('trek');
+const duration = params.get('duration');
+const banner = document.getElementById('prefill-banner');
+if (source === 'fixed' && banner) {
+  if (trek) document.getElementById('ct-trek').value = trek;
+  if (duration) document.getElementById('ct-days').value = duration.includes('14') ? '11-14' : (duration.includes('5') ? '5-7' : document.getElementById('ct-days').value);
+  document.getElementById('ct-focus').value = 'Balanced route (views + culture)';
+  banner.style.display = 'block';
+  banner.textContent = `Pre-filled from Fixed Departure: ${trek || 'Trek'}${duration ? ' (' + duration + ')' : ''}. You can request any start day.`;
+}
+</script>
+</body>
+</html>

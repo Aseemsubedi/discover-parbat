@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Discover Parbat</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+
+
+<!-- SEO -->
+<meta name="description" content="Locally made trekking gear, souvenirs and essentials from Parbat, Nepal. Every purchase supports the mountain villages along the trail.">
+<meta name="keywords" content="Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+/* ─── HERO ─────────────────────────────────────────── */
+.hero-small {
+  position: relative;
+  height: 44vh;
+  min-height: 300px;
+  overflow: hidden;
+  margin-top: 72px;
+}
+.hero-small img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.hero-small::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10,30,20,0.3) 0%, rgba(10,30,20,0.68) 100%);
+}
+.hero-small-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 14%;
+  left: 7%;
+  animation: fadeUp 0.9s ease both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(82,183,136,0.25);
+  border: 1px solid rgba(82,183,136,0.5);
+  color: #a8e6c5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.hero-small h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+/* ─── INTRO STRIP ──────────────────────────────────── */
+.intro-strip {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 32px 7%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.intro-line {
+  width: 4px; height: 52px;
+  background: linear-gradient(to bottom, var(--green-mid), var(--blue-mid));
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.intro-strip p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 700px;
+}
+
+/* ─── FORMAT INFO BAR ──────────────────────────────── */
+.format-bar {
+  padding: 40px 7% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 860px;
+}
+
+.format-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.format-icon {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.format-icon.frame { background: linear-gradient(135deg, rgba(45,106,79,0.12), rgba(26,111,168,0.08)); }
+.format-icon.digital { background: linear-gradient(135deg, rgba(26,111,168,0.12), rgba(78,168,216,0.08)); }
+.format-icon svg { width: 22px; height: 22px; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.format-icon.frame svg { stroke: var(--green-mid); }
+.format-icon.digital svg { stroke: var(--blue-mid); }
+
+.format-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.format-info p {
+  font-size: 0.84rem;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+.format-price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── SECTION HEADER ───────────────────────────────── */
+.section-header {
+  padding: 52px 7% 32px;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.section-title span {
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.title-divider {
+  width: 48px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin-top: 16px;
+}
+
+/* ─── PRODUCT GRID ─────────────────────────────────── */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 7% 80px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.product-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.06); }
+.product-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,30,20,0.4) 0%, transparent 50%);
+}
+
+.product-code {
+  position: absolute;
+  top: 14px; right: 14px;
+  z-index: 2;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.product-body {
+  padding: 18px 20px 20px;
+}
+
+.product-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* Price options row */
+.price-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.price-option {
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.price-option-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.price-option-sub {
+  font-size: 0.65rem;
+  color: #bbb;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.price-option-amount {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-option.frame .price-option-amount { color: var(--green-mid); }
+.price-option.digital .price-option-amount { color: var(--blue-mid); }
+
+/* Buy buttons */
+.buy-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.buy-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+}
+.buy-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+.buy-btn.frame {
+  background: linear-gradient(135deg, var(--green-mid), var(--green-dark));
+  color: var(--white);
+  box-shadow: 0 3px 12px rgba(45,106,79,0.25);
+}
+.buy-btn.digital {
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue-deep));
+  color: var(--white);
+  box-shadow: 0 3px 12px rgba(26,111,168,0.25);
+}
+
+/* ─── MOBILE ───────────────────────────────────────── */
+@media (max-width: 960px) {
+  .shop-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .intro-strip { padding: 24px 5%; }
+  .format-bar { padding: 32px 5% 0; grid-template-columns: 1fr; }
+  .section-header { padding: 44px 5% 28px; }
+  .shop-grid { grid-template-columns: 1fr; padding: 0 5% 60px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────────── -->
+<header id="main-header">
+  <div class="logo">
+    <img src="logo.png" alt="Discover Parbat">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html" class="active" aria-current="page">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html" aria-current="page">Shop</a></li>
+  </ul>
+</div>
+
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section class="hero-small">
+  <img src="kokhe.jpg" alt="Photo Prints">
+  <div class="hero-small-content">
+    <div class="hero-eyebrow">Discover Parbat</div>
+    <h1>Photo Prints &amp; Digital Gallery</h1>
+  </div>
+</section>
+
+<!-- ─── INTRO ──────────────────────────────────────── -->
+<div class="intro-strip">
+  <div class="intro-line"></div>
+  <p>Take a piece of the Himalayas home. Each photo is shot on the trails to Himalayas — available as a framed print or a high-resolution digital copy.</p>
+</div>
+
+<!-- ─── FORMAT INFO ─────────────────────────────────── -->
+<div class="format-bar">
+
+  <div class="format-card">
+    <div class="format-icon frame">
+      <!-- Frame icon -->
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg>
+    </div>
+    <div class="format-info">
+      <h4>Framed Print</h4>
+      <p>12 × 18 inch · High-quality print in a wooden frame, ready to hang</p>
+      <span class="format-price">NPR 5,000</span>
+    </div>
+  </div>
+
+  <div class="format-card">
+    <div class="format-icon digital">
+      <!-- Download icon -->
+      <svg viewBox="0 0 24 24"><path d="M12 2v13m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+    </div>
+    <div class="format-info">
+      <h4>Digital Copy</h4>
+      <p>Full-resolution file delivered via email · Print anywhere, any size</p>
+      <span class="format-price">$35</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ─── SECTION HEADER ───────────────────────────────── -->
+<div class="section-header">
+  <div class="section-eyebrow">Photography Collection</div>
+  <h2 class="section-title">Browse <span>Prints</span></h2>
+  <div class="title-divider"></div>
+</div>
+
+<!-- ─── PRODUCT GRID ────────────────────────────────── -->
+<div class="shop-grid">
+
+  <!-- Product 1 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="DP001.jpg" alt="Tea House at KOkhe Danda">
+      <span class="product-code">DP001</span>
+    </div>
+    <div class="product-body">
+      <h3>Tea House at KOkhe Danda with Annapurnas</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="shop-order.html?item=DP001&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="shop-order.html?item=DP001&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="DP002.jpg" alt="Fall Colors">
+      <span class="product-code">DP002</span>
+    </div>
+    <div class="product-body">
+      <h3>Annapurna with the fall colors at Jaljala</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="shop-order.html?item=DP002&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="shop-order.html?item=DP002&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="DP003.jpg" alt="Annapurna Base Camp">
+      <span class="product-code">DP003</span>
+    </div>
+    <div class="product-body">
+      <h3>Annapurna Base Camp</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="shop-order.html?item=DP003&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="shop-order.html?item=DP003&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="DP004.jpg" alt="Mount Fishtail">
+      <span class="product-code">DP004</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="shop-order.html?item=DP004&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="shop-order.html?item=DP004&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="mvp.jpg" alt="DP005">
+      <span class="product-code">DP005</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Dhaukagiri from Muldai Viewpoint</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="shop-order.html?item=DP005&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="shop-order.html?item=DP005&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ─── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Walk slow, go far.</p>
+  </div>
+</footer>
+
+</body>
+</html>

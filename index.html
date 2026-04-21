@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Parbat</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+
+
+<!-- SEO -->
+<meta name="description" content="Discover Parbat — small-group Himalayan treks in Nepal's Annapurna region, guided by locals born on the trail. Offbeat routes, authentic villages, 5-star reviews.">
+<meta name="keywords" content="Discover Parbat, Authentic Trails, Less Touristy Treks,Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+/* ─── HERO ─────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: heroFade 36s infinite;
+  transform: scale(1.05);
+  animation-timing-function: ease-in-out;
+}
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 6s; }
+.hero-slide:nth-child(3) { animation-delay: 12s; }
+.hero-slide:nth-child(4) { animation-delay: 18s; }
+.hero-slide:nth-child(5) { animation-delay: 24s; }
+.hero-slide:nth-child(6) { animation-delay: 30s; }
+@keyframes heroFade {
+   0%   { opacity:0; transform: scale(1.05); }
+  4%   { opacity:1; transform: scale(1.0); }
+  14%  { opacity:1; transform: scale(1.0); }
+  20%  { opacity:0; transform: scale(1.02); }
+  100% { opacity:0; transform: scale(1.05); }
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,30,20,0.25) 0%,
+    rgba(10,30,20,0.15) 40%,
+    rgba(10,30,20,0.65) 100%
+  );
+  z-index: 1;
+}
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 12%;
+  left: 7%;
+  max-width: 660px;
+  animation: heroSlideUp 1.1s ease both;
+}
+@keyframes heroSlideUp {
+  from { opacity:0; transform: translateY(30px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(82,183,136,0.25);
+  border: 1px solid rgba(82,183,136,0.5);
+  color: #a8e6c5;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.08;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.hero p {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.88);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 480px;
+}
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.7;
+  animation: bounce 2.4s ease-in-out infinite;
+}
+.scroll-hint span { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: white; }
+.scroll-hint svg { width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2; stroke-linecap: round; }
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ─── SOCIAL PROOF BAR ─────────────────────────────── */
+.proof-bar {
+  background: linear-gradient(135deg, var(--green-dark) 0%, #12304a 100%);
+  padding: 0 7%;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.proof-bar-inner {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  justify-content: space-between;
+}
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 20px 12px;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.proof-item + .proof-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 24%; bottom: 24%;
+  width: 1px;
+  background: rgba(255,255,255,0.14);
+}
+.proof-text strong {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.2px;
+  line-height: 1.05;
+}
+.proof-text span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.62);
+  margin-top: 5px;
+  display: block;
+}
+
+/* ─── WHY TREK WITH US ─────────────────────────────── */
+.why-section {
+  background: var(--white);
+  padding: 72px 7%;
+  position: relative;
+  overflow: hidden;
+}
+.why-section::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82,183,136,0.06), transparent 70%);
+  pointer-events: none;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.why-header .section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+}
+.why-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.why-header h2 span {
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.why-header .title-divider {
+  width: 52px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin: 16px auto 0;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 30px 24px 26px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+.why-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+  border-radius: 0 0 3px 3px;
+}
+.why-card:hover::after { transform: scaleX(1); }
+.why-emoji { font-size: 2rem; margin-bottom: 14px; display: block; }
+.why-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.why-card p {
+  font-size: 0.84rem;
+  color: #777;
+  line-height: 1.65;
+}
+
+/* ─── SECTION TITLES (shared) ──────────────────────── */
+.section-header {
+  text-align: center;
+  padding: 70px 7% 40px;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.section-title span {
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.title-divider {
+  width: 52px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin: 18px auto 0;
+}
+
+/* ─── TREK CARDS ───────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 0 7% 70px;
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.card-img-wrap { position: relative; overflow: hidden; height: 210px; }
+.card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+.card:hover .card-img-wrap img { transform: scale(1.07); }
+.card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,20,0.6) 0%, transparent 55%); }
+.badge {
+  position: absolute;
+  bottom: 14px; left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  padding: 5px 13px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-light); flex-shrink: 0; }
+.badge.moderate .badge-dot { background: var(--blue-light); }
+.card-content { padding: 18px 20px 22px; }
+.card-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+}
+.card-content p { font-size: 0.87rem; color: #666; line-height: 1.5; }
+.card-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  letter-spacing: 0.5px;
+  transition: gap var(--transition);
+}
+.card:hover .card-arrow { gap: 9px; }
+
+/* ─── DEPARTURES ───────────────────────────────────── */
+.departures-section {
+  background: linear-gradient(160deg, var(--green-dark) 0%, var(--blue-deep) 100%);
+  padding: 70px 7%;
+  position: relative;
+  overflow: hidden;
+}
+.departures-section::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(82,183,136,0.07);
+  pointer-events: none;
+}
+.departures-section .section-header { padding: 0 0 44px; text-align: left; }
+.departures-section .section-eyebrow { color: var(--green-light); }
+.departures-section .section-title   { color: var(--white); }
+.departures-section .section-title span {
+  background: linear-gradient(135deg, var(--green-light), var(--blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.departures-section .title-divider { margin: 18px 0 0; }
+.departures-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 20px; }
+.departure-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  transition: background var(--transition), border var(--transition);
+}
+.departure-card:hover { background: rgba(255,255,255,0.10); border-color: rgba(82,183,136,0.35); }
+.dep-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 14px; }
+.dep-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
+.dep-meta-item { display: flex; flex-direction: column; gap: 2px; }
+.dep-meta-label { font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.45); font-weight: 600; }
+.dep-meta-value { font-size: 0.92rem; font-weight: 500; color: rgba(255,255,255,0.92); }
+.seats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(82,183,136,0.18);
+  border: 1px solid rgba(82,183,136,0.4);
+  color: var(--green-light);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-top: 14px;
+  letter-spacing: 0.4px;
+}
+.book-btn {
+  background: linear-gradient(135deg, var(--green-light), var(--blue-mid));
+  color: var(--white);
+  padding: 13px 28px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 18px rgba(82,183,136,0.35);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.book-btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(82,183,136,0.45); }
+
+/* ─── SEASON CALENDAR ──────────────────────────────── */
+.season-section {
+  background: var(--cream);
+  padding: 80px 7%;
+}
+.season-section .section-header { padding: 0 0 48px; text-align: left; }
+.season-section .title-divider  { margin: 16px 0 0; }
+
+.season-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Month bar chart */
+.season-months {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 32px 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.season-months-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 24px;
+}
+.months-chart {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  height: 140px;
+}
+.month-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+}
+.month-bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  transition: opacity var(--transition);
+  min-height: 4px;
+}
+.month-bar.peak {
+  background: linear-gradient(to top, var(--green-mid), var(--green-light));
+}
+.month-bar.good {
+  background: linear-gradient(to top, var(--blue-mid), var(--blue-light));
+}
+.month-bar.fair {
+  background: rgba(82,183,136,0.25);
+}
+.month-bar.poor {
+  background: rgba(0,0,0,0.08);
+}
+.month-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+.month-bar-wrap.highlight .month-label {
+  color: var(--green-mid);
+  font-weight: 700;
+}
+
+.season-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: #666;
+  font-weight: 500;
+}
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.legend-dot.peak { background: var(--green-light); }
+.legend-dot.good { background: var(--blue-light); }
+.legend-dot.fair { background: rgba(82,183,136,0.4); }
+.legend-dot.poor { background: rgba(0,0,0,0.15); }
+
+/* Season info cards */
+.season-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.season-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-left: 4px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.season-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+.season-card.peak-season { border-left-color: var(--green-light); }
+.season-card.good-season { border-left-color: var(--blue-light); }
+.season-card.avoid-season { border-left-color: rgba(0,0,0,0.15); }
+.season-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+.season-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+.season-card-months {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+.peak-season .season-card-months { background: rgba(82,183,136,0.12); color: var(--green-mid); }
+.good-season .season-card-months { background: rgba(78,168,216,0.12); color: var(--blue-mid); }
+.avoid-season .season-card-months { background: rgba(0,0,0,0.06); color: #999; }
+.season-card p { font-size: 0.84rem; color: #666; line-height: 1.65; }
+
+
+
+/* Add these alongside the existing season styles */
+.month-bar.monsoon {
+  background: linear-gradient(to top, #3a8c5c, #6dbf82);
+}
+.month-bar.low {
+  background: linear-gradient(to top, var(--blue-mid), var(--blue-light));
+}
+.season-card.monsoon-season {
+  border-left-color: #6dbf82;
+}
+.season-card.monsoon-season .season-card-months {
+  background: rgba(61,140,92,0.12);
+  color: #2e7a50;
+}
+.season-card.low-season {
+  border-left-color: var(--blue-light);
+}
+.season-card.low-season .season-card-months {
+  background: rgba(78,168,216,0.12);
+  color: var(--blue-mid);
+}
+.legend-dot.monsoon { background: #6dbf82; }
+.legend-dot.low     { background: var(--blue-light); }
+
+
+/* ─── BLOG ─────────────────────────────────────────── */
+.blog-section { padding: 70px 7% 80px; background: var(--white); }
+.blog-section .section-header { padding: 0 0 40px; text-align: left; }
+.blog-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cream);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: inherit;
+  max-width: 860px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.blog-card-img { position: relative; overflow: hidden; min-height: 260px; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); }
+.blog-card:hover .blog-card-img img { transform: scale(1.06); }
+.blog-tag {
+  position: absolute;
+  top: 16px; left: 16px;
+  z-index: 2;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.blog-card-body {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.blog-meta { font-size: 0.73rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green-mid); }
+.blog-card-body h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--text-dark); line-height: 1.35; }
+.blog-card-body p { font-size: 0.9rem; color: #777; line-height: 1.7; }
+.blog-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  margin-top: 4px;
+  transition: gap var(--transition);
+}
+.blog-card:hover .blog-read-more { gap: 10px; }
+.blog-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 28px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  text-decoration: none;
+  transition: gap var(--transition);
+}
+.blog-all-link:hover { gap: 11px; }
+
+/* ─── TESTIMONIALS ─────────────────────────────────── */
+.testimonials-section {
+  background: linear-gradient(160deg, var(--green-dark) 0%, #0f2535 100%);
+  padding: 80px 7%;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials-section::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 5%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+.testimonials-section .section-header { padding: 0 0 48px; }
+.testimonials-section .section-eyebrow { color: var(--green-light); }
+.testimonials-section .section-title   { color: var(--white); }
+.testimonials-section .section-title span {
+  background: linear-gradient(135deg, var(--green-light), var(--blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.testimonials-section .title-divider { margin: 18px auto 0; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 34px 34px 30px;
+  position: relative;
+  transition: background var(--transition), border var(--transition);
+}
+.testimonial-card:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(82,183,136,0.28);
+}
+
+/* Big quote mark */
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 18px; right: 26px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(82,183,136,0.2);
+  font-weight: 700;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 18px;
+}
+.stars span {
+  font-size: 0.9rem;
+}
+
+.testimonial-card blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+.author-info strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.author-info span {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.45);
+}
+.trek-tag {
+  display: inline-block;
+  background: rgba(82,183,136,0.15);
+  border: 1px solid rgba(82,183,136,0.3);
+  color: var(--green-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border-radius: 100px;
+  margin-top: 3px;
+}
+
+/* ─── REVIEWS ──────────────────────────────────────── */
+.reviews-section { padding: 80px 7%; text-align: center; background: var(--cream); }
+.reviews-section .section-header { padding: 0 0 40px; }
+.review-cards { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 2px solid transparent;
+}
+.review-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.review-btn.fb { background: var(--black); color: var(--white); }
+.review-btn.google { background: var(--white); color: var(--text-dark); border-color: rgba(0,0,0,0.1); }
+.review-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.review-note { margin-top: 36px; font-size: 0.88rem; color: #888; }
+
+/* ─── MOBILE ───────────────────────────────────────── */
+@media (max-width: 960px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .season-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .departures-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .proof-bar { padding: 0 5%; }
+  .proof-bar-inner { flex-wrap: wrap; }
+  .proof-item { flex: 0 0 50%; padding: 18px 0; }
+  .proof-item:nth-child(3)::before,
+  .proof-item:nth-child(2)::before { display: none; }
+  .proof-item:nth-child(3)::before,
+  .proof-item:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    bottom: auto;
+    width: 80%;
+    left: 10%;
+    background: rgba(255,255,255,0.08);
+  }
+  .why-grid { grid-template-columns: 1fr; }
+  .blog-card { grid-template-columns: 1fr; }
+  .blog-card-img { min-height: 200px; }
+}
+@media (max-width: 640px) {
+  .book-btn { white-space: normal; text-align: center; }
+
+  .proof-text strong { font-size: 1.18rem; }
+  .proof-text span { font-size: 0.62rem; letter-spacing: 1.5px; }
+  .hero-content { left: 5%; bottom: 10%; }
+  .section-header { padding: 50px 5% 30px; }
+  .cards-grid { padding: 0 5% 50px; }
+  .departures-section { padding: 50px 5%; }
+  .reviews-section { padding: 60px 5%; }
+  .why-section { padding: 50px 5%; }
+  .season-section { padding: 60px 5%; }
+  .testimonials-section { padding: 60px 5%; }
+  .blog-section { padding: 60px 5%; }
+  .review-btn { padding: 14px 24px; font-size: 0.9rem; }
+  .departure-card { flex-direction: column; align-items: flex-start; }
+  .months-chart { gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header id="main-header">
+  <div class="logo">
+    <img src="logo.png" alt="Discover Parbat">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<!-- ─── HERO ───────────────────────────────────────────── -->
+<section class="hero">
+  <img class="hero-slide" src="kokhe.jpg" alt="Kokhe Danda">
+  <img class="hero-slide" src="mardi.jpg" alt="Mardi Himal">
+  <img class="hero-slide" src="khopra.jpg" alt="Khopra Ridge">
+  <img class="hero-slide" src="abc.jpg" alt="Annapurna Base Camp">
+  <img class="hero-slide" src="muldai.jpg" alt="Muldai Peak">
+  <img class="hero-slide" src="haljure.jpg" alt="Haljure">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Parbat, Nepal</div>
+    <h1>Discover<br>Parbat</h1>
+    <p>Explore hidden trails, yoga retreats and authentic Himalayan experiences.</p>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- ─── SOCIAL PROOF BAR ───────────────────────────────── -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item">
+      <div class="proof-text">
+        <strong>30+</strong>
+        <span>Countries Represented</span>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-text">
+        <strong>500+</strong>
+        <span>Trekkers Guided</span>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-text">
+        <strong>5.0</strong>
+        <span>Google Rating</span>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="proof-text">
+        <strong>Est. 2017</strong>
+        <span>Born in Parbat</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── WHY TREK WITH US ───────────────────────────────── -->
+<section class="why-section">
+  <div class="why-header">
+    <span class="section-eyebrow">The Discover Parbat Difference</span>
+    <h2>Why Trek <span>With Us</span></h2>
+    <div class="title-divider"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-emoji">🧭</span>
+      <h3>100% Local Guides</h3>
+      <p>Every guide and porter is from the trail region. They know these ridges, these villages, and these stories by heart — not from a manual.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-emoji">👥</span>
+      <h3>Small Groups Only</h3>
+      <p>We cap all treks at 10 trekkers. You'll feel the mountain, not the crowd. Quiet trails, genuine connections.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-emoji">🌿</span>
+      <h3>Eco & Community First</h3>
+      <p>Plastic-free, locally sourced meals, and every rupee stays in the village. Trekking that gives back.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-emoji">🙏</span>
+      <h3>Personal from Day One</h3>
+      <p>When you write to us, a real person replies. No call centres, no templates — just honest, warm conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURED TREKS ─────────────────────────────────── -->
+<div class="section-header">
+  <div class="section-eyebrow">Handpicked Routes</div>
+  <h2 class="section-title">Featured <span>Treks</span></h2>
+  <div class="title-divider"></div>
+</div>
+
+<div class="cards-grid">
+  <a class="card" href="Kokhe-Danda-Trek.html">
+    <div class="card-img-wrap">
+      <img src="kokhe.jpg" alt="Kokhe Danda Trek">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 5 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Kokhe Danda Trek</h3>
+      <p>Village culture + Himalayan views</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Mardi-Himal-Trek.html">
+    <div class="card-img-wrap">
+      <img src="mardi.jpg" alt="Mardi Himal Trek">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 5 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Mardi Himal Trek</h3>
+      <p>Ridge trek towards Fishtail</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Khopra-Danda-Trek.html">
+    <div class="card-img-wrap">
+      <img src="khopra.jpg" alt="Khopra Ridge Trek">
+      <div class="card-overlay"></div>
+      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 8 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Khopra Ridge Trek</h3>
+      <p>Beautiful offbeat ridge trek</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Annapurna-Base-Camp-Trek.html">
+    <div class="card-img-wrap">
+      <img src="abc.jpg" alt="Annapurna Base Camp">
+      <div class="card-overlay"></div>
+      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 10 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Annapurna Base Camp Trek</h3>
+      <p>Classic Himalayan journey</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Short-Kokhe-Danda-Trek.html">
+    <div class="card-img-wrap">
+      <img src="kokhe.jpg" alt="Short Kokhe Danda Trek">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 4 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Short Kokhe Danda Trek</h3>
+      <p>Short and scenic trek</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Multiple-Viewpoints-Trek.html">
+    <div class="card-img-wrap">
+      <img src="mvp.jpg" alt="Multiple Viewpoints Trek">
+      <div class="card-overlay"></div>
+      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 14 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Multiple Viewpoints Trek</h3>
+      <p>Best viewpoints in one trek</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+
+  <a class="card" href="Short-Multiple-Viewpoints-Trek.html">
+    <div class="card-img-wrap">
+      <img src="shortmvp.jpg" alt="Short Multiple Viewpoints Trek">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 6 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Short Multiple Viewpoints Trek</h3>
+      <p>Mulde, Poonhill &amp; Kokhe</p>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+</div>
+
+<!-- ─── FIXED DEPARTURES ───────────────────────────────── -->
+<section class="departures-section">
+  <div class="section-header">
+    <div class="section-eyebrow">Limited Seats Available</div>
+    <h2 class="section-title">Join a Fixed <span>Departure</span></h2>
+    <div class="title-divider"></div>
+  </div>
+  <div class="departures-grid">
+    <div class="departure-card">
+      <div class="dep-info">
+        <div class="dep-name">Kokhe Danda Trek</div>
+        <div class="dep-meta">
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Date</span>
+            <span class="dep-meta-value">10 May, 2026</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Duration</span>
+            <span class="dep-meta-value">5 Days</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Joined</span>
+            <span class="dep-meta-value">1 Person</span>
+          </div>
+        </div>
+        <span class="seats-pill">● 5 Seats Left</span>
+      </div>
+      <a href="custom-trek.html?source=fixed&trek=Kokhe%20Danda%20Trek&duration=5%20Days" class="book-btn">Book Now</a>
+    </div>
+    <div class="departure-card">
+      <div class="dep-info">
+        <div class="dep-name">Multiple Viewpoints Trek</div>
+        <div class="dep-meta">
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Date</span>
+            <span class="dep-meta-value">Oct 12, 2026</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Duration</span>
+            <span class="dep-meta-value">14 Days</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Joined</span>
+            <span class="dep-meta-value">2 People</span>
+          </div>
+        </div>
+        <span class="seats-pill">● 6 Seats Left</span>
+      </div>
+      <a href="custom-trek.html?source=fixed&trek=Multiple%20Viewpoints%20Trek&duration=14%20Days" class="book-btn">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TREKKING SEASON CALENDAR ───────────────────────── -->
+<section class="season-section">
+  <div class="section-header">
+    <div class="section-eyebrow">Plan Your Visit</div>
+    <h2 class="section-title">Best Time to <span>Trek</span></h2>
+    <div class="title-divider"></div>
+  </div>
+
+  <div class="season-grid">
+
+    <!-- Visual month chart -->
+    <div class="season-months">
+      <div class="season-months-title">Trekking Conditions by Month</div>
+      <div class="months-chart">
+        <div class="month-bar-wrap">
+          <div class="month-bar fair" style="height:40%"></div>
+          <div class="month-label">Jan</div>
+        </div>
+        <div class="month-bar-wrap">
+          <div class="month-bar fair" style="height:45%"></div>
+          <div class="month-label">Feb</div>
+        </div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar peak" style="height:85%"></div>
+          <div class="month-label">Mar</div>
+        </div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar peak" style="height:100%"></div>
+          <div class="month-label">Apr</div>
+        </div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar good" style="height:75%"></div>
+          <div class="month-label">May</div>
+        </div>
+      <div class="month-bar-wrap">
+  <div class="month-bar good" style="height:42%"></div>
+  <div class="month-label">Jun</div>
+</div>
+<div class="month-bar-wrap">
+  <div class="month-bar fair" style="height:30%"></div>
+  <div class="month-label">Jul</div>
+</div>
+<div class="month-bar-wrap">
+  <div class="month-bar fair" style="height:28%"></div>
+  <div class="month-label">Aug</div>
+</div>
+<div class="month-bar-wrap highlight">
+  <div class="month-bar good" style="height:42%"></div>
+  <div class="month-label">Sep</div>
+</div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar peak" style="height:100%"></div>
+          <div class="month-label">Oct</div>
+        </div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar peak" style="height:95%"></div>
+          <div class="month-label">Nov</div>
+        </div>
+        <div class="month-bar-wrap highlight">
+          <div class="month-bar low" style="height:55%"></div>
+          <div class="month-label">Dec</div>
+        </div>
+      </div>
+      <div class="season-legend">
+        <div class="legend-item"><span class="legend-dot peak"></span>Peak Season</div>
+        <div class="legend-item"><span class="legend-dot good"></span>Good</div>
+        <div class="legend-item"><span class="legend-dot fair"></span>Fair</div>
+        <div class="legend-item"><span class="legend-dot monsoon"></span>Monsoon</div>
+        <div class="legend-item"><span class="legend-dot low"></span>Low</div>
+      </div>
+    </div>
+
+    <!-- Season info cards -->
+    <div class="season-cards">
+      <div class="season-card peak-season">
+        <span class="season-card-icon">🌸</span>
+        <div>
+          <span class="season-card-months">March – May</span>
+          <h4>Spring — Prime Season</h4>
+          <p>Rhododendrons blanketing the ridges in crimson and pink, crisp skies, and the clearest mountain views of the year. April is our most beloved month on the trail.</p>
+        </div>
+      </div>
+      <div class="season-card peak-season">
+        <span class="season-card-icon">🍂</span>
+        <div>
+          <span class="season-card-months">October – November</span>
+          <h4>Autumn — Peak Season</h4>
+          <p>Post-monsoon air brings razor-sharp visibility and golden light on the peaks. Dry trails, warm days, and cool starlit nights — the classic Nepal trekking window.</p>
+        </div>
+      </div>
+      <div class="season-card monsoon-season">
+        <span class="season-card-icon">🌿</span>
+        <div>
+          <span class="season-card-months">June – September</span>
+          <h4>Monsoon — Raw & Lush</h4>
+          <p>The trails come alive with roaring waterfalls, thick jungle greenery, and wildflowers you won't see any other time of year. Fewer trekkers, dramatic skies, and an intimacy with the forest that peak season simply can't offer. Best suited for experienced trekkers who don't mind wet boots.</p>
+        </div>
+      </div>
+      <div class="season-card low-season">
+        <span class="season-card-icon">❄️</span>
+        <div>
+          <span class="season-card-months">December – February</span>
+          <h4>Winter — Hidden Gem</h4>
+          <p>December is one of our best-kept secrets. The crowds are gone, the air is crystal clear, and snow-dusted ridges make for extraordinary views. A quieter, more personal kind of trekking experience — and often our guides' personal favourite.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── BLOG SECTION ───────────────────────────────────── -->
+<section class="blog-section">
+  <div class="section-header">
+    <div class="section-eyebrow">From the Blog</div>
+    <h2 class="section-title">Latest <span>Article</span></h2>
+    <div class="title-divider" style="margin: 18px 0 0;"></div>
+  </div>
+  <a href="Why-Discover-Parbat-For-Kokhe-Danda-Trek.html" class="blog-card">
+    <div class="blog-card-img">
+      <img src="whykokhe.jpg" alt="Magar Cultural Dress">
+      <span class="blog-tag">Trek Guide</span>
+    </div>
+    <div class="blog-card-body">
+      <p class="blog-meta">Discover Parbat &nbsp;·&nbsp; 2026</p>
+      <h3>Why You Should Choose Discover Parbat for Kokhe Danda Trek</h3>
+      <p>How a trek born during lockdown became one of Nepal's best-kept trekking secrets — and why the people who built it are the best to guide it.</p>
+      <span class="blog-read-more">Read Article →</span>
+    </div>
+  </a>
+  <a href="articles.html" class="blog-all-link">View all articles →</a>
+</section>
+
+<!-- ─── TESTIMONIALS ───────────────────────────────────── -->
+<section class="testimonials-section">
+  <div class="section-header">
+    <div class="section-eyebrow">Voices from the Trail</div>
+    <h2 class="section-title">What Trekkers <span>Say</span></h2>
+    <div class="title-divider"></div>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <div class="stars">
+        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+      </div>
+      <blockquote>
+        We did the 5-day Kokhe Danda Trek with Sameer and absolutely loved it. We enjoyed the mixture of culture, beautiful walks, and amazing views. Sameer took great care of us and shared his rich knowledge about the religion, culture, and geography of the region. 
+Absolutely recommended!
+      </blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">L</div>
+        <div class="author-info">
+          <strong>Linda R.</strong>
+          <span>Germany</span>
+          <span class="trek-tag">Kokhe Danda Trek</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">
+        <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+      </div>
+      <blockquote>
+        Amazing two-week trek in the Annapurna region! Our guide, Sameer, was outstanding, super friendly, great at time management, and incredibly knowledgeable. Since he was born in the area, he knows the region inside out.
+The accommodations were comfortable and well selected, and the whole trek felt like a true Nepalese experience. He shared a lot of interesting knowledge about local culture and religion, which added so much value to the journey.</blockquote>
+      <div class="testimonial-author">
+        <div class="author-avatar">Y</div>
+        <div class="author-info">
+          <strong>Yinthe V.</strong>
+          <span>Netherland</span>
+          <span class="trek-tag">multiple Viewpoints Trek</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── REVIEWS ────────────────────────────────────────── -->
+<section class="reviews-section">
+  <div class="section-header">
+    <div class="section-eyebrow">From Our Travelers</div>
+    <h2 class="section-title">Read <span>Reviews</span></h2>
+    <div class="title-divider"></div>
+  </div>
+  <div class="review-cards">
+    <a class="review-btn fb" href="https://www.facebook.com/discoverparbat" target="_blank">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      Facebook Reviews
+    </a>
+    <a class="review-btn google" href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Google Reviews
+    </a>
+  </div>
+  <p class="review-note">Trusted by trekkers from 30+ countries</p>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Nepal Himalayas, Once is not enough.</p>
+  </div>
+</footer>
+
+<!-- ─── STICKY ENQUIRE BUTTON ──────────────────────────── -->
+<div class="sticky-enquire" id="sticky-enquire">
+  <a class="sticky-btn" href="mailto:info@discoverparbat.com?subject=Trek%20Enquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20trekking%20with%20Discover%20Parbat.%20Could%20you%20share%20more%20details%3F%0A%0AThank%20you.">
+    <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    Enquire Now
+  </a>
+</div>
+
+<!-- ─── SCRIPTS ────────────────────────────────────────── -->
+</body>
+</html>

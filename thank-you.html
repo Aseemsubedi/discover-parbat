@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | Discover Parbat</title>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+body { background: #f7f4ef; }
+.thank-wrap {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+  padding: 110px 7% 70px;
+}
+.thank-card {
+  width: min(760px, 100%);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.08);
+  padding: 34px 32px;
+}
+.thank-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.1rem, 4vw, 2.8rem);
+  color: #1a3d2b;
+  margin-bottom: 10px;
+}
+.thank-card p {
+  color: #3d3d3d;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+.next-steps {
+  margin: 16px 0;
+  padding-left: 18px;
+  color: #333;
+}
+.next-steps li { margin-bottom: 8px; }
+.cta-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #2d6a4f, #1a6fa8);
+}
+.btn-ghost {
+  color: #1a3d2b;
+  border: 1px solid rgba(26,61,43,0.25);
+  background: #fff;
+}
+.emergency {
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+.emergency a {
+  color: #2d6a4f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.emergency a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .thank-wrap { padding: 96px 4% 44px; }
+  .thank-card { padding: 26px 16px; border-radius: 14px; }
+  .thank-card p { font-size: 0.95rem; }
+  .next-steps { padding-left: 16px; }
+  .cta-row { gap: 10px; }
+  .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<header id="main-header">
+  <div class="logo"><img src="logo.png" alt="Discover Parbat"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<main class="thank-wrap">
+  <section class="thank-card">
+    <h1>Thank You for Your Inquiry</h1>
+    <p>We have received your details and our team will contact you with trip guidance, pricing confirmation, and availability updates.</p>
+    <p>What happens next:</p>
+    <ul class="next-steps">
+      <li>We review your route, date, and group details.</li>
+      <li>We send a clear response with next steps.</li>
+      <li>We help finalize your plan quickly and smoothly.</li>
+    </ul>
+    <p class="emergency">For emergencies, contact WhatsApp: <a href="https://wa.me/9779867649780" target="_blank" rel="noopener">+977 986-7649780</a></p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="treks.html">Back to Treks</a>
+      <a class="btn btn-ghost" href="index.html">Go to Home</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

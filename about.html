@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us – Discover Parbat</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+
+
+<!-- SEO -->
+<meta name="description" content="Meet the team behind Discover Parbat — locally-born guides and porters from the villages along Nepal's offbeat Himalayan trails. Our story, values and why we trek small.">
+<meta name="keywords" content="Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+/* ─── ABOUT HERO ─────────────────────────────────────── */
+.about-hero {
+  padding-top: 72px;
+  position: relative;
+  background: linear-gradient(160deg, var(--green-dark) 0%, #0f2a1e 40%, var(--blue-deep) 100%);
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+/* Organic background patterns */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -80px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82,183,136,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px; left: -60px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(78,168,216,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Leaf pattern overlay */
+.hero-leaves {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: 
+    radial-gradient(circle at 20% 50%, var(--green-light) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, var(--blue-light) 1px, transparent 1px),
+    radial-gradient(circle at 60% 80%, var(--green-light) 1px, transparent 1px);
+  background-size: 60px 60px, 80px 80px, 50px 50px;
+}
+
+/* Mountain silhouette SVG line */
+.hero-mountain-line {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  overflow: hidden;
+}
+.hero-mountain-line svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 80px 7% 90px;
+  max-width: 760px;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(82,183,136,0.2);
+  border: 1px solid rgba(82,183,136,0.45);
+  color: #a8e6c5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.about-hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 22px;
+  animation: fadeUp 0.9s ease both 0.1s;
+}
+
+.about-hero-content h1 em {
+  font-style: italic;
+  color: var(--green-light);
+}
+
+.about-hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.75;
+  max-width: 520px;
+  font-weight: 300;
+  animation: fadeUp 1s ease both 0.2s;
+}
+
+/* Floating stat badges in hero */
+.hero-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  animation: fadeUp 1s ease both 0.35s;
+}
+
+.hero-stat-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  padding: 12px 22px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hero-stat-pill strong {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+.hero-stat-pill span {
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION SHARED ─────────────────────────────────── */
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.section-title span {
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.title-divider {
+  width: 52px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin-top: 18px;
+}
+
+/* ─── STORY SECTION ──────────────────────────────────── */
+.story-section {
+  padding: 90px 7%;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative number watermark */
+.story-section::before {
+  content: '२०२०';
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18rem;
+  font-weight: 700;
+  color: rgba(45,106,79,0.03);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.story-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.story-visual {
+  position: relative;
+}
+
+.story-img-main {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Accent card floating over image */
+.story-accent-card {
+  position: absolute;
+  bottom: -24px;
+  right: -28px;
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+  color: var(--white);
+  padding: 22px 28px;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+  max-width: 200px;
+}
+.story-accent-card .big-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--green-light);
+}
+.story-accent-card p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 5px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+/* Green dot accent */
+.story-dot-accent {
+  position: absolute;
+  top: -20px; left: -20px;
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(82,183,136,0.25), rgba(78,168,216,0.15));
+  border: 2px dashed rgba(82,183,136,0.35);
+}
+
+.story-text .section-eyebrow { display: block; margin-bottom: 12px; }
+.story-text .section-title { margin-bottom: 10px; }
+.story-text .title-divider { margin-top: 16px; margin-bottom: 30px; }
+
+.story-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.story-text p strong {
+  color: var(--green-mid);
+  font-weight: 600;
+}
+
+.story-text p:last-of-type { margin-bottom: 0; }
+
+.story-quote {
+  margin: 30px 0;
+  padding: 22px 28px;
+  border-left: 3px solid var(--green-light);
+  background: linear-gradient(135deg, rgba(82,183,136,0.06), rgba(78,168,216,0.04));
+  border-radius: 0 10px 10px 0;
+}
+
+.story-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--green-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── VALUES SECTION ─────────────────────────────────── */
+.values-section {
+  padding: 90px 7%;
+  background: var(--cream);
+  text-align: center;
+}
+
+.values-section .section-eyebrow { color: var(--green-mid); }
+.values-section .title-divider { margin: 18px auto 52px; }
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 30px 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.04);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Gradient top edge */
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+}
+.value-card.green::before {
+  background: linear-gradient(90deg, var(--green-mid), var(--green-light));
+}
+.value-card.blue::before {
+  background: linear-gradient(90deg, var(--blue-mid), var(--blue-light));
+}
+.value-card.teal::before {
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+}
+
+.value-icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.value-card.green .value-icon { background: rgba(45,106,79,0.1); }
+.value-card.blue  .value-icon { background: rgba(26,111,168,0.1); }
+.value-card.teal  .value-icon { background: rgba(82,183,136,0.12); }
+
+.value-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ─── TEAM SECTION ───────────────────────────────────── */
+.team-section {
+  padding: 90px 7%;
+  background: var(--white);
+}
+
+.team-section .title-divider { margin-top: 16px; margin-bottom: 52px; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+}
+
+.team-card {
+  background: var(--cream);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-img-wrap {
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+}
+
+.team-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.team-card:hover .team-img-wrap img { transform: scale(1.05); }
+
+/* Placeholder avatar when no image */
+.team-avatar-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: -2px;
+}
+
+.team-card-body {
+  padding: 22px 24px 26px;
+}
+
+.team-card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.team-role {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.team-card-body p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.65;
+}
+
+/* ─── ECO PLEDGE SECTION ─────────────────────────────── */
+.eco-section {
+  background: linear-gradient(160deg, #0d3320 0%, var(--green-dark) 45%, var(--blue-deep) 100%);
+  padding: 90px 7%;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 35%, rgba(82,183,136,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 65%, rgba(78,168,216,0.07) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.eco-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1100px;
+}
+
+.eco-text .section-eyebrow { color: var(--green-light); }
+.eco-text .section-title {
+  color: var(--white);
+  margin-bottom: 0;
+}
+.eco-text .section-title span {
+  background: linear-gradient(135deg, var(--green-light), var(--blue-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.eco-text .title-divider { margin-top: 16px; margin-bottom: 28px; }
+
+.eco-text p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.eco-pledges {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eco-pledge-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px;
+  padding: 16px 20px;
+  transition: background var(--transition);
+}
+.eco-pledge-item:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(82,183,136,0.3);
+}
+
+.pledge-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.eco-pledge-item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.eco-pledge-item p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Certification badge visual */
+.eco-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eco-badge-circle {
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 2px dashed rgba(82,183,136,0.3);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateSlow 30s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.eco-badge-inner {
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82,183,136,0.12), rgba(26,61,43,0.9));
+  border: 1px solid rgba(82,183,136,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  animation: rotateSlow 30s linear infinite reverse;
+  text-align: center;
+  padding: 20px;
+}
+
+.eco-badge-inner .big-leaf { font-size: 3rem; }
+
+.eco-badge-inner h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.eco-badge-inner p {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green-light);
+  font-weight: 600;
+}
+
+/* Orbiting dots */
+.eco-badge-circle::before,
+.eco-badge-circle::after {
+  content: '';
+  position: absolute;
+  width: 10px; height: 10px;
+  background: var(--green-light);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(82,183,136,0.7);
+}
+.eco-badge-circle::before { top: 10px; left: 50%; transform: translateX(-50%); }
+.eco-badge-circle::after  { bottom: 10px; left: 50%; transform: translateX(-50%); }
+
+/* ─── TESTIMONIAL PULL QUOTE ─────────────────────────── */
+.pullquote-section {
+  padding: 90px 7%;
+  background: var(--cream);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pullquote-section::before {
+  content: '"';
+  position: absolute;
+  top: -20px; left: 6%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20rem;
+  font-weight: 700;
+  color: rgba(45,106,79,0.05);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pullquote-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.pullquote-inner blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--green-dark);
+  line-height: 1.55;
+  margin-bottom: 28px;
+}
+
+.pullquote-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.author-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.author-info strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.author-info span {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+/* ─── CTA STRIP ──────────────────────────────────────── */
+.cta-strip {
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  padding: 64px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.cta-strip h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.cta-strip p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.cta-strip-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.cta-btn-primary {
+  background: var(--white);
+  color: var(--green-dark);
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.3px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+.cta-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+}
+
+.cta-btn-secondary {
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  backdrop-filter: blur(8px);
+  transition: background var(--transition), border var(--transition);
+}
+.cta-btn-secondary:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.6);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .story-inner { grid-template-columns: 1fr; gap: 50px; }
+  .story-visual { max-width: 480px; }
+  .story-accent-card { right: -10px; }
+  .eco-inner { grid-template-columns: 1fr; gap: 50px; }
+  .eco-visual { display: none; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .about-hero-content { padding: 60px 5% 70px; }
+  .hero-stats { gap: 10px; }
+  .story-section,
+  .values-section,
+  .team-section,
+  .eco-section,
+  .pullquote-section { padding: 60px 5%; }
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .cta-strip { padding: 50px 5%; flex-direction: column; align-items: flex-start; }
+  .story-accent-card { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header id="main-header">
+  <div class="logo">
+    <img src="logo.png" alt="Discover Parbat">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<!-- ─── ABOUT HERO ─────────────────────────────────────── -->
+<section class="about-hero">
+  <div class="hero-leaves"></div>
+  <div class="hero-mountain-line">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="white">
+      <path d="M0,80 L120,40 L240,70 L360,20 L480,55 L600,10 L720,45 L840,15 L960,50 L1080,25 L1200,60 L1320,30 L1440,65 L1440,120 L0,120 Z"/>
+    </svg>
+  </div>
+
+  <div class="about-hero-content">
+    <span class="hero-eyebrow">Our Story</span>
+    <h1>Born from the<br><em>Mountains</em> of Parbat</h1>
+    <p>A small team rooted in the hills of western Nepal, sharing the trails, culture and spirit of Parbat with travelers from around the world — slowly, mindfully, and with deep respect for the land.</p>
+    <div class="hero-stats">
+      <div class="hero-stat-pill">
+        <strong>2020</strong>
+        <span>Founded</span>
+      </div>
+      <div class="hero-stat-pill">
+        <strong>30+</strong>
+        <span>Countries</span>
+      </div>
+      <div class="hero-stat-pill">
+        <strong>7</strong>
+        <span>Trek Routes</span>
+      </div>
+      <div class="hero-stat-pill">
+        <strong>100%</strong>
+        <span>Local Guides</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR STORY ─────────────────────────────────────── -->
+<section class="story-section">
+  <div class="story-inner">
+    <div class="story-visual">
+      <div class="story-dot-accent"></div>
+      <img class="story-img-main" src="kokhe.jpg" alt="Parbat mountains">
+      <div class="story-accent-card">
+        <div class="big-year">2017</div>
+        <p>Born during lockdown, from a love of these hills</p>
+      </div>
+    </div>
+    <div class="story-text">
+      <span class="section-eyebrow">How it began</span>
+      <h2 class="section-title">A Trek Built<br><span>During Lockdown</span></h2>
+      <div class="title-divider"></div>
+      <p>When the world stood still in 2017-2020, our founder — a native of Parbat — spent months walking the ridges and forests of his home district. Trails that locals had walked for generations but travelers had never seen.</p>
+      <p>From that stillness, <strong>Discover Parbat</strong> was born. A trekking agency rooted not in a Kathmandu office but in the villages, rhododendron forests, and high ridgelines of Parbat district itself.</p>
+
+      <div class="story-quote">
+        <p>"We didn't want to bring trekkers to Nepal. We wanted to bring them to our home — and show them what we see every day."</p>
+      </div>
+
+      <p>Every trek we run starts and ends here. Our guides are from these villages. Our teahouses are family-run. When you trek with us, your money stays in the community that built these trails.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR VALUES ─────────────────────────────────────── -->
+<section class="values-section">
+  <span class="section-eyebrow">What drives us</span>
+  <h2 class="section-title">Our <span>Values</span></h2>
+  <div class="title-divider"></div>
+
+  <div class="values-grid">
+
+    <div class="value-card green">
+      <div class="value-icon">🌿</div>
+      <h3>Rooted in Community</h3>
+      <p>All our guides, porters, and teahouse partners are local to Parbat. We exist to strengthen the communities that have shaped these mountains for centuries.</p>
+    </div>
+
+    <div class="value-card blue">
+      <div class="value-icon">🏔️</div>
+      <h3>Slow Travel Philosophy</h3>
+      <p>We design treks to move at the pace of the landscape — not to tick summits, but to absorb them. Rest days, acclimatisation, and wonder are built into every itinerary.</p>
+    </div>
+
+    <div class="value-card teal">
+      <div class="value-icon">🙏</div>
+      <h3>Spiritual Sensitivity</h3>
+      <p>Parbat is sacred land. From the temples of Kusma to the high Khayar Lake, we approach every site with the reverence it deserves and share that spirit with our trekkers.</p>
+    </div>
+
+    <div class="value-card teal">
+      <div class="value-icon">🌱</div>
+      <h3>Leave No Trace</h3>
+      <p>Plastic-free packing, locally sourced meals, and no mass tourism. We cap group sizes and choose routes that let the land breathe between visits.</p>
+    </div>
+
+    <div class="value-card green">
+      <div class="value-icon">🤝</div>
+      <h3>Honest, Personal Service</h3>
+      <p>No call centres. When you write to us, you're talking to the people who will actually walk the trail with you. Small is intentional.</p>
+    </div>
+
+    <div class="value-card blue">
+      <div class="value-icon">✨</div>
+      <h3>Authentic Experience</h3>
+      <p>We resist the tourist trail. Our routes pass through villages where travelers are still a novelty and a warm welcome is genuine — because it is.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── MEET THE TEAM ──────────────────────────────────── -->
+<section class="team-section">
+  <span class="section-eyebrow">The People Behind It</span>
+  <h2 class="section-title">Meet the <span>Team</span></h2>
+  <div class="title-divider"></div>
+
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-img-wrap">
+        <!-- Replace with actual team photo: <img src="founder.jpg" alt="Founder"> -->
+        <div class="team-avatar-placeholder">SR</div>
+      </div>
+      <div class="team-card-body">
+        <h3>Sameer Regmi</h3>
+        <span class="team-role">Founder & Lead Guide</span>
+        <p>Born and raised in Parbat, Sameer has walked every ridge in this region. He created Discover Parbat to share his homeland's beauty, and the peaceful authentic trails — with the world.</p>
+      </div>
+    </div>
+
+    
+
+  </div>
+</section>
+
+<!-- ─── ECO PLEDGE ─────────────────────────────────────── -->
+<section class="eco-section">
+  <div class="eco-inner">
+    <div class="eco-text">
+      <span class="section-eyebrow">Our Responsibility</span>
+      <h2 class="section-title">Trekking with<br><span>Purpose</span></h2>
+      <div class="title-divider"></div>
+      <p>The mountains that make our work possible are fragile. Every step we take, we take with that in mind. These are the commitments we make to Parbat — and to every traveler who chooses us.</p>
+
+      <div class="eco-pledges">
+        <div class="eco-pledge-item">
+          <span class="pledge-icon">🚯</span>
+          <div>
+            <h4>Zero Single-Use Plastic on Trails</h4>
+            <p>Reusable water bottles and filtered refills at all our teahouses. No plastic bags, no disposable cutlery.</p>
+          </div>
+        </div>
+        <div class="eco-pledge-item">
+          <span class="pledge-icon">🌾</span>
+          <div>
+            <h4>Locally Sourced, Seasonal Meals</h4>
+            <p>Dal bhat, local vegetables, and honey from Parbat's forests. We support local farmers over imported goods.</p>
+          </div>
+        </div>
+        <div class="eco-pledge-item">
+          <span class="pledge-icon">🌳</span>
+          <div>
+            <h4>Trail Maintenance & Reforestation</h4>
+            <p>A portion of every booking funds trail upkeep and native tree planting in partnership with local councils.</p>
+          </div>
+        </div>
+        <div class="eco-pledge-item">
+          <span class="pledge-icon">👥</span>
+          <div>
+            <h4>Small Groups, Always</h4>
+            <p>We never run groups larger than 10 trekkers. The trail deserves quiet. So do the villages we pass through.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eco-visual">
+      <div class="eco-badge-circle">
+        <div class="eco-badge-inner">
+          <span class="big-leaf">🌿</span>
+          <h3>Eco&nbsp;Conscious Trekking</h3>
+          <p>Parbat, Nepal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PULL QUOTE ─────────────────────────────────────── -->
+<section class="pullquote-section">
+  <div class="pullquote-inner">
+    <blockquote>
+      "We had the most incredible time thanks to Sameer! It was a truly authentic experience where we were shown around local villages and stayed in the most beautiful homestays in the mountains. The team was all so lovely and Sameer was kind enough to teach us all about Hinduism which was fascinating and we learned so much. "</blockquote>
+
+    <div class="pullquote-author">
+      <div class="author-avatar">M</div>
+      <div class="author-info">
+        <strong>Molly White.</strong>
+        <span>Kokhe Danda Trek · United Kingdom</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA STRIP ──────────────────────────────────────── -->
+<div class="cta-strip">
+  <div>
+    <h2>Ready to walk with us?</h2>
+    <p>Browse our treks or write to us — we answer every message personally.</p>
+  </div>
+  <div class="cta-strip-btns">
+    <a href="treks.html" class="cta-btn-primary">View All Treks</a>
+    <a href="mailto:info@discoverparbat.com" class="cta-btn-secondary">Email Us</a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Walk slow, go far.</p>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ────────────────────────────────────────── -->
+</body>
+</html>

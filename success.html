@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inquiry Sent | Discover Parbat</title>
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+body {
+  background: linear-gradient(180deg, #f7f4ef 0%, #eef6f2 100%);
+  min-height: 100vh;
+}
+.success-wrap {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  place-items: center;
+  padding: 110px 7% 60px;
+}
+.success-card {
+  width: min(680px, 100%);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  padding: 34px 30px;
+  text-align: center;
+}
+.ok-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #2d6a4f, #1a6fa8);
+}
+.success-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #1a3d2b;
+  margin-bottom: 10px;
+}
+.success-card p {
+  color: #3a3a3a;
+  line-height: 1.75;
+}
+.cta-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #2d6a4f, #1a6fa8);
+}
+.btn-ghost {
+  color: #1a3d2b;
+  border: 1px solid rgba(26,61,43,0.25);
+  background: #fff;
+}
+.emergency {
+  margin-top: 16px;
+  font-size: 0.88rem;
+  color: #4a4a4a;
+}
+.emergency a {
+  color: #2d6a4f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.emergency a:hover { text-decoration: underline; }
+@media (max-width: 640px) {
+  .success-wrap { padding: 96px 4% 40px; }
+  .success-card { padding: 26px 16px; border-radius: 14px; }
+  .success-card p { font-size: 0.95rem; }
+  .cta-row { gap: 10px; }
+  .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<header id="main-header">
+  <div class="logo"><img src="logo.png" alt="Discover Parbat"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<main class="success-wrap">
+  <section class="success-card">
+    <div class="ok-badge">✓</div>
+    <h1>Inquiry Sent Successfully</h1>
+    <p>Your request is now with our team. We will review your details and get back to you shortly with the next steps.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="thank-you.html">View Thank You Page</a>
+      <a class="btn btn-ghost" href="treks.html">Explore More Treks</a>
+    </div>
+    <p class="emergency">For emergencies, contact WhatsApp: <a href="https://wa.me/9779867649780" target="_blank" rel="noopener">+977 986-7649780</a></p>
+  </section>
+</main>
+</body>
+</html>

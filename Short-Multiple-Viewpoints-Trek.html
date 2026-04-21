@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short Multiple Viewpoints Trek | Discover Parbat</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+
+
+<!-- SEO -->
+<meta name="description" content="3 viewpoints. 6 days. Zero tourist crowds. Short Multiple Viewpoints Trek is Nepal's best offbeat alternative to classic short treks — locally guided from Parbat.">
+<meta name="keywords" content="Short Multiple Viewpoints Trek Nepal,
+offbeat short trek Nepal, Poon Hill alternative trek, Mulde viewpoint trek,
+Kokhe Danda trek, 6 day trek Nepal, best short trek Annapurna,
+offbeat Annapurna trek, local guide short trek Nepal,
+Parbat trekking short trek">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+/* ─── PAGE BODY OVERRIDE ───────────────────────────── */
+body { line-height: 1.7; }
+
+/* ─── HERO ─────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 88vh;
+  min-height: 560px;
+  overflow: hidden;
+  margin-top: 72px;
+}
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,30,20,0.15) 0%,
+    rgba(10,30,20,0.2) 40%,
+    rgba(10,30,20,0.72) 100%
+  );
+}
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
+  left: 7%;
+  max-width: 680px;
+  animation: fadeUp 0.9s ease both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(24px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(82,183,136,0.25);
+  border: 1px solid rgba(82,183,136,0.5);
+  color: #a8e6c5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.06;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  margin-bottom: 14px;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ─── QUICK STATS ──────────────────────────────────── */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 0 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.07);
+  transition: background var(--transition);
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(45,106,79,0.04); }
+.stat-value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+}
+
+/* ─── GALLERY ──────────────────────────────────────── */
+.gallery-section { padding: 50px 7% 0; }
+.gallery-wrap {
+  position: relative;
+  height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.gallery-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: galleryFade 9s infinite;
+}
+.gallery-wrap img:nth-child(1){animation-delay:0s;}
+.gallery-wrap img:nth-child(2){animation-delay:3s;}
+.gallery-wrap img:nth-child(3){animation-delay:6s;}
+@keyframes galleryFade {
+  0%{opacity:0;} 10%{opacity:1;} 30%{opacity:1;} 40%{opacity:0;} 100%{opacity:0;}
+}
+.gallery-label {
+  position: absolute;
+  bottom: 20px; right: 20px;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+/* ─── MAIN LAYOUT ──────────────────────────────────── */
+.page-body {
+  padding: 56px 7% 70px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ─── LEFT COLUMN ──────────────────────────────────── */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+  display: block;
+}
+.content-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.title-divider {
+  width: 44px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+.about-text p {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.about-text p:last-child { margin-bottom: 0; }
+
+/* Highlights */
+.highlights-box {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.highlights-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 22px;
+}
+.highlights-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+.highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.highlights-list li::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--blue-light));
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ─── RIGHT FOR YOU ────────────────────────────────── */
+.right-for-you {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.right-for-you h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 22px;
+}
+.rfy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.rfy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.rfy-yes { background: rgba(45,106,79,0.05); border-color: rgba(45,106,79,0.12); }
+.rfy-no  { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.07); }
+.rfy-icon {
+  font-size: 0.72rem;
+  font-weight: 700;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.rfy-yes .rfy-icon { background: rgba(45,106,79,0.15); color: var(--green-mid); }
+.rfy-no  .rfy-icon { background: rgba(0,0,0,0.08); color: #999; }
+.rfy-item p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.55; }
+
+/* Itinerary */
+.itinerary-section { margin-top: 52px; }
+.accordion-item {
+  background: var(--white);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: box-shadow var(--transition);
+}
+.accordion-item.open { box-shadow: var(--shadow-md); border-color: rgba(45,106,79,0.15); }
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition);
+}
+.accordion-btn:hover { background: rgba(45,106,79,0.04); }
+.accordion-item.open .accordion-btn { background: rgba(45,106,79,0.05); }
+.acc-day-badge {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+.acc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  flex: 1;
+  line-height: 1.3;
+}
+.acc-chevron {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+.acc-chevron svg {
+  width: 10px; height: 10px;
+  stroke: var(--text-mid); fill: none;
+  stroke-width: 2.5; stroke-linecap: round;
+  transition: stroke var(--transition);
+}
+.accordion-item.open .acc-chevron { transform: rotate(180deg); background: var(--green-mid); border-color: var(--green-mid); }
+.accordion-item.open .acc-chevron svg { stroke: white; }
+.accordion-content { display: none; padding: 0 24px 24px 82px; }
+.accordion-content.open { display: block; }
+.acc-body-text { font-size: 0.93rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 18px; }
+.acc-meta { display: flex; flex-wrap: wrap; gap: 10px; }
+.acc-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.acc-meta-chip strong { color: var(--green-mid); font-weight: 700; }
+
+/* ─── TREK FAQ ─────────────────────────────────────── */
+.trek-faq { margin-top: 52px; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.faq-item.open { border-color: rgba(45,106,79,0.2); box-shadow: var(--shadow-md); }
+.faq-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+  transition: color var(--transition), background var(--transition);
+}
+.faq-btn:hover { background: rgba(45,106,79,0.03); }
+.faq-item.open .faq-btn { color: var(--green-mid); }
+.faq-chevron {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  opacity: 0.45;
+  stroke: currentColor;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); opacity: 1; stroke: var(--green-mid); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s ease;
+  padding: 0 24px;
+}
+.faq-item.open .faq-answer { max-height: 400px; padding: 0 24px 20px; }
+.faq-answer p { font-size: 0.91rem; color: var(--text-mid); line-height: 1.8; }
+.faq-answer a { color: var(--green-mid); font-weight: 600; text-decoration: none; }
+.faq-answer a:hover { text-decoration: underline; }
+
+/* ─── RIGHT SIDEBAR ────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pricing-card {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.pricing-card-header {
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+  padding: 24px 26px;
+}
+.pricing-card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.pricing-card-header p { font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
+.pricing-table { width: 100%; min-width: 520px; border-collapse: collapse; }
+.pricing-table thead tr { background: rgba(45,106,79,0.06); }
+.pricing-table th {
+  padding: 12px 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.pricing-table td {
+  padding: 14px 18px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+}
+.pricing-table tr:last-child td { border-bottom: none; }
+.pricing-table td:last-child {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.pricing-table tr:hover td { background: rgba(45,106,79,0.03); }
+.includes-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.includes-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.includes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.89rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.includes-list li::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background: rgba(45,106,79,0.1);
+  color: var(--green-mid);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.not-included-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 22px;
+  margin-bottom: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+.not-included-list li::before {
+  content: '✕';
+  background: rgba(0,0,0,0.06);
+  color: #999;
+}
+/* Booking card */
+.booking-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.booking-card-header {
+  padding: 20px 22px 18px;
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+  color: var(--white);
+}
+.booking-card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.booking-card-header p {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.55;
+}
+.booking-form {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.booking-field.full {
+  grid-column: 1 / -1;
+}
+.booking-field label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #667;
+}
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 11px 12px;
+  min-height: 46px;
+  font-size: 0.94rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.booking-field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.12);
+}
+.booking-note {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: #6e7781;
+  line-height: 1.55;
+}
+.booking-actions {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-submit {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-height: 48px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(45,106,79,0.25);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.booking-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(45,106,79,0.33);
+}
+.booking-assist {
+  font-size: 0.76rem;
+  color: #6b7280;
+  text-align: center;
+}
+.booking-assist a {
+  color: var(--green-mid);
+  font-weight: 600;
+  text-decoration: none;
+}
+.booking-assist a:hover {
+  text-decoration: underline;
+}
+/* ─── MOBILE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .page-body { grid-template-columns: 1fr; gap: 30px; }
+  .sidebar { position: static; max-width: 680px; width: 100%; margin: 0 auto; }
+  .highlights-list { grid-template-columns: 1fr; }
+  .rfy-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .accordion-content { padding-left: 24px; }
+}
+@media (max-width: 640px) {
+  .pricing-table th, .pricing-table td { padding: 10px 12px; font-size: 0.85rem; }
+
+  .booking-card-header { padding: 18px 16px 16px; }
+  .booking-form { padding: 16px 14px 18px; }
+  .booking-card-header h3 { font-size: 1.28rem; }
+  .booking-card-header p { font-size: 0.8rem; }
+  .booking-field label { font-size: 0.68rem; letter-spacing: 0.8px; }
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea { font-size: 0.92rem; }
+  .booking-submit { font-size: 0.92rem; }
+
+  .hero-content { left: 5%; bottom: 8%; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0 5%; }
+  .gallery-section { padding: 36px 5% 0; }
+  .gallery-wrap { height: 260px; }
+  .page-body { padding: 34px 4% 46px; }
+  .rfy-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+  .booking-card-header { padding: 16px 14px 14px; }
+  .booking-form { padding: 14px 12px 16px; }
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea { padding: 10px 10px; }
+  .booking-note { font-size: 0.74rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────────── -->
+<header id="main-header">
+  <div class="logo">
+    <img src="logo.png" alt="Discover Parbat">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html" aria-current="page">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html" aria-current="page">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section class="hero">
+  <img src="shortmvp.jpg" alt="Short Multiple Viewpoints Trek">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Annapurna Region, Nepal · 6 Days</div>
+    <h1>Short Multiple<br>Viewpoints Trek</h1>
+    <p>Less touristy trail with stunning views of the Annapurna Range</p>
+  </div>
+</section>
+
+<!-- ─── QUICK STATS ─────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-value">6 Days</div>
+    <div class="stat-label">Duration</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">Moderate</div>
+    <div class="stat-label">Difficulty</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">3,536m</div>
+    <div class="stat-label">Max Altitude</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">Tea House</div>
+    <div class="stat-label">Accommodation</div>
+  </div>
+</div>
+
+<!-- ─── PHOTO GALLERY ───────────────────────────────── -->
+<div class="gallery-section">
+  <div class="gallery-wrap">
+    <img src="shortmvp.jpg" alt="Short MVP Trek">
+    <img src="shortmvp1.jpg" alt="Short MVP Trek">
+    <img src="shortmvp2.jpg" alt="Short MVP Trek">
+    <img src="shortmvp3.jpg" alt="Short MVP Trek">
+    <img src="shortmvp4.jpg" alt="Short MVP Trek">
+    <img src="shortmvp5.jpg" alt="Short MVP Trek">
+    <img src="shortmvp6.jpg" alt="Short MVP Trek">
+    <img src="shortmvp7.jpg" alt="Short MVP Trek">
+    <img src="shortmvp8.jpg" alt="Short MVP Trek">
+    <img src="shortmvp9.jpg" alt="Short MVP Trek">
+    <span class="gallery-label">Photo Gallery</span>
+  </div>
+</div>
+
+<!-- ─── MAIN BODY ───────────────────────────────────── -->
+<div class="page-body">
+
+  <!-- LEFT: Content -->
+  <div class="left-col">
+
+    <!-- About -->
+    <span class="section-label">Overview</span>
+    <h2 class="content-title">About Short Multiple Viewpoints Trek</h2>
+    <div class="title-divider"></div>
+    <div class="about-text">
+      <p>The Short Multiple Viewpoints Trek is a compact yet deeply rewarding journey through some of the most diverse landscapes in the Annapurna and Parbat regions of Nepal. Designed for trekkers who want to maximise Himalayan experiences within a shorter timeframe, this route combines iconic viewpoints with hidden ridges, traditional Gurung villages, and quiet forest trails that most visitors never discover.</p>
+
+<p>The adventure begins with a scenic drive from Pokhara to Ghandruk, one of the largest and most celebrated Gurung villages in Nepal. Perched at around 1,940 metres, Ghandruk offers immediate rewards with its slate-roofed stone houses, terraced fields, and commanding views of Annapurna South and Machhapuchhre rising dramatically above the Modi Khola valley. While Ghandruk sees a steady flow of trekkers, its cultural richness — from the Gurung Museum to the warm hospitality of local teahouses — makes it a worthy starting point for the days ahead.</p>
+
+<p>From Ghandruk, the trail climbs steadily through dense rhododendron and oak forests towards Tadapani, sitting at around 2,630 metres. This forested ridge-top settlement is a quiet crossroads where the main trekking crowds thin noticeably. On clear mornings, the tree line frames jaw-dropping views of Annapurna South and Hiunchuli, while the surrounding forest provides shelter to Himalayan birds and the occasional glimpse of wildlife. The walk through these ancient woods, particularly when rhododendrons are in bloom from March to April, is one of the most atmospheric stretches of the entire route.</p>
+
+<p>Continuing upward from Tadapani, the trail emerges onto the open ridge at Dobato, a viewpoint that feels almost secret in its seclusion. At roughly 3,600 metres, Dobato offers an unobstructed panorama across the Annapurna massif, with Annapurna South, Fang, and the iconic fishtail peak of Machhapuchhre arranged like a living painting above the valleys below. Sunrise here is a deeply quiet affair — far from the crowds of Poon Hill — with only the alpine wind and the slow ignition of gold across the high snow faces for company. Few trekkers venture to Dobato on this particular circuit, which makes mornings at this ridgeline feel like a private audience with the Himalayas.</p>
+
+<p>The route then ascends further to Muldai Viewpoint, one of the finest and least-known high vantage points in the region. At approximately 3,700 metres, Muldai opens up an even wider sweep of the horizon, drawing the Dhaulagiri range into full view alongside the familiar giants of the Annapurna circuit. The high meadows around Muldai feel remote and untamed, with yak pastures rolling gently across the ridge and the silence broken only by wind. This is genuinely off-the-beaten-path trekking — trails here see a fraction of the foot traffic found on the main Poon Hill circuit, and the sense of discovery is palpable with every step.</p>
+
+<p>Descending from Muldai, the trek joins the more frequented trail into Ghorepani, a busy trekking hub sitting at 2,860 metres. After days of quiet ridges and empty trails, Ghorepani's teahouses and the company of fellow trekkers from around the world provide a welcome contrast. The pre-dawn climb to Poon Hill at 3,210 metres remains one of the great trekking rituals in Nepal — the summit fills with headlamps and anticipation before the sky turns through shades of violet, pink, and gold behind a 180-degree panorama of Dhaulagiri, Tukuche, Nilgiri, Annapurna I through South, Machhapuchhre, and Lamjung Himal. It is a spectacular and well-deserved reward, even if shared with a crowd.</p>
+
+<p>What truly distinguishes this itinerary from the standard Ghorepani loop is where the trail leads next. Beyond Ghorepani, the route pushes into Parbat district towards Kokhe Danda, an emerging viewpoint that is drawing only the most curious of trekkers. The trail here is noticeably quieter, winding through mixed forests and open ridgelines with Himalayan views that rival anything seen earlier on the trek. Kokhe Danda feels like a place still finding its way onto the map — a hidden gem where the mountains feel closer and the experience feels entirely your own.</p>
+
+<p>From Kokhe Danda, the descent continues through Lespar, a traditional village where the rhythms of rural Nepali life continue largely untouched by tourism. Stone pathways connect terraced farms, local women weave and work outside their homes, and the teahouses are simple and sincere. This is the kind of authentic encounter that makes trekking in Nepal so meaningful — the mountains provide the spectacle, but the people provide the soul.</p>
+
+<p>The final descent carries through Banau before the trail reaches the road at Kushma, a riverside town in Parbat district known for Nepal's highest suspension bridge over the Kali Gandaki gorge. From Kushma, a comfortable drive returns trekkers to Pokhara, completing a circuit that has moved from iconic vistas to secret ridges, from bustling mountain villages to quiet rural hamlets, and from the familiar to the wonderfully unexpected.</p>
+
+<p>The Short Multiple Viewpoints Trek is ideal for trekkers with limited time who refuse to compromise on experience. It delivers world-class Himalayan panoramas, genuine off-trail discovery, and rich cultural immersion — all within a compact and well-connected route that leaves even seasoned trekkers with a lasting sense of having found something truly special.</p>
+    </div>
+
+    <!-- Highlights -->
+    <div class="highlights-box">
+      <h3>✦ Trek Highlights</h3>
+      <ul class="highlights-list">
+        <li>Panoramic Annapurna and Dhaulagiri views</li>
+        <li>Sunrise from Muldai Viewpoint and Kokhe Danda</li>
+        <li>Experience of local culture and lifestyle</li>
+        <li>Different perspective of Annapurna South</li>
+        <li>Less touristy trails</li>
+        <li>Rhododendron and Oak forests</li>
+      </ul>
+    </div>
+
+    <!-- Right for you -->
+    <div class="right-for-you">
+      <h3>✦ This Trek Is Right for You If…</h3>
+      <div class="rfy-grid">
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+         <p>You want to experience multiple iconic viewpoints — Poon Hill, Dobato, Muldai, and Kokhe Danda — in a single connected journey</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You have 6 days and want a compact but varied route covering forests, high ridges, traditional villages, and river valleys</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You enjoy combining famous highlights like Ghandruk and Poon Hill with quiet, off-the-beaten-path sections most trekkers never discover</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You love authentic cultural encounters — passing through traditional Gurung villages, eating local dal bhat, and experiencing genuine rural Nepali hospitality in Lespar and Banau</p>
+        </div>
+        <div class="rfy-item rfy-no">
+          <span class="rfy-icon">✗</span>
+          <p>You're looking for a quick 3–4 day option — this route is designed to give you the full picture, and the best viewpoints take time to reach</p>
+        </div>
+        <div class="rfy-item rfy-no">
+          <span class="rfy-icon">✗</span>
+          <p>You expect luxury teahouse facilities throughout — accommodation in the quieter sections like Kokhe Danda and Lespar is simple, clean, and wonderfully local</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Itinerary -->
+    <div class="itinerary-section">
+      <span class="section-label">Day by Day</span>
+      <h2 class="content-title">Detailed Itinerary</h2>
+      <div class="title-divider"></div>
+
+      <!-- Day 1 -->
+      <div class="accordion-item" id="acc1">
+        <button class="accordion-btn" onclick="toggleAcc('acc1')">
+          <div class="acc-day-badge">Day<br>1</div>
+          <span class="acc-title">Drive Pokhara → Ghandruk → Trek to Tadapani</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc1-content">
+          <p class="acc-body-text">Morning drive from Pokhara to Ghandruk, a two and a half hour drive (43KM). We stop for a short tea break at Ghandruk and then start our hike to Tadapani. After two and a half hours, we reach Bhaisikharka where we stop for lunch. We then hike for a further hour on a gradual uphill trail to reach Tadapani. The trail today passes through beautiful Rhododendron forest.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,705m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 6.5 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 3.5 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="accordion-item" id="acc2">
+        <button class="accordion-btn" onclick="toggleAcc('acc2')">
+          <div class="acc-day-badge">Day<br>2</div>
+          <span class="acc-title">Tadapani → Isharu → Dobato</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc2-content">
+          <p class="acc-body-text">We wake up early in the morning for the sunrise view. During clear weather, we can see Annapurna South, Hiunchuli and Mount Fishtail from here.</p>
+          <p class="acc-body-text">After breakfast, we start our hike towards Dobato. The trail again passes through beautiful Rhododendron and Oak forest. Initially it is gradual uphill and a bit steep before reaching Isharu from Meshar. At Isharu, we stop for lunch and then hike for another one and a half hours to reach Dobato, where we stay at Hotel Dobato ViewTop. We can also hike to Muldai for a sunset view.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 3,500m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 6.2 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 5–6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+        <div class="accordion-item" id="acc3">
+        <button class="accordion-btn" onclick="toggleAcc('acc3')">
+          <div class="acc-day-badge">Day<br>3</div>
+          <span class="acc-title">Dobato → Deurali → Ghorepani</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc3-content">
+          <p class="acc-body-text">Today, we wake up early and hike around 25 minutes to reach Muldai Viewpoint for the sunrise view. We can see Dhaulagiri, Annapurna and Mansiri range peaks from here. We then hike back down to the tea house, have breakfast, and start hiking to Khopra Danda.</p>
+          <p class="acc-body-text">We come down to the TEahouse for breakfast. After this, we continue to Ghorepani. Initially, we climb up again to Muldai Viewpoint and then start trekking downhill to Ghorepani. AFter a couple of hours downhill hike, we reach Deurali, here we stop for lunch. After this, we slighty go gradual uphill and then follow the ridgeline leading to Ghorepani,</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,880m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 7.8 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Community Lodge</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="accordion-item" id="acc4">
+        <button class="accordion-btn" onclick="toggleAcc('acc4')">
+          <div class="acc-day-badge">Day<br>4</div>
+          <span class="acc-title">Ghorepani → Poonhill → Kokhe Danda</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc4-content">
+          <p class="acc-body-text">Today, unlike others, we don't start early in the morning for Poon Hill — we go after breakfast instead. It is an hour's uphill climb on stone steps, and by the time we reach Poon Hill it will be almost empty, so we have the entire viewpoint to ourselves. Later, we descend to Phulbari for lunch and then climb up to Kokhe Danda through a beautiful Rhododendron forest.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Distance:</strong> 6.7 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 5 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="accordion-item" id="acc5">
+        <button class="accordion-btn" onclick="toggleAcc('acc5')">
+          <div class="acc-day-badge">Day<br>5</div>
+          <span class="acc-title">Kokhe Danda → Jaljala → Lespar</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc5-content">
+          <p class="acc-body-text">We wake up early for sunrise and the first sunrays over the Dhaulagiri and Annapurna range peaks. On a clear day, views extend all the way to Langtang Lirung and even Numbur peak in the Lower Everest region.</p>
+          <p class="acc-body-text">After breakfast, we start our hike to Lespar. Initially mostly flat or gradual downhill to Dhima Danda, then we descend to Jaljala and follow stone steps all the way down to Lespar. After lunch, we walk around to explore the village. In the evening, we can have a Momo making session with the host at the Homestay.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,150m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 9 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 5 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Homestay</span>
+          </div>
+        </div>
+      </div>
+
+      <!--DAy 6-->
+     <div class="accordion-item" id="acc6">
+        <button class="accordion-btn" onclick="toggleAcc('acc6')">
+          <div class="acc-day-badge">Day<br>6</div>
+          <span class="acc-title">Lespar → Banau → Drive to Pokhara</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc6-content">
+          <p class="acc-body-text">We enjoy a local breakfast in the morning. After that, we start our hike to Banau via Haljure. Initially an hour uphill, then mostly flat until Haljure, followed by another hour's descent to Banau. From Banau, we take a taxi or jeep back to Pokhara with a stop at Kushma — a total drive of about two and a half hours.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Distance:</strong> 9 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 3 Hrs</span>
+          </div>
+        </div>
+      </div>
+
+     
+    </div><!-- /itinerary -->
+
+   <!-- FAQ -->
+    <div class="trek-faq">
+      <span class="section-label">Common Questions</span>
+      <h2 class="content-title">Frequently Asked Questions</h2>
+      <div class="title-divider"></div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Is the Short Multiple Viewpoints Trek suitable for beginners?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — the trek is rated Moderate and is well within reach for fit beginners. The longest day is Day 3, which includes the sunrise hike to Muldai before descending all the way to Ghorepani, but the trail is clear and the pace is manageable. If you can walk comfortably for 5–6 hours over consecutive days, you'll handle this route well.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            How does this trek differ from the standard Poon Hill route?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The standard Poon Hill circuit follows a well-worn loop that most trekkers in the Annapurna region take. This route approaches Poon Hill from a quieter direction — via Tadapani, Dobato, and Muldai — viewpoints that see a fraction of the foot traffic. After Poon Hill, instead of looping back, the trail continues into Parbat district through Kokhe Danda and Lespar, areas that most trekkers never see. You get Poon Hill, plus three hidden viewpoints, plus a genuine cultural finale.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is Dobato and is it worth stopping there overnight?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Dobato is a high ridgeline viewpoint at around 3,500 metres, sitting above the Tadapani forest and offering unobstructed views of Annapurna South, Fang, and Machhapuchhre. Staying overnight means you're positioned for the sunrise hike to Muldai the following morning — a 25-minute walk above Dobato that opens up one of the widest Himalayan panoramas on the entire route. Skipping the overnight here would mean missing both viewpoints entirely.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the Muldai Viewpoint and is it worth the extra hike?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Muldai sits just above Dobato at around 3,650 metres and is absolutely worth the 25-minute pre-breakfast climb. On clear mornings the panorama sweeps from Dhaulagiri across the full Annapurna range to Manaslu — with almost no other trekkers in sight. Many who have done both say the view-to-crowd ratio at Muldai surpasses Poon Hill. It is built into the itinerary as a sunrise stop on Day 3.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            How do we get to the trek start and back to Pokhara?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We arrange private transport from Pokhara to Ghandruk at the start — around a two and a half hour drive. On the final day, after the hike down to Banau, we take a taxi or jeep back to Pokhara via Kushma, which is another two and a half hours. Both transfers are included in the trek cost. There are no public buses or connections to arrange on your end.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What are the teahouses and accommodation like?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most nights are comfortable teahouses with private rooms and shared bathrooms. Dobato has one well-regarded teahouse — Hotel Dobato ViewTop — that is simple but well-positioned for the views. Kokhe Danda accommodation is basic and genuinely off-grid, which is part of the appeal. The final night at Lespar is a family homestay — warm, personal, and home-cooked. Hot showers are available at lower stops for a small fee. A sleeping bag liner is recommended for the higher nights.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the best time of year for this trek?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>October and November offer the clearest skies and the best mountain views — ideal for the sunrise moments at Muldai, Poon Hill, and Kokhe Danda. March to May is equally rewarding, with rhododendrons in full bloom through the forest sections between Ghandruk and Dobato. December is quiet and crisp, with very few trekkers on the trail. June to September brings monsoon conditions and is not recommended for this route.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Do I need permits for this trek?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. Both are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any permit offices yourself.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the food like on the trek?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Teahouse menus offer the standard Himalayan range — dal bhat, noodles, pasta, eggs, soups, and seasonal vegetables. At the Lespar homestay on Day 5, meals are home-cooked by your host family, and the evening includes a momo-making session. Three meals per day are included throughout the trek. If you have dietary requirements, let us know in advance and we will inform each stop along the route.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What should I pack for 6 days?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Key items: sturdy trekking boots, warm layers including a down or fleece jacket (nights at Dobato and Kokhe Danda can drop near freezing), a waterproof outer shell, trekking poles for the longer descent days, a headlamp for the early sunrise starts, a reusable water bottle, sunscreen, and a daypack of 20–25L. A sleeping bag liner is recommended for the homestay and off-grid teahouse nights. We'll send a full packing list after booking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What happens if I need to leave the trek early?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>If you need to return early for any reason, there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary — at no extra charge. Please see our full <a href="cancellation.html">Cancellation Policy</a> for complete details.</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /faq -->
+
+  </div><!-- /left-col -->
+
+  <!-- RIGHT: Sidebar -->
+  <aside class="sidebar">
+
+    <!-- Pricing -->
+    <div class="pricing-card">
+      <div class="pricing-card-header">
+        <h3>Cost Details</h3>
+        <p>Per person · All inclusive</p>
+      </div>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Group Size</th>
+            <th>Per Person</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 Person</td><td>$500</td></tr>
+          <tr><td>2 People</td><td>$460</td></tr>
+          <tr><td>3–4 People</td><td>$440</td></tr>
+          <tr><td>5+ People</td><td>$420</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Includes + Not Included -->
+    <div class="includes-card">
+      <h4>What's Included</h4>
+      <ul class="includes-list">
+        <li>Permits required for the trek</li>
+        <li>Two-way private transport</li>
+        <li>3 meals and drinks during trek</li>
+        <li>Accommodation during trek</li>
+        <li>Guide and Porter salary</li>
+        <li>Meals and accommodation of Guide and Porter</li>
+      </ul>
+
+      <h4 class="not-included-title">What's Not Included</h4>
+      <ul class="includes-list not-included-list">
+        <li>International flights and Nepal visa</li>
+        <li>Travel insurance (strongly recommended)</li>
+        <li>Personal trekking gear and equipment</li>
+        <li>Tips for guide and porter</li>
+        <li>Any costs due to early return or emergency evacuation</li>
+      </ul>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-card">
+      <div class="booking-card-header">
+        <h3>Book This Trek</h3>
+        <p>Share your details and we will send a tailored plan and confirmation options quickly.</p>
+      </div>
+      <form class="booking-form" id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="booking-grid">
+          <div class="booking-field full">
+            <label for="bk-name">Full Name *</label>
+            <input id="bk-name" name="name" type="text" placeholder="Your full name" required>
+          </div>
+
+          <div class="booking-field full">
+            <label for="bk-country">Country *</label>
+            <select id="bk-country" name="country" required>
+              <option value="" selected disabled>Select your country</option>
+              <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option>
+              <option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option>
+              <option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option>
+              <option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bhutan</option>
+              <option>Bolivia</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Brazil</option><option>Brunei</option>
+              <option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option>
+              <option>Cameroon</option><option>Canada</option><option>Central African Republic</option><option>Chad</option><option>Chile</option>
+              <option>China</option><option>Colombia</option><option>Comoros</option><option>Congo (Congo-Brazzaville)</option><option>Costa Rica</option>
+              <option>Croatia</option><option>Cuba</option><option>Cyprus</option><option>Czechia</option><option>Democratic Republic of the Congo</option>
+              <option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option>
+              <option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option>
+              <option>Eswatini</option><option>Ethiopia</option><option>Fiji</option><option>Finland</option><option>France</option>
+              <option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option>
+              <option>Greece</option><option>Grenada</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option>
+              <option>Guyana</option><option>Haiti</option><option>Honduras</option><option>Hungary</option><option>Iceland</option>
+              <option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option>
+              <option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option>
+              <option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option>
+              <option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option>
+              <option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option>
+              <option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option>
+              <option>Marshall Islands</option><option>Mauritania</option><option>Mauritius</option><option>Mexico</option><option>Micronesia</option>
+              <option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option>
+              <option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option>
+              <option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option>
+              <option>North Korea</option><option>North Macedonia</option><option>Norway</option><option>Oman</option><option>Pakistan</option>
+              <option>Palau</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option>
+              <option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option>
+              <option>Russia</option><option>Rwanda</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Saudi Arabia</option><option>Senegal</option>
+              <option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option>
+              <option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Korea</option>
+              <option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option>
+              <option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Taiwan</option><option>Tajikistan</option>
+              <option>Tanzania</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Tonga</option>
+              <option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Tuvalu</option>
+              <option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option>
+              <option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Vatican City</option><option>Venezuela</option>
+              <option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-email">Gmail (optional)</label>
+            <input id="bk-email" name="email" type="email" placeholder="you@gmail.com">
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-whatsapp">WhatsApp (optional)</label>
+            <input id="bk-whatsapp" name="whatsapp" type="tel" placeholder="+977 98XXXXXXXX">
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-trek">Trekking Name *</label>
+            <select id="bk-trek" name="trek" required>
+              <option value="Kokhe Danda Trek">Kokhe Danda Trek</option>
+              <option value="Not sure yet">Not sure yet</option>
+              <option value="Short Kokhe Danda Trek">Short Kokhe Danda Trek</option>
+              <option value="Mardi Himal Trek">Mardi Himal Trek</option>
+              <option value="Khopra Ridge Trek">Khopra Ridge Trek</option>
+              <option value="Annapurna Base Camp Trek">Annapurna Base Camp Trek</option>
+              <option value="Multiple Viewpoints Trek">Multiple Viewpoints Trek</option>
+              <option value="Short Multiple Viewpoints Trek" selected>Short Multiple Viewpoints Trek</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-date">Start Date *</label>
+            <input id="bk-date" name="startDate" type="date" required>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-pax">No. of Pax *</label>
+            <select id="bk-pax" name="pax" required>
+              <option value="2" selected>2</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10+">10+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="booking-field full">
+            <label for="bk-special">Special Requirement</label>
+            <textarea id="bk-special" name="special" placeholder="Dietary preference, altitude concerns, private trip request, room type, pickup details, etc."></textarea>
+          </div>
+        </div>
+
+        <p class="booking-note">Please provide at least one contact option (Gmail or WhatsApp). You can choose "Not sure yet" for trek or pax if you are still deciding.</p>
+
+        <div class="booking-actions">
+          <button type="submit" class="booking-submit">Send Booking Request</button>
+          <p class="booking-assist">Prefer direct contact? <a href="contact.html">Use full contact form</a></p>
+        </div>
+      </form>
+    </div>
+
+  </aside>
+
+</div><!-- /page-body -->
+
+<!-- ─── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Walk slow, go far.</p>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ────────────────────────────────────── -->
+<script>
+  // Itinerary accordion
+  function toggleAcc(id) {
+    const item    = document.getElementById(id);
+    const content = document.getElementById(id + '-content');
+    const isOpen  = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+    if (!isOpen) {
+      item.classList.add('open');
+      content.classList.add('open');
+    }
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item   = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+
+  async function handleBookingSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('booking-form');
+    const name = document.getElementById('bk-name').value.trim();
+    const country = document.getElementById('bk-country').value;
+    const email = document.getElementById('bk-email').value.trim();
+    const whatsapp = document.getElementById('bk-whatsapp').value.trim();
+    const trek = document.getElementById('bk-trek').value;
+    const startDate = document.getElementById('bk-date').value;
+    const pax = document.getElementById('bk-pax').value;
+    const special = document.getElementById('bk-special').value.trim();
+
+    if (!email && !whatsapp) {
+      alert('Please provide at least one contact option: Gmail or WhatsApp.');
+      return;
+    }
+
+    const payload = new URLSearchParams({
+      type: 'booking',
+      name,
+      country,
+      email,
+      whatsapp,
+      trek,
+      startDate,
+      pax,
+      special
+    });
+
+    try {
+      const res = await fetch('inquiry.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: payload.toString()
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to send booking request');
+      }
+
+      form.reset();
+      window.location.href = 'success.html';
+    } catch (err) {
+      alert('Could not send automatically right now. Please try again in a moment.');
+    }
+  }
+
+  const dateInput = document.getElementById('bk-date');
+  if (dateInput) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.min = yyyy + '-' + mm + '-' + dd;
+  }
+
+</script>
+
+</body>
+</html>

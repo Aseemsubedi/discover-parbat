@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annapurna Base Camp Trek | Discover Parbat</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png" sizes="32x32">
+<link rel="icon" type="image/png" href="logo.png" sizes="16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="favicon.ico">
+
+
+<!-- SEO -->
+<meta name="description" content="Explore the Annapurna Base Camp trail via a quieter, less touristy approach through Mohare and Kokhe Danda. 10-day locally guided trek with Discover Parbat.">
+<meta name="keywords" content="Annapurna Basecamp via Kokhe Danda, ABC Trek via Mohare Danda route. Alternative Annapurna BAsecamp route, Best route for Annapurna Basecamp trail">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+<style>
+/* ─── PAGE BODY OVERRIDE ───────────────────────────── */
+body { line-height: 1.7; }
+
+/* ─── HERO ─────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 88vh;
+  min-height: 560px;
+  overflow: hidden;
+  margin-top: 72px;
+}
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,30,20,0.15) 0%,
+    rgba(10,30,20,0.2) 40%,
+    rgba(10,30,20,0.72) 100%
+  );
+}
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 10%;
+  left: 7%;
+  max-width: 680px;
+  animation: fadeUp 0.9s ease both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(24px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(82,183,136,0.25);
+  border: 1px solid rgba(82,183,136,0.5);
+  color: #a8e6c5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.06;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  margin-bottom: 14px;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* ─── QUICK STATS ──────────────────────────────────── */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 0 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.07);
+  transition: background var(--transition);
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(45,106,79,0.04); }
+.stat-value {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+}
+
+/* ─── GALLERY ──────────────────────────────────────── */
+.gallery-section { padding: 50px 7% 0; }
+.gallery-wrap {
+  position: relative;
+  height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.gallery-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: galleryFade 9s infinite;
+}
+.gallery-wrap img:nth-child(1){animation-delay:0s;}
+.gallery-wrap img:nth-child(2){animation-delay:3s;}
+.gallery-wrap img:nth-child(3){animation-delay:6s;}
+@keyframes galleryFade {
+  0%{opacity:0;} 10%{opacity:1;} 30%{opacity:1;} 40%{opacity:0;} 100%{opacity:0;}
+}
+.gallery-label {
+  position: absolute;
+  bottom: 20px; right: 20px;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+/* ─── MAIN LAYOUT ──────────────────────────────────── */
+.page-body {
+  padding: 56px 7% 70px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ─── LEFT COLUMN ──────────────────────────────────── */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: 12px;
+  display: block;
+}
+.content-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.title-divider {
+  width: 44px; height: 3px;
+  background: linear-gradient(90deg, var(--green-light), var(--blue-light));
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+.about-text p {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+.about-text p:last-child { margin-bottom: 0; }
+
+/* Highlights */
+.highlights-box {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.highlights-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 22px;
+}
+.highlights-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+.highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.highlights-list li::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-light), var(--blue-light));
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ─── RIGHT FOR YOU ────────────────────────────────── */
+.right-for-you {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  margin-top: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.right-for-you h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 22px;
+}
+.rfy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.rfy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.rfy-yes { background: rgba(45,106,79,0.05); border-color: rgba(45,106,79,0.12); }
+.rfy-no  { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.07); }
+.rfy-icon {
+  font-size: 0.72rem;
+  font-weight: 700;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.rfy-yes .rfy-icon { background: rgba(45,106,79,0.15); color: var(--green-mid); }
+.rfy-no  .rfy-icon { background: rgba(0,0,0,0.08); color: #999; }
+.rfy-item p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.55; }
+
+/* Itinerary */
+.itinerary-section { margin-top: 52px; }
+.accordion-item {
+  background: var(--white);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: box-shadow var(--transition);
+}
+.accordion-item.open { box-shadow: var(--shadow-md); border-color: rgba(45,106,79,0.15); }
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition);
+}
+.accordion-btn:hover { background: rgba(45,106,79,0.04); }
+.accordion-item.open .accordion-btn { background: rgba(45,106,79,0.05); }
+.acc-day-badge {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+.acc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  flex: 1;
+  line-height: 1.3;
+}
+.acc-chevron {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+.acc-chevron svg {
+  width: 10px; height: 10px;
+  stroke: var(--text-mid); fill: none;
+  stroke-width: 2.5; stroke-linecap: round;
+  transition: stroke var(--transition);
+}
+.accordion-item.open .acc-chevron { transform: rotate(180deg); background: var(--green-mid); border-color: var(--green-mid); }
+.accordion-item.open .acc-chevron svg { stroke: white; }
+.accordion-content { display: none; padding: 0 24px 24px 82px; }
+.accordion-content.open { display: block; }
+.acc-body-text { font-size: 0.93rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 18px; }
+.acc-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.acc-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.acc-meta-chip strong { color: var(--green-mid); font-weight: 700; }
+
+/* ─── TREK FAQ ─────────────────────────────────────── */
+.trek-faq { margin-top: 52px; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.faq-item.open { border-color: rgba(45,106,79,0.2); box-shadow: var(--shadow-md); }
+.faq-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+  transition: color var(--transition), background var(--transition);
+}
+.faq-btn:hover { background: rgba(45,106,79,0.03); }
+.faq-item.open .faq-btn { color: var(--green-mid); }
+.faq-chevron {
+  width: 18px; height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--transition);
+  opacity: 0.45;
+  stroke: currentColor;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); opacity: 1; stroke: var(--green-mid); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s ease;
+  padding: 0 24px;
+}
+.faq-item.open .faq-answer { max-height: 400px; padding: 0 24px 20px; }
+.faq-answer p { font-size: 0.91rem; color: var(--text-mid); line-height: 1.8; }
+.faq-answer a { color: var(--green-mid); font-weight: 600; text-decoration: none; }
+.faq-answer a:hover { text-decoration: underline; }
+
+/* ─── RIGHT SIDEBAR ────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 92px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pricing-card {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.pricing-card-header {
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+  padding: 24px 26px;
+}
+.pricing-card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.pricing-card-header p { font-size: 0.78rem; color: rgba(255,255,255,0.6); letter-spacing: 0.5px; }
+.pricing-table { width: 100%; min-width: 520px; border-collapse: collapse; }
+.pricing-table thead tr { background: rgba(45,106,79,0.06); }
+.pricing-table th {
+  padding: 12px 18px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.pricing-table td {
+  padding: 14px 18px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+}
+.pricing-table tr:last-child td { border-bottom: none; }
+.pricing-table td:last-child {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.pricing-table tr:hover td { background: rgba(45,106,79,0.03); }
+.includes-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.includes-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+.includes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.89rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.includes-list li::before {
+  content: '✓';
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  background: rgba(45,106,79,0.1);
+  color: var(--green-mid);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.not-included-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 22px;
+  margin-bottom: 14px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+.not-included-list li::before {
+  content: '✕';
+  background: rgba(0,0,0,0.06);
+  color: #999;
+}
+/* Booking card */
+.booking-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.booking-card-header {
+  padding: 20px 22px 18px;
+  background: linear-gradient(135deg, var(--green-dark), var(--blue-deep));
+  color: var(--white);
+}
+.booking-card-header h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.booking-card-header p {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.55;
+}
+.booking-form {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.booking-field.full {
+  grid-column: 1 / -1;
+}
+.booking-field label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #667;
+}
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+  width: 100%;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 11px 12px;
+  min-height: 46px;
+  font-size: 0.94rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: #fff;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.booking-field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.12);
+}
+.booking-note {
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: #6e7781;
+  line-height: 1.55;
+}
+.booking-actions {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-submit {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-height: 48px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background: linear-gradient(135deg, var(--green-mid), var(--blue-mid));
+  color: var(--white);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(45,106,79,0.25);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.booking-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(45,106,79,0.33);
+}
+.booking-assist {
+  font-size: 0.76rem;
+  color: #6b7280;
+  text-align: center;
+}
+.booking-assist a {
+  color: var(--green-mid);
+  font-weight: 600;
+  text-decoration: none;
+}
+.booking-assist a:hover {
+  text-decoration: underline;
+}
+/* ─── MOBILE ───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .page-body { grid-template-columns: 1fr; gap: 30px; }
+  .sidebar { position: static; max-width: 680px; width: 100%; margin: 0 auto; }
+  .highlights-list { grid-template-columns: 1fr; }
+  .rfy-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .accordion-content { padding-left: 24px; }
+}
+@media (max-width: 640px) {
+  .pricing-table th, .pricing-table td { padding: 10px 12px; font-size: 0.85rem; }
+
+  .booking-card-header { padding: 18px 16px 16px; }
+  .booking-form { padding: 16px 14px 18px; }
+  .booking-card-header h3 { font-size: 1.28rem; }
+  .booking-card-header p { font-size: 0.8rem; }
+  .booking-field label { font-size: 0.68rem; letter-spacing: 0.8px; }
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea { font-size: 0.92rem; }
+  .booking-submit { font-size: 0.92rem; }
+
+  .hero-content { left: 5%; bottom: 8%; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0 5%; }
+  .gallery-section { padding: 36px 5% 0; }
+  .gallery-wrap { height: 260px; }
+  .page-body { padding: 34px 4% 46px; }
+  .rfy-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+  .booking-card-header { padding: 16px 14px 14px; }
+  .booking-form { padding: 14px 12px 16px; }
+  .booking-field input,
+  .booking-field select,
+  .booking-field textarea { padding: 10px 10px; }
+  .booking-note { font-size: 0.74rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─────────────────────────────────────── -->
+<header id="main-header">
+  <div class="logo">
+    <img src="logo.png" alt="Discover Parbat">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="treks.html" aria-current="page">Treks</a></li>
+      <li><a href="custom-trek.html">Custom Trek</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+  </button>
+</header>
+
+<div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="treks.html" aria-current="page">Treks</a></li>
+    <li><a href="custom-trek.html">Custom Trek</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="Shop.html">Shop</a></li>
+  </ul>
+</div>
+
+<!-- ─── HERO ───────────────────────────────────────── -->
+<section class="hero">
+  <img src="khopra.jpg" alt="Khopra Ridge Trek">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Annapurna Region, Nepal · 8 Days</div>
+    <h1>Annapurna Base <br>Camp Trek</h1>
+    <p>Trek throudh the gorge of Modi Khola to Annapurna Sanctuary</p>
+  </div>
+</section>
+
+<!-- ─── QUICK STATS ─────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-value">10 Days</div>
+    <div class="stat-label">Duration</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">Moderate</div>
+    <div class="stat-label">Difficulty</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">4,130m</div>
+    <div class="stat-label">Max Altitude</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">Tea House</div>
+    <div class="stat-label">Accommodation</div>
+  </div>
+</div>
+
+<!-- ─── PHOTO GALLERY ───────────────────────────────── -->
+<div class="gallery-section">
+  <div class="gallery-wrap">
+    <img src="abc.jpg" alt="ABC Trek">
+    <img src="abc1.jpg" alt="ABC Trek">
+    <img src="abc2.jpg" alt="ABC Trek">
+    <img src="abc3.jpg" alt="ABC Trek">
+    <img src="abc4.jpg" alt="ABC Trek">
+    <img src="abc5.jpg" alt="ABC Trek">
+    <img src="abc6.jpg" alt="ABC Trek">
+    <img src="abc7.jpg" alt="ABC Trek">
+    <img src="abc8.jpg" alt="ABC Trek">
+    <img src="abc9.jpg" alt="ABC Trek">
+    <img src="abc10.jpg" alt="ABC Trek">
+    <span class="gallery-label">Photo Gallery</span>
+  </div>
+</div>
+
+<!-- ─── MAIN BODY ───────────────────────────────────── -->
+<div class="page-body">
+
+  <!-- LEFT: Content -->
+  <div class="left-col">
+
+    <!-- About -->
+    <span class="section-label">Overview</span>
+    <h2 class="content-title">About Annapurna Base Camp Trek</h2>
+    <div class="title-divider"></div>
+    <div class="about-text">
+      <p>The 10 Days Annapurna Base Camp Trek is one of the most iconic trekking experiences in Nepal, offering a complete journey into the heart of the Himalayas. This carefully designed route begins with a scenic drive from Pokhara to Banau via Kushma, gradually transitioning from road access into peaceful hiking trails that pass through authentic villages and forested hillsides.</p>
+      <p>Unlike the standard approach, this itinerary follows a unique and diverse route through Sarga and Kokhe Danda, allowing trekkers to experience quieter sections of the Annapurna region before connecting to the classic trail. These early days provide a more immersive introduction to local life, terraced farmlands, and traditional settlements, while also offering wide-angle Himalayan views away from the busier trekking corridors.</p>
+      <p>The trail then reaches the famous Poon Hill (3,210m), one of the most celebrated viewpoints in Nepal. From here, trekkers are rewarded with a breathtaking sunrise over the Annapurna and Dhaulagiri ranges, with peaks like Annapurna South and Machhapuchhre glowing in golden light. This section offers a perfect blend of accessibility and unforgettable mountain scenery.</p>
+      <p>As the journey continues, the trail descends and reconnects with the main Annapurna Base Camp route at Chhomrong, a beautiful Gurung village perched on a hillside with dramatic views. From here, the landscape begins to change significantly as you move deeper into the Annapurna Sanctuary, passing through dense bamboo forests, river valleys, and high alpine terrain via Himalaya.</p>
+      <p>The highlight of the trek is reaching Annapurna Base Camp (4,130m), a spectacular natural amphitheater surrounded by towering snow-capped peaks. Unlike other viewpoints, Annapurna Base Camp sits within a high glacial valley, offering a rare 360-degree panorama where mountains such as Annapurna I, Annapurna South, Hiunchuli, and Machhapuchhre rise dramatically on all sides. This unique perspective—being inside the mountains rather than viewing them from a distance—is what makes this trek truly unforgettable.</p>
+      <p>Historically, the Annapurna Base Camp Trek was completed as a full camping expedition, with trekkers carrying tents and supplies through remote terrain. Over the years, the development of teahouses and lodges along the route has made it more accessible, transforming it into one of Nepal's most popular trekking routes while still preserving its natural beauty and cultural richness.</p>
+      <p>Due to its popularity, the trail can be busy during peak trekking seasons such as spring (March–May) and autumn (September–November). However, the diversity of landscapes, well-established infrastructure, and consistent mountain views make it a highly rewarding experience despite the crowds.</p>
+      <p>The return journey includes a relaxing stop at Jhinu Danda, where natural hot springs by the riverside provide the perfect opportunity to unwind after days of trekking. This final highlight adds a refreshing and memorable end to the adventure before heading back towards Pokhara.</p>
+      <p>Overall, the Annapurna Base Camp Trek is ideal for trekkers seeking a balanced Himalayan experience—combining cultural immersion, diverse landscapes, and close-up mountain views. With its unique route variation via Kokhe Danda and Poon Hill, this itinerary offers both originality and the classic beauty that has made Annapurna Base Camp one of the best trekking destinations in the world.</p>
+    </div>
+
+    <!-- Highlights -->
+    <div class="highlights-box">
+      <h3>✦ Trek Highlights</h3>
+      <ul class="highlights-list">
+        <li>Scenic drive from Pokhara to Banau</li>
+        <li>Offbeat trail via Kokhe Danda</li>
+        <li>Sunrise views from Poon Hill</li>
+        <li>Journey into Annapurna Sanctuary valley</li>
+        <li>Close-up views of snowcapped peaks</li>
+        <li>Annapurna Base Camp amphitheater experience</li>
+        <li>Relaxing hot springs at Jhinu Danda</li>
+      </ul>
+    </div>
+
+    <!-- Right for you -->
+    <div class="right-for-you">
+      <h3>✦ This Trek Is Right for You If…</h3>
+      <div class="rfy-grid">
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You want to reach Annapurna Base Camp via a more unique, less-travelled approach through Kokhe Danda and Poon Hill</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You want the full Himalayan experience — forests, ridgelines, valleys, sanctuary, and hot springs — in one journey</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You're comfortable with 10 days of consecutive trekking including one day reaching 4,130m altitude</p>
+        </div>
+        <div class="rfy-item rfy-yes">
+          <span class="rfy-icon">✓</span>
+          <p>You dream of standing inside a 360-degree amphitheater of towering Himalayan peaks</p>
+        </div>
+        <div class="rfy-item rfy-no">
+          <span class="rfy-icon">✗</span>
+          <p>You have less than 10 days — this is a full itinerary and cannot be meaningfully shortened</p>
+        </div>
+        <div class="rfy-item rfy-no">
+          <span class="rfy-icon">✗</span>
+          <p>You're prone to altitude sickness or have not acclimatised at altitude before — 4,130m requires solid preparation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Itinerary -->
+    <div class="itinerary-section">
+      <span class="section-label">Day by Day</span>
+      <h2 class="content-title">Detailed Itinerary</h2>
+      <div class="title-divider"></div>
+
+      <!-- Day 1 -->
+      <div class="accordion-item" id="acc1">
+        <button class="accordion-btn" onclick="toggleAcc('acc1')">
+          <div class="acc-day-badge">Day<br>1</div>
+          <span class="acc-title">Drive Pokhara → Banau → Trek to Sarga</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc1-content">
+          <p class="acc-body-text">Today, we initially drive to Banau village, with a short tea break at Kushma. It is around 75KM which takes two and a half hours of driving. From Banau we start hiking through ridge to Haljure, where we stop for lunch. After lunch, the hike through ridge continues, we then reach Lespar. From Lespar, we start climbing again to reach Sarga Camp and Homestay, our accomodation for tonight.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,400m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 9 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 4 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Homestay</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="accordion-item" id="acc2">
+        <button class="accordion-btn" onclick="toggleAcc('acc2')">
+          <div class="acc-day-badge">Day<br>2</div>
+          <span class="acc-title">Sarga Camp → Dhima Danda → Kokhe Danda</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc2-content">
+          <p class="acc-body-text">Sarga is a beautiful quite accomodation amidst the forest.</p>
+          <p class="acc-body-text">After breakfast, we start our hiking. The first half today is a bit steep as we gain around 650m in elevation before lunch. After reaching Jaljala, 2900m, we start seeing the snowcapped peaks. From here, Dhima Danda is still an hour more hike, where we stop for lunch. From here, it is mostly flat or gradual uphill and we gaon another 250m, before reaching Kokhe Danda. The trail passes through beautiful Rhododendron an Oak forest.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 3,309m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 8.4 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 5–6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="accordion-item" id="acc3">
+        <button class="accordion-btn" onclick="toggleAcc('acc3')">
+          <div class="acc-day-badge">Day<br>3</div>
+          <span class="acc-title">Kokhe Danda → Poonhill → Ghorepani</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc3-content">
+          <p class="acc-body-text">Today, we wake up early for the sunrise view from Kokhe Danda. During clear weather, we see peaks from Annapurna, Dhaulagiri, Mansiri and Langtang range.</p>
+          <p class="acc-body-text">The hike to Ghorepani via Poonhill passes through a beautiful ridgeline with view of Dhaulagiri at left and Annapurna at right side. It takes around 4 hours but we can make a detour to Kalidaha, a small pond just five minutes below the main trail. It gives stunning views of reflection of Nilgiri, Annapurna South and Annapurna I. We stop for a short tea break at Tinpokhare from where its 30 minutes uphill to Poonhill. Eventually, we descend down on the stone steps leading to Ghorepani.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,880m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 6 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 7 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="accordion-item" id="acc4">
+        <button class="accordion-btn" onclick="toggleAcc('acc4')">
+          <div class="acc-day-badge">Day<br>4</div>
+          <span class="acc-title">Ghorepani → Banthati → Tadapani</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc4-content">
+          <p class="acc-body-text">We do not climb to Poonhill today unlike others. After breakfast, we hike towards Deurali, over a ridge. After half an hours, there is a point from where the view is equivalent to that of Poonhill. After reaching Deurali, we start descending down to Banthati, where we stop for a lunch break. We then further descend down, reaching a rivulet, from where we go uphill for another 30 minutes to reach Tadapani. Todays trail is also through Rhododendron and Oak forest.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,700m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 8.4 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="accordion-item" id="acc5">
+        <button class="accordion-btn" onclick="toggleAcc('acc5')">
+          <div class="acc-day-badge">Day<br>5</div>
+          <span class="acc-title">Tadapani → Chhomrong → Sinuwa</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc5-content">
+          <p class="acc-body-text">We can see a closeup view of Annapurna South and Hiunchuli from Tadapani.</p>
+          <p class="acc-body-text">After having breakfast, we start hiking downhill to Chuile and then to Komrong Khola, stream. From there, we start climbing up again and then gradual uphill until Chhomrong. Here, we have lunch. Then we follow the stone steps leading down to Chhomrong Khola, we cross a suspension bridge. Then we start our ascent to Sinuwa, where we stay overnight.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,350m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 12 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 7 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="accordion-item" id="acc6">
+        <button class="accordion-btn" onclick="toggleAcc('acc6')">
+          <div class="acc-day-badge">Day<br>6</div>
+          <span class="acc-title">Sinuwa → Bamboo → Himalaya</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc6-content">
+          <p class="acc-body-text">Initially, we climb up to Upper Sinuwa, gaining around 200m in terms of elevation. From here, we go mostly flat or gradual uphill for the next hour. The trail gives beautiful view of Mount Fishtail. We then descend down to Bamboo. From here, we start ascending up again. At Dovan, we stop for lunch. From here, we start going uphill again passing Upper Dovan, a beautiful temple by a waterfall and then eventually reach Himalaya.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,870m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 8.6 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="accordion-item" id="acc7">
+        <button class="accordion-btn" onclick="toggleAcc('acc7')">
+          <div class="acc-day-badge">Day<br>7</div>
+          <span class="acc-title">Himalaya → MBC → ABC</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc7-content">
+          <p class="acc-body-text">We start our hike after breakfast. We ascend up listening to the sounds of Modi River as we follow her all the way upto Annapurna Base Camp. We stop at Deurali for a teabreak and then climb up to Machhapuchhre Base Camp, where we have lunch. From MBC, its another 1.5/2hrs uphill to Annapurna Base Camp. From MBC onwards, we see 360 Degree stunning views of snowcapped peaks of Annapurna Range.</p>
+          <p class="acc-body-text">We can however chose to stay overnight at MBC as well. It totally depends on your health condition, on how you feel with the elevation. In this case, we hike to ABC the next morning for sunrise.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 4,130m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 8.9 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="accordion-item" id="acc8">
+        <button class="accordion-btn" onclick="toggleAcc('acc8')">
+          <div class="acc-day-badge">Day<br>8</div>
+          <span class="acc-title">ABC → Deurali → Bamboo</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc8-content">
+          <p class="acc-body-text">We wakeup early to catchup the sunrise views. The Annapurna I, Moditse, Tharpu Chuli would be painted golden. We see another stunning perspective of Mount Fishtail or Machhapuchchre.</p>
+          <p class="acc-body-text">After breakfast, we start descending down to Bamboo. We follow the same trail as of past days, hiking just next to Modi River. We stop for lunch at Himalaya and descend further down to Bamboo, where we stop overnight.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Altitude:</strong> 2,310m</span>
+            <span class="acc-meta-chip"><strong>Distance:</strong> 14 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 7 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 9 -->
+      <div class="accordion-item" id="acc9">
+        <button class="accordion-btn" onclick="toggleAcc('acc9')">
+          <div class="acc-day-badge">Day<br>9</div>
+          <span class="acc-title">Bamboo → Chhomrong → Jhinu Danda</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc9-content">
+          <p class="acc-body-text">We start our hike after breakfast as usual. We initially climb up in the stone steps and after an hour, we go mostly flat or gradual downhill to reach Upper Sinuwa. From here, we start descending to Chhomrong Khola via Sinuwa. After crossing suspension bridge over Chhomrong Khola, we follow the stone steps leading all the way to the top of village. We stop for the lunch and later descend down on the stone steps to Jhinu Danda.</p>
+          <p class="acc-body-text">Today, we can visit the hot springs which is half an hour hike away from our Teahouse. After 9 days of hiking through the Himalayas, we can let our body recover with a dip in the hot springs.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Distance:</strong> 9.1 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 6 Hrs</span>
+            <span class="acc-meta-chip"><strong>Stay:</strong> Tea House</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="accordion-item" id="acc10">
+        <button class="accordion-btn" onclick="toggleAcc('acc10')">
+          <div class="acc-day-badge">Day<br>10</div>
+          <span class="acc-title">Jhinu Danda → Samrung → Pokhara</span>
+          <div class="acc-chevron"><svg viewBox="0 0 12 12"><polyline points="2 4 6 8 10 4"/></svg></div>
+        </button>
+        <div class="accordion-content" id="acc10-content">
+          <p class="acc-body-text">Today is a very short day in terms of hiking hours. We cross the suspension bridge over Kimrong Khola and reach Samrung after 30 minutes of hiking. From here, we take a Jeep which will take us to Pokhara. It will be a total of around 3 hours of scenic drive.</p>
+          <p class="acc-body-text">Our 10 Days Trek then ends here.</p>
+          <div class="acc-meta">
+            <span class="acc-meta-chip"><strong>Distance:</strong> 2 KM</span>
+            <span class="acc-meta-chip"><strong>Time:</strong> 30 Mins</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /itinerary -->
+
+    <!-- FAQ -->
+    <div class="trek-faq">
+      <span class="section-label">Common Questions</span>
+      <h2 class="content-title">Frequently Asked Questions</h2>
+      <div class="title-divider"></div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Is this trek suitable for first-time trekkers?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The trek is rated Moderate and is achievable for motivated first-timers with a good base of fitness. The 10-day duration means your body has time to adjust gradually. The most demanding stretch is Days 6–7, when you're gaining altitude into the Sanctuary and pushing to 4,130m. If you can handle 6–7 hours of walking on consecutive days and are comfortable at altitude, this trek is within reach. We recommend a few weeks of regular walking or cardio training before departure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What makes this route different from the standard ABC trek?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most ABC trekkers start from Nayapul or Ghandruk and follow the same well-worn path. Our route begins in Parbat, passing through the hidden trails of Sarga and Kokhe Danda before crossing via Poon Hill. This means your first two days are on quiet, less-travelled paths with wide Himalayan views — a very different introduction to the mountains. You join the classic route at Ghorepani with a fresh perspective and fewer crowds in your legs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the altitude like and should I worry about AMS?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The maximum altitude is 4,130m at Annapurna Base Camp. Acute Mountain Sickness (AMS) is possible above 3,000m and should be taken seriously. Common symptoms include headache, fatigue, nausea, and dizziness. Our itinerary is designed to gain altitude gradually, and your guide is trained to monitor for symptoms. If you feel unwell, descending is always the right call — we will fully support that decision. Travel insurance covering mountain evacuation is strongly recommended. Stay hydrated and never rush the ascent.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Can I stay at MBC instead of pushing to ABC on Day 7?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — this is entirely your choice and we build flexibility into Day 7 for exactly this reason. If you're feeling the altitude or tired after the climb to MBC, you can rest there overnight and hike to ABC the following morning for sunrise, which many trekkers consider the most magical experience of the entire journey. Your guide will assess conditions with you on the day and support whichever option suits you best.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What are the teahouses like inside the Annapurna Sanctuary?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Teahouses along the lower sections (Ghorepani, Tadapani, Chhomrong) are comfortable with private rooms, decent food, and sometimes hot showers for a small fee. As you move deeper into the Sanctuary — Himalaya, MBC, ABC — facilities become more basic. Rooms are small, heat is limited at altitude, and menus are simpler. That's part of the experience. A warm sleeping bag (rated to -10°C is ideal for ABC nights) and a sleeping bag liner are essential above Chhomrong.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What is the best time of year to do this trek?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>October and November are the most popular months — post-monsoon clarity means exceptional visibility at ABC and the trail is dry and firm. March to May is equally good with rhododendrons in bloom through the forest sections and reliable summit views. December and January are feasible but cold, especially at altitude — ABC nights can drop well below freezing. The monsoon season (June to September) brings heavy rain into the Sanctuary and is generally not recommended for this route.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Do I need permits and how are they arranged?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. Both are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any offices or queue for permits yourself.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What are the hot springs at Jhinu Danda like?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Jhinu Danda's hot springs are a natural riverside pool fed by geothermal water — the perfect reward after 9 days on the trail. They're about 30 minutes' walk below the village, set beside the Modi River. After the cold nights at altitude, soaking in warm water surrounded by forest and river sounds is genuinely restorative. There's a small entry fee payable on the day.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What should I pack for a 10-day trek reaching 4,130m?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Key items: sturdy trekking boots with ankle support, a quality sleeping bag rated to at least -10°C for ABC nights, a down jacket, waterproof outer shell, warm base layers, trekking poles (essential for the long descents), a headlamp, reusable water bottle, water purification tablets, sunscreen, sunglasses, and a daypack of 25–30L. Your porter will carry the main bag. We'll send a full detailed packing list after booking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            What happens if I need to leave the trek early?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>If you need to descend early for any reason — altitude sickness, injury, or personal circumstances — there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary at no extra charge. Please see our full <a href="cancellation.html">Cancellation Policy</a> for complete details. This is also why comprehensive travel insurance covering mountain evacuation is strongly advised before you depart.</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /faq -->
+
+  </div><!-- /left-col -->
+
+  <!-- RIGHT: Sidebar -->
+  <aside class="sidebar">
+
+    <!-- Pricing -->
+    <div class="pricing-card">
+      <div class="pricing-card-header">
+        <h3>Cost Details</h3>
+        <p>Per person · All inclusive</p>
+      </div>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Group Size</th>
+            <th>Per Person</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 Person</td><td>$800</td></tr>
+          <tr><td>2 People</td><td>$750</td></tr>
+          <tr><td>3–4 People</td><td>$720</td></tr>
+          <tr><td>5+ People</td><td>$700</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Includes + Not Included -->
+    <div class="includes-card">
+      <h4>What's Included</h4>
+      <ul class="includes-list">
+        <li>Permits required for the trek</li>
+        <li>Two-way private transport</li>
+        <li>3 meals and drinks during trek</li>
+        <li>Accommodation during trek</li>
+        <li>Guide and Porter salary</li>
+        <li>Meals and accommodation of Guide and Porter</li>
+      </ul>
+
+      <h4 class="not-included-title">What's Not Included</h4>
+      <ul class="includes-list not-included-list">
+        <li>International flights and Nepal visa</li>
+        <li>Travel insurance (strongly recommended)</li>
+        <li>Personal trekking gear and equipment</li>
+        <li>Tips for guide and porter</li>
+        <li>Hot spring entry fee at Jhinu Danda</li>
+        <li>Any costs due to early return or emergency evacuation</li>
+      </ul>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-card">
+      <div class="booking-card-header">
+        <h3>Book This Trek</h3>
+        <p>Share your details and we will send a tailored plan and confirmation options quickly.</p>
+      </div>
+      <form class="booking-form" id="booking-form" onsubmit="handleBookingSubmit(event)">
+        <div class="booking-grid">
+          <div class="booking-field full">
+            <label for="bk-name">Full Name *</label>
+            <input id="bk-name" name="name" type="text" placeholder="Your full name" required>
+          </div>
+
+          <div class="booking-field full">
+            <label for="bk-country">Country *</label>
+            <select id="bk-country" name="country" required>
+              <option value="" selected disabled>Select your country</option>
+              <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option>
+              <option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option>
+              <option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option>
+              <option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bhutan</option>
+              <option>Bolivia</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Brazil</option><option>Brunei</option>
+              <option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option>
+              <option>Cameroon</option><option>Canada</option><option>Central African Republic</option><option>Chad</option><option>Chile</option>
+              <option>China</option><option>Colombia</option><option>Comoros</option><option>Congo (Congo-Brazzaville)</option><option>Costa Rica</option>
+              <option>Croatia</option><option>Cuba</option><option>Cyprus</option><option>Czechia</option><option>Democratic Republic of the Congo</option>
+              <option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option>
+              <option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option>
+              <option>Eswatini</option><option>Ethiopia</option><option>Fiji</option><option>Finland</option><option>France</option>
+              <option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option>
+              <option>Greece</option><option>Grenada</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option>
+              <option>Guyana</option><option>Haiti</option><option>Honduras</option><option>Hungary</option><option>Iceland</option>
+              <option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option>
+              <option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option>
+              <option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option>
+              <option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option>
+              <option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option>
+              <option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option>
+              <option>Marshall Islands</option><option>Mauritania</option><option>Mauritius</option><option>Mexico</option><option>Micronesia</option>
+              <option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option>
+              <option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option>
+              <option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option>
+              <option>North Korea</option><option>North Macedonia</option><option>Norway</option><option>Oman</option><option>Pakistan</option>
+              <option>Palau</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option>
+              <option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option>
+              <option>Russia</option><option>Rwanda</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Saudi Arabia</option><option>Senegal</option>
+              <option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option>
+              <option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Korea</option>
+              <option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option>
+              <option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Taiwan</option><option>Tajikistan</option>
+              <option>Tanzania</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Tonga</option>
+              <option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Tuvalu</option>
+              <option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option>
+              <option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Vatican City</option><option>Venezuela</option>
+              <option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-email">Gmail (optional)</label>
+            <input id="bk-email" name="email" type="email" placeholder="you@gmail.com">
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-whatsapp">WhatsApp (optional)</label>
+            <input id="bk-whatsapp" name="whatsapp" type="tel" placeholder="+977 98XXXXXXXX">
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-trek">Trekking Name *</label>
+            <select id="bk-trek" name="trek" required>
+              <option value="Kokhe Danda Trek">Kokhe Danda Trek</option>
+              <option value="Not sure yet">Not sure yet</option>
+              <option value="Short Kokhe Danda Trek">Short Kokhe Danda Trek</option>
+              <option value="Mardi Himal Trek">Mardi Himal Trek</option>
+              <option value="Khopra Ridge Trek">Khopra Ridge Trek</option>
+              <option value="Annapurna Base Camp Trek" selected>Annapurna Base Camp Trek</option>
+              <option value="Multiple Viewpoints Trek">Multiple Viewpoints Trek</option>
+              <option value="Short Multiple Viewpoints Trek">Short Multiple Viewpoints Trek</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-date">Start Date *</label>
+            <input id="bk-date" name="startDate" type="date" required>
+          </div>
+
+          <div class="booking-field">
+            <label for="bk-pax">No. of Pax *</label>
+            <select id="bk-pax" name="pax" required>
+              <option value="2" selected>2</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10+">10+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="booking-field full">
+            <label for="bk-special">Special Requirement</label>
+            <textarea id="bk-special" name="special" placeholder="Dietary preference, altitude concerns, private trip request, room type, pickup details, etc."></textarea>
+          </div>
+        </div>
+
+        <p class="booking-note">Please provide at least one contact option (Gmail or WhatsApp). You can choose "Not sure yet" for trek or pax if you are still deciding.</p>
+
+        <div class="booking-actions">
+          <button type="submit" class="booking-submit">Send Booking Request</button>
+          <p class="booking-assist">Prefer direct contact? <a href="contact.html">Use full contact form</a></p>
+        </div>
+      </form>
+    </div>
+
+  </aside>
+
+</div><!-- /page-body -->
+
+<!-- ─── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Discover Parbat">
+      <p>Connecting travelers with authentic Himalayan experiences in Parbat, Nepal. Locally guided, responsibly run.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="custom-trek.html">Custom Trek</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="cancellation.html">Cancellation Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
+        <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
+        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© Discover Parbat 2026. All rights reserved.</p>
+    <p class="footer-tagline">Walk slow, go far.</p>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ────────────────────────────────────── -->
+<script>
+  // Itinerary accordion
+  function toggleAcc(id) {
+    const item    = document.getElementById(id);
+    const content = document.getElementById(id + '-content');
+    const isOpen  = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+    if (!isOpen) {
+      item.classList.add('open');
+      content.classList.add('open');
+    }
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item   = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+
+  async function handleBookingSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById('booking-form');
+    const name = document.getElementById('bk-name').value.trim();
+    const country = document.getElementById('bk-country').value;
+    const email = document.getElementById('bk-email').value.trim();
+    const whatsapp = document.getElementById('bk-whatsapp').value.trim();
+    const trek = document.getElementById('bk-trek').value;
+    const startDate = document.getElementById('bk-date').value;
+    const pax = document.getElementById('bk-pax').value;
+    const special = document.getElementById('bk-special').value.trim();
+
+    if (!email && !whatsapp) {
+      alert('Please provide at least one contact option: Gmail or WhatsApp.');
+      return;
+    }
+
+    const payload = new URLSearchParams({
+      type: 'booking',
+      name,
+      country,
+      email,
+      whatsapp,
+      trek,
+      startDate,
+      pax,
+      special
+    });
+
+    try {
+      const res = await fetch('inquiry.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: payload.toString()
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to send booking request');
+      }
+
+      form.reset();
+      window.location.href = 'success.html';
+    } catch (err) {
+      alert('Could not send automatically right now. Please try again in a moment.');
+    }
+  }
+
+  const dateInput = document.getElementById('bk-date');
+  if (dateInput) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.min = yyyy + '-' + mm + '-' + dd;
+  }
+
+</script>
+
+</body>
+</html>
