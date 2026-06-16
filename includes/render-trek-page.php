@@ -43,6 +43,13 @@ function cms_trek_safe_html(string $html): string
 <?php if ($metaKeywords !== ''): ?>
 <meta name="keywords" content="<?= cms_h($metaKeywords) ?>">
 <?php endif; ?>
+<?php cms_render_social_meta([
+    'title' => $title . ' | Discover Parbat',
+    'description' => $metaDescription !== '' ? $metaDescription : (string)($trek['subtitle'] ?? $title),
+    'url' => $canonical,
+    'image' => $heroImage,
+    'image_alt' => (string)($trek['title'] ?? $title),
+]); ?>
 <link rel="icon" type="image/png" href="/logo.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/logo.png" sizes="16x16">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">

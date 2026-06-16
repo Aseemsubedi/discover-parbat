@@ -16,6 +16,13 @@
 <!-- SEO -->
 <meta name="description" content="Trek guides, local stories and insider tips from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
 <meta name="keywords" content="Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+<?php cms_render_social_meta([
+    'title' => 'Trek Guides & Stories | Discover Parbat',
+    'description' => 'Trek guides, local stories and insider tips from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.',
+    'url' => 'https://discoverparbat.com/articles',
+    'image' => 'og-share.jpg',
+    'image_alt' => 'Himalayan trekking insights from Discover Parbat',
+]); ?>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 

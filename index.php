@@ -17,6 +17,13 @@
 <!-- SEO -->
 <meta name="description" content="Discover Parbat — small-group Himalayan treks in Nepal's Annapurna region, guided by locals born on the trail. Offbeat routes, authentic villages, 5-star reviews.">
 <meta name="keywords" content="Discover Parbat, Authentic Trails, Less Touristy Treks,Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+<?php cms_render_social_meta([
+    'title' => 'Discover Parbat | Authentic Himalayan Treks in Nepal',
+    'description' => "Small-group Himalayan treks in Nepal's Annapurna region, guided by locals born on the trail. Offbeat routes, authentic villages, 5-star reviews.",
+    'url' => 'https://discoverparbat.com/',
+    'image' => 'og-share.jpg',
+    'image_alt' => 'Snow-capped Himalayas above a village lodge in Parbat, Nepal',
+]); ?>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 

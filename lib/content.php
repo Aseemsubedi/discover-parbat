@@ -252,3 +252,56 @@ function cms_new_id(): string
 {
     return bin2hex(random_bytes(8));
 }
+
+function cms_site_origin(): string
+{
+    return 'https://discoverparbat.com';
+}
+
+function cms_abs_url(string $path): string
+{
+    if (str_starts_with($path, 'http://') || str_starts_with($path, 'https://')) {
+        return $path;
+    }
+    return cms_site_origin() . '/' . ltrim($path, '/');
+}
+
+/**
+ * @param array{
+ *   title: string,
+ *   description: string,
+ *   url?: string,
+ *   image?: string,
+ *   type?: string,
+ *   image_alt?: string,
+ *   image_width?: string|int,
+ *   image_height?: string|int,
+ *   published_at?: string
+ * } $options
+ */
+function cms_render_social_meta(array $options): void
+{
+    $socialTitle = trim((string)($options['title'] ?? 'Discover Parbat'));
+    $socialDescription = trim((string)($options['description'] ?? ''));
+    $socialUrl = trim((string)($options['url'] ?? cms_site_origin() . '/'));
+    $socialImage = cms_abs_url((string)($options['image'] ?? 'og-share.jpg'));
+    $socialType = (string)($options['type'] ?? 'website');
+    $socialSiteName = 'Discover Parbat';
+    $socialImageAlt = trim((string)($options['image_alt'] ?? $socialTitle));
+    $socialImageWidth = (string)($options['image_width'] ?? '1200');
+    $socialImageHeight = (string)($options['image_height'] ?? '630');
+    $socialPublishedAt = (string)($options['published_at'] ?? '');
+
+    if (!str_starts_with($socialUrl, 'http')) {
+        $socialUrl = cms_abs_url($socialUrl);
+    }
+
+    include __DIR__ . '/../includes/social-meta.php';
+}
+
+function cms_social_meta_html(array $options): string
+{
+    ob_start();
+    cms_render_social_meta($options);
+    return (string)ob_get_clean();
+}

@@ -17,6 +17,13 @@
 <!-- SEO -->
 <meta name="description" content="Browse all Discover Parbat treks — from 4-day Kokhe Danda to the 14-day Multiple Viewpoints route. Offbeat Annapurna region trails, locally guided, small groups only.">
 <meta name="keywords" content="Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+<?php cms_render_social_meta([
+    'title' => 'Himalayan Treks in Nepal | Discover Parbat',
+    'description' => 'Browse offbeat Annapurna region treks from 4 to 14 days — Kokhe Danda, Mardi Himal, Khopra Ridge, ABC and more. Locally guided, small groups.',
+    'url' => 'https://discoverparbat.com/treks',
+    'image' => 'og-share.jpg',
+    'image_alt' => 'Discover Parbat trek routes in the Annapurna region',
+]); ?>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 

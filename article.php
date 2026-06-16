@@ -36,6 +36,17 @@ $bodyHtml = (string)($article['body_html'] ?? '');
 <?php if ($metaKeywords !== ''): ?>
 <meta name="keywords" content="<?= cms_h($metaKeywords) ?>">
 <?php endif; ?>
+<?php cms_render_social_meta([
+    'title' => $title . ' | Discover Parbat',
+    'description' => $metaDescription !== '' ? $metaDescription : $title,
+    'url' => $canonical,
+    'image' => $image,
+    'type' => 'article',
+    'image_alt' => $title,
+    'published_at' => ($publishedAt !== '' && strtotime($publishedAt) !== false)
+        ? date('c', strtotime($publishedAt))
+        : '',
+]); ?>
 <link rel="icon" type="image/png" href="/logo.png" sizes="32x32">
 <link rel="stylesheet" href="/styles.css">
 <script src="/main.js?v=3" defer></script>
