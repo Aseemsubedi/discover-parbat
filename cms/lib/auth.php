@@ -8,7 +8,7 @@ function cms_get_credentials(): array
         return ['username' => 'admin', 'password' => trim($env)];
     }
 
-    $configPath = dirname(__DIR__) . '/cms-config.php';
+    $configPath = dirname(__DIR__, 2) . '/cms-config.php';
     if (is_file($configPath)) {
         $config = require $configPath;
         if (is_array($config)) {
