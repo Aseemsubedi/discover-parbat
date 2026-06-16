@@ -238,28 +238,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Mardi Himal Trek",
+            "meta_description": "Nepal's best short trek for up-close Himalayan views. Mardi Himal delivers Fishtail & Annapurna panoramas in just 5 days. Offbeat, intimate & locally guided from Parbat.",
+            "meta_keywords": "Mardi Himal Trek, Mardi Himal Trek Nepal, short trek Nepal, 5 day trek Nepal, Fishtail trek Nepal, Machhapuchhre trek, close Himalayan views trek, Annapurna short trek, Mardi Himal local guide, Mardi Himal Trek Cost",
+            "hero_image": "mardi.jpg",
+            "hero_eyebrow": "Annapurna Region · 5 Days",
+            "hero_title_html": "Mardi Himal<br>Trek",
+            "hero_subtitle": "Trek through the ridge leading to Fishtail Mountain",
             "stats": [
                 {
-                    "value": "",
+                    "value": "5 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Moderate",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "4,300m",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Tea House",
                     "label": "Accommodation"
                 }
             ],
@@ -276,20 +276,180 @@
                 "mardi9.jpg",
                 "mardi10.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Mardi Himal Trek",
+            "overview_paragraphs": [
+                "The Mardi Himal Trek is one of the most scenic short treks in the Annapurna region of Nepal, offering a perfect combination of forest trails, alpine landscapes, and breathtaking close-up views of the Himalayas. This 5-day trek is ideal for those seeking a compact yet rewarding trekking experience with diverse terrain and dramatic mountain scenery.",
+                "Starting from the hills above Pokhara, the trail gradually ascends through dense rhododendron and oak forests, creating a peaceful and immersive natural experience. As you move higher, the forest begins to thin out, revealing stunning views of Machhapuchhre (Fishtail), Annapurna South, and Hiunchuli. The transition from lush greenery to open ridgelines is one of the defining features of this trek.",
+                "As the trail continues along the Mardi Himal ridge, trekkers are rewarded with panoramic Himalayan vistas that feel incredibly close and expansive. Walking along these ridges offers a unique perspective, with deep valleys below and towering snow-capped peaks rising directly ahead. The proximity to Machhapuchhre is particularly striking, making this trek one of the best viewpoints for experiencing its iconic beauty.",
+                "The upper viewpoints of the trek provide unforgettable sunrise experiences, where the first light of the day illuminates the Annapurna range in golden hues. The peaceful atmosphere, combined with uninterrupted mountain views, creates a truly memorable Himalayan moment.",
+                "Beyond the landscapes, the trek also offers a glimpse into rural life in the Annapurna region, as the trail eventually descends towards traditional villages. This adds a cultural dimension to the journey, blending natural beauty with authentic local experiences.",
+                "The Mardi Himal Trek is considered a moderate trek and is suitable for both beginners and experienced trekkers. Its relatively short duration, combined with its rich variety of scenery and close-up mountain views, makes it one of the best options for those looking to experience the Himalayas within a limited timeframe.",
+                "If you are looking for a trek that delivers diverse landscapes, dramatic ridgeline walks, and stunning views of Machhapuchhre and the Annapurna massif, the Mardi Himal Trek stands out as one of the most rewarding short treks in Nepal."
+            ],
+            "highlights": [
+                "Stunning close view of Mount Fishtail",
+                "Trek through the ridge of Mardi Himal",
+                "Close view of Annapurna South and Hiunchuli",
+                "Diverse landscapes",
+                "Short but rewarding trek",
+                "Rhododendron forests"
+            ],
+            "right_for_you_yes": [
+                "You want dramatic, up-close views of Fishtail and the Annapurna range",
+                "You have 5 days and want a complete Himalayan experience with diverse terrain",
+                "You enjoy ridgeline walking with open panoramic views and big sky moments",
+                "You're comfortable with a moderate challenge — some steep sections and altitude above 4,000m"
+            ],
+            "right_for_you_no": [
+                "You're looking for deep cultural immersion and village homestay experiences",
+                "You prefer flat or easy trails with minimal altitude gain each day"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Kande → Trek to Suire Danda",
+                    "paragraphs": [
+                        "Morning drive from Pokhara to Kande, about an hour. We start hiking from Kande to Australian Camp and then to Pothana, where we stop for lunch. The first hour is a bit steep uphill and then mostly flat or gradual. After lunch, we cross Pitam Deurali, from where it's another half an hour of steep uphill to reach Suire Danda."
+                    ],
+                    "meta": {
+                        "Altitude": "2,438m",
+                        "Distance": "7.3 KM",
+                        "Time": "4 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Suire Danda → Forest Camp → Low Camp",
+                    "paragraphs": [
+                        "We wake up to a beautiful view of Dhaulagiri and Annapurna South. After breakfast, we start hiking through the forest ridge — a mix of flat and gradual uphill until Forest Camp, where we stop for a tea break. From there we gain more elevation and reach Rest Camp at 2,600m for lunch. After lunch, we gain another 400m in elevation to reach Low Camp. We can see beautiful sunset colors on Fishtail from here."
+                    ],
+                    "meta": {
+                        "Altitude": "3,004m",
+                        "Distance": "9.6 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Low Camp → Badal Danda → High Camp",
+                    "paragraphs": [
+                        "We start our day with an amazing view of golden Fishtail Mountain. We hike to Badal Danda, from where we begin seeing Annapurna South and Hiunchuli. From there we hike along the open, exposed ridge with no trees until we reach High Camp. After lunch we go for an acclimatization hike, gaining around 200m towards the Lower Viewpoint."
+                    ],
+                    "meta": {
+                        "Altitude": "3,550m",
+                        "Distance": "5 KM",
+                        "Time": "3 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 4,
+                    "title": "High Camp → Viewpoint → Low Camp",
+                    "paragraphs": [
+                        "We wake up at around 4:30 AM and start our hike to the Lower Viewpoint — about 1.5 to 2 hours of uphill, reaching 4,000m. Optionally, you can continue to the Upper Viewpoint or Mardi Himal Base Camp. At the Lower Viewpoint there are tea shops for hot drinks. We enjoy stunning close views of Annapurna South and Fishtail before retracing back to High Camp.",
+                        "After a late breakfast at High Camp, we descend to Low Camp via Badal Danda along the ridgeline trail. We have lunch at Low Camp and take some rest."
+                    ],
+                    "meta": {
+                        "Altitude": "3,004m",
+                        "Distance": "12.5 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 5,
+                    "title": "Low Camp → Siding → Pokhara",
+                    "paragraphs": [
+                        "On the last day, we hike from Low Camp down to Siding village, following stone steps all the way down through the forest. It takes around 2–3 hours. From Siding, we take a jeep back to Pokhara — a couple of hours' drive."
+                    ],
+                    "meta": {
+                        "Distance": "5 KM",
+                        "Time": "3 Hrs"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Is Mardi Himal Trek suitable for beginners?",
+                    "answer": "Mardi Himal is rated Moderate — it's achievable for first-timers with a reasonable level of fitness, but it's a step up from an easy trek. Day 4 starts at 4:30 AM and involves reaching 4,000m, which requires acclimatisation and stamina. If you can handle 5–7 hours of walking on consecutive days, including some steep sections, you'll be fine. We include an acclimatisation hike on Day 3 to help your body adjust."
+                },
+                {
+                    "question": "How do we get from Pokhara to the trek start?",
+                    "answer": "We arrange private transport from Pokhara to Kande, which takes around an hour. On the final day, we return from Siding village by jeep — again arranged by us. Both transfers are included in the trek cost, so there's nothing to organise on your end."
+                },
+                {
+                    "question": "What are the teahouses like on this trek?",
+                    "answer": "Teahouses on the Mardi Himal route are simple and functional — basic private rooms, shared bathrooms, and communal dining areas. Higher up (High Camp), facilities are more basic as you'd expect at altitude. Hot showers may be available at lower camps for a small fee. Bring a sleeping bag liner for extra warmth at the higher stops, especially High Camp at 3,550m."
+                },
+                {
+                    "question": "What are the altitude risks and how do you manage them?",
+                    "answer": "The highest point on this trek is around 4,000–4,300m at the viewpoint, which is high enough to feel the effects of altitude — headaches, fatigue, and shortness of breath are common. We build in an acclimatisation hike on Day 3 before the summit push on Day 4 to help your body adjust. Our guides are trained to monitor for altitude sickness. If you feel unwell, descending is always the safest option and we'll support that decision fully. Staying hydrated and not rushing the ascent are the most important factors."
+                },
+                {
+                    "question": "What is the food like on the trek?",
+                    "answer": "Teahouse menus on this route are solid — dal bhat, noodles, pasta, eggs, soups, porridge, and seasonal vegetables. Higher up the menu simplifies, but there's always enough to fuel you for the day. Three meals per day are included in your cost. If you have dietary restrictions, let us know in advance and we'll flag it with the teahouses along the route."
+                },
+                {
+                    "question": "What is the best time of year for Mardi Himal Trek?",
+                    "answer": "October and November are the most popular months — post-monsoon air gives the clearest mountain views and the trails are dry and firm. March to May is also excellent, with rhododendrons in bloom through the forest sections. December is surprisingly good with far fewer trekkers and crisp visibility, though nights at High Camp will be cold. June to September brings monsoon rain which makes the high ridges slippery and views less predictable."
+                },
+                {
+                    "question": "Do I need a permit for Mardi Himal Trek?",
+                    "answer": "Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. These are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any permit offices yourself."
+                },
+                {
+                    "question": "Can I visit the Upper Viewpoint or Mardi Himal Base Camp?",
+                    "answer": "Yes, this is optional on Day 4. The standard plan reaches the Lower Viewpoint at around 4,000m, which already gives extraordinary views of Fishtail and Annapurna South. If you're feeling strong and acclimatised, your guide can take you higher to the Upper Viewpoint or towards Mardi Himal Base Camp. This adds time and effort, so we assess it on the day based on conditions and how everyone is feeling."
+                },
+                {
+                    "question": "What should I pack for this trek?",
+                    "answer": "Key items: sturdy trekking boots with ankle support, warm layers including a down jacket (High Camp nights are cold), waterproof outer shell, trekking poles (very helpful on the descent), a headlamp for the 4:30 AM summit start, sunscreen, sunglasses, a reusable water bottle, and a daypack. A sleeping bag rated to at least -5°C is recommended for High Camp. We'll send a full packing list after booking."
+                },
+                {
+                    "question": "What happens if I need to leave the trek early?",
+                    "answer": "If you need to descend early for any reason — whether that's altitude sickness, injury, or personal circumstances — there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary at no extra charge. Please see our full <a href=\"/cancellation\">Cancellation Policy</a> for details."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$410"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$399"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$380"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$360"
+                    }
+                ],
+                "included": [
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter",
+                    "TIMS card and ACAP permit"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Mardi Himal Trek"
+        },
+        "cms_page": true
     },
     {
         "id": "trek_khopra",
@@ -304,28 +464,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Short Multiple Viewpoints Trek",
+            "meta_description": "Escape the tourist trail on Khopra Ridge — an offbeat 8-day trek with jaw-dropping Himalayan views. Small groups, 100% local guides.",
+            "meta_keywords": "Khopra Ridge Trek, Khopra Danda Trek, Khopra Ridge Trek Nepal, offbeat trek Nepal, Annapurna region trek, Dhaulagiri views trek, 8 day trek Nepal, Offbeat trekking Nepal, Khopra Ridge Trek local guide, hidden gem trek Nepal",
+            "hero_image": "shortmvp.jpg",
+            "hero_eyebrow": "Annapurna Region, Nepal · 6 Days",
+            "hero_title_html": "Khopra Ridge<br>Trek",
+            "hero_subtitle": "Less touristy trail with stunning views of the Annapurna Range",
             "stats": [
                 {
-                    "value": "",
+                    "value": "6 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Moderate",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "3,536m",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Tea House",
                     "label": "Accommodation"
                 }
             ],
@@ -341,20 +501,222 @@
                 "khopra8.jpg",
                 "khopra9.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Short Multiple Viewpoints Trek",
+            "overview_paragraphs": [
+                "The Short Multiple Viewpoints Trek is a compact yet deeply rewarding journey through some of the most diverse landscapes in the Annapurna and Parbat regions of Nepal. Designed for trekkers who want to maximise Himalayan experiences within a shorter timeframe, this route combines iconic viewpoints with hidden ridges, traditional Gurung villages, and quiet forest trails that most visitors never discover.",
+                "The adventure begins with a scenic drive from Pokhara to Ghandruk, one of the largest and most celebrated Gurung villages in Nepal. Perched at around 1,940 metres, Ghandruk offers immediate rewards with its slate-roofed stone houses, terraced fields, and commanding views of Annapurna South and Machhapuchhre rising dramatically above the Modi Khola valley. While Ghandruk sees a steady flow of trekkers, its cultural richness — from the Gurung Museum to the warm hospitality of local teahouses — makes it a worthy starting point for the days ahead.",
+                "From Ghandruk, the trail climbs steadily through dense rhododendron and oak forests towards Tadapani, sitting at around 2,630 metres. This forested ridge-top settlement is a quiet crossroads where the main trekking crowds thin noticeably. On clear mornings, the tree line frames jaw-dropping views of Annapurna South and Hiunchuli, while the surrounding forest provides shelter to Himalayan birds and the occasional glimpse of wildlife. The walk through these ancient woods, particularly when rhododendrons are in bloom from March to April, is one of the most atmospheric stretches of the entire route.",
+                "Continuing upward from Tadapani, the trail emerges onto the open ridge at Dobato, a viewpoint that feels almost secret in its seclusion. At roughly 3,600 metres, Dobato offers an unobstructed panorama across the Annapurna massif, with Annapurna South, Fang, and the iconic fishtail peak of Machhapuchhre arranged like a living painting above the valleys below. Sunrise here is a deeply quiet affair — far from the crowds of Poon Hill — with only the alpine wind and the slow ignition of gold across the high snow faces for company. Few trekkers venture to Dobato on this particular circuit, which makes mornings at this ridgeline feel like a private audience with the Himalayas.",
+                "The route then ascends further to Muldai Viewpoint, one of the finest and least-known high vantage points in the region. At approximately 3,700 metres, Muldai opens up an even wider sweep of the horizon, drawing the Dhaulagiri range into full view alongside the familiar giants of the Annapurna circuit. The high meadows around Muldai feel remote and untamed, with yak pastures rolling gently across the ridge and the silence broken only by wind. This is genuinely off-the-beaten-path trekking — trails here see a fraction of the foot traffic found on the main Poon Hill circuit, and the sense of discovery is palpable with every step.",
+                "Descending from Muldai, the trek joins the more frequented trail into Ghorepani, a busy trekking hub sitting at 2,860 metres. After days of quiet ridges and empty trails, Ghorepani's teahouses and the company of fellow trekkers from around the world provide a welcome contrast. The pre-dawn climb to Poon Hill at 3,210 metres remains one of the great trekking rituals in Nepal — the summit fills with headlamps and anticipation before the sky turns through shades of violet, pink, and gold behind a 180-degree panorama of Dhaulagiri, Tukuche, Nilgiri, Annapurna I through South, Machhapuchhre, and Lamjung Himal. It is a spectacular and well-deserved reward, even if shared with a crowd.",
+                "What truly distinguishes this itinerary from the standard Ghorepani loop is where the trail leads next. Beyond Ghorepani, the route pushes into Parbat district towards Kokhe Danda, an emerging viewpoint that is drawing only the most curious of trekkers. The trail here is noticeably quieter, winding through mixed forests and open ridgelines with Himalayan views that rival anything seen earlier on the trek. Kokhe Danda feels like a place still finding its way onto the map — a hidden gem where the mountains feel closer and the experience feels entirely your own.",
+                "From Kokhe Danda, the descent continues through Lespar, a traditional village where the rhythms of rural Nepali life continue largely untouched by tourism. Stone pathways connect terraced farms, local women weave and work outside their homes, and the teahouses are simple and sincere. This is the kind of authentic encounter that makes trekking in Nepal so meaningful — the mountains provide the spectacle, but the people provide the soul.",
+                "The final descent carries through Banau before the trail reaches the road at Kushma, a riverside town in Parbat district known for Nepal's highest suspension bridge over the Kali Gandaki gorge. From Kushma, a comfortable drive returns trekkers to Pokhara, completing a circuit that has moved from iconic vistas to secret ridges, from bustling mountain villages to quiet rural hamlets, and from the familiar to the wonderfully unexpected.",
+                "The Short Multiple Viewpoints Trek is ideal for trekkers with limited time who refuse to compromise on experience. It delivers world-class Himalayan panoramas, genuine off-trail discovery, and rich cultural immersion — all within a compact and well-connected route that leaves even seasoned trekkers with a lasting sense of having found something truly special."
+            ],
+            "highlights": [
+                "Panoramic Annapurna and Dhaulagiri views",
+                "Sunrise from Muldai Viewpoint and Kokhe Danda",
+                "Experience of local culture and lifestyle",
+                "Different perspective of Annapurna South",
+                "Less touristy trails",
+                "Rhododendron and Oak forests"
+            ],
+            "right_for_you_yes": [
+                "You want to experience Poon Hill and Khopra Ridge without the usual tourist crowds",
+                "You have 8 days and want a full journey covering diverse landscapes from forest to ridge to village",
+                "You enjoy combining iconic viewpoints (Poon Hill) with hidden gems (Kokhe Danda, Muldai)",
+                "You love authentic cultural experiences — village homestays, local food, and momo-making sessions"
+            ],
+            "right_for_you_no": [
+                "You're looking for a quick 3–4 day option — this trek is designed to be a full 8-day journey",
+                "You want luxury teahouse facilities throughout — accommodation is comfortable but simple on this route"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Ghandruk → Trek to Tadapani",
+                    "paragraphs": [
+                        "Morning drive from Pokhara to Ghandruk, a two and a half hour drive (43KM). We stop for a short tea break at Ghandruk and then start our hike to Tadapani. After two and a half hours, we reach Bhaisikharka where we stop for lunch. We then hike for a further hour on a gradual uphill trail to reach Tadapani. The trail today passes through beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Altitude": "2,705m",
+                        "Distance": "6.5 KM",
+                        "Time": "3.5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Tadapani → Isharu → Dobato",
+                    "paragraphs": [
+                        "We wake up early in the morning for the sunrise view. During clear weather, we can see Annapurna South, Hiunchuli and Mount Fishtail from here.",
+                        "After breakfast, we start our hike towards Dobato. The trail again passes through beautiful Rhododendron and Oak forest. Initially it is gradual uphill and a bit steep before reaching Isharu from Meshar. At Isharu, we stop for lunch and then hike for another one and a half hours to reach Dobato, where we stay at Hotel Dobato ViewTop. We can also hike to Muldai for a sunset view."
+                    ],
+                    "meta": {
+                        "Altitude": "3,500m",
+                        "Distance": "6.2 KM",
+                        "Time": "5–6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Dobato → Chhistibung → Khopra Ridge",
+                    "paragraphs": [
+                        "Today, we wake up early and hike around 25 minutes to reach Muldai Viewpoint for the sunrise view. We can see Dhaulagiri, Annapurna and Mansiri range peaks from here. We then hike back down to the tea house, have breakfast, and start hiking to Khopra Danda.",
+                        "This is a slightly longer day. After an hour, we reach Bayeli Kharka, mostly trekking along a ridge. Later, we descend to 2,800m and climb up to 3,100m to reach Chhistibung for lunch. From here, it is another 2.5–3 hrs of uphill hiking to Khopra Ridge, where we stay overnight at a Community Lodge."
+                    ],
+                    "meta": {
+                        "Altitude": "3,310m",
+                        "Distance": "11 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Community Lodge"
+                    }
+                },
+                {
+                    "day": 4,
+                    "title": "Khopra Ridge → Chhistibung → Swanta",
+                    "paragraphs": [
+                        "Even though we cannot see the sunrise from Khopra Ridge itself, we enjoy stunning close views of Dhaulagiri on one side of the gorge and Annapurna South on the near side.",
+                        "After breakfast, we start descending to Swanta Village. Initially, we follow the same trail as yesterday back to Chhistibung, and then descend to Swanta Village. We can have lunch at a stream-side restaurant one hour after Chhistibung, or wait until Swanta."
+                    ],
+                    "meta": {
+                        "Distance": "9.3 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 5,
+                    "title": "Swanta → Chitre → Ghorepani",
+                    "paragraphs": [
+                        "Since Ghorepani is not that far, we start slightly later today. Initially, we hike down to the river and after crossing a suspension bridge, we start climbing back up. We pass through the village of Chitre, sometimes hiking along the road before eventually reaching stone steps that lead all the way up to Ghorepani."
+                    ],
+                    "meta": {
+                        "Altitude": "2,880m",
+                        "Distance": "5 KM",
+                        "Time": "4 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 6,
+                    "title": "Ghorepani → Poon Hill → Kokhe Danda",
+                    "paragraphs": [
+                        "Today, unlike others, we don't start early in the morning for Poon Hill — we go after breakfast instead. It is an hour's uphill climb on stone steps, and by the time we reach Poon Hill it will be almost empty, so we have the entire viewpoint to ourselves. Later, we descend to Phulbari for lunch and then climb up to Kokhe Danda through a beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Distance": "6.7 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 7,
+                    "title": "Kokhe Danda → Jaljala → Lespar",
+                    "paragraphs": [
+                        "We wake up early for sunrise and the first sunrays over the Dhaulagiri and Annapurna range peaks. On a clear day, views extend all the way to Langtang Lirung and even Numbur peak in the Lower Everest region.",
+                        "After breakfast, we start our hike to Lespar. Initially mostly flat or gradual downhill to Dhima Danda, then we descend to Jaljala and follow stone steps all the way down to Lespar. After lunch, we walk around to explore the village. In the evening, we can have a Momo making session with the host at the Homestay."
+                    ],
+                    "meta": {
+                        "Distance": "9 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Homestay"
+                    }
+                },
+                {
+                    "day": 8,
+                    "title": "Lespar → Banau → Pokhara",
+                    "paragraphs": [
+                        "We enjoy a local breakfast in the morning. After that, we start our hike to Banau via Haljure. Initially an hour uphill, then mostly flat until Haljure, followed by another hour's descent to Banau. From Banau, we take a taxi or jeep back to Pokhara with a stop at Kushma — a total drive of about two and a half hours."
+                    ],
+                    "meta": {
+                        "Distance": "9 KM",
+                        "Time": "5 Hrs"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Is Khopra Ridge Trek suitable for beginners?",
+                    "answer": "Yes — the trek is rated Moderate and is accessible to both beginners and experienced trekkers with a reasonable level of fitness. Day 3 is the longest and most demanding (7 hours, including a descent and re-ascent before Khopra Ridge), but the pace is manageable. If you can walk comfortably for 5–7 hours over consecutive days, you'll be well suited to this route."
+                },
+                {
+                    "question": "How does this trek differ from the standard Poon Hill route?",
+                    "answer": "The standard Poon Hill circuit is one of Nepal's busiest treks. This route includes Poon Hill but approaches it from a quieter direction and then continues into the hidden trails of Khopra Ridge, Kokhe Danda, and Parbat — areas that most trekkers never see. You get the iconic viewpoint without the crowds, plus several days of genuinely off-the-beaten-path trekking that the standard route simply doesn't offer."
+                },
+                {
+                    "question": "What is the Muldai Viewpoint and is it worth the extra hike?",
+                    "answer": "Muldai is a viewpoint just above Dobato at around 3,650m, and it's absolutely worth the 25-minute pre-breakfast hike on Day 3. On clear mornings you get a sweeping panorama stretching from Dhaulagiri to the Annapurna and Manaslu ranges — some trekkers consider it even better than Poon Hill for the view-to-crowd ratio. We've built it into the itinerary as a sunrise stop on Day 3."
+                },
+                {
+                    "question": "How do we get to the trek start and back to Pokhara?",
+                    "answer": "We arrange private transport from Pokhara to Ghandruk at the start (around 2.5 hours). On the final day, we descend to Banau and take a taxi or jeep back to Pokhara via Kushma — roughly another 2.5 hours. Both transfers are included in the trek cost. No public buses or connections to arrange on your end."
+                },
+                {
+                    "question": "What are the teahouses and accommodation like?",
+                    "answer": "Accommodation varies by night. Most stops are comfortable teahouses with private rooms and shared bathrooms. Khopra Ridge has a Community Lodge which is simple but welcoming. The final night at Lespar is a genuine family homestay — warm, personal, and one of the highlights of the trip. Hot showers may be available at lower stops for a small fee. Bring a sleeping bag liner for added warmth."
+                },
+                {
+                    "question": "What is the best time of year for this trek?",
+                    "answer": "October and November are peak season — post-monsoon clarity makes the mountain views exceptional and the trails are dry and firm. March to May is equally good, with rhododendrons in full bloom through the forest sections from Ghandruk to Dobato. December offers crisp visibility and very few trekkers, making it an underrated time to go. June to September brings monsoon rain and is generally not recommended for this route."
+                },
+                {
+                    "question": "Do I need permits for this trek?",
+                    "answer": "Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. These are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any permit offices yourself."
+                },
+                {
+                    "question": "What is the food like on the trek?",
+                    "answer": "Teahouse menus cover the usual Himalayan staples — dal bhat, noodles, pasta, eggs, soups, and seasonal vegetables. At the Lespar homestay on Day 7, meals are home-cooked by your host family, and the evening includes a momo-making session. Three meals per day are included throughout. If you have dietary requirements, let us know in advance and we'll make sure each stop is informed."
+                },
+                {
+                    "question": "What should I pack for 8 days?",
+                    "answer": "Key items: sturdy trekking boots, warm layers including a down or fleece jacket (nights at Dobato and Khopra Ridge reach near-freezing), a waterproof outer shell, trekking poles (helpful on the longer descent days), a headlamp, reusable water bottle, sunscreen, and a daypack of 20–25L. A sleeping bag liner is useful for homestay and community lodge nights. We'll send a full packing list after booking."
+                },
+                {
+                    "question": "What happens if I need to leave the trek early?",
+                    "answer": "If you need to return early for any reason, there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary — at no extra charge. Please see our full <a href=\"/cancellation\">Cancellation Policy</a> for complete details."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$650"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$620"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$600"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$590"
+                    }
+                ],
+                "included": [
+                    "Permits required for the trek",
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Khopra Ridge Trek"
+        },
+        "cms_page": true
     },
     {
         "id": "trek_abc",
@@ -369,28 +731,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Annapurna Base Camp Trek",
+            "meta_description": "Explore the Annapurna Base Camp trail via a quieter, less touristy approach through Mohare and Kokhe Danda. 10-day locally guided trek with Discover Parbat.",
+            "meta_keywords": "Annapurna Basecamp via Kokhe Danda, ABC Trek via Mohare Danda route. Alternative Annapurna BAsecamp route, Best route for Annapurna Basecamp trail",
+            "hero_image": "khopra.jpg",
+            "hero_eyebrow": "Annapurna Region, Nepal · 8 Days",
+            "hero_title_html": "Annapurna Base <br>Camp Trek",
+            "hero_subtitle": "Trek throudh the gorge of Modi Khola to Annapurna Sanctuary",
             "stats": [
                 {
-                    "value": "",
+                    "value": "10 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Moderate",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "4,130m",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Tea House",
                     "label": "Accommodation"
                 }
             ],
@@ -407,20 +769,254 @@
                 "abc9.jpg",
                 "abc10.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Annapurna Base Camp Trek",
+            "overview_paragraphs": [
+                "The 10 Days Annapurna Base Camp Trek is one of the most iconic trekking experiences in Nepal, offering a complete journey into the heart of the Himalayas. This carefully designed route begins with a scenic drive from Pokhara to Banau via Kushma, gradually transitioning from road access into peaceful hiking trails that pass through authentic villages and forested hillsides.",
+                "Unlike the standard approach, this itinerary follows a unique and diverse route through Sarga and Kokhe Danda, allowing trekkers to experience quieter sections of the Annapurna region before connecting to the classic trail. These early days provide a more immersive introduction to local life, terraced farmlands, and traditional settlements, while also offering wide-angle Himalayan views away from the busier trekking corridors.",
+                "The trail then reaches the famous Poon Hill (3,210m), one of the most celebrated viewpoints in Nepal. From here, trekkers are rewarded with a breathtaking sunrise over the Annapurna and Dhaulagiri ranges, with peaks like Annapurna South and Machhapuchhre glowing in golden light. This section offers a perfect blend of accessibility and unforgettable mountain scenery.",
+                "As the journey continues, the trail descends and reconnects with the main Annapurna Base Camp route at Chhomrong, a beautiful Gurung village perched on a hillside with dramatic views. From here, the landscape begins to change significantly as you move deeper into the Annapurna Sanctuary, passing through dense bamboo forests, river valleys, and high alpine terrain via Himalaya.",
+                "The highlight of the trek is reaching Annapurna Base Camp (4,130m), a spectacular natural amphitheater surrounded by towering snow-capped peaks. Unlike other viewpoints, Annapurna Base Camp sits within a high glacial valley, offering a rare 360-degree panorama where mountains such as Annapurna I, Annapurna South, Hiunchuli, and Machhapuchhre rise dramatically on all sides. This unique perspective—being inside the mountains rather than viewing them from a distance—is what makes this trek truly unforgettable.",
+                "Historically, the Annapurna Base Camp Trek was completed as a full camping expedition, with trekkers carrying tents and supplies through remote terrain. Over the years, the development of teahouses and lodges along the route has made it more accessible, transforming it into one of Nepal's most popular trekking routes while still preserving its natural beauty and cultural richness.",
+                "Due to its popularity, the trail can be busy during peak trekking seasons such as spring (March–May) and autumn (September–November). However, the diversity of landscapes, well-established infrastructure, and consistent mountain views make it a highly rewarding experience despite the crowds.",
+                "The return journey includes a relaxing stop at Jhinu Danda, where natural hot springs by the riverside provide the perfect opportunity to unwind after days of trekking. This final highlight adds a refreshing and memorable end to the adventure before heading back towards Pokhara.",
+                "Overall, the Annapurna Base Camp Trek is ideal for trekkers seeking a balanced Himalayan experience—combining cultural immersion, diverse landscapes, and close-up mountain views. With its unique route variation via Kokhe Danda and Poon Hill, this itinerary offers both originality and the classic beauty that has made Annapurna Base Camp one of the best trekking destinations in the world."
+            ],
+            "highlights": [
+                "Scenic drive from Pokhara to Banau",
+                "Offbeat trail via Kokhe Danda",
+                "Sunrise views from Poon Hill",
+                "Journey into Annapurna Sanctuary valley",
+                "Close-up views of snowcapped peaks",
+                "Annapurna Base Camp amphitheater experience",
+                "Relaxing hot springs at Jhinu Danda"
+            ],
+            "right_for_you_yes": [
+                "You want to reach Annapurna Base Camp via a more unique, less-travelled approach through Kokhe Danda and Poon Hill",
+                "You want the full Himalayan experience — forests, ridgelines, valleys, sanctuary, and hot springs — in one journey",
+                "You're comfortable with 10 days of consecutive trekking including one day reaching 4,130m altitude",
+                "You dream of standing inside a 360-degree amphitheater of towering Himalayan peaks"
+            ],
+            "right_for_you_no": [
+                "You have less than 10 days — this is a full itinerary and cannot be meaningfully shortened",
+                "You're prone to altitude sickness or have not acclimatised at altitude before — 4,130m requires solid preparation"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Banau → Trek to Sarga",
+                    "paragraphs": [
+                        "Today, we initially drive to Banau village, with a short tea break at Kushma. It is around 75KM which takes two and a half hours of driving. From Banau we start hiking through ridge to Haljure, where we stop for lunch. After lunch, the hike through ridge continues, we then reach Lespar. From Lespar, we start climbing again to reach Sarga Camp and Homestay, our accomodation for tonight."
+                    ],
+                    "meta": {
+                        "Altitude": "2,400m",
+                        "Distance": "9 KM",
+                        "Time": "4 Hrs",
+                        "Stay": "Homestay"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Sarga Camp → Dhima Danda → Kokhe Danda",
+                    "paragraphs": [
+                        "Sarga is a beautiful quite accomodation amidst the forest.",
+                        "After breakfast, we start our hiking. The first half today is a bit steep as we gain around 650m in elevation before lunch. After reaching Jaljala, 2900m, we start seeing the snowcapped peaks. From here, Dhima Danda is still an hour more hike, where we stop for lunch. From here, it is mostly flat or gradual uphill and we gaon another 250m, before reaching Kokhe Danda. The trail passes through beautiful Rhododendron an Oak forest."
+                    ],
+                    "meta": {
+                        "Altitude": "3,309m",
+                        "Distance": "8.4 KM",
+                        "Time": "5–6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Kokhe Danda → Poonhill → Ghorepani",
+                    "paragraphs": [
+                        "Today, we wake up early for the sunrise view from Kokhe Danda. During clear weather, we see peaks from Annapurna, Dhaulagiri, Mansiri and Langtang range.",
+                        "The hike to Ghorepani via Poonhill passes through a beautiful ridgeline with view of Dhaulagiri at left and Annapurna at right side. It takes around 4 hours but we can make a detour to Kalidaha, a small pond just five minutes below the main trail. It gives stunning views of reflection of Nilgiri, Annapurna South and Annapurna I. We stop for a short tea break at Tinpokhare from where its 30 minutes uphill to Poonhill. Eventually, we descend down on the stone steps leading to Ghorepani."
+                    ],
+                    "meta": {
+                        "Altitude": "2,880m",
+                        "Distance": "6 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 4,
+                    "title": "Ghorepani → Banthati → Tadapani",
+                    "paragraphs": [
+                        "We do not climb to Poonhill today unlike others. After breakfast, we hike towards Deurali, over a ridge. After half an hours, there is a point from where the view is equivalent to that of Poonhill. After reaching Deurali, we start descending down to Banthati, where we stop for a lunch break. We then further descend down, reaching a rivulet, from where we go uphill for another 30 minutes to reach Tadapani. Todays trail is also through Rhododendron and Oak forest."
+                    ],
+                    "meta": {
+                        "Altitude": "2,700m",
+                        "Distance": "8.4 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 5,
+                    "title": "Tadapani → Chhomrong → Sinuwa",
+                    "paragraphs": [
+                        "We can see a closeup view of Annapurna South and Hiunchuli from Tadapani.",
+                        "After having breakfast, we start hiking downhill to Chuile and then to Komrong Khola, stream. From there, we start climbing up again and then gradual uphill until Chhomrong. Here, we have lunch. Then we follow the stone steps leading down to Chhomrong Khola, we cross a suspension bridge. Then we start our ascent to Sinuwa, where we stay overnight."
+                    ],
+                    "meta": {
+                        "Altitude": "2,350m",
+                        "Distance": "12 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 6,
+                    "title": "Sinuwa → Bamboo → Himalaya",
+                    "paragraphs": [
+                        "Initially, we climb up to Upper Sinuwa, gaining around 200m in terms of elevation. From here, we go mostly flat or gradual uphill for the next hour. The trail gives beautiful view of Mount Fishtail. We then descend down to Bamboo. From here, we start ascending up again. At Dovan, we stop for lunch. From here, we start going uphill again passing Upper Dovan, a beautiful temple by a waterfall and then eventually reach Himalaya."
+                    ],
+                    "meta": {
+                        "Altitude": "2,870m",
+                        "Distance": "8.6 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 7,
+                    "title": "Himalaya → MBC → ABC",
+                    "paragraphs": [
+                        "We start our hike after breakfast. We ascend up listening to the sounds of Modi River as we follow her all the way upto Annapurna Base Camp. We stop at Deurali for a teabreak and then climb up to Machhapuchhre Base Camp, where we have lunch. From MBC, its another 1.5/2hrs uphill to Annapurna Base Camp. From MBC onwards, we see 360 Degree stunning views of snowcapped peaks of Annapurna Range.",
+                        "We can however chose to stay overnight at MBC as well. It totally depends on your health condition, on how you feel with the elevation. In this case, we hike to ABC the next morning for sunrise."
+                    ],
+                    "meta": {
+                        "Altitude": "4,130m",
+                        "Distance": "8.9 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 8,
+                    "title": "ABC → Deurali → Bamboo",
+                    "paragraphs": [
+                        "We wakeup early to catchup the sunrise views. The Annapurna I, Moditse, Tharpu Chuli would be painted golden. We see another stunning perspective of Mount Fishtail or Machhapuchchre.",
+                        "After breakfast, we start descending down to Bamboo. We follow the same trail as of past days, hiking just next to Modi River. We stop for lunch at Himalaya and descend further down to Bamboo, where we stop overnight."
+                    ],
+                    "meta": {
+                        "Altitude": "2,310m",
+                        "Distance": "14 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 9,
+                    "title": "Bamboo → Chhomrong → Jhinu Danda",
+                    "paragraphs": [
+                        "We start our hike after breakfast as usual. We initially climb up in the stone steps and after an hour, we go mostly flat or gradual downhill to reach Upper Sinuwa. From here, we start descending to Chhomrong Khola via Sinuwa. After crossing suspension bridge over Chhomrong Khola, we follow the stone steps leading all the way to the top of village. We stop for the lunch and later descend down on the stone steps to Jhinu Danda.",
+                        "Today, we can visit the hot springs which is half an hour hike away from our Teahouse. After 9 days of hiking through the Himalayas, we can let our body recover with a dip in the hot springs."
+                    ],
+                    "meta": {
+                        "Distance": "9.1 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 10,
+                    "title": "Jhinu Danda → Samrung → Pokhara",
+                    "paragraphs": [
+                        "Today is a very short day in terms of hiking hours. We cross the suspension bridge over Kimrong Khola and reach Samrung after 30 minutes of hiking. From here, we take a Jeep which will take us to Pokhara. It will be a total of around 3 hours of scenic drive.",
+                        "Our 10 Days Trek then ends here."
+                    ],
+                    "meta": {
+                        "Distance": "2 KM",
+                        "Time": "30 Mins"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Is this trek suitable for first-time trekkers?",
+                    "answer": "The trek is rated Moderate and is achievable for motivated first-timers with a good base of fitness. The 10-day duration means your body has time to adjust gradually. The most demanding stretch is Days 6–7, when you're gaining altitude into the Sanctuary and pushing to 4,130m. If you can handle 6–7 hours of walking on consecutive days and are comfortable at altitude, this trek is within reach. We recommend a few weeks of regular walking or cardio training before departure."
+                },
+                {
+                    "question": "What makes this route different from the standard ABC trek?",
+                    "answer": "Most ABC trekkers start from Nayapul or Ghandruk and follow the same well-worn path. Our route begins in Parbat, passing through the hidden trails of Sarga and Kokhe Danda before crossing via Poon Hill. This means your first two days are on quiet, less-travelled paths with wide Himalayan views — a very different introduction to the mountains. You join the classic route at Ghorepani with a fresh perspective and fewer crowds in your legs."
+                },
+                {
+                    "question": "What is the altitude like and should I worry about AMS?",
+                    "answer": "The maximum altitude is 4,130m at Annapurna Base Camp. Acute Mountain Sickness (AMS) is possible above 3,000m and should be taken seriously. Common symptoms include headache, fatigue, nausea, and dizziness. Our itinerary is designed to gain altitude gradually, and your guide is trained to monitor for symptoms. If you feel unwell, descending is always the right call — we will fully support that decision. Travel insurance covering mountain evacuation is strongly recommended. Stay hydrated and never rush the ascent."
+                },
+                {
+                    "question": "Can I stay at MBC instead of pushing to ABC on Day 7?",
+                    "answer": "Yes — this is entirely your choice and we build flexibility into Day 7 for exactly this reason. If you're feeling the altitude or tired after the climb to MBC, you can rest there overnight and hike to ABC the following morning for sunrise, which many trekkers consider the most magical experience of the entire journey. Your guide will assess conditions with you on the day and support whichever option suits you best."
+                },
+                {
+                    "question": "What are the teahouses like inside the Annapurna Sanctuary?",
+                    "answer": "Teahouses along the lower sections (Ghorepani, Tadapani, Chhomrong) are comfortable with private rooms, decent food, and sometimes hot showers for a small fee. As you move deeper into the Sanctuary — Himalaya, MBC, ABC — facilities become more basic. Rooms are small, heat is limited at altitude, and menus are simpler. That's part of the experience. A warm sleeping bag (rated to -10°C is ideal for ABC nights) and a sleeping bag liner are essential above Chhomrong."
+                },
+                {
+                    "question": "What is the best time of year to do this trek?",
+                    "answer": "October and November are the most popular months — post-monsoon clarity means exceptional visibility at ABC and the trail is dry and firm. March to May is equally good with rhododendrons in bloom through the forest sections and reliable summit views. December and January are feasible but cold, especially at altitude — ABC nights can drop well below freezing. The monsoon season (June to September) brings heavy rain into the Sanctuary and is generally not recommended for this route."
+                },
+                {
+                    "question": "Do I need permits and how are they arranged?",
+                    "answer": "Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. Both are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any offices or queue for permits yourself."
+                },
+                {
+                    "question": "What are the hot springs at Jhinu Danda like?",
+                    "answer": "Jhinu Danda's hot springs are a natural riverside pool fed by geothermal water — the perfect reward after 9 days on the trail. They're about 30 minutes' walk below the village, set beside the Modi River. After the cold nights at altitude, soaking in warm water surrounded by forest and river sounds is genuinely restorative. There's a small entry fee payable on the day."
+                },
+                {
+                    "question": "What should I pack for a 10-day trek reaching 4,130m?",
+                    "answer": "Key items: sturdy trekking boots with ankle support, a quality sleeping bag rated to at least -10°C for ABC nights, a down jacket, waterproof outer shell, warm base layers, trekking poles (essential for the long descents), a headlamp, reusable water bottle, water purification tablets, sunscreen, sunglasses, and a daypack of 25–30L. Your porter will carry the main bag. We'll send a full detailed packing list after booking."
+                },
+                {
+                    "question": "What happens if I need to leave the trek early?",
+                    "answer": "If you need to descend early for any reason — altitude sickness, injury, or personal circumstances — there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary at no extra charge. Please see our full <a href=\"/cancellation\">Cancellation Policy</a> for complete details. This is also why comprehensive travel insurance covering mountain evacuation is strongly advised before you depart."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$800"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$750"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$720"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$700"
+                    }
+                ],
+                "included": [
+                    "Permits required for the trek",
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Hot spring entry fee at Jhinu Danda",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Annapurna Base Camp Trek"
+        },
+        "cms_page": true
     },
     {
         "id": "trek_short_kokhe",
@@ -435,28 +1031,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Kokhe Danda Trek",
+            "meta_description": "Nepal's most authentic short trek. Kokhe Danda delivers Himalayan views, real village life & zero crowds in just 5 days. The offbeat alternative to Poon Hill.",
+            "meta_keywords": "Kokhe Danda Trek, Poon Hill alternative Nepal, offbeat trek Nepal, short trek Nepal, Parbat trekking, authentic Nepal trek, 3 day trek Nepal, best short trek Annapurna, village trek Nepal, Discover Parbat Kokhe Danda,Best Company for Kokhe Danda, local guide Nepal",
+            "hero_image": "kokhe.jpg",
+            "hero_eyebrow": "Parbat, Nepal · 3 Days",
+            "hero_title_html": "Short Kokhe<br>Danda Trek",
+            "hero_subtitle": "Hidden Himalayan trail above Parbat with panoramic mountain views",
             "stats": [
                 {
-                    "value": "",
+                    "value": "3 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Easy",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "3,310m",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Homestay",
                     "label": "Accommodation"
                 }
             ],
@@ -469,20 +1065,154 @@
                 "kokhe6.jpg",
                 "kokhe10.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Short Kokhe Danda Trek",
+            "overview_paragraphs": [
+                "The Short Kokhe Danda Trek is designed for travelers who don't have a week to spare but refuse to compromise on the experience. In just 3 days, you reach the same panoramic ridgeline, see the same Dhaulagiri and Annapurna range views, and walk the same quiet trails that make the 5-day version one of our most loved routes. The only difference is the pace — and for the right traveler, that's not a difference at all.",
+                "The approach is direct. A drive from Pokhara to Banthati cuts out the first day of gradual ascent, placing you at the base of the climb on Day 1 itself. From there, you trek straight up to Kokhe Danda in a single push — arriving at the ridgeline with the full reward already waiting: sweeping 180-degree views of the Annapurna range, Dhaulagiri, and the rolling hills of Parbat stretching out below you. Sunrises and sunsets here are unhurried and genuinely stunning.",
+                "Day 2 brings one of the most enjoyable parts of any Kokhe Danda journey — the descent to Lespar village. This is where the trek slows down in the best possible way. You explore the village on foot, meet the families who live here, and sit down for a momo-making session with your host. It's the kind of afternoon that reminds you why slow travel matters. A home-cooked meal and a night in a genuine family homestay round out the day.",
+                "On the final morning, a gentle hike down to Banau and a scenic drive back via Kushma brings the trip to a natural close. The whole journey fits inside a long weekend, yet it carries the same silence, the same mountain views, and the same warmth of local hospitality that the longer route delivers.",
+                "One practical note worth knowing: if the weather at Kokhe Danda isn't clear on the evening of Day 1, you have the option to spend an extra morning there and wait for the views — then return via the same route on Day 3. It's a built-in flexibility that means poor weather doesn't have to mean a missed experience."
+            ],
+            "highlights": [
+                "Panoramic Annapurna and Dhaulagiri views",
+                "Sunrise from Kokhe Danda",
+                "Experience of local culture and lifestyle",
+                "Authentic Homestays",
+                "Less touristy trails",
+                "Rhododendron forests"
+            ],
+            "right_for_you_yes": [
+                "You want a genuine off-the-beaten-path experience away from tourist crowds",
+                "You're a first-time trekker or someone looking for something quieter and more personal",
+                "You love authentic village life, home-cooked food, and local culture",
+                "You have a few days and want panoramic Himalayan views without a demanding climb"
+            ],
+            "right_for_you_no": [
+                "You're looking for high-altitude acclimatisation above 4,000m",
+                "You prefer well-equipped teahouses with hot showers and Wi-Fi every night"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Banthati → Trek to Kokhe Danda",
+                    "paragraphs": [
+                        "On the first day, we start driving from Pokhara, as early as 7 AM in the morning. Initially, it is one and a half hour drive to Birethanti on a perfectly blacktopped road. From here, its an offroad drive for the next half. We start hiking from Banthati (2300m). We hike for one and a half hour to Taprang, where we stop for lunch. From here, we gain another 600m to reach Aapa Cottage, our accommodation at Kokhe Danda. The trail is mostly through Rhododendron and Oak forest and through the ridgeline after Taprang."
+                    ],
+                    "meta": {
+                        "Altitude": "3,310m",
+                        "Distance": "5.7 KM",
+                        "Time": "4.5 Hrs",
+                        "Stay": "Teahouse"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Kokhe Danda → Jaljala → Lespar",
+                    "paragraphs": [
+                        "We wake up early in the morning for the sunrise view. During clear weather, we can see from Dhaulagiri, Annapurna, Mansiri, Ganesh to Langtang range peaks.",
+                        "After breakfast, we start our hike. We initially pass Mohare Danda and from there it is mostly flat or gradual downhill till Dhima Danda, where there is a small lunch place. From here, we have a steep downhill for 30 minutes and flat for the next 30 minutes to reach Jaljala. From here on, we go down on stone steps reaching all the way down to Lespar.",
+                        "After lunch at Lespar, we go on a small circuit hike to explore the village. Later in the evening, we can have a Momo making session with the host at the Homestay."
+                    ],
+                    "meta": {
+                        "Altitude": "2,150m",
+                        "Distance": "9.4 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Homestay"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Lespar → Banau → Drive to Pokhara",
+                    "paragraphs": [
+                        "We have local breakfast at Lespar. The first part of the hike is steep for an hour, going up on stone steps. After that we go mostly flat for an hour to reach Haljure. From here, we start descending down to Banau. At Banau, we end the hike and take a car back to Pokhara with a stop at Kushma. At Kushma, you can do Bungee or Zipline if you are interested."
+                    ],
+                    "meta": {
+                        "Altitude": "800m",
+                        "Distance": "7.6 KM",
+                        "Time": "3 Hrs"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Do I need prior trekking experience for Kokhe Danda?",
+                    "answer": "No prior trekking experience is needed. Kokhe Danda is rated Easy and is suitable for first-time trekkers. The longest day (Day 2) involves around 5 hours of walking with some elevation gain, so a basic level of fitness helps — but you don't need to be an athlete. If you can walk comfortably for a few hours, you'll be fine."
+                },
+                {
+                    "question": "How do we get from Pokhara to the trek start?",
+                    "answer": "We arrange private transport from Pokhara to Banthati (approximately 2 hours including the road to Birethanti). The drive is scenic — you pass through the hills leading into Parbat district. No public buses or connections to worry about; it's all handled by us."
+                },
+                {
+                    "question": "What are the homestays like? Will I have a private room?",
+                    "answer": "The homestays are simple, clean, and genuinely family-run — this is one of the things that makes Kokhe Danda special. You'll typically have a private or semi-private room with basic bedding. Bathrooms are usually shared and facilities are basic. Think warm hospitality over luxury. Meals are home-cooked by the host family, which is honestly one of the highlights of the trip."
+                },
+                {
+                    "question": "What is the food like on the trek?",
+                    "answer": "You'll eat what the local families eat — mostly dal bhat (lentils and rice), fresh vegetables, local honey, eggs, and seasonal produce. On Day 2, there's a hands-on momo making session with your host family. It's wholesome, filling, and genuinely delicious. If you have dietary restrictions or allergies, let us know in advance and we'll make sure the hosts are prepared."
+                },
+                {
+                    "question": "Is there mobile network and Wi-Fi on the trail?",
+                    "answer": "Mobile signal (NCell or NTC) is available in most villages along the route, though it can be patchy on the higher ridgelines. Wi-Fi is not reliably available at the homestays — this is a remote trail and part of its charm. We'd recommend downloading offline maps and letting family know you may be out of contact for stretches. A local SIM card from Pokhara is a good idea if you need connectivity."
+                },
+                {
+                    "question": "What is the best time of year to do this trek?",
+                    "answer": "The two peak windows are March–May (spring) and October–November (autumn). Spring brings rhododendrons in full bloom along the forest trails, while autumn delivers the clearest mountain views after the monsoon clears the air. December is quieter than most people expect — fewer trekkers and crisp visibility make it a genuinely underrated option. June–September is the monsoon season; trails are lush but wetter underfoot."
+                },
+                {
+                    "question": "Do I need a trekking permit for Kokhe Danda?",
+                    "answer": "For our normal five-day Kokhe Danda Trek, no permit is needed. However, for the three-day option we need an ACAP permit as we pass via Nayapul. This is included in your trek cost and arranged by us before departure."
+                },
+                {
+                    "question": "Can I do this trek solo or do I need a group?",
+                    "answer": "Absolutely — solo trekkers are very welcome and actually quite common on this route. You'll have a private guide for the full trek, and the solo experience on these quiet trails is genuinely special. You can also join one of our fixed group departures if you'd prefer company. Either way, the pricing is transparent and listed above."
+                },
+                {
+                    "question": "What should I pack for this trek?",
+                    "answer": "For a 3-day easy trek, you don't need to overpack. Essentials include: sturdy walking shoes or light trekking boots, layers for cool evenings at altitude (3,300m nights can be cold), a rain jacket, a good daypack, a reusable water bottle, sunscreen, and a headlamp. A sleeping bag liner is useful for homestay nights. We'll send you a full packing list after booking."
+                },
+                {
+                    "question": "What happens if I need to leave the trek early?",
+                    "answer": "If you need to return early for any reason, there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary — at no extra charge. Please also see our full <a href=\"/cancellation\">Cancellation Policy</a> for details."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$299"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$270"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$260"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$240"
+                    }
+                ],
+                "included": [
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter",
+                    "ACAP permit"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Short Kokhe Danda Trek"
+        },
+        "cms_page": true
     },
     {
         "id": "trek_mvp",
@@ -497,28 +1227,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Multiple Viewpoints Trek",
+            "meta_description": "Why choose one when you can have it all? The Multiple Viewpoints Trek is the ultimate Annapurna region experience — 14 days of breathtaking ridges, villages & Himalayan panoramas.",
+            "meta_keywords": "Multiple Viewpoints Trek Nepal, ultimate Annapurna trek, best 14 day trek Nepal, Kokhe Danda Mardi Himal Khopra Ridge trek, Annapurna region trekking, offbeat Nepal trek, combined viewpoints trek Nepal, local guide Annapurna, Annapurna Circuit Alternative, long trek Annapurna",
+            "hero_image": "khopra.jpg",
+            "hero_eyebrow": "Annapurna Region, Nepal · 14 Days",
+            "hero_title_html": "Multiple Viewpoints<br>Trek",
+            "hero_subtitle": "Less touristy trail with stunning views of the Annapurna Range",
             "stats": [
                 {
-                    "value": "",
+                    "value": "14 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Moderate",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "4,600mm",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Tea House",
                     "label": "Accommodation"
                 }
             ],
@@ -537,20 +1267,291 @@
                 "mvp12.jpg",
                 "mvp13.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Multiple Viewpoints Trek",
+            "overview_paragraphs": [
+                "The Multiple Viewpoint Trek is a comprehensive 14-day journey through the Annapurna region, designed to offer a wide range of perspectives of the Himalayas while combining some of the most scenic trails into one immersive experience. Starting from Pokhara with a short drive to Kande, the trek gradually unfolds through diverse landscapes, blending popular highlights with quieter, less touristy sections.",
+                "The trail begins along the Mardi Himal route, ascending through lush rhododendron and oak forests towards high ridges that reveal striking views of Machhapuchhre and the Annapurna range. This section provides a close-up Himalayan experience, with constantly changing scenery and dramatic ridge-line walking that sets the tone for the journey ahead.",
+                "From the Mardi region, the route transitions towards the culturally rich village of Ghandruk, offering a chance to experience traditional Gurung lifestyle along with spectacular mountain backdrops. Moving further away from the busier trails, the trek continues towards Dobato, leading to the stunning Muldai Viewpoint, one of the finest sunrise viewpoints in the region with wide panoramic views stretching across Annapurna and Dhaulagiri.",
+                "As the journey progresses towards Khopra Ridge, the landscapes open into alpine terrain and high ridges, offering a completely different angle of the mountains. This section is notably less touristy, allowing for peaceful trekking while enjoying uninterrupted views of Dhaulagiri, Annapurna South, Nilgiri, and surrounding peaks from unique and less explored vantage points.",
+                "A highlight of the trek is the day hike to the sacred Khayer Lake, a high-altitude alpine lake surrounded by dramatic mountain scenery. This side trip adds both spiritual and visual depth to the experience, showcasing the raw and untouched beauty of the high Himalayas.",
+                "The trail then descends towards Swanta and reconnects briefly with the classic route to Poon Hill, where another iconic sunrise viewpoint offers yet another perspective of the Annapurna and Dhaulagiri ranges. Unlike typical itineraries, the journey continues beyond, heading towards Kokhe Danda, a hidden gem in Parbat that provides wide, peaceful panoramic views far from the crowds.",
+                "This extended section towards Kokhe Danda and Lespar stands out for its authenticity, passing through quiet villages, terraced fields, and untouched trails. It offers a deeper cultural experience along with fresh viewpoints, making the trek feel diverse and continuously rewarding.",
+                "The final descent to Kushma completes the circuit, connecting remote mountain trails with road access while maintaining the sense of exploration throughout. Overall, the Multiple Viewpoint Trek is ideal for trekkers seeking a longer, more varied adventure that combines famous highlights with hidden routes, delivering multiple perspectives of the Annapurna and Dhaulagiri ranges along with rich cultural experiences."
+            ],
+            "highlights": [
+                "Multiple Himalayan viewpoints across a 14-day journey",
+                "Panoramic views of Annapurna, Dhaulagiri, Machhapuchhre, and Nilgiri",
+                "Sunrise from Muldai Viewpoint, Poon Hill, and Kokhe Danda",
+                "Mardi Himal ridge experience with dramatic close-up mountain scenery",
+                "Khopra Ridge vantage point with unique angles of Annapurna South and Dhaulagiri",
+                "Day hike to the sacred Khayer Lake",
+                "Less touristy trails beyond the main trekking routes",
+                "Experience of authentic Gurung and Magar village culture",
+                "Rhododendron and oak forests with diverse landscapes",
+                "Extended route through Swanta, Kokhe Danda, and Lespar for a complete circuit experience"
+            ],
+            "right_for_you_yes": [
+                "You want to experience Poon Hill and Khopra Ridge without the usual tourist crowds",
+                "You have a couple of weeks and want a full journey covering diverse landscapes from forest to ridge to village",
+                "You enjoy combining iconic viewpoints (Poon Hill, Mardi Himal) with hidden gems (Khopra Ridge, Kokhe Danda, Muldai)",
+                "You love authentic cultural experiences — village homestays, local food, and momo-making sessions"
+            ],
+            "right_for_you_no": [
+                "You're looking for a quick 7-8 day option — this trek is designed to be a full 14-day journey",
+                "You want luxury teahouse facilities throughout — accommodation is comfortable but simple on this route"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Kande → Trek to Suire Danda",
+                    "paragraphs": [
+                        "Morning drive from Pokhara to Kande, about an hour. We start hiking from Kande to Australian Camp and then to Pothana, where we stop for lunch. The first hour is a bit steep uphill and then mostly flat or gradual. After lunch, we cross Pitam Deurali, from where it's another half an hour of steep uphill to reach Suire Danda."
+                    ],
+                    "meta": {
+                        "Altitude": "2,438m",
+                        "Distance": "7.3 KM",
+                        "Time": "4 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Suire Danda → Forest Camp → Low Camp",
+                    "paragraphs": [
+                        "We wake up to a beautiful view of Dhaulagiri and Annapurna South. After breakfast, we start hiking through the forest ridge — a mix of flat and gradual uphill until Forest Camp, where we stop for a tea break. From there we gain more elevation and reach Rest Camp at 2,600m for lunch. After lunch, we gain another 400m in elevation to reach Low Camp. We can see beautiful sunset colors on Fishtail from here."
+                    ],
+                    "meta": {
+                        "Altitude": "3,004m",
+                        "Distance": "9.6 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Low Camp → Badal Danda → High Camp",
+                    "paragraphs": [
+                        "We start our day with an amazing view of golden Fishtail Mountain. We hike to Badal Danda, from where we begin seeing Annapurna South and Hiunchuli. From there we hike along the open, exposed ridge with no trees until we reach High Camp. After lunch we go for an acclimatization hike, gaining around 200m towards the Lower Viewpoint."
+                    ],
+                    "meta": {
+                        "Altitude": "3,550m",
+                        "Distance": "5 KM",
+                        "Time": "3 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 4,
+                    "title": "High Camp → Viewpoint → Rest Camp",
+                    "paragraphs": [
+                        "We wake up at around 4:30 AM and start our hike to the Lower Viewpoint — about 1.5 to 2 hours of uphill, reaching 4,000m. Optionally, you can continue to the Upper Viewpoint or Mardi Himal Base Camp. At the Lower Viewpoint there are tea shops for hot drinks. We enjoy stunning close views of Annapurna South and Fishtail before retracing back to High Camp.",
+                        "After a late breakfast at High Camp, we start our descend down to Rest Camp via Badal Danda and Low Camp. We make a stop at Low Camp for lunch."
+                    ],
+                    "meta": {
+                        "Altitude": "3,004m",
+                        "Distance": "15 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 5,
+                    "title": "Rest Camp → Landruk → Ghandruk",
+                    "paragraphs": [
+                        "Today we do a lot of descending and ascending. Initially we go all the way down to Modi River via Landruk. At Landruk, we stop for a tea break. We reach down till 1,300m in elevation. After 30 minutes of uphill from the river valley, we stop for lunch, next to the road leading to Ghandruk. After lunch, we hike all the way up to Ghandruk — a 2 to 2.5 hour steep uphill hike on stone steps trail."
+                    ],
+                    "meta": {
+                        "Altitude": "2,050m",
+                        "Distance": "8.6 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 6,
+                    "title": "Ghandruk → Bhaisikharka → Tadapani",
+                    "paragraphs": [
+                        "Ghandruk is a beautiful Gurung Community Village with close views of Annapurna South and Hiunchuli. In the morning, we explore the village and walk towards the traditional old village side.",
+                        "After some rest and a late breakfast, we start our hike to Tadapani. After two and a half hours, we reach Bhaisikharka where we stop for lunch. We then hike for a further hour on a gradual uphill trail to reach Tadapani. The trail today passes through beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Distance": "6.7 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 7,
+                    "title": "Tadapani → Isharu → Dobato",
+                    "paragraphs": [
+                        "We wake up early in the morning for the sunrise view. During clear weather, we can see Annapurna South, Hiunchuli and Mount Fishtail from here.",
+                        "After breakfast, we start our hike towards Dobato. The trail again passes through beautiful Rhododendron and Oak forest. Initially it is gradual uphill and a bit steep before reaching Isharu from Meshar. At Isharu, we stop for lunch and then hike for another one and a half hours to reach Dobato, where we stay at Hotel Dobato ViewTop. We can also hike to Muldai for a sunset view."
+                    ],
+                    "meta": {
+                        "Altitude": "3,500m",
+                        "Distance": "6.2 KM",
+                        "Time": "5–6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 8,
+                    "title": "Dobato → Chhistibung → Khopra Ridge",
+                    "paragraphs": [
+                        "Today, we wake up early and hike around 25 minutes to reach Muldai Viewpoint for the sunrise view. We can see Dhaulagiri, Annapurna and Mansiri range peaks from here. We then hike back down to the tea house, have breakfast, and start hiking to Khopra Danda.",
+                        "This is a slightly longer day. After an hour, we reach Bayeli Kharka, mostly trekking along a ridge. Later, we descend to 2,800m and climb up to 3,100m to reach Chhistibung for lunch. From here, it is another 2.5–3 hrs of uphill hiking to Khopra Ridge, where we stay overnight at a Community Lodge."
+                    ],
+                    "meta": {
+                        "Altitude": "3,310m",
+                        "Distance": "11 KM",
+                        "Time": "7 Hrs",
+                        "Stay": "Community Lodge"
+                    }
+                },
+                {
+                    "day": 9,
+                    "title": "Khopra Ridge → Khayer Lake → Khopra Ridge",
+                    "paragraphs": [
+                        "This is one of the toughest days of the entire trek. We start early in the morning to hike towards Khayer Pond. Initially we go through the ridge and later, we go on the left side towards the base of Annapurna South. We go gradual up with some sections steep in between and reach Khayer Khola after 2–3 hrs of hike. We stop here for a tea break and continue our hike. At last, there will be an hour of steep hiking before reaching the sacred pond of Khayer. We enjoy the beauty of the pond and rest for some time before returning back. We have lunch at the lunch place at Khayer Khola and then come back to the Community Lodge at Khopra. It can take a total of 8–10 hours of hiking."
+                    ],
+                    "meta": {
+                        "Altitude": "4,600m",
+                        "Distance": "16.6 KM",
+                        "Time": "8–10 Hrs",
+                        "Stay": "Community Lodge"
+                    }
+                },
+                {
+                    "day": 10,
+                    "title": "Khopra Ridge → Chhistibung → Swanta",
+                    "paragraphs": [
+                        "Even though we cannot see the sunrise from Khopra Ridge itself, we enjoy stunning close views of Dhaulagiri on one side of the gorge and Annapurna South on the near side.",
+                        "After breakfast, we start descending to Swanta Village. Initially, we follow the same trail as yesterday back to Chhistibung, and then descend to Swanta Village. We can have lunch at a stream-side restaurant one hour after Chhistibung, or wait until Swanta."
+                    ],
+                    "meta": {
+                        "Distance": "9.3 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 11,
+                    "title": "Swanta → Chitre → Ghorepani",
+                    "paragraphs": [
+                        "Since Ghorepani is not that far, we start slightly later today. Initially, we hike down to the river and after crossing a suspension bridge, we start climbing back up. We pass through the village of Chitre, sometimes hiking along the road before eventually reaching stone steps that lead all the way up to Ghorepani."
+                    ],
+                    "meta": {
+                        "Altitude": "2,880m",
+                        "Distance": "5 KM",
+                        "Time": "4 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 12,
+                    "title": "Ghorepani → Poon Hill → Kokhe Danda",
+                    "paragraphs": [
+                        "Today, unlike others, we don't start early in the morning for Poon Hill — we go after breakfast instead. It is an hour's uphill climb on stone steps, and by the time we reach Poon Hill it will be almost empty, so we have the entire viewpoint to ourselves. Later, we descend to Phulbari for lunch and then climb up to Kokhe Danda through a beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Distance": "6.7 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 13,
+                    "title": "Kokhe Danda → Jaljala → Lespar",
+                    "paragraphs": [
+                        "We wake up early for sunrise and the first sunrays over the Dhaulagiri and Annapurna range peaks. On a clear day, views extend all the way to Langtang Lirung and even Numbur peak in the Lower Everest region.",
+                        "After breakfast, we start our hike to Lespar. Initially mostly flat or gradual downhill to Dhima Danda, then we descend to Jaljala and follow stone steps all the way down to Lespar. After lunch, we walk around to explore the village. In the evening, we can have a Momo making session with the host at the Homestay."
+                    ],
+                    "meta": {
+                        "Distance": "9 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Homestay"
+                    }
+                },
+                {
+                    "day": 14,
+                    "title": "Lespar → Banau → Pokhara",
+                    "paragraphs": [
+                        "We enjoy a local breakfast in the morning. After that, we start our hike to Banau via Haljure. Initially an hour uphill, then mostly flat until Haljure, followed by another hour's descent to Banau. From Banau, we take a taxi or jeep back to Pokhara with a stop at Kushma — a total drive of about two and a half hours."
+                    ],
+                    "meta": {
+                        "Distance": "9 KM",
+                        "Time": "5 Hrs"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Is this 14-day trek suitable for beginners?",
+                    "answer": "This trek is rated Moderate to Challenging and is best suited to trekkers with some prior hiking experience or a solid base fitness level. The Mardi Himal high camp section and the approach to Khayer Lake are the most demanding stretches, with consecutive long days at altitude. That said, the pace is relaxed and the itinerary is designed with adequate acclimatisation built in. If you can walk comfortably for 6–8 hours over multiple consecutive days, you'll manage this route well."
+                },
+                {
+                    "question": "How many viewpoints does this trek cover and what makes each one different?",
+                    "answer": "This route strings together five distinct viewpoints across 14 days — Mardi Himal High Camp, Muldai, Khopra Ridge, Khayer Lake, and Poon Hill — each offering a completely different perspective on the Annapurna and Dhaulagiri ranges. Mardi Himal gives you a raw, close-up view of Machhapuchhre and Annapurna South. Muldai is a hidden sunrise spot above Dobato with a sweeping 180° panorama. Khopra Ridge offers a long ridge-walk view stretching from Dhaulagiri to Annapurna I. Khayer Lake sits at over 4,500m and is one of the most sacred and remote spots on the route. Poon Hill is the classic — iconic for good reason, especially at sunrise. No two days feel the same."
+                },
+                {
+                    "question": "How does this trek differ from the standard Poon Hill or Mardi Himal route?",
+                    "answer": "Most trekkers do either Mardi Himal or Poon Hill as standalone 5–7 day trips. This itinerary connects both, then pushes further into Khopra Ridge, Khayer Lake, and the rarely visited trails through Kokhe and Parbat district — areas most trekkers never reach. You pass through Ghandruk, one of the largest Gurung villages in Nepal, and spend nights at a family homestay in Kokhe. The result is a trek that combines the most celebrated viewpoints in the Annapurna region with genuinely off-the-beaten-path terrain."
+                },
+                {
+                    "question": "What is Khayer Lake and is the hike up to it difficult?",
+                    "answer": "Khayer Lake (also called Khayar Lake) sits at approximately 4,540m and is considered sacred by both Hindu and Buddhist communities in the region. The climb from Khopra Ridge takes around 3–4 hours return and involves a steep ascent on a narrow trail. It is one of the high points of the trek — literally and figuratively. The lake itself, set against a backdrop of Dhaulagiri and Annapurna South, is quietly stunning. We time the visit for early morning to catch the best light and to allow a comfortable return before afternoon cloud builds."
+                },
+                {
+                    "question": "What is the Muldai Viewpoint and is it worth the extra hike?",
+                    "answer": "Muldai sits at around 3,650m just above Dobato, and the hike up takes about 25 minutes from camp — easily done before breakfast. On clear mornings the panorama stretches from Dhaulagiri across the full Annapurna range to Manaslu, and many trekkers rate it above Poon Hill for the view relative to the effort and the near-total absence of crowds. We've built it in as a sunrise stop, so you return to camp for breakfast and then continue the day's walk fully fed."
+                },
+                {
+                    "question": "How do we get to the trek start and back to Pokhara?",
+                    "answer": "We arrange private transport from Pokhara to the Mardi Himal trailhead at the start of the trek. On the final day, we descend to Banau and take a jeep back to Pokhara via Kushma — roughly 2.5 hours. Both transfers are included in the trek cost. No public buses or onward connections to arrange on your end."
+                },
+                {
+                    "question": "What are the teahouses and accommodation like across 14 nights?",
+                    "answer": "Accommodation varies across the route. Lower stops like Ghandruk and Ghorepani have comfortable teahouses with private rooms and hot showers. Higher stops — Mardi Himal High Camp, Dobato, Khopra Ridge — are simpler, with basic rooms and shared facilities. Khopra Ridge has a well-run Community Lodge. Kokhe offers a genuine family homestay, one of the warmest and most memorable nights on the route. Bring a sleeping bag liner throughout, and a three-season sleeping bag for the higher altitude nights."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$1199"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$1099"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$1050"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$999"
+                    }
+                ],
+                "included": [
+                    "Permits required for the trek",
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Multiple Viewpoints Trek"
+        },
+        "cms_page": true
     },
     {
         "id": "trek_short_mvp",
@@ -565,28 +1566,28 @@
         "published": true,
         "featured": true,
         "page": {
-            "meta_title": "",
-            "meta_description": "",
-            "meta_keywords": "",
-            "hero_image": "",
-            "hero_eyebrow": "",
-            "hero_title_html": "",
-            "hero_subtitle": "",
+            "meta_title": "Short Multiple Viewpoints Trek",
+            "meta_description": "3 viewpoints. 6 days. Zero tourist crowds. Short Multiple Viewpoints Trek is Nepal's best offbeat alternative to classic short treks — locally guided from Parbat.",
+            "meta_keywords": "Short Multiple Viewpoints Trek Nepal,\noffbeat short trek Nepal, Poon Hill alternative trek, Mulde viewpoint trek,\nKokhe Danda trek, 6 day trek Nepal, best short trek Annapurna,\noffbeat Annapurna trek, local guide short trek Nepal,\nParbat trekking short trek",
+            "hero_image": "shortmvp.jpg",
+            "hero_eyebrow": "Annapurna Region, Nepal · 6 Days",
+            "hero_title_html": "Short Multiple<br>Viewpoints Trek",
+            "hero_subtitle": "Less touristy trail with stunning views of the Annapurna Range",
             "stats": [
                 {
-                    "value": "",
+                    "value": "6 Days",
                     "label": "Duration"
                 },
                 {
-                    "value": "",
+                    "value": "Moderate",
                     "label": "Difficulty"
                 },
                 {
-                    "value": "",
+                    "value": "3,536m",
                     "label": "Max Altitude"
                 },
                 {
-                    "value": "",
+                    "value": "Tea House",
                     "label": "Accommodation"
                 }
             ],
@@ -602,19 +1603,200 @@
                 "shortmvp8.jpg",
                 "shortmvp9.jpg"
             ],
-            "overview_title": "",
-            "overview_paragraphs": [],
-            "highlights": [],
-            "right_for_you_yes": [],
-            "right_for_you_no": [],
-            "itinerary": [],
-            "faqs": [],
+            "overview_title": "About Short Multiple Viewpoints Trek",
+            "overview_paragraphs": [
+                "The Short Multiple Viewpoints Trek is a compact yet deeply rewarding journey through some of the most diverse landscapes in the Annapurna and Parbat regions of Nepal. Designed for trekkers who want to maximise Himalayan experiences within a shorter timeframe, this route combines iconic viewpoints with hidden ridges, traditional Gurung villages, and quiet forest trails that most visitors never discover.",
+                "The adventure begins with a scenic drive from Pokhara to Ghandruk, one of the largest and most celebrated Gurung villages in Nepal. Perched at around 1,940 metres, Ghandruk offers immediate rewards with its slate-roofed stone houses, terraced fields, and commanding views of Annapurna South and Machhapuchhre rising dramatically above the Modi Khola valley. While Ghandruk sees a steady flow of trekkers, its cultural richness — from the Gurung Museum to the warm hospitality of local teahouses — makes it a worthy starting point for the days ahead.",
+                "From Ghandruk, the trail climbs steadily through dense rhododendron and oak forests towards Tadapani, sitting at around 2,630 metres. This forested ridge-top settlement is a quiet crossroads where the main trekking crowds thin noticeably. On clear mornings, the tree line frames jaw-dropping views of Annapurna South and Hiunchuli, while the surrounding forest provides shelter to Himalayan birds and the occasional glimpse of wildlife. The walk through these ancient woods, particularly when rhododendrons are in bloom from March to April, is one of the most atmospheric stretches of the entire route.",
+                "Continuing upward from Tadapani, the trail emerges onto the open ridge at Dobato, a viewpoint that feels almost secret in its seclusion. At roughly 3,600 metres, Dobato offers an unobstructed panorama across the Annapurna massif, with Annapurna South, Fang, and the iconic fishtail peak of Machhapuchhre arranged like a living painting above the valleys below. Sunrise here is a deeply quiet affair — far from the crowds of Poon Hill — with only the alpine wind and the slow ignition of gold across the high snow faces for company. Few trekkers venture to Dobato on this particular circuit, which makes mornings at this ridgeline feel like a private audience with the Himalayas.",
+                "The route then ascends further to Muldai Viewpoint, one of the finest and least-known high vantage points in the region. At approximately 3,700 metres, Muldai opens up an even wider sweep of the horizon, drawing the Dhaulagiri range into full view alongside the familiar giants of the Annapurna circuit. The high meadows around Muldai feel remote and untamed, with yak pastures rolling gently across the ridge and the silence broken only by wind. This is genuinely off-the-beaten-path trekking — trails here see a fraction of the foot traffic found on the main Poon Hill circuit, and the sense of discovery is palpable with every step.",
+                "Descending from Muldai, the trek joins the more frequented trail into Ghorepani, a busy trekking hub sitting at 2,860 metres. After days of quiet ridges and empty trails, Ghorepani's teahouses and the company of fellow trekkers from around the world provide a welcome contrast. The pre-dawn climb to Poon Hill at 3,210 metres remains one of the great trekking rituals in Nepal — the summit fills with headlamps and anticipation before the sky turns through shades of violet, pink, and gold behind a 180-degree panorama of Dhaulagiri, Tukuche, Nilgiri, Annapurna I through South, Machhapuchhre, and Lamjung Himal. It is a spectacular and well-deserved reward, even if shared with a crowd.",
+                "What truly distinguishes this itinerary from the standard Ghorepani loop is where the trail leads next. Beyond Ghorepani, the route pushes into Parbat district towards Kokhe Danda, an emerging viewpoint that is drawing only the most curious of trekkers. The trail here is noticeably quieter, winding through mixed forests and open ridgelines with Himalayan views that rival anything seen earlier on the trek. Kokhe Danda feels like a place still finding its way onto the map — a hidden gem where the mountains feel closer and the experience feels entirely your own.",
+                "From Kokhe Danda, the descent continues through Lespar, a traditional village where the rhythms of rural Nepali life continue largely untouched by tourism. Stone pathways connect terraced farms, local women weave and work outside their homes, and the teahouses are simple and sincere. This is the kind of authentic encounter that makes trekking in Nepal so meaningful — the mountains provide the spectacle, but the people provide the soul.",
+                "The final descent carries through Banau before the trail reaches the road at Kushma, a riverside town in Parbat district known for Nepal's highest suspension bridge over the Kali Gandaki gorge. From Kushma, a comfortable drive returns trekkers to Pokhara, completing a circuit that has moved from iconic vistas to secret ridges, from bustling mountain villages to quiet rural hamlets, and from the familiar to the wonderfully unexpected.",
+                "The Short Multiple Viewpoints Trek is ideal for trekkers with limited time who refuse to compromise on experience. It delivers world-class Himalayan panoramas, genuine off-trail discovery, and rich cultural immersion — all within a compact and well-connected route that leaves even seasoned trekkers with a lasting sense of having found something truly special."
+            ],
+            "highlights": [
+                "Panoramic Annapurna and Dhaulagiri views",
+                "Sunrise from Muldai Viewpoint and Kokhe Danda",
+                "Experience of local culture and lifestyle",
+                "Different perspective of Annapurna South",
+                "Less touristy trails",
+                "Rhododendron and Oak forests"
+            ],
+            "right_for_you_yes": [
+                "You want to experience multiple iconic viewpoints — Poon Hill, Dobato, Muldai, and Kokhe Danda — in a single connected journey",
+                "You have 6 days and want a compact but varied route covering forests, high ridges, traditional villages, and river valleys",
+                "You enjoy combining famous highlights like Ghandruk and Poon Hill with quiet, off-the-beaten-path sections most trekkers never discover",
+                "You love authentic cultural encounters — passing through traditional Gurung villages, eating local dal bhat, and experiencing genuine rural Nepali hospitality in Lespar and Banau"
+            ],
+            "right_for_you_no": [
+                "You're looking for a quick 3–4 day option — this route is designed to give you the full picture, and the best viewpoints take time to reach",
+                "You expect luxury teahouse facilities throughout — accommodation in the quieter sections like Kokhe Danda and Lespar is simple, clean, and wonderfully local"
+            ],
+            "itinerary": [
+                {
+                    "day": 1,
+                    "title": "Drive Pokhara → Ghandruk → Trek to Tadapani",
+                    "paragraphs": [
+                        "Morning drive from Pokhara to Ghandruk, a two and a half hour drive (43KM). We stop for a short tea break at Ghandruk and then start our hike to Tadapani. After two and a half hours, we reach Bhaisikharka where we stop for lunch. We then hike for a further hour on a gradual uphill trail to reach Tadapani. The trail today passes through beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Altitude": "2,705m",
+                        "Distance": "6.5 KM",
+                        "Time": "3.5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 2,
+                    "title": "Tadapani → Isharu → Dobato",
+                    "paragraphs": [
+                        "We wake up early in the morning for the sunrise view. During clear weather, we can see Annapurna South, Hiunchuli and Mount Fishtail from here.",
+                        "After breakfast, we start our hike towards Dobato. The trail again passes through beautiful Rhododendron and Oak forest. Initially it is gradual uphill and a bit steep before reaching Isharu from Meshar. At Isharu, we stop for lunch and then hike for another one and a half hours to reach Dobato, where we stay at Hotel Dobato ViewTop. We can also hike to Muldai for a sunset view."
+                    ],
+                    "meta": {
+                        "Altitude": "3,500m",
+                        "Distance": "6.2 KM",
+                        "Time": "5–6 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 3,
+                    "title": "Dobato → Deurali → Ghorepani",
+                    "paragraphs": [
+                        "Today, we wake up early and hike around 25 minutes to reach Muldai Viewpoint for the sunrise view. We can see Dhaulagiri, Annapurna and Mansiri range peaks from here. We then hike back down to the tea house, have breakfast, and start hiking to Khopra Danda.",
+                        "We come down to the TEahouse for breakfast. After this, we continue to Ghorepani. Initially, we climb up again to Muldai Viewpoint and then start trekking downhill to Ghorepani. AFter a couple of hours downhill hike, we reach Deurali, here we stop for lunch. After this, we slighty go gradual uphill and then follow the ridgeline leading to Ghorepani,"
+                    ],
+                    "meta": {
+                        "Altitude": "2,880m",
+                        "Distance": "7.8 KM",
+                        "Time": "6 Hrs",
+                        "Stay": "Community Lodge"
+                    }
+                },
+                {
+                    "day": 4,
+                    "title": "Ghorepani → Poonhill → Kokhe Danda",
+                    "paragraphs": [
+                        "Today, unlike others, we don't start early in the morning for Poon Hill — we go after breakfast instead. It is an hour's uphill climb on stone steps, and by the time we reach Poon Hill it will be almost empty, so we have the entire viewpoint to ourselves. Later, we descend to Phulbari for lunch and then climb up to Kokhe Danda through a beautiful Rhododendron forest."
+                    ],
+                    "meta": {
+                        "Distance": "6.7 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Tea House"
+                    }
+                },
+                {
+                    "day": 5,
+                    "title": "Kokhe Danda → Jaljala → Lespar",
+                    "paragraphs": [
+                        "We wake up early for sunrise and the first sunrays over the Dhaulagiri and Annapurna range peaks. On a clear day, views extend all the way to Langtang Lirung and even Numbur peak in the Lower Everest region.",
+                        "After breakfast, we start our hike to Lespar. Initially mostly flat or gradual downhill to Dhima Danda, then we descend to Jaljala and follow stone steps all the way down to Lespar. After lunch, we walk around to explore the village. In the evening, we can have a Momo making session with the host at the Homestay."
+                    ],
+                    "meta": {
+                        "Altitude": "2,150m",
+                        "Distance": "9 KM",
+                        "Time": "5 Hrs",
+                        "Stay": "Homestay"
+                    }
+                },
+                {
+                    "day": 6,
+                    "title": "Lespar → Banau → Drive to Pokhara",
+                    "paragraphs": [
+                        "We enjoy a local breakfast in the morning. After that, we start our hike to Banau via Haljure. Initially an hour uphill, then mostly flat until Haljure, followed by another hour's descent to Banau. From Banau, we take a taxi or jeep back to Pokhara with a stop at Kushma — a total drive of about two and a half hours."
+                    ],
+                    "meta": {
+                        "Distance": "9 KM",
+                        "Time": "3 Hrs"
+                    }
+                }
+            ],
+            "faqs": [
+                {
+                    "question": "Is the Short Multiple Viewpoints Trek suitable for beginners?",
+                    "answer": "Yes — the trek is rated Moderate and is well within reach for fit beginners. The longest day is Day 3, which includes the sunrise hike to Muldai before descending all the way to Ghorepani, but the trail is clear and the pace is manageable. If you can walk comfortably for 5–6 hours over consecutive days, you'll handle this route well."
+                },
+                {
+                    "question": "How does this trek differ from the standard Poon Hill route?",
+                    "answer": "The standard Poon Hill circuit follows a well-worn loop that most trekkers in the Annapurna region take. This route approaches Poon Hill from a quieter direction — via Tadapani, Dobato, and Muldai — viewpoints that see a fraction of the foot traffic. After Poon Hill, instead of looping back, the trail continues into Parbat district through Kokhe Danda and Lespar, areas that most trekkers never see. You get Poon Hill, plus three hidden viewpoints, plus a genuine cultural finale."
+                },
+                {
+                    "question": "What is Dobato and is it worth stopping there overnight?",
+                    "answer": "Dobato is a high ridgeline viewpoint at around 3,500 metres, sitting above the Tadapani forest and offering unobstructed views of Annapurna South, Fang, and Machhapuchhre. Staying overnight means you're positioned for the sunrise hike to Muldai the following morning — a 25-minute walk above Dobato that opens up one of the widest Himalayan panoramas on the entire route. Skipping the overnight here would mean missing both viewpoints entirely."
+                },
+                {
+                    "question": "What is the Muldai Viewpoint and is it worth the extra hike?",
+                    "answer": "Muldai sits just above Dobato at around 3,650 metres and is absolutely worth the 25-minute pre-breakfast climb. On clear mornings the panorama sweeps from Dhaulagiri across the full Annapurna range to Manaslu — with almost no other trekkers in sight. Many who have done both say the view-to-crowd ratio at Muldai surpasses Poon Hill. It is built into the itinerary as a sunrise stop on Day 3."
+                },
+                {
+                    "question": "How do we get to the trek start and back to Pokhara?",
+                    "answer": "We arrange private transport from Pokhara to Ghandruk at the start — around a two and a half hour drive. On the final day, after the hike down to Banau, we take a taxi or jeep back to Pokhara via Kushma, which is another two and a half hours. Both transfers are included in the trek cost. There are no public buses or connections to arrange on your end."
+                },
+                {
+                    "question": "What are the teahouses and accommodation like?",
+                    "answer": "Most nights are comfortable teahouses with private rooms and shared bathrooms. Dobato has one well-regarded teahouse — Hotel Dobato ViewTop — that is simple but well-positioned for the views. Kokhe Danda accommodation is basic and genuinely off-grid, which is part of the appeal. The final night at Lespar is a family homestay — warm, personal, and home-cooked. Hot showers are available at lower stops for a small fee. A sleeping bag liner is recommended for the higher nights."
+                },
+                {
+                    "question": "What is the best time of year for this trek?",
+                    "answer": "October and November offer the clearest skies and the best mountain views — ideal for the sunrise moments at Muldai, Poon Hill, and Kokhe Danda. March to May is equally rewarding, with rhododendrons in full bloom through the forest sections between Ghandruk and Dobato. December is quiet and crisp, with very few trekkers on the trail. June to September brings monsoon conditions and is not recommended for this route."
+                },
+                {
+                    "question": "Do I need permits for this trek?",
+                    "answer": "Yes — an Annapurna Conservation Area Permit (ACAP) and a TIMS card are both required. Both are included in your trek cost and arranged by us in Pokhara before departure. You don't need to visit any permit offices yourself."
+                },
+                {
+                    "question": "What is the food like on the trek?",
+                    "answer": "Teahouse menus offer the standard Himalayan range — dal bhat, noodles, pasta, eggs, soups, and seasonal vegetables. At the Lespar homestay on Day 5, meals are home-cooked by your host family, and the evening includes a momo-making session. Three meals per day are included throughout the trek. If you have dietary requirements, let us know in advance and we will inform each stop along the route."
+                },
+                {
+                    "question": "What should I pack for 6 days?",
+                    "answer": "Key items: sturdy trekking boots, warm layers including a down or fleece jacket (nights at Dobato and Kokhe Danda can drop near freezing), a waterproof outer shell, trekking poles for the longer descent days, a headlamp for the early sunrise starts, a reusable water bottle, sunscreen, and a daypack of 20–25L. A sleeping bag liner is recommended for the homestay and off-grid teahouse nights. We'll send a full packing list after booking."
+                },
+                {
+                    "question": "What happens if I need to leave the trek early?",
+                    "answer": "If you need to return early for any reason, there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary — at no extra charge. Please see our full <a href=\"/cancellation\">Cancellation Policy</a> for complete details."
+                }
+            ],
             "pricing": {
-                "rows": [],
-                "included": [],
-                "excluded": []
+                "rows": [
+                    {
+                        "group": "1 Person",
+                        "price": "$500"
+                    },
+                    {
+                        "group": "2 People",
+                        "price": "$460"
+                    },
+                    {
+                        "group": "3–4 People",
+                        "price": "$440"
+                    },
+                    {
+                        "group": "5+ People",
+                        "price": "$420"
+                    }
+                ],
+                "included": [
+                    "Permits required for the trek",
+                    "Two-way private transport",
+                    "3 meals and drinks during trek",
+                    "Accommodation during trek",
+                    "Guide and Porter salary",
+                    "Meals and accommodation of Guide and Porter"
+                ],
+                "excluded": [
+                    "International flights and Nepal visa",
+                    "Travel insurance (strongly recommended)",
+                    "Personal trekking gear and equipment",
+                    "Tips for guide and porter",
+                    "Any costs due to early return or emergency evacuation"
+                ]
             },
-            "booking_trek_name": ""
-        }
+            "booking_trek_name": "Short Multiple Viewpoints Trek"
+        },
+        "cms_page": true
     }
 ]
