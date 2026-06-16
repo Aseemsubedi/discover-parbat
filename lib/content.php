@@ -198,6 +198,16 @@ function cms_trek_has_cms_page(array $trek): bool
     return !empty($trek['cms_page']) && !empty($trek['page']) && is_array($trek['page']);
 }
 
+/** @param list<string> $gallery */
+function cms_render_trek_gallery(array $gallery, string $altTitle): void
+{
+    if ($gallery === []) {
+        return;
+    }
+    $galleryAlt = $altTitle;
+    include __DIR__ . '/../includes/trek-gallery.php';
+}
+
 function cms_save_trek(array $trek): void
 {
     $items = cms_get_treks(false);

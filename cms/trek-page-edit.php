@@ -211,7 +211,7 @@ ob_start();
   <fieldset class="cms-fieldset">
     <legend>Photo gallery</legend>
     <div class="cms-field">
-      <label for="gallery">Gallery images (one filename per line)</label>
+      <label for="gallery">Gallery images (one filename per line — shown in carousel on trek page)</label>
       <textarea id="gallery" name="gallery" rows="6"><?= cms_h(implode("\n", (array)$page['gallery'])) ?></textarea>
     </div>
   </fieldset>

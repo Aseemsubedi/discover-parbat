@@ -83,32 +83,7 @@ function cms_trek_safe_html(string $html): string
 <?php endif; ?>
 
 <?php if (count($gallery) > 0): ?>
-<div class="gallery-section">
-  <div class="gallery-carousel" id="trek-gallery" data-count="<?= count($gallery) ?>">
-    <?php foreach ($gallery as $i => $img): ?>
-      <?php $src = '/' . ltrim((string)$img, '/'); ?>
-      <div class="gallery-slide<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>">
-        <img src="<?= cms_h($src) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?> — photo <?= (int)$i + 1 ?>" loading="<?= $i === 0 ? 'eager' : 'lazy' ?>">
-      </div>
-    <?php endforeach; ?>
-
-    <div class="gallery-ui">
-      <span class="gallery-counter" id="gallery-counter">1 / <?= count($gallery) ?></span>
-      <button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg>
-      </button>
-      <button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Next photo">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
-      </button>
-      <div class="gallery-dots" id="gallery-dots">
-        <?php foreach ($gallery as $i => $img): ?>
-          <button type="button" class="gallery-dot<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>" aria-label="Go to photo <?= (int)$i + 1 ?>"></button>
-        <?php endforeach; ?>
-      </div>
-      <span class="gallery-label">Photo Gallery</span>
-    </div>
-  </div>
-</div>
+<?php cms_render_trek_gallery($gallery, (string)($trek['title'] ?? 'Trek')); ?>
 <?php endif; ?>
 
 <div class="page-body">

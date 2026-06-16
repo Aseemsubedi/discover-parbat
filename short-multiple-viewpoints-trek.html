@@ -24,7 +24,9 @@ Parbat trekking short trek">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/trek-page.css?v=2">
 <script src="main.js?v=3" defer></script>
+<script src="/trek-page.js?v=2" defer></script>
 <style>
 /* ─── PAGE BODY OVERRIDE ───────────────────────────── */
 body { line-height: 1.7; }
@@ -123,45 +125,6 @@ body { line-height: 1.7; }
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: var(--green-mid);
-}
-
-/* ─── GALLERY ──────────────────────────────────────── */
-.gallery-section { padding: 50px 7% 0; }
-.gallery-wrap {
-  position: relative;
-  height: 420px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-.gallery-wrap img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: galleryFade 9s infinite;
-}
-.gallery-wrap img:nth-child(1){animation-delay:0s;}
-.gallery-wrap img:nth-child(2){animation-delay:3s;}
-.gallery-wrap img:nth-child(3){animation-delay:6s;}
-@keyframes galleryFade {
-  0%{opacity:0;} 10%{opacity:1;} 30%{opacity:1;} 40%{opacity:0;} 100%{opacity:0;}
-}
-.gallery-label {
-  position: absolute;
-  bottom: 20px; right: 20px;
-  z-index: 2;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 100px;
-  font-weight: 600;
 }
 
 /* ─── MAIN LAYOUT ──────────────────────────────────── */
@@ -693,7 +656,6 @@ body { line-height: 1.7; }
   .hero-content { left: 5%; bottom: 8%; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 0 5%; }
   .gallery-section { padding: 36px 5% 0; }
-  .gallery-wrap { height: 260px; }
   .page-body { padding: 34px 4% 46px; }
   .rfy-grid { grid-template-columns: 1fr; }
 }
@@ -770,18 +732,60 @@ body { line-height: 1.7; }
 
 <!-- ─── PHOTO GALLERY ───────────────────────────────── -->
 <div class="gallery-section">
-  <div class="gallery-wrap">
-    <img src="shortmvp.jpg" alt="Short MVP Trek">
-    <img src="shortmvp1.jpg" alt="Short MVP Trek">
-    <img src="shortmvp2.jpg" alt="Short MVP Trek">
-    <img src="shortmvp3.jpg" alt="Short MVP Trek">
-    <img src="shortmvp4.jpg" alt="Short MVP Trek">
-    <img src="shortmvp5.jpg" alt="Short MVP Trek">
-    <img src="shortmvp6.jpg" alt="Short MVP Trek">
-    <img src="shortmvp7.jpg" alt="Short MVP Trek">
-    <img src="shortmvp8.jpg" alt="Short MVP Trek">
-    <img src="shortmvp9.jpg" alt="Short MVP Trek">
-    <span class="gallery-label">Photo Gallery</span>
+  <div class="gallery-carousel" id="trek-gallery" data-count="10">
+                <div class="gallery-slide active" data-index="0">
+        <img src="/shortmvp.jpg" alt="Short MVP Trek — photo 1" loading="eager">
+      </div>
+                <div class="gallery-slide" data-index="1">
+        <img src="/shortmvp1.jpg" alt="Short MVP Trek — photo 2" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="2">
+        <img src="/shortmvp2.jpg" alt="Short MVP Trek — photo 3" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="3">
+        <img src="/shortmvp3.jpg" alt="Short MVP Trek — photo 4" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="4">
+        <img src="/shortmvp4.jpg" alt="Short MVP Trek — photo 5" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="5">
+        <img src="/shortmvp5.jpg" alt="Short MVP Trek — photo 6" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="6">
+        <img src="/shortmvp6.jpg" alt="Short MVP Trek — photo 7" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="7">
+        <img src="/shortmvp7.jpg" alt="Short MVP Trek — photo 8" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="8">
+        <img src="/shortmvp8.jpg" alt="Short MVP Trek — photo 9" loading="lazy">
+      </div>
+                <div class="gallery-slide" data-index="9">
+        <img src="/shortmvp9.jpg" alt="Short MVP Trek — photo 10" loading="lazy">
+      </div>
+    
+    <div class="gallery-ui">
+      <span class="gallery-counter" id="gallery-counter">1 / 10</span>
+      <button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg>
+      </button>
+      <button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+      <div class="gallery-dots" id="gallery-dots">
+                  <button type="button" class="gallery-dot active" data-index="0" aria-label="Go to photo 1"></button>
+                  <button type="button" class="gallery-dot" data-index="1" aria-label="Go to photo 2"></button>
+                  <button type="button" class="gallery-dot" data-index="2" aria-label="Go to photo 3"></button>
+                  <button type="button" class="gallery-dot" data-index="3" aria-label="Go to photo 4"></button>
+                  <button type="button" class="gallery-dot" data-index="4" aria-label="Go to photo 5"></button>
+                  <button type="button" class="gallery-dot" data-index="5" aria-label="Go to photo 6"></button>
+                  <button type="button" class="gallery-dot" data-index="6" aria-label="Go to photo 7"></button>
+                  <button type="button" class="gallery-dot" data-index="7" aria-label="Go to photo 8"></button>
+                  <button type="button" class="gallery-dot" data-index="8" aria-label="Go to photo 9"></button>
+                  <button type="button" class="gallery-dot" data-index="9" aria-label="Go to photo 10"></button>
+              </div>
+      <span class="gallery-label">Photo Gallery</span>
+    </div>
   </div>
 </div>
 
