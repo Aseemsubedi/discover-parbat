@@ -123,7 +123,7 @@ DP.openWhatsAppFallback = function (message) {
 
 DP.submitInquiry = async function (payload, options) {
   const opts = options || {};
-  const successUrl = opts.successUrl !== undefined ? opts.successUrl : 'success.html';
+  const successUrl = opts.successUrl !== undefined ? opts.successUrl : '/success';
 
   try {
     const res = await fetch('inquiry.php', {

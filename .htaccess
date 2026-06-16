@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+# Legacy mixed-case .html URLs → lowercase clean URLs
+RewriteRule ^Shop\.html$ /shop [R=301,L,NC]
+RewriteRule ^Kokhe-Danda-Trek\.html$ /kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^Short-Kokhe-Danda-Trek\.html$ /short-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^Mardi-Himal-Trek\.html$ /mardi-himal-trek [R=301,L,NC]
+RewriteRule ^Khopra-Danda-Trek\.html$ /khopra-danda-trek [R=301,L,NC]
+RewriteRule ^Annapurna-Base-Camp-Trek\.html$ /annapurna-base-camp-trek [R=301,L,NC]
+RewriteRule ^Multiple-Viewpoints-Trek\.html$ /multiple-viewpoints-trek [R=301,L,NC]
+RewriteRule ^Short-Multiple-Viewpoints-Trek\.html$ /short-multiple-viewpoints-trek [R=301,L,NC]
+RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ /why-kokhe-danda-trek [R=301,L,NC]
+
+# Any other .html URL → extensionless (301)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L,NE]
+
+# index.html → homepage
+RewriteRule ^index\.html$ / [R=301,L,NC]
+
+# Serve .html files for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
