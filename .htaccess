@@ -1,6 +1,16 @@
 RewriteEngine On
 RewriteBase /
 
+DirectoryIndex index.php index.html
+
+# Dynamic CMS pages
+RewriteRule ^articles/?$ articles.php [L]
+RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
+RewriteRule ^treks/?$ treks.php [L]
+
+# Legacy article URL → CMS article
+RewriteRule ^why-kokhe-danda-trek/?$ /article/why-kokhe-danda-trek [R=301,L,NC]
+
 # Legacy mixed-case .html URLs → lowercase clean URLs
 RewriteRule ^Shop\.html$ /shop [R=301,L,NC]
 RewriteRule ^Kokhe-Danda-Trek\.html$ /kokhe-danda-trek [R=301,L,NC]

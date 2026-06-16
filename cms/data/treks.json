@@ -1,0 +1,93 @@
+[
+  {
+    "id": "trek_kokhe",
+    "slug": "kokhe-danda-trek",
+    "title": "Kokhe Danda Trek",
+    "subtitle": "Village culture + Himalayan views",
+    "image": "kokhe.jpg",
+    "difficulty": "easy",
+    "days": 5,
+    "days_label": "5 Days",
+    "sort_order": 1,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_mardi",
+    "slug": "mardi-himal-trek",
+    "title": "Mardi Himal Trek",
+    "subtitle": "Ridge trek towards Fishtail",
+    "image": "mardi.jpg",
+    "difficulty": "easy",
+    "days": 5,
+    "days_label": "5 Days",
+    "sort_order": 2,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_khopra",
+    "slug": "khopra-danda-trek",
+    "title": "Khopra Ridge Trek",
+    "subtitle": "Beautiful offbeat ridge trek",
+    "image": "khopra.jpg",
+    "difficulty": "moderate",
+    "days": 8,
+    "days_label": "8 Days",
+    "sort_order": 3,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_abc",
+    "slug": "annapurna-base-camp-trek",
+    "title": "Annapurna Base Camp Trek",
+    "subtitle": "Classic Himalayan journey",
+    "image": "abc.jpg",
+    "difficulty": "moderate",
+    "days": 10,
+    "days_label": "10 Days",
+    "sort_order": 4,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_short_kokhe",
+    "slug": "short-kokhe-danda-trek",
+    "title": "Short Kokhe Danda Trek",
+    "subtitle": "Short and scenic trek",
+    "image": "kokhe.jpg",
+    "difficulty": "easy",
+    "days": 4,
+    "days_label": "4 Days",
+    "sort_order": 5,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_mvp",
+    "slug": "multiple-viewpoints-trek",
+    "title": "Multiple Viewpoints Trek",
+    "subtitle": "Best viewpoints in one trek",
+    "image": "mvp.jpg",
+    "difficulty": "moderate",
+    "days": 14,
+    "days_label": "14 Days",
+    "sort_order": 6,
+    "published": true,
+    "featured": true
+  },
+  {
+    "id": "trek_short_mvp",
+    "slug": "short-multiple-viewpoints-trek",
+    "title": "Short Multiple Viewpoints Trek",
+    "subtitle": "Highlights in fewer days",
+    "image": "shortmvp.jpg",
+    "difficulty": "moderate",
+    "days": 6,
+    "days_label": "6 Days",
+    "sort_order": 7,
+    "published": true,
+    "featured": true
+  }
+]
