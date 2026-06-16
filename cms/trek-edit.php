@@ -36,6 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'featured' => cms_post_bool('featured'),
     ];
 
+    if (!$isNew && $trek !== null) {
+        if (isset($trek['cms_page'])) {
+            $data['cms_page'] = $trek['cms_page'];
+        }
+        if (isset($trek['page'])) {
+            $data['page'] = $trek['page'];
+        }
+    }
+
     if ($data['days_label'] === '') {
         $data['days_label'] = $data['days'] . ' Days';
     }
@@ -141,6 +150,9 @@ ob_start();
 
   <div class="cms-form-actions">
     <button class="cms-btn cms-btn-primary" type="submit">Save trek</button>
+    <?php if (!$isNew): ?>
+      <a class="cms-btn cms-btn-ghost" href="trek-page-edit.php?id=<?= urlencode($id) ?>">Edit full page</a>
+    <?php endif; ?>
     <a class="cms-btn cms-btn-ghost" href="treks.php">Cancel</a>
     <?php if (!$isNew): ?>
       <button class="cms-btn cms-btn-danger" type="submit" name="action" value="delete" onclick="return confirm('Remove this trek from CMS listings?')">Delete</button>

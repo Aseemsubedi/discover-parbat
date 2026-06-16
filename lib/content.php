@@ -124,6 +124,80 @@ function cms_get_trek_by_id(string $id): ?array
     return null;
 }
 
+function cms_get_trek_by_slug(string $slug, bool $publishedOnly = true): ?array
+{
+    foreach (cms_get_treks(false) as $trek) {
+        if (($trek['slug'] ?? '') === $slug) {
+            if ($publishedOnly && empty($trek['published'])) {
+                return null;
+            }
+            return $trek;
+        }
+    }
+    return null;
+}
+
+/** @return list<string> */
+function cms_lines_to_array(string $text): array
+{
+    $lines = preg_split('/\r\n|\r|\n/', $text) ?: [];
+    return array_values(array_filter(array_map('trim', $lines), static fn(string $line): bool => $line !== ''));
+}
+
+function cms_trek_page_defaults(): array
+{
+    return [
+        'meta_title' => '',
+        'meta_description' => '',
+        'meta_keywords' => '',
+        'hero_image' => '',
+        'hero_eyebrow' => '',
+        'hero_title_html' => '',
+        'hero_subtitle' => '',
+        'stats' => [
+            ['value' => '', 'label' => 'Duration'],
+            ['value' => '', 'label' => 'Difficulty'],
+            ['value' => '', 'label' => 'Max Altitude'],
+            ['value' => '', 'label' => 'Accommodation'],
+        ],
+        'gallery' => [],
+        'overview_title' => '',
+        'overview_paragraphs' => [],
+        'highlights' => [],
+        'right_for_you_yes' => [],
+        'right_for_you_no' => [],
+        'itinerary' => [],
+        'faqs' => [],
+        'pricing' => [
+            'rows' => [],
+            'included' => [],
+            'excluded' => [],
+        ],
+        'booking_trek_name' => '',
+    ];
+}
+
+function cms_merge_trek_page(?array $page): array
+{
+    $defaults = cms_trek_page_defaults();
+    if ($page === null || $page === []) {
+        return $defaults;
+    }
+    $merged = array_merge($defaults, $page);
+    if (!empty($page['stats']) && is_array($page['stats'])) {
+        $merged['stats'] = $page['stats'];
+    }
+    if (!empty($page['pricing']) && is_array($page['pricing'])) {
+        $merged['pricing'] = array_merge($defaults['pricing'], $page['pricing']);
+    }
+    return $merged;
+}
+
+function cms_trek_has_cms_page(array $trek): bool
+{
+    return !empty($trek['cms_page']) && !empty($trek['page']) && is_array($trek['page']);
+}
+
 function cms_save_trek(array $trek): void
 {
     $items = cms_get_treks(false);

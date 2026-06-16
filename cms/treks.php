@@ -21,12 +21,13 @@ ob_start();
         <th>Slug / URL</th>
         <th>Difficulty</th>
         <th>Status</th>
+        <th>Page</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
       <?php if ($treks === []): ?>
-        <tr><td colspan="6">No treks yet.</td></tr>
+        <tr><td colspan="7">No treks yet.</td></tr>
       <?php else: ?>
         <?php foreach ($treks as $trek): ?>
           <tr>
@@ -41,8 +42,16 @@ ob_start();
                 <span class="cms-badge cms-badge-draft">Hidden</span>
               <?php endif; ?>
             </td>
+            <td>
+              <?php if (!empty($trek['cms_page'])): ?>
+                <span class="cms-badge cms-badge-live">CMS</span>
+              <?php else: ?>
+                <span class="cms-badge cms-badge-draft">Static</span>
+              <?php endif; ?>
+            </td>
             <td class="cms-actions">
-              <a class="cms-btn cms-btn-ghost" href="trek-edit.php?id=<?= urlencode((string)($trek['id'] ?? '')) ?>">Edit</a>
+              <a class="cms-btn cms-btn-ghost" href="trek-edit.php?id=<?= urlencode((string)($trek['id'] ?? '')) ?>">Listing</a>
+              <a class="cms-btn cms-btn-ghost" href="trek-page-edit.php?id=<?= urlencode((string)($trek['id'] ?? '')) ?>">Page</a>
               <?php if (!empty($trek['published'])): ?>
                 <a class="cms-btn cms-btn-ghost" href="/<?= urlencode((string)($trek['slug'] ?? '')) ?>" target="_blank" rel="noopener">View page</a>
               <?php endif; ?>

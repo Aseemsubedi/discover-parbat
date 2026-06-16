@@ -207,3 +207,32 @@ a:hover { text-decoration: underline; }
   .cms-sidebar { position: sticky; top: 0; z-index: 2; }
   .cms-grid-2 { grid-template-columns: 1fr; }
 }
+
+.cms-fieldset {
+  border: 1px solid #d6e3dc;
+  border-radius: 12px;
+  padding: 18px 20px 20px;
+  margin: 0 0 20px;
+  background: #fff;
+}
+.cms-fieldset legend {
+  font-weight: 700;
+  padding: 0 8px;
+  color: #1a2e24;
+}
+.cms-repeatable { display: flex; flex-direction: column; gap: 14px; margin-bottom: 12px; }
+.cms-repeat-row {
+  border: 1px dashed #c5d5cc;
+  border-radius: 10px;
+  padding: 14px;
+  background: #f8fbf9;
+}
+.cms-repeat-row-inline {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 12px;
+  align-items: end;
+}
+@media (max-width: 700px) {
+  .cms-repeat-row-inline { grid-template-columns: 1fr; }
+}

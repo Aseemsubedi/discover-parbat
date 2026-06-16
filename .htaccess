@@ -29,8 +29,7 @@ RewriteRule ^ %1 [R=301,L,NE]
 # index.html → homepage
 RewriteRule ^index\.html$ / [R=301,L,NC]
 
-# Serve .html files for clean URLs
+# Trek detail pages (CMS or static .html fallback)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
+RewriteRule ^([a-z0-9-]+)/?$ trek.php?slug=$1 [L,QSA]

@@ -1,0 +1,159 @@
+<?php
+declare(strict_types=1);
+
+/** Full page content for Kokhe Danda Trek — used to seed CMS data. */
+return [
+    'meta_title' => 'Kokhe Danda Trek |5 Days Authentic Trel',
+    'meta_description' => "Nepal's most authentic short trek. Kokhe Danda delivers Himalayan views, real village life & zero crowds in just 5 days. The offbeat alternative to Poon Hill.",
+    'meta_keywords' => 'Kokhe Danda Trek, Poon Hill alternative Nepal, offbeat trek Nepal, short trek Nepal, Parbat trekking, authentic Nepal trek, 5 day trek Nepal, best short trek Annapurna, village trek Nepal, Discover Parbat Kokhe Danda,Best Company for Kokhe Danda, local guide Nepal',
+    'hero_image' => 'kokhe.jpg',
+    'hero_eyebrow' => 'Parbat, Nepal · 5 Days',
+    'hero_title_html' => 'Kokhe Danda<br>Trek',
+    'hero_subtitle' => 'Hidden Himalayan trail above Parbat with panoramic mountain views',
+    'stats' => [
+        ['value' => '5 Days', 'label' => 'Duration'],
+        ['value' => 'Easy', 'label' => 'Difficulty'],
+        ['value' => '3,310m', 'label' => 'Max Altitude'],
+        ['value' => 'Homestay', 'label' => 'Accommodation'],
+    ],
+    'gallery' => [
+        'kokhe.jpg', 'kokhe1.jpg', 'kokhe2.jpg', 'kokhe3.jpg', 'kokhe4.jpg',
+        'kokhe5.jpg', 'kokhe6.jpg', 'kokhe7.jpg', 'kokhe8.jpg', 'kokhe9.jpg', 'kokhe10.jpg',
+    ],
+    'overview_title' => 'About Kokhe Danda Trek',
+    'overview_paragraphs' => [
+        'Kokhe Danda Trek is a hidden gem in the hills of western Nepal, offering a refreshing alternative to the more crowded trekking routes. Tucked away from the mainstream trails, this trek introduces you to untouched landscapes, peaceful forests, and authentic rural life that many popular treks no longer provide. It\'s an ideal journey for those seeking tranquility, raw natural beauty, and a deeper connection with local culture.',
+        'What makes Kokhe Danda truly different is its silence and solitude. Unlike well-known trekking regions that can feel busy during peak seasons, this trail remains calm and uncrowded. You walk through quiet paths, lush forests, and traditional villages where life moves at its own pace. The absence of mass tourism allows you to experience nature and culture in their purest form, without distractions.',
+        'The trek typically spans a few days, making it perfect for travelers with limited time. The itinerary blends gentle ascents with rewarding viewpoints, leading you through terraced farmlands, small settlements, and scenic ridgelines. Each day offers a mix of walking and cultural immersion, with opportunities to interact with locals, observe daily village life, and enjoy home-cooked meals.',
+        'Culturally, Kokhe Danda provides a genuine and traditional experience. You\'ll encounter warm hospitality, simple lifestyles, and traditions that have been preserved for generations. Staying in local homes adds a personal touch to the journey, giving you insight into the region\'s heritage and way of life.',
+        'Above all, the highlight of the trek is the panoramic views. From the top of Kokhe Danda, you are rewarded with sweeping vistas of rolling hills, distant Himalayan ranges, and dramatic sunrises and sunsets. It\'s a place where you can pause, breathe, and truly appreciate the beauty of Nepal — far from the crowds, yet just as breathtaking.',
+    ],
+    'highlights' => [
+        'Panoramic Annapurna and Dhaulagiri views',
+        'Sunrise from Haljure and Kokhe Danda',
+        'Experience of local culture and lifestyle',
+        'Authentic Homestays',
+        'Less touristy trails',
+        'Rhododendron forests',
+    ],
+    'right_for_you_yes' => [
+        'You want a genuine off-the-beaten-path experience away from tourist crowds',
+        'You\'re a first-time trekker or someone looking for something quieter and more personal',
+        'You love authentic village life, home-cooked food, and local culture',
+        'You have 5 days and want panoramic Himalayan views without a demanding climb',
+    ],
+    'right_for_you_no' => [
+        'You\'re looking for high-altitude acclimatisation above 4,000m',
+        'You prefer well-equipped teahouses with hot showers and Wi-Fi every night',
+    ],
+    'itinerary' => [
+        [
+            'day' => 1,
+            'title' => 'Drive Pokhara → Banau → Trek to Haljure',
+            'paragraphs' => [
+                'Morning drive from Pokhara to Kushma, a one and a half hour drive (57KM). Exploration of Kushma, city of adventure. If you would be interested, you can also do Bungee or Zipline. We have lunch at Kushma and then drive one hour further to Banau, 2100m. From Banau, we start our hike and after 1–1.5hrs of hike, we reach our Homestay at Haljure.',
+            ],
+            'meta' => ['Altitude' => '2,445m', 'Distance' => '3 KM', 'Time' => '1.5 Hrs', 'Stay' => 'Homestay'],
+        ],
+        [
+            'day' => 2,
+            'title' => 'Haljure → Lespar → Sarga',
+            'paragraphs' => [
+                'We wake up early in the morning for sunrise view. During clear weather, we can see from Dhaulagiri, Annapurna, Mansiri, Ganesh to Langtang range peaks.',
+                'We have local breakfast and after that we start our hike to Lespar. At Lespar, we will have a Momo making session with the host at Homestay. We walk for around an hour to explore the village, interact with locals and you can also try the Magar Cultural Dress as well. After lunch, we hike to Sarga Camp and Homestay.',
+            ],
+            'meta' => ['Altitude' => '2,400m', 'Distance' => '8 KM', 'Time' => '4–5 Hrs', 'Stay' => 'Homestay / Camping'],
+        ],
+        [
+            'day' => 3,
+            'title' => 'Sarga → Jaljala → Kokhe Danda',
+            'paragraphs' => [
+                'Even though we do not see snowcapped peaks from Sarga, this is still a charming place inside the forest. After breakfast, we set off to Kokhe Danda. The first half till lunch is a bit steep where we gain around 700m in elevation, which takes around 3–3.5 hrs. We pass through beautiful Rhododendron and Oak forests. After lunch at Dhima, it\'s more comfortable as we hike through a gradual uphill section except for the 10 and 5 minute uphill before reaching Mohare and Kokhe Danda.',
+            ],
+            'meta' => ['Altitude' => '3,310m', 'Distance' => '8.2 KM', 'Time' => '6–7 Hrs', 'Stay' => 'Tea House'],
+        ],
+        [
+            'day' => 4,
+            'title' => 'Kokhe Danda → Hampal → Phalame Danda',
+            'paragraphs' => [
+                'We wake up early in the morning for sunrise and mountain views. On clear weather, we can see close views of Dhaulagiri and Annapurna Range mountains.',
+                'After breakfast, we start our hike towards Phalame Danda. Initially, we hike down to Nangi village, where we stop for lunch. After that, we hike gradually up for the next half and then mostly flat before we reach our Community Homestay at Phalame Danda.',
+            ],
+            'meta' => ['Altitude' => '2,300m', 'Distance' => '14 KM', 'Time' => '7 Hrs', 'Stay' => 'Tea House'],
+        ],
+        [
+            'day' => 5,
+            'title' => 'Phalame Danda → Beni → Pokhara',
+            'paragraphs' => [
+                'On the last day, we still see both Dhaulagiri and a few peaks of the Annapurna range. Initially, we hike down to Banskharka village where we stop for a tea break. After that we hike down to Mallaj where we end our trek and take a taxi back to Pokhara via Kushma.',
+            ],
+            'meta' => ['Altitude' => '1,000m', 'Distance' => '7 KM', 'Time' => '4 Hrs'],
+        ],
+    ],
+    'faqs' => [
+        [
+            'question' => 'Do I need prior trekking experience for Kokhe Danda?',
+            'answer' => 'No prior trekking experience is needed. Kokhe Danda is rated Easy and is suitable for first-time trekkers. The longest day (Day 3) involves around 6–7 hours of walking with some elevation gain, so a basic level of fitness helps — but you don\'t need to be an athlete. If you can walk comfortably for a few hours, you\'ll be fine.',
+        ],
+        [
+            'question' => 'How do we get from Pokhara to the trek start?',
+            'answer' => 'We arrange private transport from Pokhara to Banau (approx. 2.5 hours including the stop in Kushma). The drive is scenic — you pass through the Kali Gandaki gorge area and arrive in the hills of Parbat. No public buses or connections to worry about; it\'s all handled by us.',
+        ],
+        [
+            'question' => 'What are the homestays like? Will I have a private room?',
+            'answer' => 'The homestays are simple, clean, and genuinely family-run — this is one of the things that makes Kokhe Danda special. You\'ll typically have a private or semi-private room with basic bedding. Bathrooms are usually shared and facilities are basic. Think warm hospitality over luxury. Meals are home-cooked by the host family, which is honestly one of the highlights of the trip.',
+        ],
+        [
+            'question' => 'What is the food like on the trek?',
+            'answer' => 'You\'ll eat what the local families eat — mostly dal bhat (lentils and rice), fresh vegetables, local honey, eggs, and seasonal produce. On Day 2, there\'s a hands-on momo making session with your host family. It\'s wholesome, filling, and genuinely delicious. If you have dietary restrictions or allergies, let us know in advance and we\'ll make sure the hosts are prepared.',
+        ],
+        [
+            'question' => 'Is there mobile network and Wi-Fi on the trail?',
+            'answer' => 'Mobile signal (NCell or NTC) is available in most villages along the route, though it can be patchy on the higher ridgelines. Wi-Fi is not reliably available at the homestays — this is a remote trail and part of its charm. We\'d recommend downloading offline maps and letting family know you may be out of contact for stretches. A local SIM card from Pokhara is a good idea if you need connectivity.',
+        ],
+        [
+            'question' => 'What is the best time of year to do this trek?',
+            'answer' => 'The two peak windows are March–May (spring) and October–November (autumn). Spring brings rhododendrons in full bloom along the forest trails, while autumn delivers the clearest mountain views after the monsoon clears the air. December is quieter than most people expect — fewer trekkers and crisp visibility make it a genuinely underrated option. June–September is the monsoon season; trails are lush with waterfalls and wildflowers but wetter underfoot.',
+        ],
+        [
+            'question' => 'Do I need a trekking permit for Kokhe Danda?',
+            'answer' => 'Yes, a TIMS card (Trekkers\' Information Management System) and an Annapurna Conservation Area Permit (ACAP) are required. Both are included in your trek cost — we handle the paperwork and arrange them in Pokhara before departure. You don\'t need to do anything separately.',
+        ],
+        [
+            'question' => 'Can I do this trek solo or do I need a group?',
+            'answer' => 'Absolutely — solo trekkers are very welcome and actually quite common on this route. You\'ll have a private guide for the full trek, and the solo experience on these quiet trails is genuinely special. You can also join one of our fixed group departures if you\'d prefer company. Either way, the pricing is transparent and listed above.',
+        ],
+        [
+            'question' => 'What should I pack for this trek?',
+            'answer' => 'For a 5-day easy trek, you don\'t need to overpack. Essentials include: sturdy walking shoes or light trekking boots, layers for cool evenings at altitude (3,300m nights can be cold), a rain jacket, a good daypack, a reusable water bottle, sunscreen, and a headlamp. A sleeping bag liner is useful for homestay nights. We\'ll send you a full packing list after booking.',
+        ],
+        [
+            'question' => 'What happens if I need to leave the trek early?',
+            'answer' => 'If you need to return early for any reason, there is no refund on the remaining trek cost. However, we will arrange comfortable accommodation for you in Pokhara for the number of nights that remain on your itinerary — at no extra charge. Please also see our full <a href="/cancellation">Cancellation Policy</a> for details.',
+        ],
+    ],
+    'pricing' => [
+        'rows' => [
+            ['group' => '1 Person', 'price' => '$410'],
+            ['group' => '2 People', 'price' => '$380'],
+            ['group' => '3–4 People', 'price' => '$360'],
+            ['group' => '5+ People', 'price' => '$350'],
+        ],
+        'included' => [
+            'Two-way private transport',
+            '3 meals and drinks during trek',
+            'Accommodation during trek',
+            'Guide and Porter salary',
+            'Meals and accommodation of Guide and Porter',
+            'TIMS card and ACAP permit',
+        ],
+        'excluded' => [
+            'International flights and Nepal visa',
+            'Travel insurance (strongly recommended)',
+            'Personal trekking gear and equipment',
+            'Tips for guide and porter',
+            'Any costs due to early return or emergency evacuation',
+        ],
+    ],
+    'booking_trek_name' => 'Kokhe Danda Trek',
+];
