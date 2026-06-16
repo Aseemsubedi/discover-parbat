@@ -206,21 +206,18 @@ async function handleShopOrder(event) {
     special: note
   });
 
-  try {
-    const res = await fetch('inquiry.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-      body: payload.toString()
-    });
-    const data = await res.json();
-    if (!res.ok || !data.ok) throw new Error(data.error || 'Failed');
-    document.getElementById('shop-order-form').reset();
-    if (item) document.getElementById('so-item').value = item;
-    if (format) document.getElementById('so-format').value = format;
-    document.getElementById('order-success').style.display = 'block';
-  } catch (e) {
-    alert('Could not send order request right now. Please try again in a moment.');
-  }
+  await DiscoverParbat.submitInquiry(payload, {
+    successUrl: null,
+    whatsappMessage: DiscoverParbat.formatShopMessage({
+      name, email, whatsapp, country, itemCode, format: formatVal, qty, note
+    }),
+    onSuccess: () => {
+      document.getElementById('shop-order-form').reset();
+      if (item) document.getElementById('so-item').value = item;
+      if (format) document.getElementById('so-format').value = format;
+      document.getElementById('order-success').style.display = 'block';
+    }
+  });
 }
 </script>
 </body>

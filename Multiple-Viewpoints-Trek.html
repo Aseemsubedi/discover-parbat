@@ -1466,23 +1466,15 @@ body { line-height: 1.7; }
       special
     });
 
-    try {
-      const res = await fetch('inquiry.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-        body: payload.toString()
-      });
-
-      const data = await res.json();
-      if (!res.ok || !data.ok) {
-        throw new Error(data.error || 'Failed to send booking request');
+    await DiscoverParbat.submitInquiry(payload, {
+      whatsappMessage: DiscoverParbat.formatBookingMessage({
+        name, country, email, whatsapp, trek, startDate, pax, special
+      }),
+      onSuccess: () => {
+        form.reset();
+        window.location.href = 'success.html';
       }
-
-      form.reset();
-      window.location.href = 'success.html';
-    } catch (err) {
-      alert('Could not send automatically right now. Please try again in a moment.');
-    }
+    });
   }
 
   const dateInput = document.getElementById('bk-date');

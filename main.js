@@ -106,3 +106,114 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+/* Inquiry submit + WhatsApp fallback when email send fails */
+window.DiscoverParbat = window.DiscoverParbat || {};
+const DP = window.DiscoverParbat;
+
+DP.WHATSAPP_NUMBER = '9779867649780';
+
+DP.buildWhatsAppUrl = function (text) {
+  return 'https://wa.me/' + DP.WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+};
+
+DP.openWhatsAppFallback = function (message) {
+  window.location.href = DP.buildWhatsAppUrl(message);
+};
+
+DP.submitInquiry = async function (payload, options) {
+  const opts = options || {};
+  const successUrl = opts.successUrl !== undefined ? opts.successUrl : 'success.html';
+
+  try {
+    const res = await fetch('inquiry.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+      body: payload.toString()
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Send failed');
+
+    if (typeof opts.onSuccess === 'function') {
+      opts.onSuccess();
+    } else if (successUrl) {
+      window.location.href = successUrl;
+    }
+    return true;
+  } catch (e) {
+    if (opts.whatsappMessage) {
+      DP.openWhatsAppFallback(opts.whatsappMessage);
+    }
+    return false;
+  }
+};
+
+DP.formatCustomTrekMessage = function (d) {
+  return [
+    'Custom Trek Inquiry',
+    '',
+    'Name: ' + d.name,
+    'Country: ' + d.country,
+    'Preferred Trek: ' + (d.trek || 'Not specified'),
+    'Preferred Duration: ' + d.days + ' days',
+    'Preferred Start Date: ' + d.date,
+    'No. of Pax: ' + d.pax,
+    'Focus: ' + (d.focus || 'Not specified'),
+    'Email: ' + (d.email || 'Not provided'),
+    'WhatsApp: ' + (d.whatsapp || 'Not provided'),
+    '',
+    'Special Requirement:',
+    d.note || 'None'
+  ].join('\n');
+};
+
+DP.formatBookingMessage = function (d) {
+  return [
+    'Booking Inquiry',
+    '',
+    'Name: ' + d.name,
+    'Country: ' + d.country,
+    'Trek: ' + d.trek,
+    'Start Date: ' + d.startDate,
+    'No. of Pax: ' + d.pax,
+    'Email: ' + (d.email || 'Not provided'),
+    'WhatsApp: ' + (d.whatsapp || 'Not provided'),
+    '',
+    'Special Requirement:',
+    d.special || 'None'
+  ].join('\n');
+};
+
+DP.formatContactMessage = function (d) {
+  const fullName = [d.fname, d.lname].filter(Boolean).join(' ').trim();
+  return [
+    'Contact Inquiry',
+    '',
+    'Name: ' + fullName,
+    'Email: ' + d.email,
+    'Country: ' + (d.country || 'Not provided'),
+    'Trek: ' + (d.trek || 'Not specified'),
+    'Group Size: ' + (d.group || 'Not specified'),
+    'Preferred Start Date: ' + (d.date || 'Not specified'),
+    '',
+    'Message:',
+    d.message || 'No additional message'
+  ].join('\n');
+};
+
+DP.formatShopMessage = function (d) {
+  return [
+    'Shop Order Inquiry',
+    '',
+    'Name: ' + d.name,
+    'Country: ' + d.country,
+    'Photo Code: ' + d.itemCode,
+    'Format: ' + d.format,
+    'Quantity: ' + d.qty,
+    'Email: ' + (d.email || 'Not provided'),
+    'WhatsApp: ' + (d.whatsapp || 'Not provided'),
+    '',
+    'Interest / Note:',
+    d.note || 'None'
+  ].join('\n');
+};

@@ -3,13 +3,12 @@ declare(strict_types=1);
 
 /*
  |------------------------------------------------------------
- | SMTP Password Fallback Config
+ | SMTP Password Fallback Config (example)
  |------------------------------------------------------------
- | Use this file only when hosting does not support env vars.
+ | Copy this file to smtp-config.php and set your password.
  | Prefer setting DISCOVERPARBAT_SMTP_PASSWORD in environment.
  */
 
 return [
     'password' => '',
 ];
-
