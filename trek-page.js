@@ -72,48 +72,55 @@ document.addEventListener('DOMContentLoaded', () => {
     dateInput.min = `${yyyy}-${mm}-${dd}`;
   }
 
-  const gallery = document.getElementById('trek-gallery');
-  const lightbox = document.getElementById('gallery-lightbox');
-  const lightboxImg = document.getElementById('gallery-lightbox-img');
-  if (!gallery || !lightbox || !lightboxImg) return;
+  const carousel = document.getElementById('trek-gallery');
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll('.gallery-slide'));
+    const dots = Array.from(carousel.querySelectorAll('.gallery-dot'));
+    const counter = document.getElementById('gallery-counter');
+    const total = slides.length;
+    let current = 0;
+    let timer = null;
 
-  const items = Array.from(gallery.querySelectorAll('.gallery-item'));
-  const sources = items.map((btn) => btn.dataset.src || '');
-  let current = 0;
+    const goTo = (index) => {
+      if (!total) return;
+      current = (index + total) % total;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
+      if (counter) counter.textContent = `${current + 1} / ${total}`;
+    };
 
-  const show = (index) => {
-    if (!sources.length) return;
-    current = (index + sources.length) % sources.length;
-    lightboxImg.src = sources[current];
-    lightboxImg.alt = items[current]?.querySelector('img')?.alt || 'Trek photo';
-    lightbox.classList.add('open');
-    lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  };
+    const next = () => goTo(current + 1);
+    const prev = () => goTo(current - 1);
 
-  const close = () => {
-    lightbox.classList.remove('open');
-    lightbox.setAttribute('aria-hidden', 'true');
-    lightboxImg.src = '';
-    document.body.style.overflow = '';
-  };
+    const startAuto = () => {
+      stopAuto();
+      if (total > 1) timer = window.setInterval(next, 4000);
+    };
+    const stopAuto = () => {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    };
 
-  items.forEach((btn, index) => {
-    btn.addEventListener('click', () => show(index));
-  });
+    carousel.querySelector('.gallery-arrow-next')?.addEventListener('click', () => {
+      next();
+      startAuto();
+    });
+    carousel.querySelector('.gallery-arrow-prev')?.addEventListener('click', () => {
+      prev();
+      startAuto();
+    });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(Number(dot.dataset.index || 0));
+        startAuto();
+      });
+    });
 
-  lightbox.querySelector('.gallery-lightbox-close')?.addEventListener('click', close);
-  lightbox.querySelector('.gallery-lightbox-prev')?.addEventListener('click', () => show(current - 1));
-  lightbox.querySelector('.gallery-lightbox-next')?.addEventListener('click', () => show(current + 1));
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
 
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) close();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show(current - 1);
-    if (e.key === 'ArrowRight') show(current + 1);
-  });
+    startAuto();
+  }
 });

@@ -84,25 +84,24 @@ function cms_trek_safe_html(string $html): string
 
 <?php if (count($gallery) > 0): ?>
 <div class="gallery-section">
-  <div class="gallery-header">
-    <span class="gallery-label">Photo Gallery</span>
-    <span class="gallery-count"><?= count($gallery) ?> photos</span>
-  </div>
-  <div class="gallery-grid" id="trek-gallery">
+  <div class="gallery-carousel" id="trek-gallery" data-count="<?= count($gallery) ?>">
     <?php foreach ($gallery as $i => $img): ?>
       <?php $src = '/' . ltrim((string)$img, '/'); ?>
-      <button type="button" class="gallery-item" data-index="<?= (int)$i ?>" data-src="<?= cms_h($src) ?>" aria-label="View photo <?= (int)$i + 1 ?>">
-        <img src="<?= cms_h($src) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?> — photo <?= (int)$i + 1 ?>" loading="<?= $i < 4 ? 'eager' : 'lazy' ?>">
-      </button>
+      <div class="gallery-slide<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>">
+        <img src="<?= cms_h($src) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?> — photo <?= (int)$i + 1 ?>" loading="<?= $i === 0 ? 'eager' : 'lazy' ?>">
+      </div>
     <?php endforeach; ?>
-  </div>
-</div>
 
-<div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
-  <button type="button" class="gallery-lightbox-close" aria-label="Close gallery">&times;</button>
-  <button type="button" class="gallery-lightbox-prev" aria-label="Previous photo">&#8249;</button>
-  <img id="gallery-lightbox-img" src="" alt="">
-  <button type="button" class="gallery-lightbox-next" aria-label="Next photo">&#8250;</button>
+    <span class="gallery-counter" id="gallery-counter">1 / <?= count($gallery) ?></span>
+    <button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo">&#8249;</button>
+    <button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Next photo">&#8250;</button>
+    <div class="gallery-dots" id="gallery-dots">
+      <?php foreach ($gallery as $i => $img): ?>
+        <button type="button" class="gallery-dot<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>" aria-label="Go to photo <?= (int)$i + 1 ?>"></button>
+      <?php endforeach; ?>
+    </div>
+    <span class="gallery-label">Photo Gallery</span>
+  </div>
 </div>
 <?php endif; ?>
 
