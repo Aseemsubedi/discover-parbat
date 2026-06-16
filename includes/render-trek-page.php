@@ -49,9 +49,9 @@ function cms_trek_safe_html(string $html): string
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-<link rel="stylesheet" href="/trek-page.css">
+<link rel="stylesheet" href="/trek-page.css?v=2">
 <script src="/main.js?v=3" defer></script>
-<script src="/trek-page.js" defer></script>
+<script src="/trek-page.js?v=2" defer></script>
 </head>
 <body>
 
@@ -92,15 +92,21 @@ function cms_trek_safe_html(string $html): string
       </div>
     <?php endforeach; ?>
 
-    <span class="gallery-counter" id="gallery-counter">1 / <?= count($gallery) ?></span>
-    <button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo">&#8249;</button>
-    <button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Next photo">&#8250;</button>
-    <div class="gallery-dots" id="gallery-dots">
-      <?php foreach ($gallery as $i => $img): ?>
-        <button type="button" class="gallery-dot<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>" aria-label="Go to photo <?= (int)$i + 1 ?>"></button>
-      <?php endforeach; ?>
+    <div class="gallery-ui">
+      <span class="gallery-counter" id="gallery-counter">1 / <?= count($gallery) ?></span>
+      <button type="button" class="gallery-arrow gallery-arrow-prev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg>
+      </button>
+      <button type="button" class="gallery-arrow gallery-arrow-next" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+      <div class="gallery-dots" id="gallery-dots">
+        <?php foreach ($gallery as $i => $img): ?>
+          <button type="button" class="gallery-dot<?= $i === 0 ? ' active' : '' ?>" data-index="<?= (int)$i ?>" aria-label="Go to photo <?= (int)$i + 1 ?>"></button>
+        <?php endforeach; ?>
+      </div>
+      <span class="gallery-label">Photo Gallery</span>
     </div>
-    <span class="gallery-label">Photo Gallery</span>
   </div>
 </div>
 <?php endif; ?>
