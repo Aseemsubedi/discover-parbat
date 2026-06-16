@@ -98,15 +98,16 @@ ob_start();
     <input id="subtitle" name="subtitle" value="<?= cms_h((string)$item['subtitle']) ?>">
   </div>
 
-  <div class="cms-grid-2">
-    <div class="cms-field">
-      <label for="image">Card image filename</label>
-      <input id="image" name="image" value="<?= cms_h((string)$item['image']) ?>">
-    </div>
-    <div class="cms-field">
-      <label for="sort_order">Sort order</label>
-      <input id="sort_order" name="sort_order" type="number" value="<?= (int)$item['sort_order'] ?>">
-    </div>
+  <?php
+  $imageInputId = 'image';
+  $imageLabel = 'Card image';
+  $imageValue = (string)$item['image'];
+  include __DIR__ . '/includes/image-field.php';
+  ?>
+
+  <div class="cms-field">
+    <label for="sort_order">Sort order</label>
+    <input id="sort_order" name="sort_order" type="number" value="<?= (int)$item['sort_order'] ?>">
   </div>
 
   <div class="cms-grid-2">

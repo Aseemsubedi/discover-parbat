@@ -99,11 +99,17 @@ ob_start();
       <input id="tag" name="tag" value="<?= cms_h((string)$item['tag']) ?>">
     </div>
     <div class="cms-field">
-      <label for="image">Cover image filename</label>
-      <input id="image" name="image" value="<?= cms_h((string)$item['image']) ?>" placeholder="kokhe.jpg">
-      <p class="cms-help">Upload image to site root, then enter filename here.</p>
+      <label for="author">Author</label>
+      <input id="author" name="author" value="<?= cms_h((string)$item['author']) ?>">
     </div>
   </div>
+
+  <?php
+  $imageInputId = 'image';
+  $imageLabel = 'Cover image';
+  $imageValue = (string)$item['image'];
+  include __DIR__ . '/includes/image-field.php';
+  ?>
 
   <div class="cms-field">
     <label for="excerpt">Short excerpt (listing card)</label>
@@ -118,21 +124,17 @@ ob_start();
 
   <div class="cms-grid-2">
     <div class="cms-field">
-      <label for="author">Author</label>
-      <input id="author" name="author" value="<?= cms_h((string)$item['author']) ?>">
-    </div>
-    <div class="cms-field">
       <label for="published_at">Publish date</label>
       <input id="published_at" name="published_at" type="date" value="<?= cms_h((string)$item['published_at']) ?>">
     </div>
-  </div>
-
-  <div class="cms-grid-2">
     <div class="cms-field">
       <label for="read_minutes">Read time (minutes)</label>
       <input id="read_minutes" name="read_minutes" type="number" min="1" value="<?= (int)$item['read_minutes'] ?>">
     </div>
-    <div class="cms-field cms-check" style="padding-top:28px;">
+  </div>
+
+  <div class="cms-grid-2">
+    <div class="cms-field cms-check" style="padding-top:4px;">
       <label><input type="checkbox" name="published" value="1" <?= !empty($item['published']) ? 'checked' : '' ?>> Published (visible on website)</label>
     </div>
   </div>

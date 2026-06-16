@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/lib/auth.php';
 require_once dirname(__DIR__) . '/lib/content.php';
+require_once __DIR__ . '/lib/upload.php';
 
 function cms_page(string $title, string $content, string $active = ''): void
 {
@@ -45,6 +46,7 @@ function cms_page(string $title, string $content, string $active = ''): void
       <?= $content ?>
     </main>
   </div>
+  <script src="assets/admin.js" defer></script>
 </body>
 </html>
     <?php
