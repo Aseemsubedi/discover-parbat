@@ -1,15 +1,12 @@
 RewriteEngine On
 RewriteBase /
 
-# Prefer PHP when present; fall back to static HTML if PHP deploy lags
-DirectoryIndex index.php index.html
+# Prefer static homepage if PHP index is missing on host; PHP takes over when present
+DirectoryIndex index.html index.php
 
-# Dynamic CMS pages (only when PHP files exist)
-RewriteCond %{DOCUMENT_ROOT}/articles.php -f
+# Dynamic CMS listing pages
 RewriteRule ^articles/?$ articles.php [L]
-RewriteCond %{DOCUMENT_ROOT}/article.php -f
 RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
-RewriteCond %{DOCUMENT_ROOT}/treks.php -f
 RewriteRule ^treks/?$ treks.php [L]
 
 # Legacy article URL → CMS article
@@ -33,14 +30,7 @@ RewriteRule ^ %1 [R=301,L,NE]
 # index.html → homepage
 RewriteRule ^index\.html$ / [R=301,L,NC]
 
-# Trek detail pages via CMS when trek.php is deployed
+# Clean URLs → trek.php (CMS page or static .html fallback inside trek.php)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}/trek.php -f
 RewriteRule ^([a-z0-9-]+)/?$ trek.php?slug=$1 [L,QSA]
-
-# Static .html fallback for clean URLs (contact, about, treks, etc.)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
