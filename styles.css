@@ -189,6 +189,13 @@ footer::before {
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; flex-wrap: wrap; gap: 12px; }
 .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 .footer-tagline  { font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic; }
+.footer-credit { font-size: 0.78rem; color: rgba(255,255,255,0.32); }
+.footer-credit a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-credit a:hover { color: #a8e6c5; text-decoration: underline; }
 
 /* ─── STICKY ENQUIRE BUTTON ────────────────────────── */
 .sticky-enquire {
