@@ -55,7 +55,7 @@ function cms_trek_safe_html(string $html): string
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=4">
 <link rel="stylesheet" href="/trek-page.css?v=2">
 <script src="/main.js?v=3" defer></script>
 <script src="/trek-page.js?v=2" defer></script>

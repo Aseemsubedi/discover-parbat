@@ -48,7 +48,7 @@ $bodyHtml = (string)($article['body_html'] ?? '');
         : '',
 ]); ?>
 <link rel="icon" type="image/png" href="/logo.png" sizes="32x32">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=4">
 <script src="/main.js?v=3" defer></script>
 <style>
 body { line-height: 1.75; }

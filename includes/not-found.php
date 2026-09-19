@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page not found | Discover Parbat</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=4">
 </head>
 <body>
   <main style="max-width:560px;margin:120px auto;padding:0 24px;text-align:center;">
