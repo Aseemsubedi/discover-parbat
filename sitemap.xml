@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://discoverparbat.com/</loc></url>
-  <url><loc>https://discoverparbat.com/treks</loc></url>
-  <url><loc>https://discoverparbat.com/custom-trek</loc></url>
-  <url><loc>https://discoverparbat.com/about</loc></url>
-  <url><loc>https://discoverparbat.com/contact</loc></url>
-  <url><loc>https://discoverparbat.com/articles</loc></url>
-  <url><loc>https://discoverparbat.com/article/why-kokhe-danda-trek</loc></url>
-  <url><loc>https://discoverparbat.com/shop</loc></url>
-  <url><loc>https://discoverparbat.com/shop-order</loc></url>
-  <url><loc>https://discoverparbat.com/cancellation</loc></url>
-  <url><loc>https://discoverparbat.com/kokhe-danda-trek</loc></url>
-  <url><loc>https://discoverparbat.com/short-kokhe-danda-trek</loc></url>
-  <url><loc>https://discoverparbat.com/mardi-himal-trek</loc></url>
-  <url><loc>https://discoverparbat.com/khopra-danda-trek</loc></url>
-  <url><loc>https://discoverparbat.com/annapurna-base-camp-trek</loc></url>
-  <url><loc>https://discoverparbat.com/multiple-viewpoints-trek</loc></url>
-  <url><loc>https://discoverparbat.com/short-multiple-viewpoints-trek</loc></url>
-  <url><loc>https://discoverparbat.com/why-kokhe-danda-trek</loc></url>
+
+  <!-- Main pages -->
+  <url><loc>https://www.discoverparbat.com/</loc></url>
+  <url><loc>https://www.discoverparbat.com/treks</loc></url>
+  <url><loc>https://www.discoverparbat.com/articles</loc></url>
+  <url><loc>https://www.discoverparbat.com/about</loc></url>
+  <url><loc>https://www.discoverparbat.com/custom-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/contact</loc></url>
+  <url><loc>https://www.discoverparbat.com/shop</loc></url>
+  <url><loc>https://www.discoverparbat.com/cancellation</loc></url>
+
+  <!-- Treks -->
+  <url><loc>https://www.discoverparbat.com/kokhe-danda-trek</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://www.discoverparbat.com/short-kokhe-danda-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/khopra-ridge-trek</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://www.discoverparbat.com/multiple-viewpoints-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/short-multiple-viewpoints-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/poonhill-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/mardi-himal-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/mardi-himal-and-poonhill-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/annapurna-base-camp-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/annapurna-circuit-trek</loc></url>
+
+  <!-- Articles -->
+  <url><loc>https://www.discoverparbat.com/why-kokhe-danda-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/best-season-for-kokhe-danda-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/kokhe-danda-trek-alternative-to-poon-hill</loc></url>
+  <url><loc>https://www.discoverparbat.com/khopra-ridge-trek-alternative-to-langtang-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/what-to-pack-for-khopra-ridge-trek</loc></url>
+  <url><loc>https://www.discoverparbat.com/multiple-viewpoints-trek-alternative-to-annapurna-circuit</loc></url>
+
 </urlset>
