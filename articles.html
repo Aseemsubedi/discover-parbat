@@ -13,13 +13,13 @@
 
 
 <!-- SEO -->
-<meta name="description" content="Trek guides, local stories and insider tips from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
-<meta name="keywords" content="Parbat trekking, Nepal trek, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+<meta name="description" content="Trek guides, planning tips, weather advice and news from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
+<meta name="keywords" content="Parbat trekking, Nepal trek, trek guides Nepal, trek packing list, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
 <!-- Social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Discover Parbat">
 <meta property="og:title" content="Trek Guides &amp; Stories | Discover Parbat">
-<meta property="og:description" content="Trek guides, local stories and insider tips from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
+<meta property="og:description" content="Trek guides, planning tips, weather advice and news from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
 <meta property="og:url" content="https://discoverparbat.com/articles">
 <meta property="og:image" content="https://discoverparbat.com/og-share.jpg">
 <meta property="og:image:secure_url" content="https://discoverparbat.com/og-share.jpg">
@@ -29,10 +29,29 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Trek Guides &amp; Stories | Discover Parbat">
-<meta name="twitter:description" content="Trek guides, local stories and insider tips from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
+<meta name="twitter:description" content="Trek guides, planning tips, weather advice and news from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
 <meta name="twitter:image" content="https://discoverparbat.com/og-share.jpg">
 <meta name="twitter:image:alt" content="Trek Guides &amp; Stories | Discover Parbat">
 <meta name="theme-color" content="#1a3d2b">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Trek Guides & Stories | Discover Parbat",
+  "url": "https://discoverparbat.com/articles",
+  "description": "Trek guides, planning tips, weather advice and news from Parbat, Nepal.",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://discoverparbat.com/article/multiple-viewpoints-trek-alternative-to-annapurna-circuit", "name": "Multiple Viewpoints Trek: The Best Alternative to the Annapurna Circuit" },
+      { "@type": "ListItem", "position": 2, "url": "https://discoverparbat.com/khopra-ridge-trek-alternative-to-langtang-trek", "name": "Khopra Ridge Trek: The Best Alternative to Langtang Trek After the 2026 Flood" },
+      { "@type": "ListItem", "position": 3, "url": "https://discoverparbat.com/what-to-pack-for-khopra-ridge-trek", "name": "What to Pack for the Khopra Ridge Trek" },
+      { "@type": "ListItem", "position": 4, "url": "https://discoverparbat.com/why-kokhe-danda-trek", "name": "Why You Should Choose Discover Parbat for Kokhe Danda Trek" }
+    ]
+  }
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
 
@@ -121,7 +140,7 @@
 }
 
 .section-header {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
 }
 .section-eyebrow {
   display: inline-block;
@@ -152,6 +171,71 @@
   margin-top: 16px;
 }
 
+/* ─── CATEGORY JUMP LINKS ──────────────────────────── */
+.cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 52px;
+}
+.cat-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 100px;
+  background: var(--white);
+  border: 1px solid rgba(45,106,79,0.22);
+  color: var(--green-mid);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.cat-nav a:hover {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+  color: var(--white);
+}
+
+/* ─── CATEGORY BLOCKS ──────────────────────────────── */
+.cat-section {
+  margin-bottom: 76px;
+  scroll-margin-top: 100px;
+}
+.cat-head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 8px;
+}
+.cat-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+}
+.cat-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  background: rgba(45,106,79,0.09);
+  border: 1px solid rgba(45,106,79,0.2);
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+.cat-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #6b7a72;
+  max-width: 640px;
+  margin-bottom: 26px;
+}
+
 /* ─── ARTICLE CARD ─────────────────────────────────── */
 .articles-grid {
   display: grid;
@@ -170,6 +254,7 @@
   border: 1px solid rgba(0,0,0,0.05);
   transition: transform var(--transition), box-shadow var(--transition);
 }
+.article-card[hidden] { display: none; }
 .article-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
@@ -224,7 +309,7 @@
   margin-bottom: 10px;
 }
 
-.article-body h2 {
+.article-body h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   font-weight: 700;
@@ -245,10 +330,37 @@
 }
 .article-card:hover .article-read-more { gap: 10px; }
 
-/* ─── EMPTY STATE (for when more articles come) ────── */
+/* ─── SHOW ALL TOGGLE ──────────────────────────────── */
+.show-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 12px 24px;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  background: var(--white);
+  border: 1px solid rgba(45,106,79,0.3);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.show-all:hover { background: var(--green-mid); color: var(--white); }
+.show-all:focus-visible { outline: 3px solid var(--blue-mid); outline-offset: 3px; }
+.show-all .chev {
+  width: 9px; height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.25s ease;
+}
+.show-all[aria-expanded="true"] .chev { transform: rotate(-135deg) translateY(-2px); }
+
+/* ─── EMPTY STATE ──────────────────────────────────── */
 .coming-soon-note {
-  margin-top: 48px;
-  padding: 28px 32px;
+  padding: 26px 30px;
   background: var(--white);
   border-radius: var(--radius);
   border: 1px dashed rgba(45,106,79,0.25);
@@ -277,6 +389,7 @@
   .intro-strip { padding: 24px 5%; }
   .articles-section { padding: 44px 5% 60px; }
   .articles-grid { grid-template-columns: 1fr; }
+  .cat-section { margin-bottom: 56px; }
 }
 </style>
 </head>
@@ -335,26 +448,123 @@
     <div class="title-divider"></div>
   </div>
 
-  <div class="articles-grid">
+  <nav class="cat-nav" aria-label="Article categories">
+    <a href="#trek-guides">Trek Guides</a>
+    <a href="#planning">Planning</a>
+    <a href="#weather">Weather</a>
+    <a href="#news">News</a>
+  </nav>
 
-    <a href="/why-kokhe-danda-trek" class="article-card">
-      <div class="article-img-wrap">
-        <img src="kokhe.jpg" alt="Kokhe Danda Trek">
-        <span class="article-tag">Trek Guide</span>
-      </div>
-      <div class="article-body">
-        <p class="article-meta">Discover Parbat &nbsp;·&nbsp; 2026</p>
-        <h2>Why You Should Choose Discover Parbat for Kokhe Danda Trek</h2>
-        <span class="article-read-more">Read Article →</span>
-      </div>
-    </a>
+  <!--
+  HOW TO ADD AN ARTICLE
+  1. Copy one <a class="article-card"> block below.
+  2. Paste it at the TOP of the right category (newest first).
+  3. Change the link, image, tag, date and title.
+  The page automatically shows the first 3 in each category
+  and puts the rest behind the "View all" button.
+  -->
 
+  <!-- ═════════ TREK GUIDES ═════════ -->
+  <div class="cat-section" id="trek-guides" data-cat>
+    <div class="cat-head">
+      <h2 class="cat-title">Trek Guides</h2>
+      <span class="cat-count" data-count></span>
+    </div>
+    <p class="cat-desc">Route guides and trek comparisons to help you choose the right Himalayan trail.</p>
+
+    <div class="articles-grid">
+
+      <a href="/article/multiple-viewpoints-trek-alternative-to-annapurna-circuit" class="article-card">
+        <div class="article-img-wrap">
+          <img src="khopra3.jpg" alt="Multiple Viewpoints Trek, an alternative to the Annapurna Circuit" loading="lazy">
+          <span class="article-tag">Trek Guide</span>
+        </div>
+        <div class="article-body">
+          <p class="article-meta">Discover Parbat &nbsp;·&nbsp; Oct 2026</p>
+          <h3>Multiple Viewpoints Trek: The Best Alternative to the Annapurna Circuit</h3>
+          <span class="article-read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <a href="/why-kokhe-danda-trek" class="article-card">
+        <div class="article-img-wrap">
+          <img src="kokhe.jpg" alt="Kokhe Danda Trek" loading="lazy">
+          <span class="article-tag">Trek Guide</span>
+        </div>
+        <div class="article-body">
+          <p class="article-meta">Discover Parbat &nbsp;·&nbsp; 2026</p>
+          <h3>Why You Should Choose Discover Parbat for Kokhe Danda Trek</h3>
+          <span class="article-read-more">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 
-   
-  <div class="coming-soon-note">
-    <div class="coming-soon-dot"></div>
-    <p><strong>More articles coming soon.</strong> We're working on guides, travel tips, and stories from the trails of Parbat.</p>
+  <!-- ═════════ PLANNING ═════════ -->
+  <div class="cat-section" id="planning" data-cat>
+    <div class="cat-head">
+      <h2 class="cat-title">Planning</h2>
+      <span class="cat-count" data-count></span>
+    </div>
+    <p class="cat-desc">Packing lists, permits, preparation and practical advice before you trek.</p>
+
+    <div class="articles-grid">
+
+      <a href="/what-to-pack-for-khopra-ridge-trek" class="article-card">
+        <div class="article-img-wrap">
+          <img src="khopra.jpg" alt="Khopra Ridge Trek packing list" loading="lazy">
+          <span class="article-tag">Planning</span>
+        </div>
+        <div class="article-body">
+          <p class="article-meta">Discover Parbat &nbsp;·&nbsp; Sep 2026</p>
+          <h3>What to Pack for the Khopra Ridge Trek</h3>
+          <span class="article-read-more">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ═════════ WEATHER ═════════ -->
+  <div class="cat-section" id="weather" data-cat>
+    <div class="cat-head">
+      <h2 class="cat-title">Weather</h2>
+      <span class="cat-count" data-count></span>
+    </div>
+    <p class="cat-desc">Seasons, conditions and the best months to walk the trails of Parbat.</p>
+
+    <div class="articles-grid">
+      <div class="coming-soon-note" data-empty>
+        <div class="coming-soon-dot"></div>
+        <p><strong>Weather guides coming soon.</strong> We're preparing season-by-season advice for the Annapurna region.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════ NEWS ═════════ -->
+  <div class="cat-section" id="news" data-cat>
+    <div class="cat-head">
+      <h2 class="cat-title">News</h2>
+      <span class="cat-count" data-count></span>
+    </div>
+    <p class="cat-desc">Trail updates and what is changing in Nepal's trekking regions.</p>
+
+    <div class="articles-grid">
+
+      <a href="/khopra-ridge-trek-alternative-to-langtang-trek" class="article-card">
+        <div class="article-img-wrap">
+          <img src="khopra1.jpg" alt="Khopra Ridge Trek, an alternative to Langtang after the 2026 flood" loading="lazy">
+          <span class="article-tag">News</span>
+        </div>
+        <div class="article-body">
+          <p class="article-meta">Discover Parbat &nbsp;·&nbsp; Sep 2026</p>
+          <h3>Khopra Ridge Trek: The Best Alternative to Langtang Trek After the 2026 Flood</h3>
+          <span class="article-read-more">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 
 </section>
@@ -399,6 +609,44 @@
     <p class="footer-tagline">Walk slow, go far.</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var LIMIT = 3; /* articles shown before "View all" */
+
+  document.querySelectorAll('[data-cat]').forEach(function (sec) {
+    var grid  = sec.querySelector('.articles-grid');
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
+    var badge = sec.querySelector('[data-count]');
+
+    if (badge) {
+      badge.textContent = cards.length
+        ? cards.length + (cards.length === 1 ? ' article' : ' articles')
+        : 'Coming soon';
+    }
+
+    if (cards.length <= LIMIT) return;
+
+    var extra = cards.slice(LIMIT);
+    extra.forEach(function (c) { c.hidden = true; });
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'show-all';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="lbl">View all ' + cards.length + ' articles</span><span class="chev" aria-hidden="true"></span>';
+    grid.parentNode.insertBefore(btn, grid.nextSibling);
+
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      extra.forEach(function (c) { c.hidden = open; });
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      btn.querySelector('.lbl').textContent = open ? 'View all ' + cards.length + ' articles' : 'Show fewer';
+      if (open) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
