@@ -828,3 +828,18 @@ body { line-height: 1.7; }
   .booking-note { font-size: 0.74rem; }
 }
 
+/* ─── GALLERY: show full photos on desktop ─────────── */
+.gallery-section .gallery-carousel {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  max-width: min(1100px, calc(80vh * 1.5)); /* stays within the screen height */
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery-section .gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
