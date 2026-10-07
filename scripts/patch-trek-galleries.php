@@ -74,7 +74,7 @@ foreach ($trekFiles as $file) {
     if (!str_contains($html, 'trek-page.css')) {
         $html = str_replace(
             '<link rel="stylesheet" href="styles.css">',
-            "<link rel=\"stylesheet\" href=\"styles.css\">\n<link rel=\"stylesheet\" href=\"/trek-page.css?v=2\">",
+            "<link rel=\"stylesheet\" href=\"styles.css\">\n<link rel=\"stylesheet\" href=\"/trek-page.css?v=3\">",
             $html
         );
     }
