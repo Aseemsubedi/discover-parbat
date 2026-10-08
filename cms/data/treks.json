@@ -971,7 +971,7 @@
             },
             "booking_trek_name": "Annapurna Base Camp Trek"
         },
-        "cms_page": true
+        "cms_page": false
     },
     {
         "id": "trek_short_kokhe",
