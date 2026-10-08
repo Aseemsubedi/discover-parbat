@@ -58,7 +58,7 @@ function cms_trek_safe_html(string $html): string
 <link rel="stylesheet" href="/styles.css?v=4">
 <link rel="stylesheet" href="/trek-page.css?v=3">
 <script src="/main.js?v=3" defer></script>
-<script src="/trek-page.js?v=2" defer></script>
+<script src="/trek-page.js?v=3" defer></script>
 </head>
 <body>
 
