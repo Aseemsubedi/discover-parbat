@@ -62,7 +62,54 @@ async function handleBookingSubmit(event) {
   });
 }
 
+// ─── BOOKING FORM TREK LIST ─────────────────────────────
+// Edit this ONE list to change the "Trekking Name" dropdown on every trek page.
+// Each name is exactly what arrives in the booking message.
+const DP_TREKS = [
+  'Kokhe Danda Trek',
+  'Short Kokhe Danda Trek',
+  'Multiple Viewpoints Trek',
+  'Short Multiple Viewpoints Trek',
+  'Mardi Himal Trek',
+  'Mardi Himal and Poon Hill Trek',
+  'Poon Hill Trek',
+  'Khopra Ridge Trek',
+  'Pikey Peak Trek',
+  'Annapurna Base Camp Trek',
+  'Annapurna Circuit Trek'
+  // add new treks here, e.g. 'New Trek Name',
+];
+
+function buildTrekDropdown() {
+  const sel = document.getElementById('bk-trek');
+  if (!sel) return;
+
+  // The trek this page marked "selected" in its HTML
+  const current = sel.value;
+
+  const make = (name, selected) => {
+    const o = document.createElement('option');
+    o.value = name;
+    o.textContent = name;
+    if (selected) o.selected = true;
+    return o;
+  };
+
+  sel.innerHTML = '';
+
+  // Page's own trek first (kept even if it is missing from DP_TREKS)
+  if (current && current !== 'Not sure yet') {
+    sel.appendChild(make(current, true));
+  }
+  sel.appendChild(make('Not sure yet', current === 'Not sure yet'));
+  DP_TREKS
+    .filter((t) => t !== current)
+    .forEach((t) => sel.appendChild(make(t, false)));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  buildTrekDropdown();
+
   const dateInput = document.getElementById('bk-date');
   if (dateInput) {
     const today = new Date();
