@@ -404,7 +404,7 @@
             },
             "booking_trek_name": "Mardi Himal Trek"
         },
-        "cms_page": true
+        "cms_page": false
     },
     {
         "id": "trek_khopra",
