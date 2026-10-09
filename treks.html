@@ -292,18 +292,18 @@
 }
 .tk-facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid rgba(0,0,0,0.07);
   border-bottom: 1px solid rgba(0,0,0,0.07);
   margin: 6px 0;
 }
 .tk-fact { padding: 14px 0; text-align: center; }
 .tk-fact + .tk-fact { border-left: 1px solid rgba(0,0,0,0.07); }
-.tk-fact strong { display: block; font-size: 1.15rem; font-weight: 600; color: var(--text-dark); }
+.tk-fact strong { display: block; font-size: 1.12rem; font-weight: 600; color: var(--text-dark); }
 .tk-fact span {
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 600;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   color: var(--green-mid);
 }
@@ -364,13 +364,18 @@
   position: absolute;
   z-index: 2;
   left: 14px; bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: rgba(255,255,255,0.95);
   color: var(--text-dark);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: 5px 12px;
+  padding: 6px 13px;
   border-radius: 100px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
+.tk-days svg { width: 13px; height: 13px; stroke: var(--green-mid); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .tk-card-body {
   padding: 22px 24px 24px;
   display: flex;
@@ -392,6 +397,31 @@
   color: var(--text-dark);
   line-height: 1.25;
 }
+
+/* Difficulty + max altitude, read together under the trek name */
+.tk-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 4px;
+}
+.tk-alt {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: #f3f4f2;
+  border: 1px solid rgba(0,0,0,0.08);
+  color: var(--text-dark);
+  font-size: 0.74rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tk-alt svg { width: 13px; height: 13px; fill: #6b7a72; flex-shrink: 0; }
+.tk-alt small { font-size: 0.7rem; font-weight: 500; color: #6b7a72; }
+
 .tk-card-body p {
   font-size: 0.9rem;
   color: #666;
@@ -401,8 +431,7 @@
 .tk-card-foot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-end;
   margin-top: 8px;
   padding-top: 14px;
   border-top: 1px solid rgba(0,0,0,0.06);
@@ -461,7 +490,7 @@
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(0,0,0,0.05);
 }
-.tk-compare { width: 100%; min-width: 560px; border-collapse: collapse; }
+.tk-compare { width: 100%; min-width: 640px; border-collapse: collapse; }
 .tk-compare thead tr { background: rgba(45,106,79,0.06); }
 .tk-compare th {
   padding: 14px 20px;
@@ -585,6 +614,11 @@
   .tk-empty { margin: 10px 5% 32px; }
   .why-section { padding: 50px 5%; }
 }
+@media (max-width: 480px) {
+  .tk-facts { grid-template-columns: repeat(2, 1fr); }
+  .tk-fact:nth-child(3) { border-left: none; }
+  .tk-fact:nth-child(n+3) { border-top: 1px solid rgba(0,0,0,0.07); }
+}
 </style>
 </head>
 <body>
@@ -617,6 +651,12 @@
     <li><a href="/shop">Shop</a></li>
   </ul>
 </div>
+
+<!-- Reusable icons (referenced with <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-peak" viewBox="0 0 24 24"><path d="M2 20 9.5 7l3.6 6.2L15.5 10 22 20z"/></symbol>
+</svg>
 
 <!-- ─── HERO ───────────────────────────────────────── -->
 <section class="hero-small">
@@ -663,12 +703,20 @@
       <div class="tk-facts">
         <div class="tk-fact"><strong>5 Days</strong><span>Duration</span></div>
         <div class="tk-fact"><strong>Easy</strong><span>Difficulty</span></div>
+        <div class="tk-fact"><strong>3,310 m</strong><span>Max Altitude</span></div>
         <div class="tk-fact"><strong>$350</strong><span>From / person</span></div>
       </div>
       <span class="tk-btn">View Kokhe Danda Trek →</span>
     </div>
   </a>
 </div>
+
+<!--
+  HOW TO EDIT A CARD
+  On the photo:      days  →  <span class="tk-days">…5 Days</span>
+  Under the name:    difficulty badge + max altitude  →  <div class="tk-meta">…</div>
+  Filter uses data-diff (easy / moderate / hard) and data-days on the <a>.
+-->
 
 <!-- ─── GROUP 1: PARBAT ROUTES ─────────────────────── -->
 <section class="tk-group" data-group>
@@ -684,48 +732,51 @@
     <a class="tk-card" href="/short-kokhe-danda-trek" data-diff="easy" data-days="4">
       <div class="tk-card-img">
         <img src="kokhe.jpg" alt="Short Kokhe Danda Trek in Parbat" loading="lazy">
-        <span class="tk-days">4 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>4 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Parbat</span>
         <h3>Short Kokhe Danda Trek</h3>
-        <p>Short and scenic trek</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-easy"><span class="badge-dot"></span>Easy</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>3,310 m <small>max</small></span>
         </div>
+        <p>Short and scenic trek</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/short-multiple-viewpoints-trek" data-diff="easy" data-days="6">
       <div class="tk-card-img">
         <img src="shortmvp.jpg" alt="Short Multiple Viewpoints Trek: Mulde, Poon Hill and Kokhe Danda" loading="lazy">
-        <span class="tk-days">6 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>6 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Parbat &amp; Annapurna</span>
         <h3>Short Multiple Viewpoints Trek</h3>
-        <p>Mulde, Poonhill &amp; Kokhe</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-easy"><span class="badge-dot"></span>Easy</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>3,637 m <small>max</small></span>
         </div>
+        <p>Mulde, Poonhill &amp; Kokhe</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/multiple-viewpoints-trek" data-diff="moderate" data-days="14">
       <div class="tk-card-img">
         <img src="mvp.jpg" alt="Multiple Viewpoints Trek across Parbat and the Annapurna region" loading="lazy">
-        <span class="tk-days">14 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>14 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Parbat &amp; Annapurna</span>
         <h3>Multiple Viewpoints Trek</h3>
-        <p>Best viewpoints in one trek</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>4,660 m <small>max</small></span>
         </div>
+        <p>Best viewpoints in one trek</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
@@ -746,112 +797,119 @@
     <a class="tk-card" href="/poonhill-trek" data-diff="easy" data-days="4">
       <div class="tk-card-img">
         <img src="poonhill3.jpg" alt="Sunrise view from Poon Hill in the Annapurna region" loading="lazy">
-        <span class="tk-days">4 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>4 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna</span>
         <h3>Poonhill Trek</h3>
-        <p>Classic Himalayan short viewpoint trek</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-easy"><span class="badge-dot"></span>Easy</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>3,210 m <small>max</small></span>
         </div>
+        <p>Classic Himalayan short viewpoint trek</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/mardi-himal-trek" data-diff="moderate" data-days="5">
       <div class="tk-card-img">
         <img src="mardi.jpg" alt="Machhapuchhre (Fishtail) from the Mardi Himal Trek" loading="lazy">
-        <span class="tk-days">5 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>5 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna</span>
         <h3>Mardi Himal Trek</h3>
-        <p>Ridge trek towards Fishtail</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>4,000 m <small>max</small></span>
         </div>
+        <p>Ridge trek towards Fishtail</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/pikey-peak-trek" data-diff="easy" data-days="7">
       <div class="tk-card-img">
         <img src="pikey.jpg" alt="Everest range seen from Pikey Peak" loading="lazy">
-        <span class="tk-days">7 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>7 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Everest Region</span>
         <h3>Pikey Peak Trek</h3>
-        <p>Trek with views of multiple eight-thousanders</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-easy"><span class="badge-dot"></span>Easy</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>4,065 m <small>max</small></span>
         </div>
+        <p>Trek with views of multiple eight-thousanders</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/khopra-ridge-trek" data-diff="moderate" data-days="8">
       <div class="tk-card-img">
         <img src="khopra.jpg" alt="Khopra Ridge with views of Dhaulagiri and Annapurna South" loading="lazy">
-        <span class="tk-days">8 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>8 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna</span>
         <h3>Khopra Ridge Trek</h3>
-        <p>Beautiful offbeat ridge trek</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>3,660 m <small>max</small></span>
         </div>
+        <p>Beautiful offbeat ridge trek</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/annapurna-base-camp-trek" data-diff="moderate" data-days="10">
       <div class="tk-card-img">
         <img src="abc.jpg" alt="Annapurna Base Camp surrounded by Himalayan peaks" loading="lazy">
-        <span class="tk-days">10 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>10 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna</span>
         <h3>Annapurna Base Camp Trek</h3>
-        <p>Classic Himalayan journey</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>4,130 m <small>max</small></span>
         </div>
+        <p>Classic Himalayan journey</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/mardi-himal-and-poonhill-trek" data-diff="moderate" data-days="10">
       <div class="tk-card-img">
         <img src="mardi7.jpg" alt="Mardi Himal and Poon Hill Trek in the Annapurna region" loading="lazy">
-        <span class="tk-days">10 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>10 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna &amp; Parbat</span>
         <h3>Mardi Himal &amp; Poonhill Trek</h3>
-        <p>Mardi, Poonhill &amp; Kokhe</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>4,000 m <small>max</small></span>
         </div>
+        <p>Mardi, Poonhill &amp; Kokhe</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
     <a class="tk-card" href="/annapurna-circuit-trek" data-diff="hard" data-days="12">
       <div class="tk-card-img">
         <img src="act2.jpg" alt="Annapurna Circuit Trek towards Thorong La pass" loading="lazy">
-        <span class="tk-days">12 Days</span>
+        <span class="tk-days"><svg><use href="#i-cal"/></svg>12 Days</span>
       </div>
       <div class="tk-card-body">
         <span class="tk-region">Annapurna</span>
         <h3>Annapurna Circuit Trek</h3>
-        <p>Classic Himalayan circuit over Thorong La</p>
-        <div class="tk-card-foot">
+        <div class="tk-meta">
           <span class="badge badge-hard"><span class="badge-dot"></span>Challenging</span>
-          <span class="tk-arrow">View Trek →</span>
+          <span class="tk-alt"><svg><use href="#i-peak"/></svg>5,416 m <small>max</small></span>
         </div>
+        <p>Classic Himalayan circuit over Thorong La</p>
+        <div class="tk-card-foot"><span class="tk-arrow">View Trek →</span></div>
       </div>
     </a>
 
@@ -873,20 +931,20 @@
     <div class="tk-compare-scroll">
       <table class="tk-compare">
         <thead>
-          <tr><th>Trek</th><th>Days</th><th>Difficulty</th><th>Region</th></tr>
+          <tr><th>Trek</th><th>Days</th><th>Difficulty</th><th>Max Altitude</th><th>Region</th></tr>
         </thead>
         <tbody>
-          <tr><td><a href="/short-kokhe-danda-trek">Short Kokhe Danda Trek</a></td><td>4</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>Parbat</td></tr>
-          <tr><td><a href="/poonhill-trek">Poonhill Trek</a></td><td>4</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>Annapurna</td></tr>
-          <tr><td><a href="/kokhe-danda-trek">Kokhe Danda Trek</a></td><td>5</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>Parbat</td></tr>
-          <tr><td><a href="/mardi-himal-trek">Mardi Himal Trek</a></td><td>5</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>Annapurna</td></tr>
-          <tr><td><a href="/short-multiple-viewpoints-trek">Short Multiple Viewpoints Trek</a></td><td>6</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>Parbat &amp; Annapurna</td></tr>
-          <tr><td><a href="/pikey-peak-trek">Pikey Peak Trek</a></td><td>7</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>Everest Region</td></tr>
-          <tr><td><a href="/khopra-ridge-trek">Khopra Ridge Trek</a></td><td>8</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>Annapurna</td></tr>
-          <tr><td><a href="/annapurna-base-camp-trek">Annapurna Base Camp Trek</a></td><td>10</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>Annapurna</td></tr>
-          <tr><td><a href="/mardi-himal-and-poonhill-trek">Mardi Himal &amp; Poonhill Trek</a></td><td>10</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>Annapurna &amp; Parbat</td></tr>
-          <tr><td><a href="/annapurna-circuit-trek">Annapurna Circuit Trek</a></td><td>12</td><td><span class="badge badge-hard"><span class="badge-dot"></span>Challenging</span></td><td>Annapurna</td></tr>
-          <tr><td><a href="/multiple-viewpoints-trek">Multiple Viewpoints Trek</a></td><td>14</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>Parbat &amp; Annapurna</td></tr>
+          <tr><td><a href="/short-kokhe-danda-trek">Short Kokhe Danda Trek</a></td><td>4</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>3,310 m</td><td>Parbat</td></tr>
+          <tr><td><a href="/poonhill-trek">Poonhill Trek</a></td><td>4</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>3,210 m</td><td>Annapurna</td></tr>
+          <tr><td><a href="/kokhe-danda-trek">Kokhe Danda Trek</a></td><td>5</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>3,310 m</td><td>Parbat</td></tr>
+          <tr><td><a href="/mardi-himal-trek">Mardi Himal Trek</a></td><td>5</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>4,000 m</td><td>Annapurna</td></tr>
+          <tr><td><a href="/short-multiple-viewpoints-trek">Short Multiple Viewpoints Trek</a></td><td>6</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>3,637 m</td><td>Parbat &amp; Annapurna</td></tr>
+          <tr><td><a href="/pikey-peak-trek">Pikey Peak Trek</a></td><td>7</td><td><span class="badge badge-easy"><span class="badge-dot"></span>Easy</span></td><td>4,065 m</td><td>Everest Region</td></tr>
+          <tr><td><a href="/khopra-ridge-trek">Khopra Ridge Trek</a></td><td>8</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>3,660 m</td><td>Annapurna</td></tr>
+          <tr><td><a href="/annapurna-base-camp-trek">Annapurna Base Camp Trek</a></td><td>10</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>4,130 m</td><td>Annapurna</td></tr>
+          <tr><td><a href="/mardi-himal-and-poonhill-trek">Mardi Himal &amp; Poonhill Trek</a></td><td>10</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>4,000 m</td><td>Annapurna &amp; Parbat</td></tr>
+          <tr><td><a href="/annapurna-circuit-trek">Annapurna Circuit Trek</a></td><td>12</td><td><span class="badge badge-hard"><span class="badge-dot"></span>Challenging</span></td><td>5,416 m</td><td>Annapurna</td></tr>
+          <tr><td><a href="/multiple-viewpoints-trek">Multiple Viewpoints Trek</a></td><td>14</td><td><span class="badge badge-moderate"><span class="badge-dot"></span>Moderate</span></td><td>4,660 m</td><td>Parbat &amp; Annapurna</td></tr>
         </tbody>
       </table>
     </div>
