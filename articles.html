@@ -14,7 +14,7 @@
 
 <!-- SEO -->
 <meta name="description" content="Trek guides, planning tips, weather advice and news from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
-<meta name="keywords" content="Parbat trekking, Nepal trek, trek guides Nepal, trek packing list, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal">
+<meta name="keywords" content="Parbat trekking, Nepal trek, trek guides Nepal, trek packing list, Kokhe Danda trek, Mardi Himal, Khopra Ridge, Annapurna trek, Himalayan trekking, local guides Nepal, पर्वत घुम्ने ठाउँ, नेपाली लेख">
 <!-- Social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Discover Parbat">
@@ -27,6 +27,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Trek Guides &amp; Stories | Discover Parbat">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ne_NP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Trek Guides &amp; Stories | Discover Parbat">
 <meta name="twitter:description" content="Trek guides, planning tips, weather advice and news from Parbat, Nepal — written by the people who live and guide on these Himalayan trails.">
@@ -44,16 +45,17 @@
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "url": "https://discoverparbat.com/article/multiple-viewpoints-trek-alternative-to-annapurna-circuit", "name": "Multiple Viewpoints Trek: The Best Alternative to the Annapurna Circuit" },
+      { "@type": "ListItem", "position": 1, "url": "https://discoverparbat.com/multiple-viewpoints-trek-alternative-to-annapurna-circuit", "name": "Multiple Viewpoints Trek: The Best Alternative to the Annapurna Circuit" },
       { "@type": "ListItem", "position": 2, "url": "https://discoverparbat.com/khopra-ridge-trek-alternative-to-langtang-trek", "name": "Khopra Ridge Trek: The Best Alternative to Langtang Trek After the 2026 Flood" },
       { "@type": "ListItem", "position": 3, "url": "https://discoverparbat.com/what-to-pack-for-khopra-ridge-trek", "name": "What to Pack for the Khopra Ridge Trek" },
-      { "@type": "ListItem", "position": 4, "url": "https://discoverparbat.com/why-kokhe-danda-trek", "name": "Why You Should Choose Discover Parbat for Kokhe Danda Trek" }
+      { "@type": "ListItem", "position": 4, "url": "https://discoverparbat.com/why-kokhe-danda-trek", "name": "Why You Should Choose Discover Parbat for Kokhe Danda Trek" },
+      { "@type": "ListItem", "position": 5, "url": "https://discoverparbat.com/parbat-dashain-travel-destinations", "name": "दशैंको बिदामा घुम्न जाने सोचमा हुनुहुन्छ? पर्वतका यी ५ ठाउँ छुटाउनै हुँदैन" }
     ]
   }
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,600&family=Mukta:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css?v=4">
 <script src="main.js?v=3" defer></script>
@@ -197,6 +199,10 @@
   border-color: var(--green-mid);
   color: var(--white);
 }
+.cat-nav a[lang="ne"] {
+  font-family: 'Mukta', 'DM Sans', sans-serif;
+  font-size: 0.92rem;
+}
 
 /* ─── CATEGORY BLOCKS ──────────────────────────────── */
 .cat-section {
@@ -234,6 +240,33 @@
   color: #6b7a72;
   max-width: 640px;
   margin-bottom: 26px;
+}
+
+/* ─── NEPALI SECTION (Devanagari type) ─────────────── */
+.cat-section[lang="ne"] .cat-title {
+  font-family: 'Noto Serif Devanagari', 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.4;
+}
+.cat-section[lang="ne"] .cat-count,
+.cat-section[lang="ne"] .cat-desc,
+.cat-section[lang="ne"] .article-meta,
+.cat-section[lang="ne"] .article-tag,
+.cat-section[lang="ne"] .article-read-more,
+.cat-section[lang="ne"] .show-all {
+  font-family: 'Mukta', 'DM Sans', sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.cat-section[lang="ne"] .cat-count,
+.cat-section[lang="ne"] .article-tag { font-size: 0.8rem; }
+.cat-section[lang="ne"] .cat-desc { font-size: 1rem; line-height: 1.8; }
+.cat-section[lang="ne"] .article-meta { font-size: 0.85rem; }
+.cat-section[lang="ne"] .article-read-more { font-size: 0.9rem; }
+.cat-section[lang="ne"] .article-body h3 {
+  font-family: 'Noto Serif Devanagari', 'Playfair Display', serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
 }
 
 /* ─── ARTICLE CARD ─────────────────────────────────── */
@@ -453,6 +486,7 @@
     <a href="#planning">Planning</a>
     <a href="#weather">Weather</a>
     <a href="#news">News</a>
+    <a href="#nepali" lang="ne">नेपाली लेख</a>
   </nav>
 
   <!--
@@ -460,6 +494,8 @@
   1. Copy one <a class="article-card"> block below.
   2. Paste it at the TOP of the right category (newest first).
   3. Change the link, image, tag, date and title.
+  4. Nepali-language articles always go in the "नेपाली लेख" section
+     at the bottom (it handles Devanagari fonts automatically).
   The page automatically shows the first 3 in each category
   and puts the rest behind the "View all" button.
   -->
@@ -511,7 +547,6 @@
 
     <div class="articles-grid">
 
-
       <a href="/annapurna-circuit-trail-condition-update" class="article-card">
         <div class="article-img-wrap">
           <img src="act1.jpg" alt="Annapurna Circuit Update Trek" loading="lazy">
@@ -519,13 +554,12 @@
         </div>
         <div class="article-body">
           <p class="article-meta">Discover Parbat &nbsp;·&nbsp; Sep 2026</p>
-          <h3>Annapurna Circuit Trek Update: Latest Trail, Road & Flood Conditions</h3>
+          <h3>Annapurna Circuit Trek Update: Latest Trail, Road &amp; Flood Conditions</h3>
           <span class="article-read-more">Read Article →</span>
         </div>
-      </a>  
-      
+      </a>
 
-       <a href="/kokhe-danda-trek-alternative-to-poon-hill" class="article-card">
+      <a href="/kokhe-danda-trek-alternative-to-poon-hill" class="article-card">
         <div class="article-img-wrap">
           <img src="kokhe1.jpg" alt="Kokhe Danda Trek" loading="lazy">
           <span class="article-tag">Planning</span>
@@ -535,9 +569,8 @@
           <h3>Why Kokhe Danda Trek Is A Better Alternative To Poonhill Trek</h3>
           <span class="article-read-more">Read Article →</span>
         </div>
-      </a> 
+      </a>
 
-      
       <a href="/what-to-pack-for-khopra-ridge-trek" class="article-card">
         <div class="article-img-wrap">
           <img src="khopra.jpg" alt="Khopra Ridge Trek packing list" loading="lazy">
@@ -550,8 +583,7 @@
         </div>
       </a>
 
-
-         <a href="/best-season-for-kokhe-danda-trek" class="article-card">
+      <a href="/best-season-for-kokhe-danda-trek" class="article-card">
         <div class="article-img-wrap">
           <img src="kokhe4.jpg" alt="Kokhe Danda Trek" loading="lazy">
           <span class="article-tag">Planning</span>
@@ -562,6 +594,7 @@
           <span class="article-read-more">Read Article →</span>
         </div>
       </a>
+
     </div>
   </div>
 
@@ -615,6 +648,35 @@
     </div>
   </div>
 
+  <!-- ═════════ नेपाली लेख (NEPALI ARTICLES) ═════════
+       All Nepali-language articles go here, newest first.
+       Copy the card below and change link, image, tag, date and title. -->
+  <div class="cat-section" id="nepali" lang="ne" data-cat
+       data-count-one="लेख" data-count-many="लेख" data-count-empty="चाँडै आउँदै"
+       data-view-all="सबै {n} लेख हेर्नुहोस्" data-show-fewer="कम देखाउनुहोस्">
+    <div class="cat-head">
+      <h2 class="cat-title">नेपाली लेख</h2>
+      <span class="cat-count" data-count></span>
+    </div>
+    <p class="cat-desc">पर्वत र आसपासका घुम्ने ठाउँ, पदयात्रा, मौसम र स्थानीय जानकारी, नेपाली भाषामा।</p>
+
+    <div class="articles-grid">
+
+      <a href="/parbat-dashain-travel-destinations" class="article-card">
+        <div class="article-img-wrap">
+          <img src="kokhe-danda.jpg" alt="दशैंमा घुम्न सकिने पर्वतका ५ ठाउँ, कोखे डाँडा" loading="lazy">
+          <span class="article-tag">घुमफिर</span>
+        </div>
+        <div class="article-body">
+          <p class="article-meta">Discover Parbat &nbsp;·&nbsp; असोज २०८३</p>
+          <h3>दशैंको बिदामा घुम्न जाने सोचमा हुनुहुन्छ? पर्वतका यी ५ ठाउँ छुटाउनै हुँदैन</h3>
+          <span class="article-read-more">पूरा पढ्नुहोस् →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
 </section>
 
 <!-- ─── FOOTER ─────────────────────────────────────── -->
@@ -661,20 +723,34 @@
 <script>
 (function () {
   var LIMIT = 3; /* articles shown before "View all" */
+  var NE_DIGITS = '०१२३४५६७८९';
 
   document.querySelectorAll('[data-cat]').forEach(function (sec) {
     var grid  = sec.querySelector('.articles-grid');
     var cards = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
     var badge = sec.querySelector('[data-count]');
+    var isNe  = sec.getAttribute('lang') === 'ne';
+    var d     = sec.dataset;
+
+    /* number formatting: Devanagari digits for the Nepali section */
+    function num(n) {
+      return isNe ? String(n).replace(/\d/g, function (x) { return NE_DIGITS[x]; }) : String(n);
+    }
+    var one     = d.countOne   || 'article';
+    var many    = d.countMany  || 'articles';
+    var empty   = d.countEmpty || 'Coming soon';
+    var viewAll = d.viewAll    || 'View all {n} articles';
+    var fewer   = d.showFewer  || 'Show fewer';
 
     if (badge) {
       badge.textContent = cards.length
-        ? cards.length + (cards.length === 1 ? ' article' : ' articles')
-        : 'Coming soon';
+        ? num(cards.length) + ' ' + (cards.length === 1 ? one : many)
+        : empty;
     }
 
     if (cards.length <= LIMIT) return;
 
+    var allLabel = viewAll.replace('{n}', num(cards.length));
     var extra = cards.slice(LIMIT);
     extra.forEach(function (c) { c.hidden = true; });
 
@@ -682,14 +758,15 @@
     btn.type = 'button';
     btn.className = 'show-all';
     btn.setAttribute('aria-expanded', 'false');
-    btn.innerHTML = '<span class="lbl">View all ' + cards.length + ' articles</span><span class="chev" aria-hidden="true"></span>';
+    btn.innerHTML = '<span class="lbl"></span><span class="chev" aria-hidden="true"></span>';
+    btn.querySelector('.lbl').textContent = allLabel;
     grid.parentNode.insertBefore(btn, grid.nextSibling);
 
     btn.addEventListener('click', function () {
       var open = btn.getAttribute('aria-expanded') === 'true';
       extra.forEach(function (c) { c.hidden = open; });
       btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-      btn.querySelector('.lbl').textContent = open ? 'View all ' + cards.length + ' articles' : 'Show fewer';
+      btn.querySelector('.lbl').textContent = open ? allLabel : fewer;
       if (open) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
