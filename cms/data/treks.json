@@ -671,7 +671,7 @@
             },
             "booking_trek_name": "Khopra Ridge Trek"
         },
-        "cms_page": true
+        "cms_page": false
     },
     {
         "id": "trek_abc",
