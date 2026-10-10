@@ -1752,6 +1752,6 @@
             },
             "booking_trek_name": "Short Multiple Viewpoints Trek"
         },
-        "cms_page": true
+        "cms_page": false
     }
 ]
