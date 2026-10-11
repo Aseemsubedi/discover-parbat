@@ -220,29 +220,35 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Framed look: soft "wall" behind, black frame, white mat */
 .product-img-wrap {
   position: relative;
-  height: 220px;
+  height: 250px;
   overflow: hidden;
+  padding: 24px;
+  background: linear-gradient(160deg, #f5f2ec 0%, #e9e4da 100%);
 }
 .product-img-wrap img {
+  display: block;
+  box-sizing: border-box;
   width: 100%; height: 100%;
   object-fit: cover;
+  border: 11px solid #ffffff;                       /* white mat */
+  outline: 1px solid rgba(0,0,0,0.12);             /* thin inner bevel line */
+  outline-offset: -11px;
+  box-shadow:
+    0 0 0 8px #141414,                             /* black frame */
+    0 0 0 9px #2a2a2a,                             /* frame edge highlight */
+    0 12px 22px rgba(0,0,0,0.32);                  /* shadow on the wall */
   transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
 }
-.product-card:hover .product-img-wrap img { transform: scale(1.06); }
-.product-img-wrap::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10,30,20,0.4) 0%, transparent 50%);
-}
+.product-card:hover .product-img-wrap img { transform: scale(1.03); }
 
 .product-code {
   position: absolute;
-  top: 14px; right: 14px;
+  top: 8px; right: 10px;
   z-index: 2;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.55);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.2);
   color: rgba(255,255,255,0.9);
@@ -348,6 +354,7 @@
   .format-bar { padding: 32px 5% 0; grid-template-columns: 1fr; }
   .section-header { padding: 44px 5% 28px; }
   .shop-grid { grid-template-columns: 1fr; padding: 0 5% 60px; }
+  .product-img-wrap { height: 260px; }
 }
 </style>
 </head>
@@ -439,11 +446,11 @@
   <!-- Product 1 -->
   <div class="product-card">
     <div class="product-img-wrap">
-      <img src="DP001.jpg" alt="Tea House at KOkhe Danda">
+      <img src="/shop/a-dog-with-annapurna-range-view-haljure.jpg" alt="A dog resting with the Annapurna range in view at Haljure" loading="lazy">
       <span class="product-code">DP001</span>
     </div>
     <div class="product-body">
-      <h3>Tea House at KOkhe Danda with Annapurnas</h3>
+      <h3>A Dog with the Annapurna Range, Haljure</h3>
       <div class="price-options">
         <div class="price-option frame">
           <div class="price-option-label">Framed</div>
@@ -466,11 +473,11 @@
   <!-- Product 2 -->
   <div class="product-card">
     <div class="product-img-wrap">
-      <img src="DP002.jpg" alt="Fall Colors">
+      <img src="/shop/annapurna-i-view-from-abc.jpg" alt="Annapurna I seen from Annapurna Base Camp" loading="lazy">
       <span class="product-code">DP002</span>
     </div>
     <div class="product-body">
-      <h3>Annapurna with the fall colors at Jaljala</h3>
+      <h3>Annapurna I from Annapurna Base Camp</h3>
       <div class="price-options">
         <div class="price-option frame">
           <div class="price-option-label">Framed</div>
@@ -493,11 +500,11 @@
   <!-- Product 3 -->
   <div class="product-card">
     <div class="product-img-wrap">
-      <img src="DP003.jpg" alt="Annapurna Base Camp">
+      <img src="/shop/annapurna-range-and-startrail-from-kokhe.jpg" alt="Star trails over the Annapurna range from Kokhe Danda" loading="lazy">
       <span class="product-code">DP003</span>
     </div>
     <div class="product-body">
-      <h3>Annapurna Base Camp</h3>
+      <h3>Star Trails over the Annapurna Range, Kokhe Danda</h3>
       <div class="price-options">
         <div class="price-option frame">
           <div class="price-option-label">Framed</div>
@@ -520,11 +527,11 @@
   <!-- Product 4 -->
   <div class="product-card">
     <div class="product-img-wrap">
-      <img src="DP004.jpg" alt="Mount Fishtail">
+      <img src="/shop/annapurna-range-from-jaljala-myagdi.jpg" alt="Annapurna range from Jaljala, Myagdi" loading="lazy">
       <span class="product-code">DP004</span>
     </div>
     <div class="product-body">
-      <h3>Mount Fishtail</h3>
+      <h3>Annapurna Range from Jaljala, Myagdi</h3>
       <div class="price-options">
         <div class="price-option frame">
           <div class="price-option-label">Framed</div>
@@ -547,11 +554,11 @@
   <!-- Product 5 -->
   <div class="product-card">
     <div class="product-img-wrap">
-      <img src="mvp.jpg" alt="DP005">
+      <img src="/shop/annapurna-range-from-phalame-danda.jpg" alt="Annapurna range from Phalame Danda" loading="lazy">
       <span class="product-code">DP005</span>
     </div>
     <div class="product-body">
-      <h3>Mount Dhaukagiri from Muldai Viewpoint</h3>
+      <h3>Annapurna Range from Phalame Danda</h3>
       <div class="price-options">
         <div class="price-option frame">
           <div class="price-option-label">Framed</div>
@@ -567,6 +574,654 @@
       <div class="buy-buttons">
         <a href="/shop-order?item=DP005&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
         <a href="/shop-order?item=DP005&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/Boudhanath-stupa.jpg" alt="Boudhanath Stupa above the rooftops of Kathmandu" loading="lazy">
+      <span class="product-code">DP006</span>
+    </div>
+    <div class="product-body">
+      <h3>Boudhanath Stupa, Kathmandu</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP006&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP006&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 7 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/chulu-wesst-annapurna-circuit.jpg" alt="Chulu West peak on the Annapurna Circuit" loading="lazy">
+      <span class="product-code">DP007</span>
+    </div>
+    <div class="product-body">
+      <h3>Chulu West, Annapurna Circuit</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP007&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP007&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 8 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/community-homestay-phalame-danda.jpg" alt="Community homestay at Phalame Danda with Himalayan peaks behind" loading="lazy">
+      <span class="product-code">DP008</span>
+    </div>
+    <div class="product-body">
+      <h3>Community Homestay at Phalame Danda</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP008&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP008&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 9 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/dhaulagiri-view-from-khayertrail.jpg" alt="Dhaulagiri seen from the Khayer trail" loading="lazy">
+      <span class="product-code">DP009</span>
+    </div>
+    <div class="product-body">
+      <h3>Dhaulagiri from the Khayer Trail</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP009&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP009&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 10 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/durlung-kot-temple.jpg" alt="Durlung Kot Temple in Parbat" loading="lazy">
+      <span class="product-code">DP010</span>
+    </div>
+    <div class="product-body">
+      <h3>Durlung Kot Temple</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP010&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP010&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 11 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/fishtail-from-highcampmardi.jpg" alt="Mount Fishtail (Machhapuchhre) from Mardi Himal High Camp" loading="lazy">
+      <span class="product-code">DP011</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail from Mardi High Camp</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP011&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP011&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 12 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/fishtail-view-pjalame-danda.jpg" alt="Mount Fishtail from Phalame Danda" loading="lazy">
+      <span class="product-code">DP012</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail from Phalame Danda</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP012&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP012&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 13 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/fishtail-with-sunset-colors-kokhedanda.jpg" alt="Mount Fishtail in sunset colors from Kokhe Danda" loading="lazy">
+      <span class="product-code">DP013</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail at Sunset, Kokhe Danda</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP013&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP013&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 14 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/home-between-green-rice-terrace.jpg" alt="A home between green rice terraces seen from above" loading="lazy">
+      <span class="product-code">DP014</span>
+    </div>
+    <div class="product-body">
+      <h3>Home Between Green Rice Terraces</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP014&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP014&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 15 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/hut-in-between-rice-terrace-kurgha.jpg" alt="A hut among rice terraces at Kurgha" loading="lazy">
+      <span class="product-code">DP015</span>
+    </div>
+    <div class="product-body">
+      <h3>Hut Among the Rice Terraces, Kurgha</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP015&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP015&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 16 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/jaljala-fall-color-with-annapurna.jpg" alt="Autumn colors at Jaljala with Annapurna behind" loading="lazy">
+      <span class="product-code">DP016</span>
+    </div>
+    <div class="product-body">
+      <h3>Fall Colors at Jaljala with Annapurna</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP016&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP016&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 17 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/kokhe-danda-teahouse.jpg" alt="Teahouse at Kokhe Danda with snow peaks" loading="lazy">
+      <span class="product-code">DP017</span>
+    </div>
+    <div class="product-body">
+      <h3>Kokhe Danda Teahouse</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP017&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP017&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 18 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/kokhe-danda-teahouse-with-annapurna.jpg" alt="Kokhe Danda teahouse with the Annapurna range" loading="lazy">
+      <span class="product-code">DP018</span>
+    </div>
+    <div class="product-body">
+      <h3>Kokhe Danda Teahouse with Annapurna</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP018&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP018&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 19 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/paiyun-kot-temple.jpg" alt="Paiyun Kot Temple in Parbat" loading="lazy">
+      <span class="product-code">DP019</span>
+    </div>
+    <div class="product-body">
+      <h3>Paiyun Kot Temple</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP019&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP019&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 20 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/reflection-of-annapurna-at-kali-daha.jpg" alt="Annapurna reflected in the Kali Daha pond" loading="lazy">
+      <span class="product-code">DP020</span>
+    </div>
+    <div class="product-body">
+      <h3>Annapurna Reflected in Kali Daha</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP020&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP020&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 21 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/shiva-statue-thuli-pokhari.jpg" alt="Shiva statue at Thuli Pokhari with Himalayan peaks" loading="lazy">
+      <span class="product-code">DP021</span>
+    </div>
+    <div class="product-body">
+      <h3>Shiva Statue at Thuli Pokhari</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP021&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP021&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 22 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/star-trail-over-annapurna-haljure.jpg" alt="Star trails over Annapurna at Haljure" loading="lazy">
+      <span class="product-code">DP022</span>
+    </div>
+    <div class="product-body">
+      <h3>Star Trails over Annapurna, Haljure</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP022&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP022&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 23 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/teahouse-at-thorang-phedi.jpg" alt="Teahouse at Thorong Phedi on the Annapurna Circuit" loading="lazy">
+      <span class="product-code">DP023</span>
+    </div>
+    <div class="product-body">
+      <h3>Teahouse at Thorong Phedi</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP023&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP023&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 24 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/teahouse-kokhe-danda-dhaulagiri.jpg" alt="Kokhe Danda teahouse with Dhaulagiri in the distance" loading="lazy">
+      <span class="product-code">DP024</span>
+    </div>
+    <div class="product-body">
+      <h3>Kokhe Danda Teahouse with Dhaulagiri</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP024&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP024&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 25 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/traditional-homes-at-arthar-parbat.jpg" alt="Traditional homes at Arthar, Parbat" loading="lazy">
+      <span class="product-code">DP025</span>
+    </div>
+    <div class="product-body">
+      <h3>Traditional Homes at Arthar, Parbat</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP025&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP025&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 26 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/view-from-jaljala-myagdi.jpg" alt="Himalayan view from Jaljala, Myagdi" loading="lazy">
+      <span class="product-code">DP026</span>
+    </div>
+    <div class="product-body">
+      <h3>View from Jaljala, Myagdi</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP026&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP026&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 27 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/view-of-an-unamed-peak-from-apibasecamp.jpg" alt="An unnamed peak seen from Api Base Camp" loading="lazy">
+      <span class="product-code">DP027</span>
+    </div>
+    <div class="product-body">
+      <h3>Unnamed Peak from Api Base Camp</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP027&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP027&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 28 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/view-pf-fishtail-from-muldai.jpg" alt="Mount Fishtail from Muldai Viewpoint" loading="lazy">
+      <span class="product-code">DP028</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail from Muldai</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP028&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP028&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 29 -->
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <img src="/shop/view-pf-fishtail-from-tadapani.jpg" alt="Mount Fishtail from Tadapani" loading="lazy">
+      <span class="product-code">DP029</span>
+    </div>
+    <div class="product-body">
+      <h3>Mount Fishtail from Tadapani</h3>
+      <div class="price-options">
+        <div class="price-option frame">
+          <div class="price-option-label">Framed</div>
+          <div class="price-option-sub">12×18 inch</div>
+          <div class="price-option-amount">NPR 5,000</div>
+        </div>
+        <div class="price-option digital">
+          <div class="price-option-label">Digital</div>
+          <div class="price-option-sub">Hi-res file</div>
+          <div class="price-option-amount">$35</div>
+        </div>
+      </div>
+      <div class="buy-buttons">
+        <a href="/shop-order?item=DP029&format=Framed%20Print" class="buy-btn frame">Order Frame</a>
+        <a href="/shop-order?item=DP029&format=Digital%20Copy" class="buy-btn digital">Buy Digital</a>
       </div>
     </div>
   </div>
