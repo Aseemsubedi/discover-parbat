@@ -7,9 +7,6 @@ DirectoryIndex index.html index.php
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^article/([a-z0-9-]+)/?$ article/$1.html [L]
 
-# Dynamic CMS listing pages
-RewriteRule ^articles/?$ articles.php [L]
-RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
 
 # Dynamic CMS listing pages
 RewriteRule ^articles/?$ articles.php [L]
