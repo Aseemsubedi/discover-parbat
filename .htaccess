@@ -3,6 +3,13 @@ RewriteBase /
 
 # Prefer static homepage if PHP index is missing on host; PHP takes over when present
 DirectoryIndex index.html index.php
+# Static article pages in /article/ (e.g. /article/slug → article/slug.html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^article/([a-z0-9-]+)/?$ article/$1.html [L]
+
+# Dynamic CMS listing pages
+RewriteRule ^articles/?$ articles.php [L]
+RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
 
 # Dynamic CMS listing pages
 RewriteRule ^articles/?$ articles.php [L]
