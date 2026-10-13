@@ -1167,7 +1167,7 @@
             },
             "booking_trek_name": "Short Kokhe Danda Trek"
         },
-        "cms_page": true
+        "cms_page": false
     },
     {
         "id": "trek_mvp",
