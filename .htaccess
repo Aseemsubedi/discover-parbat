@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteCond %{HTTP_HOST} ^www\.discoverparbat\.com$ [NC]
+RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L]
+
+
 # Prefer static homepage if PHP index is missing on host; PHP takes over when present
 DirectoryIndex index.html index.php
 # Static article pages in /article/ (e.g. /article/slug → article/slug.html)
