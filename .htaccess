@@ -4,13 +4,20 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.discoverparbat\.com$ [NC]
 RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L]
 
+# ── NEW: fix redirects pointing to dead pages ──
+# Old Khopra URLs → live Khopra Ridge page
+RewriteRule ^khopra-danda-trek/?$ /khopra-ridge-trek [R=301,L,NC]
+# MVP article lives at the root URL, send the /article/ copy there
+RewriteRule ^article/multiple-viewpoints-trek-alternative-to-annapurna-circuit/?$ /multiple-viewpoints-trek-alternative-to-annapurna-circuit [R=301,L]
+# Old spam item pages → tell Google they are gone
+RewriteRule ^items/ - [G,L]
+# ── end NEW ──
 
 # Prefer static homepage if PHP index is missing on host; PHP takes over when present
 DirectoryIndex index.html index.php
 # Static article pages in /article/ (e.g. /article/slug → article/slug.html)
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^article/([a-z0-9-]+)/?$ article/$1.html [L]
-
 
 # Dynamic CMS listing pages
 RewriteRule ^articles/?$ articles.php [L]
@@ -25,11 +32,11 @@ RewriteRule ^Shop\.html$ /shop [R=301,L,NC]
 RewriteRule ^Kokhe-Danda-Trek\.html$ /kokhe-danda-trek [R=301,L,NC]
 RewriteRule ^Short-Kokhe-Danda-Trek\.html$ /short-kokhe-danda-trek [R=301,L,NC]
 RewriteRule ^Mardi-Himal-Trek\.html$ /mardi-himal-trek [R=301,L,NC]
-RewriteRule ^Khopra-Danda-Trek\.html$ /khopra-danda-trek [R=301,L,NC]
+RewriteRule ^Khopra-Danda-Trek\.html$ /khopra-ridge-trek [R=301,L,NC]
 RewriteRule ^Annapurna-Base-Camp-Trek\.html$ /annapurna-base-camp-trek [R=301,L,NC]
 RewriteRule ^Multiple-Viewpoints-Trek\.html$ /multiple-viewpoints-trek [R=301,L,NC]
 RewriteRule ^Short-Multiple-Viewpoints-Trek\.html$ /short-multiple-viewpoints-trek [R=301,L,NC]
-RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ /why-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ /article/why-kokhe-danda-trek [R=301,L,NC]
 
 # Any other .html URL → extensionless (301)
 RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
