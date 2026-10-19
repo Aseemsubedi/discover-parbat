@@ -1,49 +1,72 @@
 RewriteEngine On
 RewriteBase /
 
+# ── 1. One domain: https://discoverparbat.com (no www, no http) ──
 RewriteCond %{HTTP_HOST} ^www\.discoverparbat\.com$ [NC]
-RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L,NE]
 
-# ── NEW: fix redirects pointing to dead pages ──
-# Old Khopra URLs → live Khopra Ridge page
-RewriteRule ^khopra-danda-trek/?$ /khopra-ridge-trek [R=301,L,NC]
-# MVP article lives at the root URL, send the /article/ copy there
-RewriteRule ^article/multiple-viewpoints-trek-alternative-to-annapurna-circuit/?$ /multiple-viewpoints-trek-alternative-to-annapurna-circuit [R=301,L]
-# Old spam item pages → tell Google they are gone
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L,NE]
+
+# ── 2. Old spam pages → 410 Gone ──
 RewriteRule ^items/ - [G,L]
-# ── end NEW ──
 
-# Prefer static homepage if PHP index is missing on host; PHP takes over when present
+# ── 3. Old / renamed URLs → current pages (keeps their Google ranking) ──
+RewriteRule ^khopra-danda-trek/?$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
+RewriteRule ^haljure/?$ https://discoverparbat.com/parbat-dashain-travel-destinations [R=301,L,NC]
+RewriteRule ^best-time-to-trek-kokhe-danda/?$ https://discoverparbat.com/best-season-for-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^best-season-for-khopra-ridge-trek/?$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
+RewriteRule ^4-days-poon-hill-trek/?$ https://discoverparbat.com/poonhill-trek [R=301,L,NC]
+RewriteRule ^mardi-himal-poonhill-trek/?$ https://discoverparbat.com/mardi-himal-and-poonhill-trek [R=301,L,NC]
+RewriteRule ^why-kokhe-danda-trek/?$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+
+RewriteRule ^article/multiple-viewpoints-trek-alternative-to-annapurna-circuit/?$ https://discoverparbat.com/multiple-viewpoints-trek-alternative-to-annapurna-circuit [R=301,L,NC]
+RewriteRule ^article/best-season-kokhe-danda-trek/?$ https://discoverparbat.com/best-season-for-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^article/article-kokhe-danda-trek-best-alternative-to-poon-hill/?$ https://discoverparbat.com/kokhe-danda-trek-alternative-to-poon-hill [R=301,L,NC]
+RewriteRule ^article/article-why-kokhe-danda-trek-is-best-short-trek-in-nepal/?$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^article/why-choose-discover-parbat-for-kokhe-danda-trek/?$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^article/annapurna-circuit-trek-conditions-after-recent-weather/?$ https://discoverparbat.com/annapurna-circuit-trail-condition-update [R=301,L,NC]
+RewriteRule ^article/annapurna-circuit-trail-condition-update/?$ https://discoverparbat.com/annapurna-circuit-trail-condition-update [R=301,L,NC]
+RewriteRule ^article/annapurna-circuit-trek-update/?$ https://discoverparbat.com/annapurna-circuit-trail-condition-update [R=301,L,NC]
+RewriteRule ^article/what-to-pack-for-khopra-ridge-trek/?$ https://discoverparbat.com/what-to-pack-for-khopra-ridge-trek [R=301,L,NC]
+RewriteRule ^article/best-time-to-do-khopra-ridge-trek/?$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
+RewriteRule ^article/kimrong-khola-bridge-swept-away-abc-trail-update/?$ https://discoverparbat.com/annapurna-base-camp-trek [R=301,L,NC]
+RewriteRule ^article/article-is-monsoon-really-a-bad-time-to-trek-in-nepal/?$ https://discoverparbat.com/article/nepal-monsoon-officially-exits-2026 [R=301,L,NC]
+RewriteRule ^article/article-best-season-to-trek-in-nepal/?$ https://discoverparbat.com/article/nepal-monsoon-officially-exits-2026 [R=301,L,NC]
+
+# ── 4. Legacy mixed-case .html URLs → lowercase clean URLs ──
+RewriteRule ^Shop\.html$ https://discoverparbat.com/shop [R=301,L,NC]
+RewriteRule ^Kokhe-Danda-Trek\.html$ https://discoverparbat.com/kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^Short-Kokhe-Danda-Trek\.html$ https://discoverparbat.com/short-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^Mardi-Himal-Trek\.html$ https://discoverparbat.com/mardi-himal-trek [R=301,L,NC]
+RewriteRule ^Khopra-Danda-Trek\.html$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
+RewriteRule ^Annapurna-Base-Camp-Trek\.html$ https://discoverparbat.com/annapurna-base-camp-trek [R=301,L,NC]
+RewriteRule ^Multiple-Viewpoints-Trek\.html$ https://discoverparbat.com/multiple-viewpoints-trek [R=301,L,NC]
+RewriteRule ^Short-Multiple-Viewpoints-Trek\.html$ https://discoverparbat.com/short-multiple-viewpoints-trek [R=301,L,NC]
+RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+RewriteRule ^why-kokhe-danda-trek\.html$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+
+# index.html → homepage (must come before the general .html rule)
+RewriteCond %{THE_REQUEST} \s/+index\.(html|php)[\s?] [NC]
+RewriteRule ^ https://discoverparbat.com/ [R=301,L]
+
+# Any other .html URL → extensionless (301), except the Google verification file
+RewriteCond %{REQUEST_URI} !^/google[0-9a-f]+\.html$ [NC]
+RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
+RewriteRule ^ https://discoverparbat.com/%1 [R=301,L,NE]
+
+# ── 5. Internal routing (no redirects) ──
 DirectoryIndex index.html index.php
-# Static article pages in /article/ (e.g. /article/slug → article/slug.html)
+
+# Static article pages: /article/slug → article/slug.html
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^article/([a-z0-9-]+)/?$ article/$1.html [L]
 
-# Dynamic CMS listing pages
+# Dynamic CMS pages
 RewriteRule ^articles/?$ articles.php [L]
 RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
 RewriteRule ^treks/?$ treks.php [L]
-
-# Legacy article URL → CMS article
-RewriteRule ^why-kokhe-danda-trek/?$ /article/why-kokhe-danda-trek [R=301,L,NC]
-
-# Legacy mixed-case .html URLs → lowercase clean URLs
-RewriteRule ^Shop\.html$ /shop [R=301,L,NC]
-RewriteRule ^Kokhe-Danda-Trek\.html$ /kokhe-danda-trek [R=301,L,NC]
-RewriteRule ^Short-Kokhe-Danda-Trek\.html$ /short-kokhe-danda-trek [R=301,L,NC]
-RewriteRule ^Mardi-Himal-Trek\.html$ /mardi-himal-trek [R=301,L,NC]
-RewriteRule ^Khopra-Danda-Trek\.html$ /khopra-ridge-trek [R=301,L,NC]
-RewriteRule ^Annapurna-Base-Camp-Trek\.html$ /annapurna-base-camp-trek [R=301,L,NC]
-RewriteRule ^Multiple-Viewpoints-Trek\.html$ /multiple-viewpoints-trek [R=301,L,NC]
-RewriteRule ^Short-Multiple-Viewpoints-Trek\.html$ /short-multiple-viewpoints-trek [R=301,L,NC]
-RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ /article/why-kokhe-danda-trek [R=301,L,NC]
-
-# Any other .html URL → extensionless (301)
-RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
-RewriteRule ^ %1 [R=301,L,NE]
-
-# index.html → homepage
-RewriteRule ^index\.html$ / [R=301,L,NC]
 
 # Clean URLs → trek.php (CMS page or static .html fallback inside trek.php)
 RewriteCond %{REQUEST_FILENAME} !-d
