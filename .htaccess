@@ -20,6 +20,7 @@ RewriteRule ^best-season-for-khopra-ridge-trek/?$ https://discoverparbat.com/kho
 RewriteRule ^4-days-poon-hill-trek/?$ https://discoverparbat.com/poonhill-trek [R=301,L,NC]
 RewriteRule ^mardi-himal-poonhill-trek/?$ https://discoverparbat.com/mardi-himal-and-poonhill-trek [R=301,L,NC]
 RewriteRule ^why-kokhe-danda-trek/?$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
+   RewriteRule ^short-multiple-viewpoints-trek(\.html)?/?$ https://discoverparbat.com/muldai-viewpoint-trek [R=301,L,NC]
 
 RewriteRule ^article/multiple-viewpoints-trek-alternative-to-annapurna-circuit/?$ https://discoverparbat.com/multiple-viewpoints-trek-alternative-to-annapurna-circuit [R=301,L,NC]
 RewriteRule ^article/best-season-kokhe-danda-trek/?$ https://discoverparbat.com/best-season-for-kokhe-danda-trek [R=301,L,NC]
