@@ -43,7 +43,7 @@ RewriteRule ^Mardi-Himal-Trek\.html$ https://discoverparbat.com/mardi-himal-trek
 RewriteRule ^Khopra-Danda-Trek\.html$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
 RewriteRule ^Annapurna-Base-Camp-Trek\.html$ https://discoverparbat.com/annapurna-base-camp-trek [R=301,L,NC]
 RewriteRule ^Multiple-Viewpoints-Trek\.html$ https://discoverparbat.com/multiple-viewpoints-trek [R=301,L,NC]
-RewriteRule ^Short-Multiple-Viewpoints-Trek\.html$ https://discoverparbat.com/short-multiple-viewpoints-trek [R=301,L,NC]
+RewriteRule ^muldai-viewpoint-trek\.html$ https://discoverparbat.com/muldai-viewpoint-trek [R=301,L,NC]
 RewriteRule ^Why-Discover-Parbat-For-Kokhe-Danda-Trek\.html$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
 RewriteRule ^why-kokhe-danda-trek\.html$ https://discoverparbat.com/article/why-kokhe-danda-trek [R=301,L,NC]
 
