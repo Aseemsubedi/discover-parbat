@@ -45,7 +45,9 @@
       "name": "Discover Parbat",
       "alternateName": "DiscoverParbat",
       "url": "https://discoverparbat.com/",
-      "publisher": {"@id": "https://discoverparbat.com/#organization"}
+      "publisher": {
+        "@id": "https://discoverparbat.com/#organization"
+      }
     },
     {
       "@type": "TravelAgency",
@@ -63,6 +65,121 @@
       "sameAs": [
         "https://www.facebook.com/discoverparbat",
         "https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8"
+      ],
+      "description": "Local trekking company from Parbat, Nepal, offering small-group, locally guided treks in the Annapurna, Parbat, Dhaulagiri and Far-West regions, including the Kokhe Danda Trek it founded.",
+      "telephone": "+9779867649780",
+      "foundingDate": "2017",
+      "founder": {
+        "@type": "Person",
+        "name": "Sameer Regmi"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+9779867649780",
+          "email": "info@discoverparbat.com",
+          "availableLanguage": [
+            "English",
+            "Nepali"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "reservations",
+          "email": "discoverparbat@gmail.com"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Parbat District, Nepal"
+        },
+        {
+          "@type": "Place",
+          "name": "Annapurna Region, Nepal"
+        },
+        {
+          "@type": "Place",
+          "name": "Dhaulagiri Region, Nepal"
+        },
+        {
+          "@type": "Place",
+          "name": "Far-West Nepal"
+        }
+      ],
+      "knowsAbout": [
+        "Kokhe Danda Trek",
+        "Khopra Ridge Trek",
+        "Api Himal Base Camp Trek",
+        "Poon Hill Trek",
+        "Trekking in Nepal"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Featured treks by Discover Parbat",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Kokhe Danda Trek",
+          "url": "https://discoverparbat.com/kokhe-danda-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Khopra Ridge Trek",
+          "url": "https://discoverparbat.com/khopra-ridge-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Api Himal Base Camp Trek",
+          "url": "https://discoverparbat.com/api-himal-base-camp-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mardi Himal Trek",
+          "url": "https://discoverparbat.com/mardi-himal-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "4 Days Poon Hill Trek",
+          "url": "https://discoverparbat.com/poonhill-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Muldai Viewpoint Trek",
+          "url": "https://discoverparbat.com/muldai-viewpoint-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Short Kokhe Danda Trek",
+          "url": "https://discoverparbat.com/short-kokhe-danda-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Multiple Viewpoints Trek",
+          "url": "https://discoverparbat.com/multiple-viewpoints-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Annapurna Base Camp Trek",
+          "url": "https://discoverparbat.com/annapurna-base-camp-trek"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Annapurna Circuit Trek",
+          "url": "https://discoverparbat.com/annapurna-circuit-trek"
+        }
       ]
     }
   ]
@@ -890,6 +1007,26 @@
 .review-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
 .review-note { margin-top: 36px; font-size: 0.88rem; color: #888; }
 
+/* ─── ABOUT INTRO ──────────────────────────────────── */
+.about-intro { background: var(--cream); padding: 72px 7%; }
+.about-intro-inner { max-width: 860px; margin: 0 auto; }
+.about-intro .section-header { padding: 0 0 32px; text-align: left; }
+.about-intro .title-divider { margin: 18px 0 0; }
+.about-intro p { font-size: 1rem; color: #555; line-height: 1.85; margin-bottom: 18px; }
+.about-intro a { color: var(--green-mid); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(82,183,136,0.35); }
+.about-intro a:hover { border-bottom-color: var(--green-mid); }
+
+/* ─── TREK CARD FACTS ──────────────────────────────── */
+.card-facts { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 0.78rem; font-weight: 600; color: var(--text-dark); }
+.card-facts span { display: inline-flex; align-items: center; gap: 5px; }
+.card-facts span + span::before { content: '·'; color: #bbb; margin-right: 9px; margin-left: -5px; }
+
+/* ─── CONTACT STRIP ────────────────────────────────── */
+.contact-strip { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+.contact-strip a { display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid rgba(0,0,0,0.08); border-radius: 100px; padding: 10px 20px; font-size: 0.88rem; font-weight: 600; color: var(--text-dark); text-decoration: none; transition: transform var(--transition), box-shadow var(--transition); }
+.contact-strip a:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.contact-strip svg { width: 16px; height: 16px; flex-shrink: 0; }
+
 /* ─── MOBILE ───────────────────────────────────────── */
 @media (max-width: 960px) {
   .why-grid { grid-template-columns: 1fr 1fr; }
@@ -933,6 +1070,8 @@
   .season-section { padding: 60px 5%; }
   .testimonials-section { padding: 60px 5%; }
   .blog-section { padding: 60px 5%; }
+  .about-intro { padding: 56px 5%; }
+  .about-intro p { font-size: 0.95rem; }
   .review-btn { padding: 14px 24px; font-size: 0.9rem; }
   .departure-card { flex-direction: column; align-items: flex-start; }
   .months-chart { gap: 4px; }
@@ -972,16 +1111,16 @@
 
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section class="hero">
-  <img class="hero-slide" src="kokhe.jpg" alt="Kokhe Danda">
-  <img class="hero-slide" src="mardi.jpg" alt="Mardi Himal">
-  <img class="hero-slide" src="khopra.jpg" alt="Khopra Ridge">
-  <img class="hero-slide" src="abc.jpg" alt="Annapurna Base Camp">
-  <img class="hero-slide" src="muldai.jpg" alt="Muldai Peak">
-  <img class="hero-slide" src="haljure.jpg" alt="Haljure">
+  <img class="hero-slide" src="kokhe.jpg" alt="Kokhe Danda, the highest point of Parbat district, with Himalayan views" fetchpriority="high">
+  <img class="hero-slide" src="mardi.jpg" alt="Trail on the Mardi Himal Trek towards Machhapuchhre" loading="lazy">
+  <img class="hero-slide" src="khopra.jpg" alt="Khopra Ridge facing the Dhaulagiri range" loading="lazy">
+  <img class="hero-slide" src="abc.jpg" alt="Annapurna Base Camp in the Annapurna Sanctuary" loading="lazy">
+  <img class="hero-slide" src="muldai.jpg" alt="Muldai Viewpoint above Dobato in the Annapurna region" loading="lazy">
+  <img class="hero-slide" src="haljure.jpg" alt="Haljure village homestay on the Kokhe Danda Trek" loading="lazy">
   <div class="hero-content">
     <div class="hero-eyebrow">Parbat, Nepal</div>
     <h1>Discover<br>Parbat</h1>
-    <p>Explore hidden trails, yoga retreats and authentic Himalayan experiences.</p>
+    <p>Locally guided treks in Nepal's Annapurna and Parbat region, plus hidden trails, yoga retreats and authentic village homestays.</p>
   </div>
   <div class="scroll-hint">
     <span>Scroll</span>
@@ -1050,6 +1189,20 @@
   </div>
 </section>
 
+<!-- ─── ABOUT INTRO ───────────────────────────────────── -->
+<section class="about-intro">
+  <div class="about-intro-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Who We Are</div>
+      <h2 class="section-title">A Local Trekking Company <span>from Parbat, Nepal</span></h2>
+      <div class="title-divider"></div>
+    </div>
+    <p>Discover Parbat is a small, locally run trekking company from Parbat district, just west of Pokhara in Nepal. We started in 2017 as a page sharing the hidden places of our home district, spent 2020 walking and mapping new trails with local guides, and became a full trekking company in 2022. Every trek we run is led by guides who grew up on these ridges and in these villages.</p>
+    <p>We are the team behind the <a href="/kokhe-danda-trek">Kokhe Danda Trek</a>, a quiet homestay route to the highest point of Parbat, through the Magar villages of Lespar and Haljure. Beyond our home trail, we guide offbeat routes like the <a href="/khopra-ridge-trek">Khopra Ridge Trek</a> facing Dhaulagiri and the remote <a href="/api-himal-base-camp-trek">Api Himal Base Camp Trek</a> in Far-West Nepal, along with classic Annapurna treks such as <a href="/poonhill-trek">Poon Hill</a>, <a href="/mardi-himal-trek">Mardi Himal</a> and <a href="/annapurna-base-camp-trek">Annapurna Base Camp</a>.</p>
+    <p>Our treks put village life and homestays first, with the mountain views as the reward. Groups stay small, meals are locally sourced, and the money you spend stays in the communities you walk through. If none of our routes fit your dates, we can <a href="/custom-trek">plan a custom trek</a> around you.</p>
+  </div>
+</section>
+
 <!-- ─── FEATURED TREKS ─────────────────────────────────── -->
 <div class="section-header">
   <div class="section-eyebrow">Handpicked Routes</div>
@@ -1060,107 +1213,134 @@
 <div class="cards-grid">
   <a class="card" href="/kokhe-danda-trek">
     <div class="card-img-wrap">
-      <img src="kokhe.jpg" alt="Kokhe Danda Trek">
+      <img src="kokhe.jpg" alt="Kokhe Danda Trek in Parbat, Nepal" loading="lazy">
       <div class="card-overlay"></div>
       <span class="badge"><span class="badge-dot"></span>Easy · 5 Days</span>
     </div>
     <div class="card-content">
       <h3>Kokhe Danda Trek</h3>
-      <p>Village culture + Himalayan views</p>
+      <p>Magar village homestays and Himalayan views</p>
+      <div class="card-facts"><span>From $350</span><span>Max 3,310 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
-  <a class="card" href="/mardi-himal-trek">
-    <div class="card-img-wrap">
-      <img src="mardi.jpg" alt="Mardi Himal Trek">
-      <div class="card-overlay"></div>
-      <span class="badge"><span class="badge-dot"></span>Easy · 5 Days</span>
-    </div>
-    <div class="card-content">
-      <h3>Mardi Himal Trek</h3>
-      <p>Ridge trek towards Fishtail</p>
-      <span class="card-arrow">View Trek →</span>
-    </div>
-  </a>
-
   <a class="card" href="/khopra-ridge-trek">
     <div class="card-img-wrap">
-      <img src="khopra.jpg" alt="Khopra Ridge Trek">
+      <img src="khopra.jpg" alt="Khopra Ridge Trek facing the Dhaulagiri range" loading="lazy">
       <div class="card-overlay"></div>
       <span class="badge moderate"><span class="badge-dot"></span>Moderate · 8 Days</span>
     </div>
     <div class="card-content">
       <h3>Khopra Ridge Trek</h3>
       <p>Beautiful offbeat ridge trek</p>
+      <div class="card-facts"><span>From $590</span><span>Max 3,660 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
-  <a class="card" href="/annapurna-base-camp-trek">
+  <a class="card" href="/api-himal-base-camp-trek">
     <div class="card-img-wrap">
-      <img src="abc.jpg" alt="Annapurna Base Camp">
+      <img src="/photo/treks/api-base-camp-trek.jpg" alt="Api Himal Base Camp in Far-West Nepal" loading="lazy">
       <div class="card-overlay"></div>
-      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 10 Days</span>
+      <span class="badge moderate"><span class="badge-dot"></span>Challenging · 14 Days</span>
     </div>
     <div class="card-content">
-      <h3>Annapurna Base Camp Trek</h3>
-      <p>Classic Himalayan journey</p>
+      <h3>Api Himal Base Camp Trek</h3>
+      <p>Remote wilderness trek in Far-West Nepal</p>
+      <div class="card-facts"><span>From $1,200</span><span>Max 4,160 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
+  <a class="card" href="/mardi-himal-trek">
+    <div class="card-img-wrap">
+      <img src="mardi.jpg" alt="Mardi Himal Trek ridge towards Machhapuchhre" loading="lazy">
+      <div class="card-overlay"></div>
+      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 5 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Mardi Himal Trek</h3>
+      <p>Ridge trek towards Fishtail</p>
+      <div class="card-facts"><span>From $360</span><span>Max 4,000 m</span></div>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+  <a class="card" href="/poonhill-trek">
+    <div class="card-img-wrap">
+      <img src="poonhill3.jpg" alt="Himalayan view from Poon Hill near Ghorepani" loading="lazy">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 4 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>4 Days Poon Hill Trek</h3>
+      <p>Poon Hill without the crowds, plus a Lespar homestay</p>
+      <div class="card-facts"><span>From $280</span><span>Max 3,309 m</span></div>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
+  <a class="card" href="/muldai-viewpoint-trek">
+    <div class="card-img-wrap">
+      <img src="shortmvp.jpg" alt="Muldai Viewpoint Trek in the Annapurna region" loading="lazy">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Easy · 6 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Muldai Viewpoint Trek</h3>
+      <p>Muldai, Poon Hill &amp; Kokhe Danda</p>
+      <div class="card-facts"><span>From $420</span><span>Max 3,536 m</span></div>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
   <a class="card" href="/short-kokhe-danda-trek">
     <div class="card-img-wrap">
-      <img src="kokhe.jpg" alt="Short Kokhe Danda Trek">
+      <img src="kokhe.jpg" alt="Short Kokhe Danda Trek near Pokhara" loading="lazy">
       <div class="card-overlay"></div>
       <span class="badge"><span class="badge-dot"></span>Easy · 3 Days</span>
     </div>
     <div class="card-content">
       <h3>Short Kokhe Danda Trek</h3>
       <p>Short and scenic trek</p>
+      <div class="card-facts"><span>From $240</span><span>Max 3,310 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
   <a class="card" href="/multiple-viewpoints-trek">
     <div class="card-img-wrap">
-      <img src="mvp.jpg" alt="Multiple Viewpoints Trek">
+      <img src="mvp.jpg" alt="Multiple Viewpoints Trek in the Annapurna region" loading="lazy">
       <div class="card-overlay"></div>
       <span class="badge moderate"><span class="badge-dot"></span>Moderate · 14 Days</span>
     </div>
     <div class="card-content">
       <h3>Multiple Viewpoints Trek</h3>
       <p>Best viewpoints in one trek</p>
+      <div class="card-facts"><span>From $999</span><span>Max 4,600 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
-  <a class="card" href="/muldai-viewpoint-trek">
+  <a class="card" href="/annapurna-base-camp-trek">
     <div class="card-img-wrap">
-      <img src="shortmvp.jpg" alt="Short Multiple Viewpoints Trek">
+      <img src="abc.jpg" alt="Annapurna Base Camp Trek" loading="lazy">
       <div class="card-overlay"></div>
-      <span class="badge"><span class="badge-dot"></span>Easy · 6 Days</span>
+      <span class="badge moderate"><span class="badge-dot"></span>Moderate · 10 Days</span>
     </div>
     <div class="card-content">
-      <h3>Short Multiple Viewpoints Trek</h3>
-      <p>Mulde, Poonhill &amp; Kokhe</p>
+      <h3>Annapurna Base Camp Trek</h3>
+      <p>Classic Himalayan journey</p>
+      <div class="card-facts"><span>From $700</span><span>Max 4,130 m</span></div>
       <span class="card-arrow">View Trek →</span>
     </div>
   </a>
-
   <a class="card" href="/annapurna-circuit-trek">
-  <div class="card-img-wrap">
-    <img src="act2.jpg" alt="Annapurna Circuit Trek">
-    <div class="card-overlay"></div>
-    <span class="badge"><span class="badge-dot"></span>Challenging · 12 Days</span>
-  </div>
-  <div class="card-content">
-    <h3>Annapurna Circuit Trek</h3>
-    <p>Classic Himalayan circuit over Thorong La</p>
-    <span class="card-arrow">View Trek →</span>
-  </div>
-</a>
+    <div class="card-img-wrap">
+      <img src="act2.jpg" alt="Annapurna Circuit Trek over Thorong La" loading="lazy">
+      <div class="card-overlay"></div>
+      <span class="badge"><span class="badge-dot"></span>Challenging · 12 Days</span>
+    </div>
+    <div class="card-content">
+      <h3>Annapurna Circuit Trek</h3>
+      <p>Classic Himalayan circuit over Thorong La</p>
+      <div class="card-facts"><span>From $799</span><span>Max 5,416 m</span></div>
+      <span class="card-arrow">View Trek →</span>
+    </div>
+  </a>
 </div>
 
 <!-- ─── FIXED DEPARTURES ───────────────────────────────── -->
@@ -1173,37 +1353,54 @@
   <div class="departures-grid">
     <div class="departure-card">
       <div class="dep-info">
-        <div class="dep-name">Khopra Ridge Trek</div>
+        <div class="dep-name"><a href="/kokhe-danda-trek" style="color:inherit;text-decoration:none">Kokhe Danda Trek</a></div>
         <div class="dep-meta">
           <div class="dep-meta-item">
             <span class="dep-meta-label">Date</span>
-            <span class="dep-meta-value">26 Oct 2026</span>
-          </div>
-          <div class="dep-meta-item">
-            <span class="dep-meta-label">Duration</span>
-            <span class="dep-meta-value">8 Days</span>
-          </div>
-        </div>
-        <span class="seats-pill">● 3 Seats Left</span>
-      </div>
-      <a href="/custom-trek?source=fixed&trek=Khopra%20Ridge%20Trek&duration=8%20Days" class="book-btn">Book Now</a>
-    </div>
-    <div class="departure-card">
-      <div class="dep-info">
-        <div class="dep-name">Kokhe Danda Trek</div>
-        <div class="dep-meta">
-          <div class="dep-meta-item">
-            <span class="dep-meta-label">Date</span>
-            <span class="dep-meta-value">27 Oct 2026</span>
+            <span class="dep-meta-value">3 Nov 2026</span>
           </div>
           <div class="dep-meta-item">
             <span class="dep-meta-label">Duration</span>
             <span class="dep-meta-value">5 Days</span>
           </div>
         </div>
-        <span class="seats-pill">● 5 Seats Left</span>
+        <span class="seats-pill">● Seats Available</span>
       </div>
       <a href="/custom-trek?source=fixed&trek=Kokhe%20Danda%20Trek&duration=5%20Days" class="book-btn">Book Now</a>
+    </div>
+    <div class="departure-card">
+      <div class="dep-info">
+        <div class="dep-name"><a href="/mardi-himal-trek" style="color:inherit;text-decoration:none">Mardi Himal Trek</a></div>
+        <div class="dep-meta">
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Date</span>
+            <span class="dep-meta-value">6 Nov 2026</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Duration</span>
+            <span class="dep-meta-value">5 Days</span>
+          </div>
+        </div>
+        <span class="seats-pill">● Seats Available</span>
+      </div>
+      <a href="/custom-trek?source=fixed&trek=Mardi%20Himal%20Trek&duration=5%20Days" class="book-btn">Book Now</a>
+    </div>
+    <div class="departure-card">
+      <div class="dep-info">
+        <div class="dep-name"><a href="/khopra-ridge-trek" style="color:inherit;text-decoration:none">Khopra Ridge Trek</a></div>
+        <div class="dep-meta">
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Date</span>
+            <span class="dep-meta-value">10 Nov 2026</span>
+          </div>
+          <div class="dep-meta-item">
+            <span class="dep-meta-label">Duration</span>
+            <span class="dep-meta-value">8 Days</span>
+          </div>
+        </div>
+        <span class="seats-pill">● Seats Available</span>
+      </div>
+      <a href="/custom-trek?source=fixed&trek=Khopra%20Ridge%20Trek&duration=8%20Days" class="book-btn">Book Now</a>
     </div>
   </div>
 </section>
@@ -1343,7 +1540,7 @@
   
    <a href="/khopra-ridge-vs-annapurna-base-camp" class="blog-card">
     <div class="blog-card-img">
-      <img src="khopra-ridge-trek.jpg" alt="Khopra Ridge Trek">
+      <img src="khopra-ridge-trek.jpg" alt="Khopra Ridge Trek compared with Annapurna Base Camp" loading="lazy">
       <span class="blog-tag">Trek Guide</span>
     </div>
     <div class="blog-card-body">
@@ -1357,7 +1554,7 @@
   
   <a href="/article/why-kokhe-danda-trek" class="blog-card">
     <div class="blog-card-img">
-      <img src="whykokhe.jpg" alt="Magar Cultural Dress">
+      <img src="whykokhe.jpg" alt="Magar women in traditional dress on the Kokhe Danda Trek" loading="lazy">
       <span class="blog-tag">Trek Guide</span>
     </div>
     <div class="blog-card-body">
@@ -1435,8 +1632,8 @@ The accommodations were comfortable and well selected, and the whole trek felt l
         <div class="author-avatar">Y</div>
         <div class="author-info">
           <strong>Yinthe V.</strong>
-          <span>Netherland</span>
-          <span class="trek-tag">multiple Viewpoints Trek</span>
+          <span>Netherlands</span>
+          <span class="trek-tag">Multiple Viewpoints Trek</span>
         </div>
       </div>
     </div>
@@ -1462,6 +1659,11 @@ The accommodations were comfortable and well selected, and the whole trek felt l
     </a>
   </div>
   <p class="review-note">Trusted by trekkers from 30+ countries</p>
+  <div class="contact-strip">
+    <a href="https://wa.me/9779867649780" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>WhatsApp +977 9867649780</a>
+    <a href="mailto:info@discoverparbat.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>info@discoverparbat.com</a>
+    <a href="mailto:discoverparbat@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>discoverparbat@gmail.com</a>
+  </div>
 </section>
 
 <!-- ─── FOOTER ─────────────────────────────────────────── -->
@@ -1494,7 +1696,9 @@ The accommodations were comfortable and well selected, and the whole trek felt l
       <ul>
         <li><a href="https://www.facebook.com/discoverparbat" target="_blank">Facebook</a></li>
         <li><a href="https://maps.app.goo.gl/wJ8wzmghg8FJQt8T8" target="_blank">Google</a></li>
-        <li><a href="mailto:info@discoverparbat.com">Email Us</a></li>
+        <li><a href="https://wa.me/9779867649780" target="_blank" rel="noopener">WhatsApp: +977 9867649780</a></li>
+        <li><a href="mailto:info@discoverparbat.com">info@discoverparbat.com</a></li>
+        <li><a href="mailto:discoverparbat@gmail.com">discoverparbat@gmail.com</a></li>
       </ul>
     </div>
   </div>
@@ -1507,7 +1711,7 @@ The accommodations were comfortable and well selected, and the whole trek felt l
 
 <!-- ─── STICKY ENQUIRE BUTTON ──────────────────────────── -->
 <div class="sticky-enquire" id="sticky-enquire">
-  <a class="sticky-btn" href="mailto:info@discoverparbat.com?subject=Trek%20Enquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20trekking%20with%20Discover%20Parbat.%20Could%20you%20share%20more%20details%3F%0A%0AThank%20you.">
+  <a class="sticky-btn" href="https://wa.me/9779867649780?text=Hi%20Discover%20Parbat%2C%20I%27m%20interested%20in%20a%20trek.%20Could%20you%20share%20more%20details%3F" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
     Enquire Now
   </a>
