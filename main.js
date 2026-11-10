@@ -113,11 +113,28 @@ const DP = window.DiscoverParbat;
 
 DP.WHATSAPP_NUMBER = '9779867649780';
 
+/* GA4 enquiry tracking: sends "generate_lead" with a "method" parameter */
+DP.trackLead = function (method, extra) {
+  if (typeof gtag !== 'function') return;
+  const params = Object.assign({ method: method, transport_type: 'beacon' }, extra || {});
+  gtag('event', 'generate_lead', params);
+};
+
+document.addEventListener('click', function (e) {
+  const a = e.target.closest ? e.target.closest('a') : null;
+  if (!a) return;
+  const href = a.getAttribute('href') || '';
+  if (/wa\.me|api\.whatsapp\.com|^whatsapp:/i.test(href)) DP.trackLead('whatsapp');
+  else if (href.indexOf('mailto:') === 0) DP.trackLead('email');
+  else if (href.indexOf('tel:') === 0) DP.trackLead('phone');
+});
+
 DP.buildWhatsAppUrl = function (text) {
   return 'https://wa.me/' + DP.WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
 };
 
 DP.openWhatsAppFallback = function (message) {
+  DP.trackLead('whatsapp_fallback');
   window.location.href = DP.buildWhatsAppUrl(message);
 };
 
@@ -133,6 +150,8 @@ DP.submitInquiry = async function (payload, options) {
     });
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.error || 'Send failed');
+
+    DP.trackLead('form', { form_type: payload.get('type') || 'inquiry' });
 
     if (typeof opts.onSuccess === 'function') {
       opts.onSuccess();
