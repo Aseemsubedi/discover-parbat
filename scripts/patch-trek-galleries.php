@@ -81,8 +81,8 @@ foreach ($trekFiles as $file) {
 
     if (!str_contains($html, 'trek-page.js')) {
         $html = str_replace(
-            '<script src="main.js?v=3" defer></script>',
-            "<script src=\"main.js?v=3\" defer></script>\n<script src=\"/trek-page.js?v=3\" defer></script>",
+            '<script src="main.js?v=4" defer></script>',
+            "<script src=\"main.js?v=4\" defer></script>\n<script src=\"/trek-page.js?v=3\" defer></script>",
             $html
         );
     }
