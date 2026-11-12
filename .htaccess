@@ -70,6 +70,8 @@ RewriteRule ^article/([a-z0-9-]+)/?$ article.php?slug=$1 [L,QSA]
 RewriteRule ^treks/?$ treks.php [L]
 
 # Clean URLs → trek.php (CMS page or static .html fallback inside trek.php)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+   # Only the repo's real folders are skipped, so a leftover folder on the
+   # server (e.g. an old about/) can no longer hijack a page URL.
+   RewriteCond %{REQUEST_URI} !^/(article|cms|includes|lib|photo|prints|scripts|uploads)(/|$) [NC]
+   RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z0-9-]+)/?$ trek.php?slug=$1 [L,QSA]
