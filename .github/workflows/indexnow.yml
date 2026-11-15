@@ -1,0 +1,54 @@
+name: IndexNow ping
+
+# Tells Bing (and other IndexNow search engines) which pages changed on each push,
+# so updates reach Bing, ChatGPT search and Copilot faster.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+  workflow_dispatch:   # run by hand from the Actions tab to submit every page in the sitemap
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Wait for Hostinger to deploy
+        if: github.event_name == 'push'
+        run: sleep 180
+      - name: Send changed URLs to IndexNow
+        env:
+          KEY: 553a2455ede3472eb93b5dd20d694abe
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            grep -o '<loc>[^<]*' sitemap.xml | sed 's#<loc>##' | sort -u > urls.txt
+          else
+          git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html' \
+            | grep -v -E '^(includes|cms|lib)/|^google|/?[A-Za-z0-9_-]*\.dc\.html$' \
+            | sed -E 's#^index\.html$##; s#\.html$##; s#^#https://discoverparbat.com/#' \
+            | sort -u > urls.txt || true
+          fi
+          echo "Changed pages:"; cat urls.txt
+          if [ ! -s urls.txt ]; then echo "Nothing to submit"; exit 0; fi
+          python3 - <<'PY'
+          import json, os, urllib.request
+          urls = [u.strip() for u in open("urls.txt") if u.strip()][:10000]
+          body = json.dumps({
+              "host": "discoverparbat.com",
+              "key": os.environ["KEY"],
+              "keyLocation": f"https://discoverparbat.com/{os.environ['KEY']}.txt",
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print("IndexNow response:", r.status)
+          except urllib.error.HTTPError as e:
+              print("IndexNow error:", e.code, e.read()[:300])
+          PY
