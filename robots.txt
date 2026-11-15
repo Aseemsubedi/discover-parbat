@@ -1,4 +1,28 @@
+# Discover Parbat welcomes search engines and AI search assistants.
+
 User-agent: *
+Allow: /
+
+# OpenAI: ChatGPT search results and live browsing
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic: Claude search and browsing
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Bing (also used by ChatGPT search and Copilot)
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://discoverparbat.com/sitemap.xml
