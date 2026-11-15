@@ -59,16 +59,28 @@
       "@id": "https://discoverparbat.com/#organization",
       "name": "Discover Parbat",
       "url": "https://discoverparbat.com/",
-      "logo": { "@type": "ImageObject", "url": "https://discoverparbat.com/logo.png" },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://discoverparbat.com/logo.png"
+      },
       "email": "info@discoverparbat.com",
-      "sameAs": ["https://www.facebook.com/discoverparbat"]
+      "sameAs": [
+        "https://www.facebook.com/discoverparbat"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://discoverparbat.com/#sameer-regmi",
       "name": "Sameer Regmi",
-      "jobTitle": "Founder and trekking guide",
-      "worksFor": { "@id": "https://discoverparbat.com/#organization" }
+      "jobTitle": "Founder & Lead Guide",
+      "url": "https://discoverparbat.com/about#sameer-regmi",
+      "image": "https://discoverparbat.com/photo/sameer-regmi.jpg",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://discoverparbat.com/#organization",
+        "name": "Discover Parbat",
+        "url": "https://discoverparbat.com/"
+      }
     },
     {
       "@type": "ImageObject",
@@ -85,8 +97,12 @@
       "url": "https://discoverparbat.com/article/kathmandu-to-darchula-bus",
       "name": "Kathmandu to Darchula by Bus: Route, Time, Cost & Tips",
       "inLanguage": "en",
-      "primaryImageOfPage": { "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#primaryimage" },
-      "breadcrumb": { "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#breadcrumb" },
+      "primaryImageOfPage": {
+        "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#primaryimage"
+      },
+      "breadcrumb": {
+        "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#breadcrumb"
+      },
       "datePublished": "2026-10-28T21:30:00+05:45",
       "dateModified": "2026-10-28T21:30:00+05:45"
     },
@@ -95,26 +111,80 @@
       "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#article",
       "headline": "Kathmandu to Darchula by Bus: A Practical Guide to Reaching Api Base Camp by Road",
       "description": "A first-hand guide to travelling overland from Kathmandu to Makarigad, the trailhead for Api Base Camp: the route via Attariya, fares, travel times, road conditions, ATMs, network and checkpoints.",
-      "image": ["https://discoverparbat.com/article/view-from-api-himal-base-camp.jpg"],
+      "image": [
+        "https://discoverparbat.com/article/view-from-api-himal-base-camp.jpg"
+      ],
       "datePublished": "2026-10-28T21:30:00+05:45",
       "dateModified": "2026-10-28T21:30:00+05:45",
       "articleSection": "Travel Guides",
       "inLanguage": "en",
-      "author": { "@id": "https://discoverparbat.com/#sameer-regmi" },
-      "publisher": { "@id": "https://discoverparbat.com/#organization" },
-      "mainEntityOfPage": { "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#webpage" },
-      "about": { "@type": "TouristTrip", "name": "Api Himal Base Camp Trek", "url": "https://discoverparbat.com/api-himal-base-camp-trek" }
+      "author": {
+        "@id": "https://discoverparbat.com/#sameer-regmi"
+      },
+      "publisher": {
+        "@id": "https://discoverparbat.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#webpage"
+      },
+      "about": {
+        "@type": "TouristTrip",
+        "name": "Api Himal Base Camp Trek",
+        "url": "https://discoverparbat.com/api-himal-base-camp-trek"
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://discoverparbat.com/article/kathmandu-to-darchula-bus#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "How long does it take to get from Kathmandu to Makarigad by road?", "acceptedAnswer": { "@type": "Answer", "text": "About two days. The bus from Kathmandu to Attariya or Dhangadhi takes roughly 20 to 22 hours, and the jeep from Attariya to Makarigad takes another 12 to 13 hours. Most people break the journey with a night in Attariya or Dhangadhi." } },
-        { "@type": "Question", "name": "How much does the bus from Kathmandu to Darchula cost?", "acceptedAnswer": { "@type": "Answer", "text": "When I travelled, the sofa-seater bus from Kathmandu to Dhangadhi or Attariya cost NPR 3,500, and a seat in a shared jeep from Attariya to Makarigad cost NPR 2,500. Reserving a whole jeep cost NPR 15,000. Fares change, so check before you travel." } },
-        { "@type": "Question", "name": "Where does the bus to Dhangadhi leave from in Kathmandu?", "acceptedAnswer": { "@type": "Answer", "text": "From Gongabu bus park, with afternoon departures around 2 to 3 pm." } },
-        { "@type": "Question", "name": "Where is the last ATM before Api Base Camp?", "acceptedAnswer": { "@type": "Answer", "text": "There are ATMs in Dhangadhi and Attariya, and the last one on the way is in Gokuleshwor. Homestays and teahouses on the trail generally do not accept cards or online payment, so carry enough cash." } },
-        { "@type": "Question", "name": "Is there mobile network on the way to Api Base Camp?", "acceptedAnswer": { "@type": "Answer", "text": "Network is available along the road. On the trail it becomes weak after Siti and is mostly gone after Chhirchhire." } },
-        { "@type": "Question", "name": "Is it better to fly or take the bus to Api Base Camp?", "acceptedAnswer": { "@type": "Answer", "text": "Flying from Kathmandu to Nepalgunj saves most of a day and is how our Api Himal Base Camp Trek package runs. The road is cheaper and shows you much more of far-western Nepal, but it takes about two days each way. On our package the road option saves $110 per person and adds one day." } }
+        {
+          "@type": "Question",
+          "name": "How long does it take to get from Kathmandu to Makarigad by road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About two days. The bus from Kathmandu to Attariya or Dhangadhi takes roughly 20 to 22 hours, and the jeep from Attariya to Makarigad takes another 12 to 13 hours. Most people break the journey with a night in Attariya or Dhangadhi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the bus from Kathmandu to Darchula cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When I travelled, the sofa-seater bus from Kathmandu to Dhangadhi or Attariya cost NPR 3,500, and a seat in a shared jeep from Attariya to Makarigad cost NPR 2,500. Reserving a whole jeep cost NPR 15,000. Fares change, so check before you travel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the bus to Dhangadhi leave from in Kathmandu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From Gongabu bus park, with afternoon departures around 2 to 3 pm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the last ATM before Api Base Camp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are ATMs in Dhangadhi and Attariya, and the last one on the way is in Gokuleshwor. Homestays and teahouses on the trail generally do not accept cards or online payment, so carry enough cash."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there mobile network on the way to Api Base Camp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Network is available along the road. On the trail it becomes weak after Siti and is mostly gone after Chhirchhire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it better to fly or take the bus to Api Base Camp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Flying from Kathmandu to Nepalgunj saves most of a day and is how our Api Himal Base Camp Trek package runs. The road is cheaper and shows you much more of far-western Nepal, but it takes about two days each way. On our package the road option saves $110 per person and adds one day."
+          }
+        }
       ]
     }
   ]
@@ -352,7 +422,7 @@
     <h1>Kathmandu to Darchula by Bus: A Practical Guide to Reaching Api Base Camp by Road</h1>
     <p class="kdb-hero-sub">Two days, one bus, one jeep and roughly 33 hours on the road. Here is exactly how I travelled overland from Kathmandu to Makarigad, the trailhead for Api Base Camp, with fares, timings and what I would tell a friend before they go.</p>
     <div class="kdb-byline">
-      <span>By <strong>Sameer Regmi</strong>, founder of Discover Parbat</span>
+      <span>By <a href="/about#sameer-regmi" style="color:inherit;text-decoration:none"><strong>Sameer Regmi</strong></a>, Founder &amp; Lead Guide</span>
       <span>Published <strong>28 October 2026</strong></span>
       <span>9 min read</span>
     </div>

@@ -458,6 +458,22 @@
 }
 .team-card:hover .team-img-wrap img { transform: scale(1.05); }
 
+/* Round portrait variant */
+.team-img-wrap.team-img-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-img-wrap.team-img-round img {
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
+.team-card:hover .team-img-wrap.team-img-round img { transform: scale(1.04); }
+#sameer-regmi { scroll-margin-top: 110px; }
+
 /* Placeholder avatar when no image */
 .team-avatar-placeholder {
   width: 100%; height: 100%;
@@ -819,6 +835,19 @@
   .story-accent-card { display: none; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://discoverparbat.com/#sameer-regmi",
+  "name": "Sameer Regmi",
+  "jobTitle": "Founder & Lead Guide",
+  "url": "https://discoverparbat.com/about#sameer-regmi",
+  "image": "https://discoverparbat.com/photo/sameer-regmi.jpg",
+  "worksFor": { "@type": "Organization", "@id": "https://discoverparbat.com/#organization", "name": "Discover Parbat", "url": "https://discoverparbat.com/" },
+  "sameAs": ["https://www.facebook.com/discoverparbat"]
+}
+</script>
 </head>
 <body>
 
@@ -967,10 +996,9 @@
 
   <div class="team-grid">
 
-    <div class="team-card">
-      <div class="team-img-wrap">
-        <!-- Replace with actual team photo: <img src="founder.jpg" alt="Founder"> -->
-        <div class="team-avatar-placeholder">SR</div>
+    <div class="team-card" id="sameer-regmi">
+      <div class="team-img-wrap team-img-round">
+        <img src="/photo/sameer-regmi.jpg" alt="Sameer Regmi, founder and lead guide of Discover Parbat, with Annapurna South behind" width="800" height="800" loading="lazy">
       </div>
       <div class="team-card-body">
         <h3>Sameer Regmi</h3>
