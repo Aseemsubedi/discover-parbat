@@ -307,7 +307,7 @@
 .kdg-pill{display:inline-block;margin:0 6px 8px 0;padding:4px 12px;border-radius:100px;background:rgba(45,106,79,0.1);color:var(--g);font-size:0.92rem;font-weight:700}
 
 .kdg-table-wrap{overflow-x:auto;margin:20px 0 26px;border:1px solid var(--line);border-radius:12px;background:#fff}
-.kdg-table{width:100%;border-collapse:collapse;min-width:520px;font-size:1.04rem}
+.kdg-table{display:table;width:100%;max-width:none;border-collapse:collapse;min-width:520px;font-size:1.04rem}
 .kdg-table th,.kdg-table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.6}
 .kdg-table th{background:rgba(45,106,79,0.08);color:var(--ink);font-weight:700}
 .kdg-table tr:last-child td{border-bottom:0}
@@ -351,6 +351,28 @@
 
 .kdg-sign{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:1rem !important;color:#5c6b62}
 
+.kdg-grid{max-width:1180px;margin:0 auto;padding:0 6%;display:grid;grid-template-columns:210px minmax(0,1fr);gap:64px;align-items:start}
+.kdg-grid .kdg-main{max-width:780px;margin:0;padding:0}
+.kdg-main [id]{scroll-margin-top:96px}
+.kdg-rail{position:sticky;top:108px;font-size:0.95rem}
+.kdg-rail p{font-weight:700;font-size:1.05rem;color:var(--ink);margin:0 0 14px}
+.kdg-rail ul{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.kdg-rail li{list-style:none;margin:0;padding:0}
+.kdg-rail a{display:block;padding:7px 0 7px 16px;margin-left:-2px;border-left:2px solid transparent;color:var(--body);text-decoration:none;line-height:1.5}
+.kdg-rail a:hover{color:var(--g)}
+.kdg-rail a.on{border-left-color:var(--gl);color:var(--ink);font-weight:600}
+@media (max-width:980px){
+  .kdg-grid{grid-template-columns:1fr;gap:0}
+  .kdg-main [id]{scroll-margin-top:140px}
+  .kdg-rail{position:sticky;top:72px;z-index:40;margin:-52px -6% 30px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--line);overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 88%,transparent);mask-image:linear-gradient(to right,#000 88%,transparent)}
+  .kdg-rail::-webkit-scrollbar{display:none}
+  .kdg-rail p{display:none}
+  .kdg-rail ul{display:flex !important;flex-wrap:nowrap !important;gap:8px;width:max-content;border-left:0;padding:0 6vw !important;white-space:nowrap}
+  .kdg-rail li{flex:0 0 auto !important}
+  .kdg-rail a{display:inline-block !important;margin:0;padding:7px 16px;border:1px solid var(--line);border-radius:100px;background:#fff;font-size:0.92rem;line-height:1.4;white-space:nowrap}
+  .kdg-rail a.on{background:var(--f);color:#fff;border-color:var(--f)}
+}
+
 @media (max-width:720px){
   .kdg-hero{min-height:56vh}
   .kdg-photo img{height:240px}
@@ -379,6 +401,25 @@
 </section>
 
 <div class="kdg-wrap">
+  <div class="kdg-grid">
+
+    <aside class="kdg-rail" aria-label="यस लेखमा">
+      <p>यस लेखमा</p>
+      <ul id="kdgToc">
+        <li><a href="#kdg-facts-sec">मुख्य जानकारी</a></li>
+        <li><a href="#kdg-routes">तीन बाटो</a></li>
+        <li><a href="#kdg-choose">कुन बाटो रोज्ने</a></li>
+        <li><a href="#kdg-poonhill">पुनहिल हुँदै झर्ने</a></li>
+        <li><a href="#kdg-fare">गाडी भाडा</a></li>
+        <li><a href="#kdg-stay">बास र होमस्टे</a></li>
+        <li><a href="#kdg-budget">कुल बजेट</a></li>
+        <li><a href="#kdg-network">नेटवर्क र बिजुली</a></li>
+        <li><a href="#kdg-prep">तयारी</a></li>
+        <li><a href="#kdg-winter">हिउँदमा</a></li>
+        <li><a href="#kdg-faq-sec">प्रश्नोत्तर</a></li>
+      </ul>
+    </aside>
+
   <article class="kdg-main">
 
     <p class="kdg-lead">पोखराबाट केही घण्टाको यात्रामै पुग्न सकिने ३,३०९ मिटर उचाइको कोखे डाँडा पछिल्ला वर्षहरूमा नेपाली पदयात्रीमाझ लोकप्रिय बन्दै गएको छ। धौलागिरिदेखि अन्नपूर्ण र माछापुच्छ्रेसम्म फैलिएको हिमशृङ्खला, बाटोमा भेटिने मगर बस्ती र डाँडाबाट देखिने मनमोहक सूर्योदय तथा सूर्यास्त यहाँका मुख्य आकर्षण हुन्। तर कोखे डाँडा जाने बाटो कुन हो, कति खर्च लाग्छ र कहाँ बस्ने भन्ने जानकारी सहजै पाउन भने अझै कठिन छ।</p>
@@ -387,7 +428,7 @@
 
     <p>निर्देशित पदयात्रा, दिनअनुसारको यात्रा कार्यक्रम तथा प्याकेजसम्बन्धी जानकारीका लागि हाम्रो <a href="/kokhe-danda-trek">Kokhe Danda Trek</a> पृष्ठ हेर्नुहोस्।</p>
 
-    <h3>मुख्य जानकारी</h3>
+    <h3 id="kdg-facts-sec">मुख्य जानकारी</h3>
     <div class="kdg-facts" aria-label="मुख्य जानकारी">
       <div class="kdg-fact"><small>उचाइ</small><strong>३,३०९ मिटर</strong></div>
       <div class="kdg-fact"><small>जिल्ला</small><strong>पर्वत, गण्डकी प्रदेश</strong></div>
@@ -404,7 +445,7 @@
       <p>पहिलो दिनमै कोखे डाँडा पुग्ने योजना बनाउने कतिपय पदयात्री ढिलो गरी यात्रा सुरु गर्दा बेलुका ८–९ बजेतिर मात्र माथि पुग्ने गरेका छन्। अँध्यारोमा लेकको बाटो हिँड्नु जोखिमपूर्ण हुनुका साथै सूर्यास्तको सुन्दर दृश्य पनि छुट्न सक्छ। त्यसैले बिहान ६–७ बजेभित्रै पोखराबाट यात्रा सुरु गर्नु उपयुक्त हुन्छ। यसो गर्दा दिउँसो ३–४ बजेसम्म कोखे डाँडा पुगेर आराम गर्न र सूर्यास्तको दृश्य अवलोकन गर्न पर्याप्त समय मिल्छ।</p>
     </div>
 
-    <h2>पोखराबाट कोखे डाँडा पुग्ने तीन प्रमुख बाटो</h2>
+    <h2 id="kdg-routes">पोखराबाट कोखे डाँडा पुग्ने तीन प्रमुख बाटो</h2>
     <p>कोखे डाँडा पुग्न पर्वतको कुश्मा हुँदै जाने पश्चिमतर्फको बाटो र नयाँपुल हुँदै जाने पूर्वतर्फको बाटो मुख्य विकल्प हुन्।</p>
     <p>कुश्माबाट बनौ वा लेस्पारसम्म गाडीमा पुगेर दुई दिनमा विस्तारै उकालो चढ्न सकिन्छ। त्यसैगरी नयाँपुल हुँदै बन्ठाटीसम्म गाडीमा पुगेर एकै दिनमा कोखे डाँडा उक्लन सकिन्छ।</p>
     <p>आफ्नो समय, शारीरिक क्षमता र खर्च गर्ने बजेटअनुसार तलका तीनमध्ये उपयुक्त बाटो रोज्न सक्नुहुन्छ।</p>
@@ -466,7 +507,7 @@
       </div>
     </div>
 
-    <h2>कुन बाटो रोज्ने?</h2>
+    <h2 id="kdg-choose">कुन बाटो रोज्ने?</h2>
     <div class="kdg-table-wrap">
       <table class="kdg-table">
         <thead>
@@ -481,12 +522,12 @@
     </div>
     <p>कोखे डाँडा पुग्दा जुन बाटो प्रयोग गर्नुभएको हो, फर्कँदा पनि त्यही बाटो रोज्नुपर्छ भन्ने छैन। बनौ वा लेस्पार हुँदै उक्लिएका पदयात्री बन्ठाटीको बाटो भएर पनि झर्न सक्छन्। यसरी फरक बाटो प्रयोग गर्दा पदयात्रामा नयाँ गाउँ, बस्ती र प्राकृतिक दृश्यहरूको अनुभव लिन सकिन्छ।</p>
 
-    <h3>कोखे डाँडाबाट पुनहिल र घोडेपानी हुँदै बन्ठाटी झर्ने अर्को विकल्प</h3>
+    <h3 id="kdg-poonhill">कोखे डाँडाबाट पुनहिल र घोडेपानी हुँदै बन्ठाटी झर्ने अर्को विकल्प</h3>
     <p>कोखे डाँडाको पदयात्रालाई अझ लामो र विविध बनाउन पुनहिल र घोडेपानीसँग पनि जोड्न सकिन्छ। कोखे डाँडाबाट पुनहिलसम्म पुग्न करिब २ घण्टा ३० मिनेट लाग्छ। पुनहिलबाट घोडेपानी पुग्न थप करिब ४५ मिनेट हिँड्नुपर्छ। त्यसपछि घोडेपानीबाट बन्ठाटी झर्न करिब २–३ घण्टा लाग्छ।</p>
     <p>यसरी कोखे डाँडाबाट सुरु भएको पदयात्रा पुनहिल र घोडेपानी हुँदै बन्ठाटीमा टुङ्ग्याउन सकिन्छ। बन्ठाटीबाट गाडीको व्यवस्था मिलाएर पोखरा फर्कन सकिन्छ।</p>
     <p>यो विकल्प रोज्दा एउटै यात्रामा जलजलाको प्राकृतिक सौन्दर्य, मगर बस्ती, पुनहिलको प्रसिद्ध हिमाली दृश्य र घोडेपानी क्षेत्रको वनजङ्गलको अनुभव लिन पाइन्छ। विशेषगरी दुई दिनभन्दा बढी समय छुट्याउन सक्ने र एउटै बाटोबाट फर्कन नचाहने पदयात्रीका लागि यो राम्रो विकल्प हो।</p>
 
-    <h2>गाडी भाडा कति लाग्छ?</h2>
+    <h2 id="kdg-fare">गाडी भाडा कति लाग्छ?</h2>
     <p>पोखराबाट कोखे डाँडाको पदयात्रा सुरु हुने विभिन्न स्थानसम्म पुग्न लाग्ने अनुमानित गाडी भाडा यस प्रकार छ।</p>
     <div class="kdg-table-wrap">
       <table class="kdg-table">
@@ -506,7 +547,7 @@
     <p>यी भाडा अनुमानित हुन्। मौसम, इन्धनको मूल्य र मोलमोलाइअनुसार केही फरक पर्न सक्छ।</p>
     <p class="kdg-note">साथीहरूको समूहमा यात्रा गर्दै हुनुहुन्छ भने रिजर्भ गाडी लिनु सुविधाजनक हुन्छ। यसो गर्दा यात्राको समय आफ्नै अनुकूल बनाउन सकिन्छ र गाडी भाडा सबैले बाँडेर तिर्दा प्रतिव्यक्ति खर्च पनि कम पर्छ।</p>
 
-    <h2>कहाँ बस्ने र कति खर्च लाग्छ?</h2>
+    <h2 id="kdg-stay">कहाँ बस्ने र कति खर्च लाग्छ?</h2>
     <p>हल्जुरे र लेस्पारमा स्थानीय परिवारले सञ्चालन गरेका होमस्टे उपलब्ध छन्। यहाँ बेलुकाको खाना, बिहानको खाजा र एक रातको बाससहित प्रतिव्यक्ति करिब <strong>रु. १,०००–१,२००</strong> खर्च लाग्छ।</p>
     <p>कोखे डाँडामा भने यही सुविधाका लागि प्रतिव्यक्ति करिब <strong>रु. १,६००</strong> लाग्छ। माथिल्लो डाँडासम्म खाद्यान्न र आवश्यक सामग्री बोकेर पुर्‍याउनुपर्ने भएकाले यहाँको खर्च केही बढी हुनु स्वाभाविक हो।</p>
     <p>शनिबार, सार्वजनिक बिदा तथा असोज–कात्तिक र फागुन–चैतजस्ता पदयात्राको चहलपहल बढ्ने समयमा कोखे डाँडामा बास पाउन कठिन हुन सक्छ। त्यसैले यात्रा सुरु गर्नुअघि नै फोन गरेर बासको व्यवस्था मिलाउनुहोस्।</p>
@@ -529,7 +570,7 @@
       <figcaption>कोखे डाँडाको बासस्थान: बिदा र चहलपहल बढ्ने समयमा पहिले नै बुक गर्नुहोस्।</figcaption>
     </figure>
 
-    <h2>कोखे डाँडा पदयात्रामा कति खर्च लाग्छ?</h2>
+    <h2 id="kdg-budget">कोखे डाँडा पदयात्रामा कति खर्च लाग्छ?</h2>
     <p>कोखे डाँडा पदयात्रा धेरै महँगो यात्रा होइन। सामान्य खर्चमा यात्रा गर्न चाहने नेपाली पदयात्रीले आफ्नो समय र रुटअनुसार करिब निम्न बजेट छुट्याउन सक्छन्।</p>
     <div class="kdg-table-wrap">
       <table class="kdg-table" style="min-width:0">
@@ -546,11 +587,11 @@
     <p>माथिल्लो क्षेत्रमा खाद्यान्न तथा आवश्यक सामग्री ढुवानी गर्नुपर्ने भएकाले कोखे डाँडाको खाना र बासको मूल्य तल्लो गाउँको तुलनामा केही बढी हुन सक्छ। त्यस्तै, रिजर्भ गाडी, व्यक्तिगत किनमेल र अन्य अतिरिक्त खर्चले कुल बजेट फरक पार्न सक्छ।</p>
     <p>त्यसैले आफ्नो यात्रा सुरु हुने स्थान र फर्कने बाटोअनुसार यातायात खर्च छुट्टै हिसाब गर्नुहोस्। थोरै बजेटमा पनि प्राकृतिक सौन्दर्य, स्थानीय संस्कृति र हिमाली दृश्यको आनन्द लिन सकिने भएकाले कोखे डाँडा नेपाली पदयात्रीका लागि राम्रो विकल्प हो।</p>
 
-    <h2>मोबाइल नेटवर्क, बिजुली र फोन चार्ज गर्ने सुविधा</h2>
+    <h2 id="kdg-network">मोबाइल नेटवर्क, बिजुली र फोन चार्ज गर्ने सुविधा</h2>
     <p>कोखे डाँडा जाने बाटोका केही स्थानमा मोबाइल नेटवर्क कमजोर हुन सक्छ। अहिलेसम्मको अनुभवअनुसार एनटीसी (NTC) को नेटवर्क तुलनात्मक रूपमा राम्रो चल्छ। त्यसैले सम्भव भए एनटीसीको सिमकार्ड पनि साथमा राख्नुहोस्।</p>
     <p>कोखे डाँडामा सौर्य ऊर्जाबाट मात्र बिजुली उत्पादन गरिन्छ। धेरै पाहुना भएका दिन सौर्य ऊर्जाबाट सञ्चित भएको विद्युत् सकिन सक्छ। त्यसैले मोबाइल फोन, क्यामेरा तथा अन्य विद्युतीय सामग्री चार्ज गर्न पावर बैंक अनिवार्य रूपमा बोक्नुहोस्।</p>
 
-    <h2>कोखे डाँडा जानुअघि के–के तयारी गर्ने?</h2>
+    <h2 id="kdg-prep">कोखे डाँडा जानुअघि के–के तयारी गर्ने?</h2>
     <p>कोखे डाँडाको पदयात्रा सहज बनाउन र यात्रालाई सुरक्षित बनाउन केही आवश्यक सामग्री साथमा राख्नुपर्छ।</p>
     <ul class="kdg-list">
       <li><strong>न्यानो कपडा:</strong> समुद्री सतहबाट ३,३०० मिटरभन्दा बढी उचाइमा रहेको कोखे डाँडामा बिहान र बेलुका निकै चिसो हुन्छ। डाउन ज्याकेट, टोपी, पन्जा, न्यानो मोजा र भित्री न्यानो कपडा बोक्नुहोस्। हिउँदमा तल्लो क्षेत्रमा पर्ने हल्जुरेमै रातको तापक्रम माइनस ५–६ डिग्रीसम्म झर्न सक्छ।</li>
@@ -562,7 +603,7 @@
     </ul>
     <p>पदयात्रामा आवश्यक पर्ने सामग्रीको विस्तृत सूचीका लागि हाम्रो <a href="/article/what-to-pack-for-kokhe-danda-trek">Kokhe Danda Packing List</a> लेख पनि पढ्नुहोस्।</p>
 
-    <h2>हिउँदमा कोखे डाँडा जाँदै हुनुहुन्छ?</h2>
+    <h2 id="kdg-winter">हिउँदमा कोखे डाँडा जाँदै हुनुहुन्छ?</h2>
     <p>मंसिरदेखि माघसम्म मौसम सफा रहने सम्भावना बढी हुने भएकाले यस समयमा हिमालहरूको दृश्य निकै स्पष्ट देख्न सकिन्छ। तर यो समयमा चिसो पनि उत्तिकै बढ्छ। हिउँ परेपछि जलजलादेखि माथिको बाटो चिप्लो र कठिन हुन सक्छ।</p>
     <p>२०७८ साल पुस १६ गते हामी बनौबाट कोखे डाँडासम्म एकै दिनमा पदयात्रा गर्दा जलजलामा कम्मरसम्म हिउँ परेको थियो। त्यस दिन कोखे डाँडा पुग्न करिब १२ घण्टा लागेको थियो।</p>
     <p>त्यसैले हिउँ परेको जानकारी प्राप्त भएमा यात्रा सुरु गर्नुअघि स्थानीय होमस्टे सञ्चालकसँग बाटोको पछिल्लो अवस्था बुझ्नुहोस्। हिउँको अवस्था प्रतिकूल भएमा यात्रा स्थगित गर्नु वा स्थानीयको सल्लाहअनुसार योजना परिवर्तन गर्नु उपयुक्त हुन्छ।</p>
@@ -574,7 +615,7 @@
 
     <p>शरद् ऋतुमा भने जलजलाको वनजङ्गल पहेँलो र रातो रङले सजिन्छ। यस समयमा वनको प्राकृतिक सौन्दर्यले पदयात्रालाई अझ आकर्षक बनाउँछ। जलजलाको शरद् ऋतुको सुन्दरता र रङ्गीन वनजङ्गलबारे थप जानकारीका लागि हाम्रो <a href="/article/jaljala-fall-colors">जलजलामा शरद् ऋतुका रङहरू</a> लेख पनि पढ्न सक्नुहुन्छ।</p>
 
-    <h2>बारम्बार सोधिने प्रश्न</h2>
+    <h2 id="kdg-faq-sec">बारम्बार सोधिने प्रश्न</h2>
     <div class="kdg-faq">
       <details>
         <summary>पोखराबाट एकै दिनमा कोखे डाँडा पुग्न सकिन्छ?</summary>
@@ -597,6 +638,8 @@
     <p class="kdg-sign">यो जानकारी कात्तिक २०८३ को अवस्थामा आधारित छ। गाडी भाडा र बासको दर समयअनुसार फरक पर्न सक्छ। सुरक्षित र रमाइलो यात्राको शुभकामना।</p>
 
   </article>
+
+  </div>
 </div>
 
 <!-- CTA -->
@@ -614,6 +657,27 @@
 </div>
 
 </div>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('#kdgToc a'));
+  var rail = document.querySelector('.kdg-rail');
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (a) {
+        var on = a.getAttribute('href') === '#' + e.target.id;
+        a.classList.toggle('on', on);
+        if (on && rail && window.innerWidth <= 980) {
+          var left = a.getBoundingClientRect().left - rail.getBoundingClientRect().left + rail.scrollLeft - 24;
+          rail.scrollTo({ left: left, behavior: 'smooth' });
+        }
+      });
+    });
+  }, { rootMargin: '-15% 0px -70% 0px' });
+  links.forEach(function (a) { var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) io.observe(t); });
+})();
+</script>
 <!-- ═══════════════ END कोखे डाँडा कसरी जाने ═══════════════ -->
 
 <!-- ─── FOOTER ─────────────────────────────────────── -->
