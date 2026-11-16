@@ -13,7 +13,7 @@ return [
     'stats' => [
         ['value' => '5 Days', 'label' => 'Duration'],
         ['value' => 'Easy', 'label' => 'Difficulty'],
-        ['value' => '3,310m', 'label' => 'Max Altitude'],
+        ['value' => '3,309m', 'label' => 'Max Altitude'],
         ['value' => 'Homestay', 'label' => 'Accommodation'],
     ],
     'gallery' => [
@@ -70,7 +70,7 @@ return [
             'paragraphs' => [
                 'Even though we do not see snowcapped peaks from Sarga, this is still a charming place inside the forest. After breakfast, we set off to Kokhe Danda. The first half till lunch is a bit steep where we gain around 700m in elevation, which takes around 3–3.5 hrs. We pass through beautiful Rhododendron and Oak forests. After lunch at Dhima, it\'s more comfortable as we hike through a gradual uphill section except for the 10 and 5 minute uphill before reaching Mohare and Kokhe Danda.',
             ],
-            'meta' => ['Altitude' => '3,310m', 'Distance' => '8.2 KM', 'Time' => '6–7 Hrs', 'Stay' => 'Tea House'],
+            'meta' => ['Altitude' => '3,309m', 'Distance' => '8.2 KM', 'Time' => '6–7 Hrs', 'Stay' => 'Tea House'],
         ],
         [
             'day' => 4,
