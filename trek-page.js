@@ -171,3 +171,68 @@ document.addEventListener('DOMContentLoaded', () => {
     startAuto();
   }
 });
+
+// ─── Mobile section bar ─────────────────────────────────────────
+// On phones and tablets (sidebar stacked under the content) a sticky row of
+// pills under the header jumps to each part of the trek page. Built from the
+// sections each page actually has, so it works on every trek page.
+(function () {
+  var mq = window.matchMedia('(max-width: 1024px)');
+  var body = document.querySelector('.page-body');
+  if (!body) return;
+  var find = function (sel, text) {
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    if (!text) return els[0] || null;
+    return els.find(function (el) { var h = el.querySelector('h2,h3'); return h && text.test(h.textContent); }) || null;
+  };
+  var leftTitle = document.querySelector('.left-col .section-label');
+  var items = [
+    ['Overview', leftTitle],
+    ['At a glance', find('.highlights-box', /glance/i)],
+    ['Highlights', find('.highlights-box', /highlight/i)],
+    ['Best time & cost', find('.plan-section')],
+    ['Itinerary', find('.itinerary-section')],
+    ['FAQ', find('.trek-faq')],
+    ['Reviews', document.getElementById('reviews')],
+    ['Price', find('.pricing-card')],
+    ['Includes', find('.includes-card')],
+    ['Book', find('.booking-card')],
+  ].filter(function (x) { return x[1]; });
+  if (items.length < 3) return;
+
+  var nav = document.createElement('nav');
+  nav.className = 'trek-secnav';
+  nav.setAttribute('aria-label', 'On this page');
+  var ul = document.createElement('ul');
+  var links = items.map(function (x, i) {
+    var el = x[1];
+    if (!el.id) el.id = 'sec-' + x[0].toLowerCase().replace(/[^a-z]+/g, '-').replace(/-$/, '');
+    el.classList.add('trek-sec-target');
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = '#' + el.id;
+    a.textContent = x[0];
+    if (x[0] === 'Book') a.className = 'book';
+    li.appendChild(a); ul.appendChild(li);
+    return a;
+  });
+  nav.appendChild(ul);
+  body.parentNode.insertBefore(nav, body);
+
+  var setOn = function (id) {
+    links.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('on', on);
+      if (on && mq.matches) {
+        var left = a.offsetLeft - 16;
+        nav.scrollTo({ left: left, behavior: 'smooth' });
+      }
+    });
+  };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) setOn(e.target.id); });
+    }, { rootMargin: '-140px 0px -65% 0px' });
+    items.forEach(function (x) { io.observe(x[1]); });
+  }
+})();
