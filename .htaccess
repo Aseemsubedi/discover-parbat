@@ -103,11 +103,6 @@ RewriteCond %{REQUEST_URI} !^/google[0-9a-f]+\.html$ [NC]
 RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
 RewriteRule ^ https://discoverparbat.com/%1 [R=301,L,NE]
 
-# Trailing slash on a page URL → no slash (one URL per page, Nov 2026).
-# Real folders (article/, photo/, cms/ …) are left alone.
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ https://discoverparbat.com/$1 [R=301,L]
-
 # ── 5. Internal routing (no redirects) ──
 DirectoryIndex index.html index.php
 
