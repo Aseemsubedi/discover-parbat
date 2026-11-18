@@ -6,7 +6,7 @@ return [
     'meta_title' => 'Kokhe Danda Trek |5 Days Authentic Trel',
     'meta_description' => "Nepal's most authentic short trek. Kokhe Danda delivers Himalayan views, real village life & zero crowds in just 5 days. The offbeat alternative to Poon Hill.",
     'meta_keywords' => 'Kokhe Danda Trek, Poon Hill alternative Nepal, offbeat trek Nepal, short trek Nepal, Parbat trekking, authentic Nepal trek, 5 day trek Nepal, best short trek Annapurna, village trek Nepal, Discover Parbat Kokhe Danda,Best Company for Kokhe Danda, local guide Nepal',
-    'hero_image' => 'kokhe.jpg',
+    'hero_image' => 'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg',
     'hero_eyebrow' => 'Parbat, Nepal · 5 Days',
     'hero_title_html' => 'Kokhe Danda<br>Trek',
     'hero_subtitle' => 'Hidden Himalayan trail above Parbat with panoramic mountain views',
@@ -17,8 +17,8 @@ return [
         ['value' => 'Homestay', 'label' => 'Accommodation'],
     ],
     'gallery' => [
-        'kokhe.jpg', 'kokhe1.jpg', 'kokhe2.jpg', 'kokhe3.jpg', 'kokhe4.jpg',
-        'kokhe5.jpg', 'kokhe6.jpg', 'kokhe7.jpg', 'kokhe8.jpg', 'kokhe9.jpg', 'kokhe10.jpg',
+        'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg', 'photo/treks/kokhe-danda-teahouse-dhaulagiri-view.jpg', 'photo/treks/dhaulagiri-from-kokhe-danda.jpg', 'photo/treks/kokhe-danda-ridge-sunrise.jpg', 'photo/treks/lespar-village-aerial-parbat.jpg',
+        'photo/treks/rhododendron-herders-hut-kokhe-danda.jpg', 'photo/treks/rhododendron-forest-kokhe-danda-trek.jpg', 'photo/treks/rhododendron-bloom-kokhe-danda-trek.jpg', 'photo/treks/magar-cultural-dance-lespar.jpg', 'photo/treks/magar-cultural-dance-phalame-danda.jpg', 'photo/treks/machhapuchhre-from-kokhe-danda.jpg',
     ],
     'overview_title' => 'About Kokhe Danda Trek',
     'overview_paragraphs' => [

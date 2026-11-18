@@ -11,7 +11,7 @@ foreach ($treks as $trek):
 ?>
   <a class="trek-card" href="/<?= cms_h((string)($trek['slug'] ?? '')) ?>">
     <div class="trek-card-img">
-      <img src="<?= cms_h((string)($trek['image'] ?? 'kokhe.jpg')) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?>">
+      <img src="<?= cms_h((string)($trek['image'] ?? 'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg')) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?>">
       <span class="trek-number"><?= str_pad((string)$num, 2, '0', STR_PAD_LEFT) ?></span>
     </div>
     <div class="trek-card-body">

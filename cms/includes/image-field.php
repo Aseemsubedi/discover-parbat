@@ -26,7 +26,7 @@ $previewUrl = $imageValue !== '' ? cms_public_image_url($imageValue) : '';
     </div>
     <input class="cms-image-file" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
     <input id="<?= cms_h($imageInputId) ?>" name="<?= cms_h($imageInputId) ?>" type="text" value="<?= cms_h($imageValue) ?>" placeholder="uploads/your-image.jpg">
-    <p class="cms-help">Upload a new image or keep an existing path such as <code>kokhe.jpg</code>.</p>
+    <p class="cms-help">Upload a new image or keep an existing path such as <code>photo/treks/kokhe-danda-teahouse-annapurna-view.jpg</code>.</p>
     <div class="cms-image-actions">
       <button class="cms-btn cms-btn-ghost cms-image-change" type="button">Upload image</button>
       <button class="cms-btn cms-btn-ghost cms-image-clear" type="button"<?= $previewUrl === '' ? ' style="display:none"' : '' ?>>Remove preview</button>

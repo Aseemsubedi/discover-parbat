@@ -17,7 +17,7 @@ foreach ($treks as $trek):
 ?>
   <a class="card" href="/<?= cms_h((string)($trek['slug'] ?? '')) ?>">
     <div class="card-img-wrap">
-      <img src="<?= cms_h((string)($trek['image'] ?? 'kokhe.jpg')) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?>">
+      <img src="<?= cms_h((string)($trek['image'] ?? 'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg')) ?>" alt="<?= cms_h((string)($trek['title'] ?? '')) ?>">
       <div class="card-overlay"></div>
       <span class="badge<?= $isModerate ? ' moderate' : '' ?>"><span class="badge-dot"></span><?= cms_h(ucfirst($difficulty)) ?> · <?= cms_h((string)($trek['days_label'] ?? '')) ?></span>
     </div>

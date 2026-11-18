@@ -10,7 +10,7 @@ $metaDescription = (string)($page['meta_description'] ?: ($trek['subtitle'] ?? '
 $metaKeywords = (string)($page['meta_keywords'] ?? '');
 $canonical = 'https://discoverparbat.com/' . rawurlencode($slug);
 
-$heroImage = (string)($page['hero_image'] !== '' ? $page['hero_image'] : ($trek['image'] ?? 'kokhe.jpg'));
+$heroImage = (string)($page['hero_image'] !== '' ? $page['hero_image'] : ($trek['image'] ?? 'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg'));
 $heroEyebrow = (string)$page['hero_eyebrow'];
 $heroTitleHtml = strip_tags((string)$page['hero_title_html'], '<br>');
 if ($heroTitleHtml === '') {

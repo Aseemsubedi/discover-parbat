@@ -927,9 +927,9 @@
 
 <!-- ─── HERO ───────────────────────────────────────────── -->
 <section class="hero">
-  <img class="hero-slide" src="kokhe.jpg" alt="Kokhe Danda">
+  <img class="hero-slide" src="photo/treks/kokhe-danda-teahouse-annapurna-view.jpg" alt="Kokhe Danda">
   <img class="hero-slide" src="mardi.jpg" alt="Mardi Himal">
-  <img class="hero-slide" src="khopra.jpg" alt="Khopra Ridge">
+  <img class="hero-slide" src="photo/treks/khopra-ridge-lodge-dhaulagiri.jpg" alt="Khopra Ridge">
   <img class="hero-slide" src="abc.jpg" alt="Annapurna Base Camp">
   <img class="hero-slide" src="muldai.jpg" alt="Muldai Peak">
   <img class="hero-slide" src="haljure.jpg" alt="Haljure">

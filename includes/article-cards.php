@@ -7,7 +7,7 @@ foreach ($articles as $article):
 ?>
     <a href="/article/<?= cms_h((string)($article['slug'] ?? '')) ?>" class="article-card">
       <div class="article-img-wrap">
-        <img src="<?= cms_h((string)($article['image'] ?? 'kokhe.jpg')) ?>" alt="<?= cms_h((string)($article['title'] ?? '')) ?>">
+        <img src="<?= cms_h((string)($article['image'] ?? 'photo/treks/kokhe-danda-teahouse-annapurna-view.jpg')) ?>" alt="<?= cms_h((string)($article['title'] ?? '')) ?>">
         <span class="article-tag"><?= cms_h((string)($article['tag'] ?? 'Article')) ?></span>
       </div>
       <div class="article-body">
