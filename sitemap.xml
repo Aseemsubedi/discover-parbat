@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main pages -->
-  <url><loc>https://discoverparbat.com/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://discoverparbat.com/treks</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://discoverparbat.com/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://discoverparbat.com/treks</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/articles</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://discoverparbat.com/about</loc></url>
   <url><loc>https://discoverparbat.com/custom-trek</loc></url>
@@ -15,9 +15,9 @@
   <url><loc>https://discoverparbat.com/kokhe-danda-trek</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://discoverparbat.com/short-kokhe-danda-trek</loc></url>
   <url><loc>https://discoverparbat.com/panchase-trek</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://discoverparbat.com/khopra-ridge-trek</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://discoverparbat.com/khopra-ridge-trek</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/api-himal-base-camp-trek</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://discoverparbat.com/multiple-viewpoints-trek</loc><lastmod>2026-11-16</lastmod></url>
+  <url><loc>https://discoverparbat.com/multiple-viewpoints-trek</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/muldai-viewpoint-trek</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://discoverparbat.com/poonhill-trek</loc></url>
   <url><loc>https://discoverparbat.com/mardi-himal-trek</loc></url>
@@ -29,13 +29,13 @@
   <!-- Articles (/article/) -->
 
   <url><loc>https://discoverparbat.com/article/what-to-pack-for-kokhe-danda-trek</loc><lastmod>2026-11-14</lastmod></url>
-    <url><loc>https://discoverparbat.com/article/best-winter-treks-from-pokhara</loc><lastmod>2026-11-10</lastmod></url>
+    <url><loc>https://discoverparbat.com/article/best-winter-treks-from-pokhara</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/article/tihar-festival-nepal-spiritual-significance</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://discoverparbat.com/article/kukur-tihar-meaning</loc><lastmod>2026-11-07</lastmod></url>
   <url><loc>https://discoverparbat.com/article/how-to-avoid-altitude-sickness-nepal-trek</loc><lastmod>2026-10-31</lastmod></url>
    <url><loc>https://discoverparbat.com/article/nepal-weather-november-2026-after-cyclone-arnab</loc><lastmod>2026-11-01</lastmod></url>
    <url><loc>https://discoverparbat.com/article/mohare-danda-or-kokhe-danda</loc><lastmod>2026-10-30</lastmod></url>
-   <url><loc>https://discoverparbat.com/article/mardi-himal-to-khopra-danda-route</loc><lastmod>2026-10-29</lastmod></url>
+   <url><loc>https://discoverparbat.com/article/mardi-himal-to-khopra-danda-route</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/article/muldai-vs-poon-hill</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://discoverparbat.com/article/kathmandu-to-darchula-bus</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://discoverparbat.com/article/family-trekking-nepal-with-kids</loc><lastmod>2026-10-26</lastmod></url>
@@ -46,7 +46,7 @@
   <url><loc>https://discoverparbat.com/article/dhan-katne-mausam-suchana</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://discoverparbat.com/article/kokhe-danda-kasari-jane</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://discoverparbat.com/article/book-teahouses-in-advance-nepal</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://discoverparbat.com/article/khayer-lake-guide</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://discoverparbat.com/article/khayer-lake-guide</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/article/parbat-district-travel-guide</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://discoverparbat.com/article/ghorepani-village-guide</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://discoverparbat.com/article/nepal-monsoon-officially-exits-2026</loc><lastmod>2026-10-26</lastmod></url>
@@ -55,13 +55,13 @@
   <url><loc>https://discoverparbat.com/article/why-kokhe-danda-trek</loc></url>
 
   <!-- Articles (older, root URLs) -->
-  <url><loc>https://discoverparbat.com/khopra-ridge-vs-annapurna-base-camp</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://discoverparbat.com/khopra-ridge-vs-annapurna-base-camp</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/parbat-dashain-travel-destinations</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://discoverparbat.com/nepal-weather-update-october-2026</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://discoverparbat.com/annapurna-circuit-trail-condition-update</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://discoverparbat.com/best-season-for-kokhe-danda-trek</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://discoverparbat.com/kokhe-danda-trek-alternative-to-poon-hill</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://discoverparbat.com/multiple-viewpoints-trek-alternative-to-annapurna-circuit</loc><lastmod>2026-10-05</lastmod></url>
-  <url><loc>https://discoverparbat.com/khopra-ridge-trek-alternative-to-langtang-trek</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://discoverparbat.com/khopra-ridge-trek-alternative-to-langtang-trek</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://discoverparbat.com/what-to-pack-for-khopra-ridge-trek</loc><lastmod>2026-11-14</lastmod></url>
 </urlset>
