@@ -149,9 +149,67 @@ DP.openWhatsAppFallback = function (message) {
   window.location.href = DP.buildWhatsAppUrl(message);
 };
 
+/* Submitting state: spinner + "Sending..." on the form's submit button while
+   inquiry.php is working, so visitors don't think nothing happened. */
+(function () {
+  const style = document.createElement('style');
+  style.textContent =
+    '.dp-sending{opacity:.8;cursor:wait!important;pointer-events:none}' +
+    '.dp-spinner{display:inline-block;width:1em;height:1em;margin-right:.5em;vertical-align:-.15em;' +
+    'border:2px solid currentColor;border-right-color:transparent;border-radius:50%;' +
+    'animation:dp-spin .7s linear infinite}' +
+    '@keyframes dp-spin{to{transform:rotate(360deg)}}';
+  document.head.appendChild(style);
+})();
+
+/* Remember which form is being submitted (forms call submitInquiry from onsubmit) */
+document.addEventListener('submit', function (e) { DP._activeForm = e.target; }, true);
+
+DP.setSending = function (el, sending) {
+  if (!el) return;
+  const btns = (el.tagName === 'BUTTON' || el.tagName === 'INPUT')
+    ? [el]
+    : Array.prototype.slice.call(el.querySelectorAll('button[type="submit"], input[type="submit"]'));
+  btns.forEach(function (btn) {
+    if (sending) {
+      if (btn.dataset.dpLabel === undefined) btn.dataset.dpLabel = btn.innerHTML;
+      btn.disabled = true;
+      btn.classList.add('dp-sending');
+      btn.setAttribute('aria-busy', 'true');
+      if (btn.tagName === 'INPUT') btn.value = 'Sending...';
+      else btn.innerHTML = '<span class="dp-spinner" aria-hidden="true"></span>Sending your enquiry...';
+    } else if (btn.dataset.dpLabel !== undefined) {
+      btn.disabled = false;
+      btn.classList.remove('dp-sending');
+      btn.removeAttribute('aria-busy');
+      if (btn.tagName === 'INPUT') btn.value = btn.dataset.dpLabel;
+      else btn.innerHTML = btn.dataset.dpLabel;
+      delete btn.dataset.dpLabel;
+    }
+  });
+};
+
+/* Reset buttons if the visitor comes back with the browser Back button */
+window.addEventListener('pageshow', function () {
+  document.querySelectorAll('.dp-sending').forEach(function (b) { DP.setSending(b, false); });
+  document.querySelectorAll('[data-dp-busy]').forEach(function (f) { delete f.dataset.dpBusy; });
+});
+
 DP.submitInquiry = async function (payload, options) {
   const opts = options || {};
   const successUrl = opts.successUrl !== undefined ? opts.successUrl : '/success';
+  /* opts.button for click-submitted forms (contact page), else the form being submitted */
+  const form = opts.button || opts.form || DP._activeForm || null;
+  DP._activeForm = null;
+
+  if (form && form.dataset.dpBusy === '1') return false; /* block double submits */
+  if (form) form.dataset.dpBusy = '1';
+  DP.setSending(form, true);
+
+  const done = function () {
+    if (form) delete form.dataset.dpBusy;
+    DP.setSending(form, false);
+  };
 
   try {
     const res = await fetch('inquiry.php', {
@@ -165,12 +223,17 @@ DP.submitInquiry = async function (payload, options) {
     DP.trackLead('form', { form_type: payload.get('type') || 'inquiry' });
 
     if (typeof opts.onSuccess === 'function') {
+      done();
       opts.onSuccess();
     } else if (successUrl) {
+      /* keep the spinner showing until the success page loads */
       window.location.href = successUrl;
+    } else {
+      done();
     }
     return true;
   } catch (e) {
+    done();
     if (opts.whatsappMessage) {
       DP.openWhatsAppFallback(opts.whatsappMessage);
     }

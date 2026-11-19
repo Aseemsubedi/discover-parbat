@@ -1083,6 +1083,7 @@
     });
 
     await DiscoverParbat.submitInquiry(payload, {
+      button: document.querySelector('.submit-btn'),
       whatsappMessage: DiscoverParbat.formatContactMessage({
         fname, lname, email, trek, country, group, date, message
       })
