@@ -113,20 +113,31 @@ const DP = window.DiscoverParbat;
 
 DP.WHATSAPP_NUMBER = '9779867649780';
 
-/* GA4 enquiry tracking: sends "generate_lead" with a "method" parameter */
-DP.trackLead = function (method, extra) {
+/* GA4 enquiry tracking
+   - "generate_lead": only when an inquiry form email was actually sent (confirmed lead)
+   - "contact_click": WhatsApp / email / phone link clicks and the WhatsApp fallback
+     (the visitor may not press send, so these are not counted as leads) */
+DP.trackEvent = function (name, method, extra) {
   if (typeof gtag !== 'function') return;
   const params = Object.assign({ method: method, transport_type: 'beacon' }, extra || {});
-  gtag('event', 'generate_lead', params);
+  gtag('event', name, params);
+};
+
+DP.trackLead = function (method, extra) {
+  DP.trackEvent('generate_lead', method, extra);
+};
+
+DP.trackContactClick = function (method, extra) {
+  DP.trackEvent('contact_click', method, extra);
 };
 
 document.addEventListener('click', function (e) {
   const a = e.target.closest ? e.target.closest('a') : null;
   if (!a) return;
   const href = a.getAttribute('href') || '';
-  if (/wa\.me|api\.whatsapp\.com|^whatsapp:/i.test(href)) DP.trackLead('whatsapp');
-  else if (href.indexOf('mailto:') === 0) DP.trackLead('email');
-  else if (href.indexOf('tel:') === 0) DP.trackLead('phone');
+  if (/wa\.me|api\.whatsapp\.com|^whatsapp:/i.test(href)) DP.trackContactClick('whatsapp');
+  else if (href.indexOf('mailto:') === 0) DP.trackContactClick('email');
+  else if (href.indexOf('tel:') === 0) DP.trackContactClick('phone');
 });
 
 DP.buildWhatsAppUrl = function (text) {
@@ -134,7 +145,7 @@ DP.buildWhatsAppUrl = function (text) {
 };
 
 DP.openWhatsAppFallback = function (message) {
-  DP.trackLead('whatsapp_fallback');
+  DP.trackContactClick('whatsapp_fallback');
   window.location.href = DP.buildWhatsAppUrl(message);
 };
 
