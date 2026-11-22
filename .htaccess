@@ -12,6 +12,9 @@ RewriteRule ^(.*)$ https://discoverparbat.com/$1 [R=301,L,NE]
 # ── 2. Old spam pages → 410 Gone ──
 RewriteRule ^items/ - [G,L]
 
+# Old CMS removed Nov 2026 → 410 Gone
+RewriteRule ^cms(/|$) - [G,L]
+
 # ── 3. Old / renamed URLs → current pages (keeps their Google ranking) ──
 RewriteRule ^khopra-danda-trek/?$ https://discoverparbat.com/khopra-ridge-trek [R=301,L,NC]
 RewriteRule ^haljure/?$ https://discoverparbat.com/parbat-dashain-travel-destinations [R=301,L,NC]
@@ -109,7 +112,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ https://discoverparbat.com/$1 [R=301,L,NE]
 
 # ── 5. Internal routing (no redirects) ──
-DirectoryIndex index.html index.php
+DirectoryIndex index.html
 
 # Static article pages: /article/slug → article/slug.html
 RewriteCond %{REQUEST_FILENAME}.html -f
@@ -123,7 +126,7 @@ RewriteRule ^treks/?$ treks.php [L]
 # Clean URLs → trek.php (CMS page or static .html fallback inside trek.php)
    # Only the repo's real folders are skipped, so a leftover folder on the
    # server (e.g. an old about/) can no longer hijack a page URL.
-   RewriteCond %{REQUEST_URI} !^/(article|cms|includes|lib|photo|prints|scripts|uploads)(/|$) [NC]
+   RewriteCond %{REQUEST_URI} !^/(article|includes|lib|photo|prints|scripts|uploads)(/|$) [NC]
    RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z0-9-]+)/?$ trek.php?slug=$1 [L,QSA]
 
