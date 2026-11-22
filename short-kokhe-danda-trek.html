@@ -1062,6 +1062,7 @@ body { line-height: 1.7; }
 .skm .leaflet-tooltip.skm-lbl::before{display:none}
 .skm .leaflet-container{font-family:'DM Sans',sans-serif}
 .skm-mapwrap{position:relative;z-index:0;isolation:isolate}
+.skm-narrow .leaflet-tooltip.skm-lbl.small,.skm-narrow .leaflet-tooltip.skm-lbl.lm{display:none}
 .skm-lm{width:11px;height:11px;transform:rotate(45deg);background:#7a6f62;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .skm-lm.view{background:#8a5a9e}
 .skm .leaflet-tooltip.skm-lbl.lm{font-weight:600;font-style:italic;font-size:12.5px;color:#5f564b}
@@ -1194,6 +1195,13 @@ body { line-height: 1.7; }
     }).addTo(map);
 
     var layers = {}, trekBounds = L.latLngBounds([]);
+    var feet = [];
+    function footCheck() {
+      feet.forEach(function (f) {
+        var px = map.latLngToContainerPoint(f.a).distanceTo(map.latLngToContainerPoint(f.b));
+        var el = f.m.getElement(); if (el) el.style.display = px < 80 ? 'none' : '';
+      });
+    }
     Object.keys(days).forEach(function (d) {
       var g = L.layerGroup(), t = pts(days[d].trek);
       days[d].drive.forEach(function (r) {
@@ -1206,8 +1214,7 @@ body { line-height: 1.7; }
       L.polyline(t, { color:'#fff', weight:9, opacity:.85, lineCap:'round' }).addTo(g);
       L.polyline(t, { color:'#c96a33', weight:5, dashArray:'10 8', lineCap:'round' }).addTo(g);
       for (var i = 0; i < t.length - 1; i++) {
-        if (i % 2) continue;
-        L.marker(mid(t[i], t[i+1]), { icon: L.divIcon({ className:'', html:'<div class="skm-ic trek">'+FOOT+'</div>', iconSize:[34,34], iconAnchor:[17,17] }), interactive:false }).addTo(g);
+        feet.push({ a: t[i], b: t[i+1], m: L.marker(mid(t[i], t[i+1]), { icon: L.divIcon({ className:'', html:'<div class="skm-ic trek">'+FOOT+'</div>', iconSize:[34,34], iconAnchor:[17,17] }), interactive:false }).addTo(g) });
       }
       t.forEach(function (p) { trekBounds.extend(p); });
       layers[d] = { group:g, trek:t, drive:days[d].drive.map(pts) };
@@ -1276,11 +1283,12 @@ body { line-height: 1.7; }
       }
       grat.innerHTML = h;
     }
-    map.on('move zoom moveend zoomend resize', function () { placeEdges(); drawGrat(); });
+    function narrowCheck() { block.classList.toggle('skm-narrow', map.getSize().x < 560 && map.getZoom() < 14); }
+    map.on('move zoom moveend zoomend resize', function () { placeEdges(); drawGrat(); footCheck(); narrowCheck(); });
 
     var full = trekBounds.pad(0.18);
     map.fitBounds(full);
-    placeEdges(); drawGrat();
+    placeEdges(); drawGrat(); footCheck(); narrowCheck();
 
     var btns = Array.prototype.slice.call(document.querySelectorAll('.skm [data-day]'));
     btns.forEach(function (b) {
