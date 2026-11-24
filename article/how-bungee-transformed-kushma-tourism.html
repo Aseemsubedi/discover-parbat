@@ -375,6 +375,7 @@
 .kcx-tags span{font-size:0.86rem;font-weight:600;padding:4px 13px;border-radius:100px;background:rgba(183,121,31,0.1);color:#8a5a14;border:1px solid rgba(183,121,31,0.25)}
 
 /* CTA */
+.kcx-fb{margin:36px 0;padding:22px 20px;border:1px solid var(--kcx-line);border-radius:14px;background:var(--kcx-paper);text-align:center}.kcx-fb[hidden]{display:none}.kcx-fb b{display:block;font-size:1.15rem;color:var(--kcx-forest)}.kcx-fb p{margin:6px 0 14px;color:var(--kcx-body)}.kcx-fb-frame{min-height:180px}.kcx-fb-link{display:inline-block;margin-top:10px;font-weight:600;color:var(--kcx-forest)}
 .kcx-cta-wrap{background:var(--kcx-paper);padding:30px 0 80px}
 .kcx-cta{max-width:1180px;margin:0 auto;width:88%;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,var(--green-dark,#1a3d2b),var(--kcx-blue-deep));box-shadow:0 16px 48px rgba(10,30,20,0.22);padding:46px 48px}
 .kcx-cta span{display:block;font-size:0.9rem;font-weight:700;color:#a8e6c5;margin-bottom:10px}
@@ -637,6 +638,31 @@
       <p>तर कुश्माको पर्यटन केवल बन्जी पुलमा सीमित हुनु हुँदैन। पर्वतको वास्तविक पर्यटन सम्भावना यसका गाउँ, हिमाली दृश्य, धार्मिक स्थल, प्राकृतिक सम्पदा, संस्कृति र स्थानीय जीवनशैलीमा पनि उत्तिकै छ।</p>
       <p>द क्लिफले एउटा सम्भावनालाई सफलतामा परिणत गरेर देखाएको छ। अब बाँकी सम्भावनालाई पहिचान गरी विकास गर्ने जिम्मेवारी सम्बन्धित सरोकारवालाको हो।</p>
       <p class="kcx-pull">द क्लिफले कुश्मालाई चिनायो। अब कुश्माबाट समग्र पर्वत चिनाउने बेला आएको छ।</p>
+
+      <!-- FB PAGE PREVIEW (shown only to visitors from Facebook) -->
+      <div class="kcx-fb" id="kcxFb" hidden>
+        <b>फेसबुकमा पनि हामीसँग जोडिनुहोस्</b>
+        <p>पर्वतका गाउँ, पदयात्रा र मौसमका ताजा अपडेट हाम्रो फेसबुक पेजमा।</p>
+        <div class="kcx-fb-frame" id="kcxFbFrame"></div>
+        <a class="kcx-fb-link" href="https://www.facebook.com/discoverparbat" target="_blank" rel="noopener">फेसबुक पेज खोल्नुहोस् →</a>
+      </div>
+      <script>
+      (function(){
+        try{
+          var q=location.search, r=document.referrer||'';
+          if(!/[?&]fbclid=/.test(q) && !/facebook\.com/i.test(r)) return;
+          var box=document.getElementById('kcxFb'), fr=document.getElementById('kcxFbFrame');
+          box.hidden=false;
+          var w=Math.max(180,Math.min(500,Math.floor(fr.clientWidth||340)));
+          var src='https://www.facebook.com/plugins/page.php?href='+encodeURIComponent('https://www.facebook.com/discoverparbat')+'&tabs=&width='+w+'&height=180&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true';
+          var i=document.createElement('iframe');
+          i.src=src; i.width=w; i.height=180; i.loading='lazy'; i.title='Discover Parbat Facebook page';
+          i.style.cssText='border:none;overflow:hidden;display:block;margin:0 auto;max-width:100%';
+          i.setAttribute('scrolling','no'); i.setAttribute('allow','encrypted-media');
+          fr.appendChild(i);
+        }catch(e){}
+      })();
+      </script>
 
       <!-- FAQ -->
       <h2 id="kcx-faq">बारम्बार सोधिने प्रश्न</h2>
